@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:19:16.641809+00:00",
+  "generated_at": "2026-10-24T13:25:35.221560+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -179,12 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4194,
+      "stars": 4200,
       "forks": 329,
       "created_at": "2026-10-20T09:13:06Z",
       "pushed_at": "2026-10-24T13:06:33Z",
-      "updated_at": "2026-10-24T13:18:28Z",
-      "stars_per_day": 1048.5,
+      "updated_at": "2026-10-24T13:25:17Z",
+      "stars_per_day": 1050.0,
       "age_days": 4
     },
     {
@@ -206,12 +206,12 @@
         "tmdb",
         "webos"
       ],
-      "stars": 4108,
+      "stars": 4110,
       "forks": 646,
       "created_at": "2026-10-19T19:29:01Z",
       "pushed_at": "2026-10-24T13:17:19Z",
-      "updated_at": "2026-10-24T13:17:24Z",
-      "stars_per_day": 1027.0,
+      "updated_at": "2026-10-24T13:23:30Z",
+      "stars_per_day": 1027.5,
       "age_days": 4
     },
     {
@@ -238,12 +238,12 @@
         "open-data",
         "primary-school"
       ],
-      "stars": 3028,
-      "forks": 697,
+      "stars": 3031,
+      "forks": 698,
       "created_at": "2026-10-18T09:04:43Z",
       "pushed_at": "2026-10-24T12:32:48Z",
-      "updated_at": "2026-10-24T13:16:04Z",
-      "stars_per_day": 504.7,
+      "updated_at": "2026-10-24T13:24:32Z",
+      "stars_per_day": 505.2,
       "age_days": 6
     },
     {
@@ -257,12 +257,12 @@
         "rea",
         "reverse-enginnering"
       ],
-      "stars": 1900,
-      "forks": 311,
+      "stars": 1903,
+      "forks": 312,
       "created_at": "2026-10-19T22:20:47Z",
       "pushed_at": "2026-10-21T00:32:22Z",
-      "updated_at": "2026-10-24T13:17:32Z",
-      "stars_per_day": 475.0,
+      "updated_at": "2026-10-24T13:21:51Z",
+      "stars_per_day": 475.8,
       "age_days": 4
     },
     {
@@ -272,12 +272,12 @@
       "description": "Offline FairPlay App Store IPA decryption with independent key derivation",
       "language": "C",
       "topics": [],
-      "stars": 1831,
+      "stars": 1834,
       "forks": 285,
       "created_at": "2026-10-19T10:07:58Z",
       "pushed_at": "2026-10-23T10:58:42Z",
-      "updated_at": "2026-10-24T13:14:17Z",
-      "stars_per_day": 366.2,
+      "updated_at": "2026-10-24T13:23:59Z",
+      "stars_per_day": 366.8,
       "age_days": 5
     },
     {
@@ -302,12 +302,12 @@
         "waf-rules",
         "wordpress-security"
       ],
-      "stars": 1732,
-      "forks": 603,
+      "stars": 1733,
+      "forks": 602,
       "created_at": "2026-10-21T07:55:16Z",
       "pushed_at": "2026-10-22T22:41:36Z",
-      "updated_at": "2026-10-24T13:18:14Z",
-      "stars_per_day": 577.3,
+      "updated_at": "2026-10-24T13:22:41Z",
+      "stars_per_day": 577.7,
       "age_days": 3
     },
     {
@@ -341,12 +341,12 @@
       "description": "Make an old Android TV fast again with Claude Code or Codex: a tiny ad-free home screen plus the prompt to clean it up",
       "language": "Java",
       "topics": [],
-      "stars": 1436,
+      "stars": 1437,
       "forks": 149,
       "created_at": "2026-10-18T06:42:29Z",
       "pushed_at": "2026-10-24T07:07:45Z",
-      "updated_at": "2026-10-24T13:03:49Z",
-      "stars_per_day": 239.3,
+      "updated_at": "2026-10-24T13:25:12Z",
+      "stars_per_day": 239.5,
       "age_days": 6
     },
     {
@@ -384,12 +384,12 @@
       "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
       "language": "Swift",
       "topics": [],
-      "stars": 1422,
+      "stars": 1425,
       "forks": 226,
       "created_at": "2026-10-21T19:38:50Z",
       "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-24T13:13:21Z",
-      "stars_per_day": 711.0,
+      "updated_at": "2026-10-24T13:24:59Z",
+      "stars_per_day": 712.5,
       "age_days": 2
     },
     {
@@ -412,12 +412,12 @@
         "unzip",
         "zip"
       ],
-      "stars": 1415,
+      "stars": 1416,
       "forks": 34,
       "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-24T13:13:11Z",
-      "updated_at": "2026-10-24T13:17:58Z",
-      "stars_per_day": 707.5,
+      "pushed_at": "2026-10-24T13:20:50Z",
+      "updated_at": "2026-10-24T13:21:41Z",
+      "stars_per_day": 708.0,
       "age_days": 2
     },
     {
@@ -427,12 +427,12 @@
       "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
       "language": "C",
       "topics": [],
-      "stars": 1395,
+      "stars": 1409,
       "forks": 165,
       "created_at": "2026-10-18T01:28:31Z",
       "pushed_at": "2026-10-24T00:41:18Z",
-      "updated_at": "2026-10-24T13:17:46Z",
-      "stars_per_day": 232.5,
+      "updated_at": "2026-10-24T13:25:34Z",
+      "stars_per_day": 234.8,
       "age_days": 6
     },
     {
@@ -562,7 +562,7 @@
         "stock-market"
       ],
       "stars": 954,
-      "forks": 213,
+      "forks": 214,
       "created_at": "2026-10-20T14:17:54Z",
       "pushed_at": "2026-10-20T14:18:00Z",
       "updated_at": "2026-10-24T13:02:19Z",
@@ -629,12 +629,12 @@
         "pixel-art",
         "sprites"
       ],
-      "stars": 654,
+      "stars": 655,
       "forks": 48,
       "created_at": "2026-10-19T13:26:45Z",
       "pushed_at": "2026-10-20T10:31:00Z",
-      "updated_at": "2026-10-24T11:40:46Z",
-      "stars_per_day": 163.5,
+      "updated_at": "2026-10-24T13:24:35Z",
+      "stars_per_day": 163.8,
       "age_days": 4
     },
     {
@@ -645,7 +645,7 @@
       "language": "Python",
       "topics": [],
       "stars": 636,
-      "forks": 66,
+      "forks": 67,
       "created_at": "2026-10-20T17:09:40Z",
       "pushed_at": "2026-10-24T02:05:45Z",
       "updated_at": "2026-10-24T13:08:14Z",
@@ -659,12 +659,12 @@
       "description": "PandaCode: a calm desktop workspace for coding agents",
       "language": "Rust",
       "topics": [],
-      "stars": 612,
+      "stars": 613,
       "forks": 119,
       "created_at": "2026-10-18T02:21:29Z",
       "pushed_at": "2026-10-24T11:46:05Z",
-      "updated_at": "2026-10-24T11:46:10Z",
-      "stars_per_day": 102.0,
+      "updated_at": "2026-10-24T13:25:16Z",
+      "stars_per_day": 102.2,
       "age_days": 6
     },
     {
@@ -719,8 +719,8 @@
       "created_at": "2026-10-18T13:22:34Z",
       "pushed_at": "2026-10-20T14:26:41Z",
       "updated_at": "2026-10-24T09:43:41Z",
-      "stars_per_day": 109.0,
-      "age_days": 5
+      "stars_per_day": 90.8,
+      "age_days": 6
     },
     {
       "full_name": "nthnclrk/CleanFrame",

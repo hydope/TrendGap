@@ -42,6 +42,21 @@
     <p class="small">Legend: darker = stronger on that axis. Numbers are from the snapshot sample only.</p>
   </section>
 
+  <section aria-label="Generate a trending repo idea, everything in one package">
+    <h2>Generate a trending repo idea — everything in one package</h2>
+    <p class="small">Like GitNym generates a name, this generates a whole repo idea: <strong>name, pitch, README outline, features, 72-hour MVP, evidence, competitors, and exports</strong> — in one package. Type what you want to build, and the generator builds it from the strongest matching snapshot evidence. <strong>Only the evidence numbers are data.</strong> The name, pitch, features, and stack are SUGGESTIONS. If nothing in the snapshot matches, it does <strong>not</strong> call the idea “trending” — it shows the closest snapshot signals instead, labelled closest-match.</p>
+    <form id="pkgForm">
+      <label for="pkgDesc">What do you want to build? (e.g. ai notes app, rust cli for tv, android tv launcher)</label>
+      <input id="pkgDesc" type="text" maxlength="200" placeholder="e.g. ai notes app" autocomplete="off">
+      <label for="pkgTopic">Topic filter (optional, e.g. Rust, android-tv)</label>
+      <input id="pkgTopic" type="text" maxlength="100" placeholder="Leave blank to use the strongest snapshot evidence" autocomplete="off">
+      <button id="pkgGenBtn" type="submit">Generate full repo idea</button>
+      <button id="pkgMoreBtn" type="button">Regenerate variant (same evidence)</button>
+    </form>
+    <p id="packageStatus" role="status" aria-live="polite"></p>
+    <div id="package" class="cards"></div>
+  </section>
+
   <section aria-label="Generate new ideas">
     <h2>Generate new ideas</h2>
     <p class="small">Like GitNym generates names, this generates new idea cards — but <strong>only from snapshot evidence</strong>. Type a topic or keyword (optional) to pick which snapshot signals to build from, then Generate. “Generate more variants” makes new names and pitches from the <em>same</em> evidence — the evidence numbers do not change, because no new data was collected. A seed with no matching signal gets <strong>no invented card</strong>: you get the closest snapshot signals instead, labelled as closest-match, not as evidence for your seed.</p>

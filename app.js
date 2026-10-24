@@ -68,6 +68,66 @@ function seedSignals(snap, seedRaw) {
     .slice(0, 3);
   return { mode: "closest", list: [], closest };
 }
+// Full repo package, GitNym-style: one input -> name + pitch + README +
+// features + MVP + evidence + competitors + exports. Only the evidence
+// numbers are data; name, pitch, features and stack are SUGGESTIONS.
+// If no snapshot signal matches, the package is built from the closest
+// signals and labelled closest-match — it is never called "trending"
+// for a seed with no evidence.
+function packageFor(snap, snapDate, descRaw, topicRaw, variant) {
+  const desc = String(descRaw || "").trim();
+  const topic = String(topicRaw || "").trim();
+  const res = topic ? seedSignals(snap, topic) : (desc ? seedSignals(snap, desc) : { mode: "all", list: snap.rising, closest: [] });
+  const mode = res.mode;
+  const list = mode === "closest" ? res.closest : res.list;
+  if (!list.length) return { error: "No data yet — this snapshot is empty. No package can be generated, and none is invented here." };
+  const evidenceCards = buildCardsFromSignals(snap, list, variant);
+  const ev = evidenceCards[0];
+  if (!ev) return { error: "No evidence card could be built from this snapshot. Nothing is invented here." };
+  const stop = new Set(["a", "the", "app", "for", "with", "and", "to", "make", "build"]);
+  const words = desc.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length >= 2 && !stop.has(w));
+  const baseWord = words[0] || ev.signal;
+  let name = clean(baseWord) + SUFFIXES[variant % SUFFIXES.length];
+  if (name.length > 24) name = name.slice(0, 24);
+  const pitch = PITCHES[variant % PITCHES.length](ev.signal, ev.topRepo ? ev.topRepo.full_name : "the snapshot sample");
+  const stack = ev.topRepo && ev.topRepo.language ? ev.topRepo.language : ev.signal;
+  const features = [
+    `One clear job in ${ev.signal}: the narrow job inside ${ev.topRepo ? ev.topRepo.full_name : "the snapshot evidence"}, not a clone of it.`,
+    "A worked example and docs first — setup friction removed, so a new user can run the demo in minutes.",
+    "A single demo built from the snapshot evidence, with the evidence numbers shown in the README.",
+    "Small scope by design: no accounts, payments, AI generation, or mobile app in the MVP.",
+  ];
+  const comps = ev.comps.map((r) => `${r.full_name} — ${r.stars} stars, ${r.stars_per_day}/day, last activity ${fmtDate(r.pushed_at || r.updated_at)}`).join("\n");
+  const status = mode === "closest"
+    ? `No trending evidence in this snapshot for “${topic || desc}”. This package is built from the closest snapshot signals (${list.map((s) => s.name).join(", ")}) and is labelled closest-match — it is NOT presented as trending for your input.`
+    : mode === "seed"
+      ? `Full repo idea generated from snapshot evidence for “${topic || desc}”. Only the evidence numbers below are data; name, pitch, features and stack are suggestions.`
+      : `Full repo idea generated from the strongest snapshot evidence. Only the evidence numbers below are data; name, pitch, features and stack are suggestions.`;
+  const markdown = `# ${name}\n\n${pitch}\n\nSUGGESTION — only the evidence numbers are data.\n\n## Problem / solution\n\nA focused ${ev.signal} tool that does one job well, inspired by ${ev.topRepo ? ev.topRepo.full_name : "the snapshot sample"}.\n\n## Features (suggestions)\n\n${features.map((f) => `- ${f}`).join("\n")}\n\n## Suggested stack\n\n${stack} (from the top matching repo's language in the snapshot sample — a suggestion, not evidence).\n\n## 72-hour MVP\n\nBuild: core in ${ev.signal}; one demo from the snapshot evidence; docs + worked example.\nCut: accounts, payments, AI generation, mobile app.\n\n## Evidence (snapshot ${snapDate})\n\n- Signal: ${ev.signal} (${ev.kind})\n- Interest signal: ${ev.score}/100 (ESTIMATE, global snapshot normalisation)\n- Avg velocity: ${ev.avgVel.toFixed(1)}/day; sample stars: ${ev.total}; HN title mentions: ${ev.hn}; dev.to title mentions: ${ev.devto}\n- Triggering repo: ${ev.topRepo ? `${ev.topRepo.full_name} (${ev.topRepo.stars} stars, created ${fmtDate(ev.topRepo.created_at)})` : "none in snapshot sample"}\n- Top competitors in snapshot sample:\n${comps || "  None in this snapshot sample — marked unchecked, not “no competitors exist”."}\n\n## Differentiation hypothesis (not proven)\n\n${ev.hypothesis.replace(/<[^>]+>/g, "")}\n`;
+  const html = `<article class="card">
+    <h3>${esc(name)} <span class="small">— SUGGESTION${mode === "closest" ? ' · <strong>Closest-match — NOT trending evidence for your input</strong>' : ''}</span></h3>
+    <p>${esc(pitch)}</p>
+    <p><strong>README outline:</strong> Problem → Solution → Features → Demo → Evidence → Differentiation. The full draft is in “Copy full package” below.</p>
+    <p><strong>Features (suggestions, not evidence):</strong></p><ul>${features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+    <p><strong>Suggested stack:</strong> ${esc(stack)} (suggestion — from the top matching repo's language, not a market claim).</p>
+    <p><strong>72-hour MVP — Build:</strong> core in ${esc(ev.signal)}; one demo from the snapshot evidence; docs + worked example. <strong>Cut:</strong> accounts, payments, AI generation, mobile app.</p>
+    <p><strong>Evidence (snapshot ${esc(snapDate)}):</strong> Signal ${esc(ev.signal)} (${esc(ev.kind)}); Interest signal ${ev.score}/100 (ESTIMATE); avg velocity ${ev.avgVel.toFixed(1)}/day; sample stars ${ev.total}; HN mentions ${ev.hn}; dev.to mentions ${ev.devto}; triggering repo ${ev.topRepo ? esc(ev.topRepo.full_name) + ' (' + ev.topRepo.stars + ' stars, created ' + fmtDate(ev.topRepo.created_at) + ')' : 'none in snapshot sample'}.</p>
+    <p><strong>Top competitors in snapshot sample:</strong></p><ul>${ev.comps.length ? ev.comps.map((r) => `<li><a href="${esc(r.html_url)}">${esc(r.full_name)}</a> — ${r.stars} stars, ${r.stars_per_day}/day, last activity ${fmtDate(r.pushed_at || r.updated_at)}.</li>`).join("") : '<li>None in this snapshot sample — marked unchecked, not “no competitors exist”.</li>'}</ul>
+    <p><strong>Differentiation hypothesis:</strong> ${ev.hypothesis}</p>
+    <div class="export">
+      <button type="button" data-pkg-export="full">Copy full package</button>
+      <button type="button" data-pkg-export="readme">Copy README draft</button>
+      <button type="button" data-pkg-export="hn">Copy HN title</button>
+      <button type="button" data-pkg-export="x">Copy X opener</button>
+      <button type="button" data-pkg-export="issue">Copy as GitHub issue/plan</button>
+    </div></article>`;
+  return {
+    html, markdown, status,
+    hn: `Show HN: ${name} — ${pitch}`,
+    x: `${name}: ${pitch} (Suggestion — evidence in TrendGap snapshot, not proof of a gap.)`,
+    issue: `## Plan: ${name}\n\nPitch: ${pitch}\n\n72-hour MVP — Build: core, one demo, docs + example. Cut: accounts, payments, AI generation, mobile app.\n\nInterest signal: ${ev.score}/100 (ESTIMATE). Evidence: signal ${ev.signal}, ${ev.avgVel.toFixed(1)}/day, ${ev.total} sample stars, snapshot ${snapDate}. Differentiation hypothesis: see package — hypothesis, not proven.`,
+  };
+}
 function drawHeat(canvas, snap, cards) {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
@@ -227,6 +287,25 @@ async function main() {
   });
   $('#searchCards').addEventListener('input', (e) => { searchText = e.target.value.trim().toLowerCase(); render(); });
   $('#sortCards').addEventListener('change', (e) => { sortMode = e.target.value; render(); });
+  // Full repo package generator: one input -> everything in one package.
+  let pkgVariant = 0;
+  let pkg = null;
+  function renderPackage() {
+    const res = packageFor(snap, snapDate, $('#pkgDesc').value, $('#pkgTopic').value, pkgVariant);
+    if (res.error) { $('#packageStatus').textContent = res.error; $('#package').innerHTML = ""; pkg = null; return; }
+    pkg = res;
+    $('#packageStatus').textContent = res.status;
+    $('#package').innerHTML = res.html;
+  }
+  $('#pkgForm').addEventListener('submit', (e) => { e.preventDefault(); pkgVariant = 0; renderPackage(); });
+  $('#pkgMoreBtn').addEventListener('click', () => { pkgVariant += 1; renderPackage(); });
+  $('#package').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-pkg-export]');
+    if (!btn || !pkg) return;
+    const kind = btn.dataset.pkgExport;
+    const text = kind === "full" || kind === "readme" ? pkg.markdown : kind === "hn" ? pkg.hn : kind === "x" ? pkg.x : pkg.issue;
+    copyText(btn, text);
+  });
   render = () => {
     let shown = selected.size ? currentCards.filter((c) => selected.has(c.signal)) : currentCards;
     if (searchText) shown = shown.filter((c) => `${c.name} ${c.signal} ${c.pitch}`.toLowerCase().includes(searchText));

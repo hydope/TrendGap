@@ -9,7 +9,7 @@
 <meta property="og:description" content="Live recently-created repos with a specific spin-off idea for each one. Evidence shown, gaps labelled as hypotheses.">
 <meta property="og:type" content="website">
 <!-- v5: bump ?v= on every deploy that changes app.js/styles.css so HTML and JS can never mismatch (2026-10-24 cache bug). -->
-<link rel="stylesheet" href="styles.css?v=20261024-3">
+<link rel="stylesheet" href="styles.css?v=20261024-4">
 </head>
 <body>
 <header class="topbar">
@@ -32,7 +32,7 @@
         <button id="genFromSearchBtn" type="button">Generate idea from top result</button>
         <button id="clearSearchBtn" type="button" class="secondary">Back to trending now</button>
       </div>
-      <p class="small">Search runs a <strong>live</strong> GitHub Search for your keywords among repos created in the last 7 days, sorted by stars — so the evidence is about <em>your</em> topic, not a closest-match fallback. If nothing matches, the page says so plainly and shows trending repos only as unrelated exploration.</p>
+      <p class="small">Search runs a <strong>live</strong> GitHub Search for your keywords in repo <strong>names and descriptions, all-time</strong> (not just the last 7 days — niche topics like Ray-Ban Meta have almost nothing new in 7 days), ranked by relevance (name match &gt; description match &gt; topic match), then stars. If your exact words match nothing, it tries shorter versions and <strong>tells you which words it dropped</strong>. If nothing matches at all, the page says so plainly, shows trending repos only as unrelated exploration, and <strong>generates no package from them</strong>.</p>
     </form>
     <p id="searchStatus" role="status" aria-live="polite"></p>
     <p id="sourceStatus" class="source"></p>
@@ -94,6 +94,6 @@
 <footer>
   <p>TrendGap v5. Live at hydope.github.io/TrendGap. No backend, no secrets, no key required. Formerly RepoRadar — renamed because RepoRadar was taken (see README). If this page ever looks stale, close the tab completely and reopen, or add <code>?v=</code> with today's date to the URL.</p>
 </footer>
-<script type="module" src="app.js?v=20261024-3"></script>
+<script type="module" src="app.js?v=20261024-4"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:35:38.685389+00:00",
+  "generated_at": "2026-10-24T13:44:56.163411+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -26,7 +26,7 @@
     {
       "name": "Python",
       "kind": "language",
-      "count_in_snapshot": 10,
+      "count_in_snapshot": 9,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -54,7 +54,7 @@
     {
       "name": "JavaScript",
       "kind": "language",
-      "count_in_snapshot": 2,
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -157,14 +157,14 @@
       "devto_mentions": 0
     },
     {
-      "name": "candiru",
+      "name": "chinese",
       "kind": "topic",
       "count_in_snapshot": 1,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "chinese",
+      "name": "claude",
       "kind": "topic",
       "count_in_snapshot": 1,
       "hn_mentions": 0,
@@ -179,12 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4207,
+      "stars": 4213,
       "forks": 329,
       "created_at": "2026-10-20T09:13:06Z",
       "pushed_at": "2026-10-24T13:06:33Z",
-      "updated_at": "2026-10-24T13:35:08Z",
-      "stars_per_day": 1051.8,
+      "updated_at": "2026-10-24T13:43:59Z",
+      "stars_per_day": 1053.2,
       "age_days": 4
     },
     {
@@ -206,12 +206,12 @@
         "tmdb",
         "webos"
       ],
-      "stars": 4112,
-      "forks": 647,
+      "stars": 4120,
+      "forks": 649,
       "created_at": "2026-10-19T19:29:01Z",
       "pushed_at": "2026-10-24T13:17:19Z",
-      "updated_at": "2026-10-24T13:34:58Z",
-      "stars_per_day": 1028.0,
+      "updated_at": "2026-10-24T13:43:11Z",
+      "stars_per_day": 1030.0,
       "age_days": 4
     },
     {
@@ -238,12 +238,12 @@
         "open-data",
         "primary-school"
       ],
-      "stars": 3035,
-      "forks": 698,
+      "stars": 3040,
+      "forks": 699,
       "created_at": "2026-10-18T09:04:43Z",
       "pushed_at": "2026-10-24T12:32:48Z",
-      "updated_at": "2026-10-24T13:31:09Z",
-      "stars_per_day": 505.8,
+      "updated_at": "2026-10-24T13:44:34Z",
+      "stars_per_day": 506.7,
       "age_days": 6
     },
     {
@@ -257,12 +257,12 @@
         "rea",
         "reverse-enginnering"
       ],
-      "stars": 1903,
-      "forks": 312,
+      "stars": 1907,
+      "forks": 313,
       "created_at": "2026-10-19T22:20:47Z",
       "pushed_at": "2026-10-21T00:32:22Z",
-      "updated_at": "2026-10-24T13:21:51Z",
-      "stars_per_day": 475.8,
+      "updated_at": "2026-10-24T13:44:17Z",
+      "stars_per_day": 476.8,
       "age_days": 4
     },
     {
@@ -272,12 +272,12 @@
       "description": "Offline FairPlay App Store IPA decryption with independent key derivation",
       "language": "C",
       "topics": [],
-      "stars": 1835,
-      "forks": 285,
+      "stars": 1840,
+      "forks": 287,
       "created_at": "2026-10-19T10:07:58Z",
       "pushed_at": "2026-10-23T10:58:42Z",
-      "updated_at": "2026-10-24T13:30:49Z",
-      "stars_per_day": 367.0,
+      "updated_at": "2026-10-24T13:43:58Z",
+      "stars_per_day": 368.0,
       "age_days": 5
     },
     {
@@ -302,12 +302,12 @@
         "waf-rules",
         "wordpress-security"
       ],
-      "stars": 1734,
+      "stars": 1735,
       "forks": 602,
       "created_at": "2026-10-21T07:55:16Z",
       "pushed_at": "2026-10-22T22:41:36Z",
-      "updated_at": "2026-10-24T13:28:39Z",
-      "stars_per_day": 578.0,
+      "updated_at": "2026-10-24T13:38:18Z",
+      "stars_per_day": 578.3,
       "age_days": 3
     },
     {
@@ -335,6 +335,36 @@
       "age_days": 6
     },
     {
+      "full_name": "Zagitta/gpu-unlock",
+      "name": "gpu-unlock",
+      "html_url": "https://github.com/Zagitta/gpu-unlock",
+      "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
+      "language": "C",
+      "topics": [],
+      "stars": 1456,
+      "forks": 172,
+      "created_at": "2026-10-18T01:28:31Z",
+      "pushed_at": "2026-10-24T00:41:18Z",
+      "updated_at": "2026-10-24T13:44:50Z",
+      "stars_per_day": 242.7,
+      "age_days": 6
+    },
+    {
+      "full_name": "wesbos/3d-model-anything",
+      "name": "3d-model-anything",
+      "html_url": "https://github.com/wesbos/3d-model-anything",
+      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "language": "Swift",
+      "topics": [],
+      "stars": 1438,
+      "forks": 227,
+      "created_at": "2026-10-21T19:38:50Z",
+      "pushed_at": "2026-10-22T13:10:22Z",
+      "updated_at": "2026-10-24T13:42:19Z",
+      "stars_per_day": 719.0,
+      "age_days": 2
+    },
+    {
       "full_name": "Ansub/tv-detox",
       "name": "tv-detox",
       "html_url": "https://github.com/Ansub/tv-detox",
@@ -348,36 +378,6 @@
       "updated_at": "2026-10-24T13:25:12Z",
       "stars_per_day": 239.5,
       "age_days": 6
-    },
-    {
-      "full_name": "Zagitta/gpu-unlock",
-      "name": "gpu-unlock",
-      "html_url": "https://github.com/Zagitta/gpu-unlock",
-      "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
-      "language": "C",
-      "topics": [],
-      "stars": 1434,
-      "forks": 167,
-      "created_at": "2026-10-18T01:28:31Z",
-      "pushed_at": "2026-10-24T00:41:18Z",
-      "updated_at": "2026-10-24T13:35:18Z",
-      "stars_per_day": 239.0,
-      "age_days": 6
-    },
-    {
-      "full_name": "wesbos/3d-model-anything",
-      "name": "3d-model-anything",
-      "html_url": "https://github.com/wesbos/3d-model-anything",
-      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
-      "language": "Swift",
-      "topics": [],
-      "stars": 1433,
-      "forks": 227,
-      "created_at": "2026-10-21T19:38:50Z",
-      "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-24T13:35:16Z",
-      "stars_per_day": 716.5,
-      "age_days": 2
     },
     {
       "full_name": "humblemuzzu/dumbtv",
@@ -427,12 +427,12 @@
         "unzip",
         "zip"
       ],
-      "stars": 1422,
-      "forks": 34,
+      "stars": 1429,
+      "forks": 35,
       "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-24T13:32:23Z",
-      "updated_at": "2026-10-24T13:35:27Z",
-      "stars_per_day": 711.0,
+      "pushed_at": "2026-10-24T13:44:26Z",
+      "updated_at": "2026-10-24T13:44:52Z",
+      "stars_per_day": 714.5,
       "age_days": 2
     },
     {
@@ -442,12 +442,12 @@
       "description": "A php2shell exploit that requires no modifications to the official version, and does not require display_errors or limit_memory.",
       "language": "Python",
       "topics": [],
-      "stars": 1386,
+      "stars": 1387,
       "forks": 404,
       "created_at": "2026-10-21T11:11:57Z",
       "pushed_at": "2026-10-23T20:40:43Z",
-      "updated_at": "2026-10-24T13:28:40Z",
-      "stars_per_day": 462.0,
+      "updated_at": "2026-10-24T13:36:29Z",
+      "stars_per_day": 462.3,
       "age_days": 3
     },
     {
@@ -472,12 +472,12 @@
       "description": null,
       "language": "C",
       "topics": [],
-      "stars": 1216,
+      "stars": 1218,
       "forks": 213,
       "created_at": "2026-10-22T06:20:11Z",
       "pushed_at": "2026-10-23T14:25:04Z",
-      "updated_at": "2026-10-24T13:28:38Z",
-      "stars_per_day": 608.0,
+      "updated_at": "2026-10-24T13:43:59Z",
+      "stars_per_day": 609.0,
       "age_days": 2
     },
     {
@@ -487,12 +487,12 @@
       "description": "Import .sql files into TypeScript with full type inference and zero codegen.",
       "language": "Rust",
       "topics": [],
-      "stars": 1151,
+      "stars": 1155,
       "forks": 8,
       "created_at": "2026-10-21T00:16:54Z",
       "pushed_at": "2026-10-24T04:54:52Z",
-      "updated_at": "2026-10-24T13:16:04Z",
-      "stars_per_day": 383.7,
+      "updated_at": "2026-10-24T13:40:41Z",
+      "stars_per_day": 385.0,
       "age_days": 3
     },
     {
@@ -502,12 +502,12 @@
       "description": "Proof-of-Concept (PoC) exploit for php2shell (CVE-2026-109618 / CVE-2026-109619), demonstrating remote code execution in vulnerable PHP environments. For security research and educational purposes only.",
       "language": "Shell",
       "topics": [],
-      "stars": 980,
+      "stars": 981,
       "forks": 243,
       "created_at": "2026-10-21T08:31:43Z",
       "pushed_at": "2026-10-22T07:19:20Z",
-      "updated_at": "2026-10-24T12:47:12Z",
-      "stars_per_day": 326.7,
+      "updated_at": "2026-10-24T13:39:32Z",
+      "stars_per_day": 327.0,
       "age_days": 3
     },
     {
@@ -561,12 +561,12 @@
         "day-trading",
         "stock-market"
       ],
-      "stars": 954,
+      "stars": 956,
       "forks": 214,
       "created_at": "2026-10-20T14:17:54Z",
       "pushed_at": "2026-10-20T14:18:00Z",
-      "updated_at": "2026-10-24T13:31:14Z",
-      "stars_per_day": 318.0,
+      "updated_at": "2026-10-24T13:44:39Z",
+      "stars_per_day": 318.7,
       "age_days": 3
     },
     {
@@ -593,12 +593,12 @@
       "description": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
       "language": "Python",
       "topics": [],
-      "stars": 831,
+      "stars": 832,
       "forks": 46,
       "created_at": "2026-10-22T01:40:05Z",
       "pushed_at": "2026-10-23T08:23:24Z",
-      "updated_at": "2026-10-24T13:33:57Z",
-      "stars_per_day": 415.5,
+      "updated_at": "2026-10-24T13:37:53Z",
+      "stars_per_day": 416.0,
       "age_days": 2
     },
     {
@@ -674,12 +674,12 @@
       "description": "Run many Claude Code and Codex agents side by side, in one sidebar that tells you which one needs you. An unofficial fork of Warp.",
       "language": "Rust",
       "topics": [],
-      "stars": 599,
+      "stars": 600,
       "forks": 41,
       "created_at": "2026-10-20T10:39:43Z",
       "pushed_at": "2026-10-21T10:29:54Z",
-      "updated_at": "2026-10-24T13:03:08Z",
-      "stars_per_day": 149.8,
+      "updated_at": "2026-10-24T13:39:54Z",
+      "stars_per_day": 150.0,
       "age_days": 4
     },
     {
@@ -704,38 +704,28 @@
       "description": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
       "language": "Python",
       "topics": [],
-      "stars": 549,
-      "forks": 107,
+      "stars": 551,
+      "forks": 109,
       "created_at": "2026-10-22T03:53:20Z",
       "pushed_at": "2026-10-24T03:40:18Z",
-      "updated_at": "2026-10-24T13:35:29Z",
-      "stars_per_day": 274.5,
+      "updated_at": "2026-10-24T13:44:13Z",
+      "stars_per_day": 275.5,
       "age_days": 2
     },
     {
-      "full_name": "interplains/zero-breach",
-      "name": "zero-breach",
-      "html_url": "https://github.com/interplains/zero-breach",
-      "description": "Zero Breach \u2014 local, read-only scanner that checks a computer for indicators of the AdFection / Candiru ad-delivered spyware campaign. No network, no admin, no dependencies.",
-      "language": "Python",
-      "topics": [
-        "candiru",
-        "digital-security",
-        "forensics",
-        "incident-response",
-        "ioc",
-        "misp",
-        "spyware",
-        "stix",
-        "threat-intelligence"
-      ],
-      "stars": 545,
-      "forks": 39,
-      "created_at": "2026-10-18T13:22:34Z",
-      "pushed_at": "2026-10-20T14:26:41Z",
-      "updated_at": "2026-10-24T09:43:41Z",
-      "stars_per_day": 90.8,
-      "age_days": 6
+      "full_name": "nthnclrk/CleanFrame",
+      "name": "CleanFrame",
+      "html_url": "https://github.com/nthnclrk/CleanFrame",
+      "description": "A personal home screen for Samsung The Frame. A starting point to fork and adapt.",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 546,
+      "forks": 89,
+      "created_at": "2026-10-20T04:40:07Z",
+      "pushed_at": "2026-10-20T04:40:58Z",
+      "updated_at": "2026-10-24T13:41:52Z",
+      "stars_per_day": 136.5,
+      "age_days": 4
     }
   ],
   "hn_items": [
@@ -885,7 +875,7 @@
   "languages": [
     [
       "Python",
-      10
+      9
     ],
     [
       "Rust",
@@ -901,7 +891,7 @@
     ],
     [
       "JavaScript",
-      2
+      3
     ],
     [
       "TypeScript",
@@ -962,10 +952,6 @@
       1
     ],
     [
-      "candiru",
-      1
-    ],
-    [
       "chinese",
       1
     ],
@@ -1015,10 +1001,6 @@
     ],
     [
       "diagnostic",
-      1
-    ],
-    [
-      "digital-security",
       1
     ],
     [
@@ -1074,10 +1056,6 @@
       1
     ],
     [
-      "forensics",
-      1
-    ],
-    [
       "gamedev",
       1
     ],
@@ -1103,14 +1081,6 @@
     ],
     [
       "home-screen",
-      1
-    ],
-    [
-      "incident-response",
-      1
-    ],
-    [
-      "ioc",
       1
     ],
     [
@@ -1143,10 +1113,6 @@
     ],
     [
       "middle-school",
-      1
-    ],
-    [
-      "misp",
       1
     ],
     [
@@ -1250,14 +1216,6 @@
       1
     ],
     [
-      "spyware",
-      1
-    ],
-    [
-      "stix",
-      1
-    ],
-    [
       "stock-market",
       1
     ],
@@ -1271,10 +1229,6 @@
     ],
     [
       "telemetry",
-      1
-    ],
-    [
-      "threat-intelligence",
       1
     ],
     [

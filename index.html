@@ -3,107 +3,97 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TrendGap — Repo ideas with the evidence shown</title>
-<meta name="description" content="TrendGap: repo ideas with the evidence shown — and the crowded competitors shown too. Deterministic suggestions from a dated snapshot sample. No official GitHub trending API is claimed.">
-<meta property="og:title" content="TrendGap — Repo ideas with the evidence shown">
-<meta property="og:description" content="Repo ideas with the evidence shown — and the crowded competitors shown too. Suggestions only; only the evidence numbers are data.">
+<title>TrendGap v5 — What repo should you build next?</title>
+<meta name="description" content="TrendGap v5: live recently-created repos, most-starred first, with a specific spin-off idea for each one. Ideas are suggestions; only evidence numbers are data. GitHub has no official trending API.">
+<meta property="og:title" content="TrendGap v5 — What repo should you build next?">
+<meta property="og:description" content="Live recently-created repos with a specific spin-off idea for each one. Evidence shown, gaps labelled as hypotheses.">
 <meta property="og:type" content="website">
-<!-- Versioned subresources: GitHub Pages + browser caching previously served
-     new HTML with an old cached app.js, which broke the new generator form
-     (native form submit -> page reload, inputs cleared). Bump ?v= on every
-     deploy that changes app.js/styles.css so HTML and JS can never mismatch. -->
-<link rel="stylesheet" href="styles.css?v=20261024-2">
+<!-- v5: bump ?v= on every deploy that changes app.js/styles.css so HTML and JS can never mismatch (2026-10-24 cache bug). -->
+<link rel="stylesheet" href="styles.css?v=20261024-3">
 </head>
 <body>
-<header class="top">
+<header class="topbar">
   <div>
-    <h1>TrendGap</h1>
-    <p class="tagline">Repo ideas with the evidence shown — and the crowded competitors shown too.</p>
-    <p class="honest">Generated ideas are <strong>SUGGESTIONS</strong>. Only the evidence numbers are data. Popularity is not proof of a gap, and there is <strong>no official GitHub trending API</strong> — this page uses a dated GitHub Search API sample (see snapshot note).</p>
+    <p class="logo">TrendGap <span class="version">v5</span></p>
+    <h1>What repo should you build next?</h1>
+    <p class="tagline">Live recently-created repos, most-starred first — with a <strong>specific</strong> spin-off idea for each one, not a template.</p>
+    <p class="honest">This is <strong>NOT an official trending feed</strong> — GitHub has no official trending API. “Trending now” here means: repos created in the last 7 days, sorted by stars in GitHub Search, fetched live from your browser with no key. Ideas are <strong>SUGGESTIONS</strong>. Only the evidence numbers are data. Angles and gaps are <strong>hypotheses</strong>, never proven gaps. No virality prediction, no fake trending claim.</p>
   </div>
   <button id="darkToggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
 </header>
 
 <main>
-  <section aria-label="Snapshot status" class="status">
-    <p id="freshness">Loading snapshot…</p>
-    <p id="liveNote"></p>
+  <section class="hero" aria-label="Search for a repo idea">
+    <form id="searchForm">
+      <label for="query">What do you want to build?</label>
+      <input id="query" type="text" maxlength="200" placeholder="e.g. ai notes app, rust cli, android tv launcher" autocomplete="off">
+      <div class="formrow">
+        <button id="searchBtn" type="submit">Search live on GitHub</button>
+        <button id="genFromSearchBtn" type="button">Generate idea from top result</button>
+        <button id="clearSearchBtn" type="button" class="secondary">Back to trending now</button>
+      </div>
+      <p class="small">Search runs a <strong>live</strong> GitHub Search for your keywords among repos created in the last 7 days, sorted by stars — so the evidence is about <em>your</em> topic, not a closest-match fallback. If nothing matches, the page says so plainly and shows trending repos only as unrelated exploration.</p>
+    </form>
+    <p id="searchStatus" role="status" aria-live="polite"></p>
+    <p id="sourceStatus" class="source"></p>
     <p id="banner" class="banner" hidden></p>
-    <p id="emptyNote" class="banner" hidden></p>
   </section>
 
-  <section aria-label="Topic filters">
-    <h2>Topics from this snapshot</h2>
-    <p class="small">Defaults come from the snapshot's top rising topics and languages — not from a preset list. Select chips to filter the cards. Use “All” to reset.</p>
-    <div id="chips" class="chips" role="group" aria-label="Filter by topic or language"></div>
-    <button id="allChips" type="button">All</button>
+  <section id="packageSection" aria-label="Generated repo idea package">
+    <h2>Generated repo idea</h2>
+    <p class="small">Pick “Generate from this repo” on any repo below, or search above and hit “Generate idea from top result”. “Regenerate variant” changes the name, pitch and angle from the <em>same</em> source repo — the evidence numbers do not change.</p>
+    <p id="packageStatus" role="status" aria-live="polite">No package yet — generate one from a repo below.</p>
+    <div class="package-actions">
+      <button id="variantBtn" type="button" disabled>Regenerate variant (same evidence)</button>
+    </div>
+    <div id="package"></div>
   </section>
 
-  <section aria-label="Rising versus saturated heat chart">
-    <h2>Rising vs. saturated</h2>
-    <p class="small">Heat = average stars/day of matching repos in this snapshot sample. “Rising” leans on velocity; “Saturated” leans on how many repos already match. This is a sample view, not the whole of GitHub.</p>
-    <canvas id="heat" width="900" height="360" aria-label="Heat chart of rising versus saturated signals from the snapshot"></canvas>
-    <p class="small">Legend: darker = stronger on that axis. Numbers are from the snapshot sample only.</p>
+  <section aria-label="Trending repos and spin-off ideas">
+    <h2 id="listHeading">Trending now</h2>
+    <p id="trendingCount" class="small"></p>
+    <div class="controls">
+      <div>
+        <label for="filterText">Filter these results</label>
+        <input id="filterText" type="search" placeholder="Filter by name, description, language or topic…" autocomplete="off">
+      </div>
+      <div>
+        <label for="sortSel">Sort by</label>
+        <select id="sortSel">
+          <option value="stars">Stars (high first)</option>
+          <option value="velocity">Stars/day (high first)</option>
+          <option value="recent">Newest first</option>
+        </select>
+      </div>
+    </div>
+    <div id="langChips" class="chips" role="group" aria-label="Filter by language"></div>
+    <button id="allLangsBtn" type="button" class="secondary">All languages</button>
+
+    <h3>Recently-created repos</h3>
+    <p class="small">Each row is a real repo from the fetched set, with a button to generate a full package from it. Stars/day = stars ÷ age in days.</p>
+    <div id="trendingList" class="repolist"></div>
+
+    <h3>Spin-off ideas — one per top repo</h3>
+    <p class="small">Each idea below is built from one specific repo: its name, its description, its language and its topics. Open any one for the full package. Interest signal formula (ESTIMATE, relative to the fetched set, <strong>not</strong> to all of GitHub): <code>50 × (stars/day ÷ max stars/day in fetched set) + 50 × (stars ÷ max stars in fetched set)</code>, rounded 0–100, components shown on each package.</p>
+    <div id="ideasList" class="cards"></div>
   </section>
 
-  <section aria-label="Generate a trending repo idea, everything in one package">
-    <h2>Generate a trending repo idea — everything in one package</h2>
-    <p class="small">Like GitNym generates a name, this generates a whole repo idea: <strong>name, pitch, README outline, features, 72-hour MVP, evidence, competitors, and exports</strong> — in one package. Type what you want to build, and the generator builds it from the strongest matching snapshot evidence. <strong>Only the evidence numbers are data.</strong> The name, pitch, features, and stack are SUGGESTIONS. If nothing in the snapshot matches, it does <strong>not</strong> call the idea “trending” — it shows the closest snapshot signals instead, labelled closest-match.</p>
-    <form id="pkgForm">
-      <label for="pkgDesc">What do you want to build? (e.g. ai notes app, rust cli for tv, android tv launcher)</label>
-      <input id="pkgDesc" type="text" maxlength="200" placeholder="e.g. ai notes app" autocomplete="off">
-      <label for="pkgTopic">Topic filter (optional, e.g. Rust, android-tv)</label>
-      <input id="pkgTopic" type="text" maxlength="100" placeholder="Leave blank to use the strongest snapshot evidence" autocomplete="off">
-      <button id="pkgGenBtn" type="button">Generate full repo idea</button>
-      <button id="pkgMoreBtn" type="button">Regenerate variant (same evidence)</button>
-    </form>
-    <p id="packageStatus" role="status" aria-live="polite"></p>
-    <div id="package" class="cards"></div>
-  </section>
-
-  <section aria-label="Generate new ideas">
-    <h2>Generate new ideas</h2>
-    <p class="small">Like GitNym generates names, this generates new idea cards — but <strong>only from snapshot evidence</strong>. Type a topic or keyword (optional) to pick which snapshot signals to build from, then Generate. “Generate more variants” makes new names and pitches from the <em>same</em> evidence — the evidence numbers do not change, because no new data was collected. A seed with no matching signal gets <strong>no invented card</strong>: you get the closest snapshot signals instead, labelled as closest-match, not as evidence for your seed.</p>
-    <form id="genForm">
-      <label for="seed">Topic / keyword (optional)</label>
-      <input id="seed" type="text" maxlength="100" placeholder="e.g. android-tv, Rust, launcher" autocomplete="off">
-      <button id="genBtn" type="submit">Generate new ideas</button>
-      <button id="moreBtn" type="button">Generate more variants</button>
-      <button id="resetBtn" type="button">Back to default 10 cards</button>
-    </form>
-    <p id="genStatus" role="status" aria-live="polite"></p>
-  </section>
-
-  <section aria-label="Idea cards">
-    <h2>Idea cards</h2>
-    <p class="small">Interest signal formula (published, ESTIMATE — not a virality prediction): <code>50 × (avg stars/day ÷ max avg stars/day in snapshot) + 30 × (sample stars ÷ max sample stars) + 20 × (min(HN + dev.to title mentions, 5) ÷ 5)</code>, rounded to 0–100. Components are shown on each card.</p>
-    <label for="searchCards">Search cards</label>
-    <input id="searchCards" type="search" placeholder="Search by name, signal or pitch…" autocomplete="off">
-    <label for="sortCards">Sort by</label>
-    <select id="sortCards">
-      <option value="interest">Interest signal (high first)</option>
-      <option value="velocity">Velocity — avg stars/day (high first)</option>
-      <option value="stars">Sample stars (high first)</option>
-      <option value="name">Name (A–Z)</option>
-    </select>
-    <div id="cards" class="cards"></div>
-  </section>
-
-  <section aria-label="About the evidence">
+  <section aria-label="What this evidence is and is not">
     <h2>What this evidence is — and is not</h2>
     <ul>
-      <li><strong>Is:</strong> a dated sample (first 30 GitHub Search results for repos created after 2026-10-17, sorted by stars), plus 10 HN Algolia stories and 10 dev.to articles from the same build.</li>
-      <li><strong>Is not:</strong> an official trending feed, a complete market survey, or proof that a gap exists. Competitor rows are the top matches <em>in this snapshot sample</em>, not a global top 3.</li>
-      <li><strong>Names on cards are suggestions only.</strong> Their npm / PyPI / domain availability was not checked here.</li>
+      <li><strong>Is:</strong> GitHub Search results for repos created in the last 7 days, sorted by stars, fetched live from your browser (no key, cached 1 hour), or — only if live search fails — the dated snapshot in <code>data/snapshot.json</code>, clearly labelled as a fallback with its date.</li>
+      <li><strong>Is not:</strong> an official trending feed, a complete market survey, or proof that a gap exists. Competitors are other repos <em>in the fetched set</em> with the same language or a shared topic, not a global top 3.</li>
+      <li><strong>Angles are hypotheses</strong> based only on the source repo's listed topics and language. A missing topic is not proof the repo lacks a feature — topics are not a feature list.</li>
+      <li><strong>Names on ideas are suggestions only.</strong> Their npm / PyPI / domain availability was not checked here.</li>
+      <li><strong>Rate limits:</strong> unauthenticated GitHub Search is limited (about 10 searches/minute per IP in practice). If you hit it, the page says “rate-limited” and falls back to the snapshot — it never invents repos.</li>
     </ul>
-    <p id="sources"></p>
+    <p id="sourcesNote" class="small"></p>
   </section>
 </main>
 
 <footer>
-  <p>TrendGap — live at hydope.github.io/TrendGap. See <a href="README.md">README</a> for how the snapshot is built and the rename note.</p>
+  <p>TrendGap v5. Live at hydope.github.io/TrendGap. No backend, no secrets, no key required. Formerly RepoRadar — renamed because RepoRadar was taken (see README). If this page ever looks stale, close the tab completely and reopen, or add <code>?v=</code> with today's date to the URL.</p>
 </footer>
-
-<script type="module" src="app.js?v=20261024-2"></script>
+<script type="module" src="app.js?v=20261024-3"></script>
 </body>
 </html>

@@ -1,119 +1,166 @@
-const $ = (s) => document.querySelector(s);
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const fmtDate = (d) => { try { return new Date(d).toISOString().slice(0, 10); } catch { return 'unknown date'; } };
-const clean = (s) => String(s).replace(/[^A-Za-z0-9]+/g, ' ').trim().split(' ').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join('');
-const SUFFIXES = ['Kit', 'Lens', 'Forge', 'Flow', 'Scope', 'Lab', 'Base', 'Wave', 'Pilot', 'Dock'];
-const PITCHES = [
-  (sig, top) => `A focused ${sig} tool that does one job well, inspired by ${top} — small, documented, and aimed at the use the top repos leave rough.`,
-  (sig, top) => `A starter + workflow for ${sig} work, built around what made ${top} spread — with the setup friction removed.`,
-  (sig, top) => `A practical ${sig} utility for everyday builders, taking the core idea behind ${top} and cutting it down to a single clear job.`,
-  (sig, top) => `A ${sig} helper that packages the pattern behind ${top} so a new project can start from a working example, not a blank page.`,
-  (sig, top) => `A narrow ${sig} tool for a specific audience, learning from ${top} and deliberately skipping the features that bloat it.`,
-];
+// TrendGap v5 — full rewrite. Live GitHub Search first, snapshot only as fallback.
+// No build step, no backend, no secrets, no key. Ideas are SUGGESTIONS;
+// only evidence numbers are data; angles are hypotheses, never proven gaps.
+// GitHub has NO official trending API — "trending now" here means repos
+// created in the last 7 days, sorted by stars in GitHub Search.
 
-function matchingRepos(snap, sig) {
-  return snap.repos.filter((r) => r.language === sig.name || (r.topics || []).includes(sig.name.toLowerCase()) || (r.topics || []).includes(sig.name));
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmtDate = (d) => { try { return new Date(d).toISOString().slice(0, 10); } catch { return "unknown date"; } };
+const clean = (s) => String(s || "").replace(/[^A-Za-z0-9]+/g, " ").trim().split(" ").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join("");
+const CACHE_KEY = "trendgap-v5-live";
+const CACHE_TTL = 60 * 60 * 1000;
+
+function date7DaysAgo() {
+  const d = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  return d.toISOString().slice(0, 10);
 }
-function signalStats(snap, sig) {
-  const m = matchingRepos(snap, sig);
-  const total = m.reduce((a, r) => a + r.stars, 0);
-  const avgVel = m.length ? m.reduce((a, r) => a + r.stars_per_day, 0) / m.length : 0;
-  return { m, total, avgVel, mentions: sig.hn_mentions + sig.devto_mentions };
+function ageDays(createdAt) {
+  const ms = Date.now() - new Date(createdAt).getTime();
+  return Math.max(1, Math.floor(ms / 86400000));
 }
-function buildCardsFromSignals(snap, signalList, offset) {
-  // Deterministic: signals sorted by count, then total stars — no preset stack, no randomness.
-  // offset shifts the name suffix and pitch template, so "Generate more variants"
-  // produces new names/pitches from the SAME evidence (evidence numbers do not change).
-  const withStats = signalList.map((sig) => ({ sig, ...signalStats(snap, sig) }));
-  withStats.sort((a, b) => (b.sig.count_in_snapshot - a.sig.count_in_snapshot) || (b.total - a.total) || a.sig.name.localeCompare(b.sig.name));
-  // Interest scores must be comparable across views, so normalise against
-  // the FULL snapshot, not the currently filtered set. (Bug found by the
-  // 2026-10-24 browser check: Rust scored 29/80/51 in different views
-  // while its evidence components never changed.)
-  const allStats = snap.rising.map((sig) => signalStats(snap, sig));
-  const maxVel = Math.max(1, ...allStats.map((x) => x.avgVel));
-  const maxTotal = Math.max(1, ...allStats.map((x) => x.total));
-  return withStats.slice(0, 10).map((x, i) => {
-    const top = [...x.m].sort((a, b) => b.stars - a.stars)[0];
-    const score = Math.round(50 * (x.avgVel / maxVel) + 30 * (x.total / maxTotal) + 20 * (Math.min(x.mentions, 5) / 5));
-    const comps = [...x.m].sort((a, b) => b.stars - a.stars).slice(0, 3);
-    return {
-      name: clean(x.sig.name) + SUFFIXES[(i + offset) % SUFFIXES.length],
-      signal: x.sig.name, kind: x.sig.kind, score, avgVel: x.avgVel, total: x.total, mentions: x.mentions,
-      hn: x.sig.hn_mentions, devto: x.sig.devto_mentions,
-      pitch: PITCHES[(i + offset) % PITCHES.length](x.sig.name, top ? top.full_name : 'the snapshot sample'),
-      topRepo: top || null, comps,
-      hypothesis: top
-        ? `Differentiation hypothesis (not proven): focus on the narrow job inside “${esc(top.description || top.full_name)}” and ship it with better docs and a single demo, instead of matching the top repos feature-for-feature.`
-        : 'Differentiation hypothesis (not proven): no matching repo in this snapshot sample — verify against a wider search before building.',
-    };
-  });
+function normalizeApiRepo(item) {
+  const age = ageDays(item.created_at);
+  return {
+    full_name: item.full_name, name: item.name, html_url: item.html_url,
+    description: item.description || "", language: item.language || "Unknown",
+    topics: item.topics || [], stars: item.stargazers_count || 0,
+    forks: item.forks_count || 0, created_at: item.created_at,
+    pushed_at: item.pushed_at, updated_at: item.updated_at,
+    stars_per_day: Math.round((item.stargazers_count || 0) / age * 10) / 10, age_days: age,
+  };
 }
-function buildCards(snap) { return buildCardsFromSignals(snap, snap.rising, 0); }
-// Evidence-only seed matching: a seed selects snapshot signals by name.
-// It never creates evidence. If nothing matches, the caller must show the
-// closest signals and label them as closest-match, not as seed evidence.
-function seedSignals(snap, seedRaw) {
-  const seed = String(seedRaw || "").trim().toLowerCase();
-  if (!seed) return { mode: "all", list: snap.rising, closest: [] };
-  const words = seed.split(/[^a-z0-9]+/).filter((w) => w.length >= 2);
-  const matched = snap.rising.filter((sig) => {
-    const name = sig.name.toLowerCase();
-    return name.includes(seed) || seed.includes(name) ||
-      words.some((w) => name.includes(w) || w.includes(name));
-  });
-  if (matched.length) return { mode: "seed", list: matched, closest: [] };
-  const closest = [...snap.rising]
-    .sort((a, b) => (b.count_in_snapshot - a.count_in_snapshot) || a.name.localeCompare(b.name))
-    .slice(0, 3);
-  return { mode: "closest", list: [], closest };
+function normalizeSnapshotRepo(r) {
+  const age = r.age_days || ageDays(r.created_at);
+  return {
+    full_name: r.full_name, name: r.name, html_url: r.html_url,
+    description: r.description || "", language: r.language || "Unknown",
+    topics: r.topics || [], stars: r.stars || 0, forks: r.forks || 0,
+    created_at: r.created_at, pushed_at: r.pushed_at, updated_at: r.updated_at,
+    stars_per_day: r.stars_per_day ?? Math.round((r.stars || 0) / age * 10) / 10, age_days: age,
+  };
 }
-// Full repo package, GitNym-style: one input -> name + pitch + README +
-// features + MVP + evidence + competitors + exports. Only the evidence
-// numbers are data; name, pitch, features and stack are SUGGESTIONS.
-// If no snapshot signal matches, the package is built from the closest
-// signals and labelled closest-match — it is never called "trending"
-// for a seed with no evidence.
-function packageFor(snap, snapDate, descRaw, topicRaw, variant) {
-  const desc = String(descRaw || "").trim();
-  const topic = String(topicRaw || "").trim();
-  const res = topic ? seedSignals(snap, topic) : (desc ? seedSignals(snap, desc) : { mode: "all", list: snap.rising, closest: [] });
-  const mode = res.mode;
-  const list = mode === "closest" ? res.closest : res.list;
-  if (!list.length) return { error: "No data yet — this snapshot is empty. No package can be generated, and none is invented here." };
-  const evidenceCards = buildCardsFromSignals(snap, list, variant);
-  const ev = evidenceCards[0];
-  if (!ev) return { error: "No evidence card could be built from this snapshot. Nothing is invented here." };
-  const stop = new Set(["a", "the", "app", "for", "with", "and", "to", "make", "build"]);
-  const words = desc.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length >= 2 && !stop.has(w));
-  const baseWord = words[0] || ev.signal;
-  let name = clean(baseWord) + SUFFIXES[variant % SUFFIXES.length];
+function loadCache() {
+  try { const c = JSON.parse(localStorage.getItem(CACHE_KEY) || "null"); return c && Date.now() - c.fetchedAt < CACHE_TTL ? c : null; } catch { return null; }
+}
+function saveCache(repos) {
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify({ fetchedAt: Date.now(), repos })); } catch { /* cache optional */ }
+}
+async function fetchJson(url, timeoutMs) {
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), timeoutMs || 10000);
+  try {
+    const res = await fetch(url, { signal: ctl.signal, headers: { Accept: "application/vnd.github+json" } });
+    clearTimeout(timer);
+    return res;
+  } catch (e) { clearTimeout(timer); throw e; }
+}
+function githubSearchUrl(keywords) {
+  const u = new URL("https://api.github.com/search/repositories");
+  const q = keywords ? `${keywords} created:>${date7DaysAgo()}` : `created:>${date7DaysAgo()}`;
+  u.searchParams.set("q", q);
+  u.searchParams.set("sort", "stars");
+  u.searchParams.set("order", "desc");
+  u.searchParams.set("per_page", "20");
+  return u.toString();
+}
+
+// ---- Angles: chosen from the repo's own topics/language ONLY. A missing
+// topic is not proof the repo lacks a feature — the hypothesis text says so.
+const WEB_LANGS = new Set(["javascript", "typescript"]);
+const ANGLE_DEFS = [
+  { key: "mobile", word: "Mobile", label: "Mobile version", audience: "phones",
+    applies: (r) => WEB_LANGS.has((r.language || "").toLowerCase()) && !hasTopic(r, ["mobile", "android", "ios", "react-native", "flutter"]),
+    why: (r) => `no mobile topic (mobile/android/ios) is listed for ${r.full_name}` },
+  { key: "cli", word: "CLI", label: "Command-line version", audience: "the terminal",
+    applies: (r) => !hasTopic(r, ["cli", "command-line", "terminal"]),
+    why: (r) => `no cli/command-line topic is listed for ${r.full_name}` },
+  { key: "selfhosted", word: "SelfHosted", label: "Self-hosted alternative", audience: "your own server",
+    applies: (r) => (r.language || "").toLowerCase() === "python" && hasTopic(r, ["api"]),
+    why: (r) => `${r.full_name} is Python and lists an api topic` },
+  { key: "offline", word: "Offline", label: "Offline-first variant", audience: "no-connection use",
+    applies: (r) => !hasTopic(r, ["offline", "pwa", "local-first"]),
+    why: (r) => `no offline/local-first topic is listed for ${r.full_name}` },
+  { key: "starter", word: "Starter", label: "Beginner-friendly starter", audience: "first-time users",
+    applies: () => true, why: (r) => `${r.full_name} is a focused tool that a starter could make approachable` },
+  { key: "team", word: "Team", label: "Team edition", audience: "small teams",
+    applies: () => true, why: (r) => `${r.full_name} is a focused tool that a team edition could extend` },
+];
+function hasTopic(r, names) {
+  const t = new Set((r.topics || []).map((x) => String(x).toLowerCase()));
+  return names.some((n) => t.has(n));
+}
+function anglesFor(repo) { return ANGLE_DEFS.filter((a) => a.applies(repo)); }
+function descShort(repo) {
+  const d = (repo.description || "").trim();
+  if (!d) return "No description listed on GitHub.";
+  return d.length > 140 ? d.slice(0, 137).trim() + "…" : d;
+}
+function ideaName(repo, angle) {
+  const full = clean(repo.name);
+  let name = full + angle.word;
+  if (name.length > 24) {
+    const first = clean(repo.name.split(/[-_]/)[0]);
+    name = first + angle.word;
+  }
   if (name.length > 24) name = name.slice(0, 24);
-  const pitch = PITCHES[variant % PITCHES.length](ev.signal, ev.topRepo ? ev.topRepo.full_name : "the snapshot sample");
-  const stack = ev.topRepo && ev.topRepo.language ? ev.topRepo.language : ev.signal;
+  return name;
+}
+function ideaFor(repo, variant) {
+  const angles = anglesFor(repo);
+  const angle = angles[variant % angles.length];
+  const name = ideaName(repo, angle);
+  const article = /^[aeiou]/i.test(angle.label) ? "An" : "A";
+  const pitch = `${article} ${angle.label.toLowerCase()} spin-off of ${repo.full_name}: ${descShort(repo)}`;
+  return { repo, angle, name, pitch };
+}
+function competitorsFor(repo, repos) {
+  const lang = (repo.language || "").toLowerCase();
+  const topics = new Set((repo.topics || []).map((t) => String(t).toLowerCase()));
+  return repos
+    .filter((r) => r.full_name !== repo.full_name &&
+      ((r.language || "").toLowerCase() === lang ||
+       (r.topics || []).some((t) => topics.has(String(t).toLowerCase()))))
+    .sort((a, b) => b.stars - a.stars)
+    .slice(0, 3);
+}
+function interestScore(repo, repos) {
+  const maxVel = Math.max(1, ...repos.map((r) => r.stars_per_day));
+  const maxStars = Math.max(1, ...repos.map((r) => r.stars));
+  return Math.round(50 * (repo.stars_per_day / maxVel) + 50 * (repo.stars / maxStars));
+}
+function packageFor(repo, variant, repos, opts) {
+  const idea = ideaFor(repo, variant);
+  const angle = idea.angle;
+  const score = interestScore(repo, repos);
+  const comps = competitorsFor(repo, repos);
+  const topTopic = (repo.topics || [])[0] || repo.language;
   const features = [
-    `One clear job in ${ev.signal}: the narrow job inside ${ev.topRepo ? ev.topRepo.full_name : "the snapshot evidence"}, not a clone of it.`,
-    "A worked example and docs first — setup friction removed, so a new user can run the demo in minutes.",
-    "A single demo built from the snapshot evidence, with the evidence numbers shown in the README.",
-    "Small scope by design: no accounts, payments, AI generation, or mobile app in the MVP.",
+    `${angle.label} build of the core job in ${repo.full_name} — ${descShort(repo)} — rebuilt for ${angle.audience}.`,
+    `Same scope, smaller surface: ${repo.language} implementation around its ${topTopic} topic, with one working demo and docs first.`,
+    `Demo from the source repo's own job: a minimal version of what ${repo.full_name} does, without copying its code or claiming its features.`,
   ];
-  const comps = ev.comps.map((r) => `${r.full_name} — ${r.stars} stars, ${r.stars_per_day}/day, last activity ${fmtDate(r.pushed_at || r.updated_at)}`).join("\n");
-  const status = mode === "closest"
-    ? `No trending evidence in this snapshot for “${topic || desc}”. This package is built from the closest snapshot signals (${list.map((s) => s.name).join(", ")}) and is labelled closest-match — it is NOT presented as trending for your input.`
-    : mode === "seed"
-      ? `Full repo idea generated from snapshot evidence for “${topic || desc}”. Only the evidence numbers below are data; name, pitch, features and stack are suggestions.`
-      : `Full repo idea generated from the strongest snapshot evidence. Only the evidence numbers below are data; name, pitch, features and stack are suggestions.`;
-  const markdown = `# ${name}\n\n${pitch}\n\nSUGGESTION — only the evidence numbers are data.\n\n## Problem / solution\n\nA focused ${ev.signal} tool that does one job well, inspired by ${ev.topRepo ? ev.topRepo.full_name : "the snapshot sample"}.\n\n## Features (suggestions)\n\n${features.map((f) => `- ${f}`).join("\n")}\n\n## Suggested stack\n\n${stack} (from the top matching repo's language in the snapshot sample — a suggestion, not evidence).\n\n## 72-hour MVP\n\nBuild: core in ${ev.signal}; one demo from the snapshot evidence; docs + worked example.\nCut: accounts, payments, AI generation, mobile app.\n\n## Evidence (snapshot ${snapDate})\n\n- Signal: ${ev.signal} (${ev.kind})\n- Interest signal: ${ev.score}/100 (ESTIMATE, global snapshot normalisation)\n- Avg velocity: ${ev.avgVel.toFixed(1)}/day; sample stars: ${ev.total}; HN title mentions: ${ev.hn}; dev.to title mentions: ${ev.devto}\n- Triggering repo: ${ev.topRepo ? `${ev.topRepo.full_name} (${ev.topRepo.stars} stars, created ${fmtDate(ev.topRepo.created_at)})` : "none in snapshot sample"}\n- Top competitors in snapshot sample:\n${comps || "  None in this snapshot sample — marked unchecked, not “no competitors exist”."}\n\n## Differentiation hypothesis (not proven)\n\n${ev.hypothesis.replace(/<[^>]+>/g, "")}\n`;
-  const html = `<article class="card">
-    <h3>${esc(name)} <span class="small">— SUGGESTION${mode === "closest" ? ' · <strong>Closest-match — NOT trending evidence for your input</strong>' : ''}</span></h3>
-    <p>${esc(pitch)}</p>
+  const hypothesis = `Hypothesis (based only on listed topics/language, NOT a proven gap): ${angle.why(repo)}, so a ${angle.label.toLowerCase()} is a possible angle. Topics are not a feature list — the repo may already do this in a way GitHub's API does not show. Verify against the repo itself before building.`;
+  const explorationNote = opts && opts.exploration
+    ? `EXPLORATION ONLY — ${repo.full_name} is a trending repo shown for exploration. It is NOT evidence for your search query and is unrelated to it.\n\n`
+    : "";
+  const markdown = `# ${idea.name}\n\n${idea.pitch}\n\nSUGGESTION — only the evidence numbers are data.\n\n${explorationNote}## README outline\n\nProblem → Solution → Features → Demo → Evidence → Differentiation.\n\n## Problem / solution\n\n${idea.pitch}\n\n## Features (suggestions, tied to the source repo — not evidence)\n\n${features.map((f) => `- ${f}`).join("\n")}\n\n## Suggested stack\n\n${repo.language} (the source repo's language, from GitHub — the reason is that the idea is a spin-off of a ${repo.language} repo, not a market claim).\n\n## 72-hour MVP\n\nBuild: core ${angle.label.toLowerCase()} in ${repo.language}; one demo; docs + worked example.\nCut: accounts, payments, AI generation, mobile app (unless the angle itself is mobile — then cut accounts, payments, AI generation).\n\n## Evidence\n\n- Source repo: ${repo.full_name} — ${repo.html_url}\n- Stars: ${repo.stars}; stars/day: ${repo.stars_per_day} (stars ÷ ${repo.age_days} days); created ${fmtDate(repo.created_at)}; last push ${fmtDate(repo.pushed_at || repo.updated_at)}\n- Language: ${repo.language}; topics: ${(repo.topics || []).join(", ") || "none listed"}\n- Interest signal: ${score}/100 (ESTIMATE, relative to the ${repos.length} repos fetched, not to all of GitHub)\n- Source: ${opts && opts.sourceLabel ? opts.sourceLabel : "fetched set"}\n- Top competitors in fetched set:\n${comps.length ? comps.map((r) => `  - ${r.full_name} — ${r.stars} stars, ${r.stars_per_day}/day, last push ${fmtDate(r.pushed_at || r.updated_at)}`).join("\n") : "  None in this fetched set — marked unchecked, not “no competitors exist”."}\n\n## Differentiation hypothesis (not proven)\n\n${hypothesis}\n`;
+  const html = `<article class="package">
+    <h3>${esc(idea.name)} <span class="small">— SUGGESTION${opts && opts.exploration ? ' · <strong>Exploration only — unrelated to your query</strong>' : ''}</span></h3>
+    <p>${esc(idea.pitch)}</p>
+    <p><strong>Angle (hypothesis):</strong> ${esc(angle.label)} — ${esc(hypothesis)}</p>
     <p><strong>README outline:</strong> Problem → Solution → Features → Demo → Evidence → Differentiation. The full draft is in “Copy full package” below.</p>
-    <p><strong>Features (suggestions, not evidence):</strong></p><ul>${features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
-    <p><strong>Suggested stack:</strong> ${esc(stack)} (suggestion — from the top matching repo's language, not a market claim).</p>
-    <p><strong>72-hour MVP — Build:</strong> core in ${esc(ev.signal)}; one demo from the snapshot evidence; docs + worked example. <strong>Cut:</strong> accounts, payments, AI generation, mobile app.</p>
-    <p><strong>Evidence (snapshot ${esc(snapDate)}):</strong> Signal ${esc(ev.signal)} (${esc(ev.kind)}); Interest signal ${ev.score}/100 (ESTIMATE); avg velocity ${ev.avgVel.toFixed(1)}/day; sample stars ${ev.total}; HN mentions ${ev.hn}; dev.to mentions ${ev.devto}; triggering repo ${ev.topRepo ? esc(ev.topRepo.full_name) + ' (' + ev.topRepo.stars + ' stars, created ' + fmtDate(ev.topRepo.created_at) + ')' : 'none in snapshot sample'}.</p>
-    <p><strong>Top competitors in snapshot sample:</strong></p><ul>${ev.comps.length ? ev.comps.map((r) => `<li><a href="${esc(r.html_url)}">${esc(r.full_name)}</a> — ${r.stars} stars, ${r.stars_per_day}/day, last activity ${fmtDate(r.pushed_at || r.updated_at)}.</li>`).join("") : '<li>None in this snapshot sample — marked unchecked, not “no competitors exist”.</li>'}</ul>
-    <p><strong>Differentiation hypothesis:</strong> ${ev.hypothesis}</p>
+    <p><strong>Features (suggestions, tied to the source repo):</strong></p><ul>${features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+    <p><strong>Suggested stack:</strong> ${esc(repo.language)} — the source repo's language (a suggestion, not a market claim).</p>
+    <p><strong>72-hour MVP — Build:</strong> core ${esc(angle.label.toLowerCase())} in ${esc(repo.language)}; one demo; docs + worked example. <strong>Cut:</strong> accounts, payments, AI generation${angle.key === "mobile" ? "" : ", mobile app"}.</p>
+    <div class="evidence">
+      <p><strong>Evidence:</strong> Source repo <a href="${esc(repo.html_url)}" target="_blank" rel="noopener">${esc(repo.full_name)}</a> — ${repo.stars} stars, ${repo.stars_per_day}/day (stars ÷ ${repo.age_days} days), created ${fmtDate(repo.created_at)}, last push ${fmtDate(repo.pushed_at || repo.updated_at)}.</p>
+      <p>Language: ${esc(repo.language)}; topics: ${esc((repo.topics || []).join(", ") || "none listed")}.</p>
+      <p>Interest signal: ${score}/100 (ESTIMATE, relative to the ${repos.length} repos fetched, not to all of GitHub).</p>
+      <p>Source: ${esc(opts && opts.sourceLabel ? opts.sourceLabel : "fetched set")}.</p>
+      <p><strong>Top competitors in fetched set:</strong></p><ul>${comps.length ? comps.map((r) => `<li><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a> — ${r.stars} stars, ${r.stars_per_day}/day, last push ${fmtDate(r.pushed_at || r.updated_at)}.</li>`).join("") : '<li>None in this fetched set — marked unchecked, not “no competitors exist”.</li>'}</ul>
+    </div>
+    <p><strong>Differentiation hypothesis:</strong> ${esc(hypothesis)}</p>
     <div class="export">
       <button type="button" data-pkg-export="full">Copy full package</button>
       <button type="button" data-pkg-export="readme">Copy README draft</button>
@@ -122,224 +169,224 @@ function packageFor(snap, snapDate, descRaw, topicRaw, variant) {
       <button type="button" data-pkg-export="issue">Copy as GitHub issue/plan</button>
     </div></article>`;
   return {
-    html, markdown, status,
-    hn: `Show HN: ${name} — ${pitch}`,
-    x: `${name}: ${pitch} (Suggestion — evidence in TrendGap snapshot, not proof of a gap.)`,
-    issue: `## Plan: ${name}\n\nPitch: ${pitch}\n\n72-hour MVP — Build: core, one demo, docs + example. Cut: accounts, payments, AI generation, mobile app.\n\nInterest signal: ${ev.score}/100 (ESTIMATE). Evidence: signal ${ev.signal}, ${ev.avgVel.toFixed(1)}/day, ${ev.total} sample stars, snapshot ${snapDate}. Differentiation hypothesis: see package — hypothesis, not proven.`,
+    html, markdown, repo, angle, score,
+    hn: `Show HN: ${idea.name} — ${idea.pitch}`,
+    x: `${idea.name}: ${idea.pitch} (Suggestion — evidence in TrendGap, not proof of a gap.)`,
+    issue: `## Plan: ${idea.name}\n\nPitch: ${idea.pitch}\n\n72-hour MVP — Build: core, one demo, docs + example. Cut: accounts, payments, AI generation.\n\nInterest signal: ${score}/100 (ESTIMATE, relative to the fetched set). Differentiation hypothesis: see package — hypothesis, not proven.`,
   };
-}
-function drawHeat(canvas, snap, cards) {
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return;
-  const w = canvas.width, rows = Math.max(cards.length, 1), rh = Math.floor(300 / rows);
-  ctx.clearRect(0, 0, w, canvas.height);
-  ctx.font = '13px system-ui'; ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--fg') || '#111';
-  ctx.fillText('Signal', 10, 22); ctx.fillText('Rising (velocity)', 260, 22); ctx.fillText('Saturated (count in sample)', 560, 22);
-  const maxVel = Math.max(1, ...cards.map((c) => c.avgVel));
-  const maxCount = Math.max(1, ...snap.rising.slice(0, 10).map((s) => s.count_in_snapshot));
-  cards.forEach((c, i) => {
-    const y = 30 + i * rh;
-    const sig = snap.rising.find((s) => s.name === c.signal);
-    const rising = c.avgVel / maxVel, sat = (sig ? sig.count_in_snapshot : 1) / maxCount;
-    ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--fg') || '#111';
-    ctx.fillText(c.signal.slice(0, 22), 10, y + rh / 2);
-    ctx.fillStyle = `rgba(26,92,58,${0.15 + 0.85 * rising})`; ctx.fillRect(260, y + 4, 220 * rising + 20, rh - 8);
-    ctx.fillStyle = `rgba(160,60,20,${0.15 + 0.85 * sat})`; ctx.fillRect(560, y + 4, 220 * sat + 20, rh - 8);
-    ctx.fillStyle = '#fff'; ctx.fillText(`${c.avgVel.toFixed(1)}/day`, 266, y + rh / 2); ctx.fillText(`${sig ? sig.count_in_snapshot : 0} in sample`, 566, y + rh / 2);
-  });
 }
 async function copyText(btn, text) {
   try { await navigator.clipboard.writeText(text); } catch {
-    const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove();
+    const t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove();
   }
-  const old = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = old; }, 1500);
-}
-function cardHtml(c, snapDate) {
-  const compHtml = c.comps.length ? c.comps.map((r) => `<li><a href="${esc(r.html_url)}">${esc(r.full_name)}</a> — ${r.stars} stars, ${r.stars_per_day}/day, last activity ${fmtDate(r.pushed_at || r.updated_at)}.</li>`).join('')
-    : '<li>None in this snapshot sample — marked unchecked, not “no competitors exist”.</li>';
-  const pad = c.comps.length < 3 ? `<li>${3 - c.comps.length} further competitor slot(s): unchecked in this snapshot sample.</li>` : '';
-  return `<article class="card" data-signal="${esc(c.signal)}">
-    <h3>${esc(c.name)} <span class="small">— SUGGESTION</span>${c.contextLabel ? ` <span class="small"><strong>${esc(c.contextLabel)}</strong></span>` : ''}</h3>
-    <p>${esc(c.pitch)}</p>
-    <p><strong>Interest signal: ${c.score}/100 — ESTIMATE, not a virality prediction.</strong><br><span class="small">Components: avg velocity ${c.avgVel.toFixed(1)}/day; sample stars ${c.total}; HN title mentions ${c.hn}; dev.to title mentions ${c.devto}. Triggering evidence: ${c.topRepo ? esc(c.topRepo.full_name) + ' (' + c.topRepo.stars + ' stars, created ' + fmtDate(c.topRepo.created_at) + ')' : 'none in snapshot sample'}; snapshot generated ${snapDate}.</span></p>
-    <p><strong>72-hour MVP — Build:</strong> core in ${esc(c.signal)}; one demo from the snapshot evidence; docs + worked example. <strong>Cut:</strong> accounts, payments, AI generation, mobile app.</p>
-    <p><strong>Top 3 in snapshot sample:</strong></p><ul>${compHtml}${pad}</ul>
-    <p><strong>Differentiation hypothesis:</strong> ${c.hypothesis}</p>
-    <div class="export">
-      <button type="button" data-export="readme">Copy README hook</button>
-      <button type="button" data-export="hn">Copy HN title</button>
-      <button type="button" data-export="x">Copy X opener</button>
-      <button type="button" data-export="issue">Copy as GitHub issue/plan</button>
-    </div></article>`;
-}
-function exportText(kind, c) {
-  if (kind === 'readme') return `# ${c.name}\n\n${c.pitch}\n\nSUGGESTION — evidence numbers only are data. Interest signal ${c.score}/100 (ESTIMATE). See TrendGap snapshot for sources.`;
-  if (kind === 'hn') return `Show HN: ${c.name} — ${c.pitch}`;
-  if (kind === 'x') return `${c.name}: ${c.pitch} (Suggestion — evidence in TrendGap snapshot, not proof of a gap.)`;
-  return `## Plan: ${c.name}\n\nPitch: ${c.pitch}\n\n72-hour MVP — Build: core, one demo, docs + example. Cut: accounts, payments, AI generation, mobile app.\n\nInterest signal: ${c.score}/100 (ESTIMATE). Differentiation hypothesis: see TrendGap card — hypothesis, not proven.`;
+  const old = btn.textContent; btn.textContent = "Copied"; setTimeout(() => { btn.textContent = old; }, 1500);
 }
 
 async function main() {
-  const params = new URLSearchParams(location.search);
-  const darkParam = params.get('dark');
-  if (darkParam === '1' || (darkParam !== '0' && localStorage.getItem('trendgap-dark') === '1')) document.body.classList.add('dark');
-  $('#darkToggle').textContent = document.body.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-  $('#darkToggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    localStorage.setItem('trendgap-dark', document.body.classList.contains('dark') ? '1' : '0');
-    $('#darkToggle').textContent = document.body.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-    const u = new URLSearchParams(location.search); u.set('dark', document.body.classList.contains('dark') ? '1' : '0'); history.replaceState(null, '', '?' + u.toString());
-    render();
-  });
+  // Dark mode.
+  const savedTheme = localStorage.getItem("trendgap-theme");
+  const applyTheme = (t) => { document.body.classList.toggle("dark", t === "dark"); $("darkToggle").textContent = t === "dark" ? "Light mode" : "Dark mode"; };
+  let theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  applyTheme(theme);
+  $("darkToggle").addEventListener("click", () => { theme = theme === "dark" ? "light" : "dark"; localStorage.setItem("trendgap-theme", theme); applyTheme(theme); });
 
-  let snap = null, render;
-  try {
-    const res = await fetch('data/snapshot.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('snapshot HTTP ' + res.status);
-    snap = await res.json();
-  } catch (e) {
-    $('#freshness').textContent = 'Snapshot could not be loaded. Serve this folder over HTTP (for example: python3 -m http.server) and reload — the page does not work from file:// for the snapshot fetch.';
-    $('#banner').hidden = false; $('#banner').textContent = 'No data yet — snapshot could not be loaded. Nothing below is presented as real data.';
-    return;
-  }
-  const gen = new Date(snap.generated_at);
-  const hours = Number.isFinite(gen.getTime()) ? (Date.now() - gen.getTime()) / 3600000 : NaN;
-  const snapDate = fmtDate(snap.generated_at);
-  const stale = Number.isFinite(hours) && hours > 24;
-  $('#freshness').textContent = Number.isFinite(hours)
-    ? `Snapshot updated ${hours < 1 ? 'less than 1h' : Math.floor(hours) + 'h'} ago (${snap.generated_at}). ${snap.sample_note || ''}`
-    : `Snapshot date unknown (${snap.generated_at}). Treat as stale.`;
-  if (stale || !Number.isFinite(hours)) { $('#banner').hidden = false; $('#banner').textContent = 'Stale snapshot (>24h old or undated) — numbers are from the last build, not live. Rebuild data/snapshot.json before relying on them.'; }
-  if (snap.unavailable_sources && snap.unavailable_sources.length) {
-    $('#liveNote').textContent = 'Unavailable at build time: ' + snap.unavailable_sources.map((s) => s.name + ' (' + s.reason + ')').join('; ') + '. The page degrades to the remaining snapshot sources.';
-  }
-  $('#sources').innerHTML = 'Sources at build time: ' + (snap.sources || []).map((s) => `${esc(s.name)} — ${esc(s.status)}`).join('; ') + '.';
-
-  const allCards = buildCards(snap);
-  let currentCards = allCards;
-  let variant = 0;
-  let searchText = "";
-  let sortMode = "interest";
-  // Default = all 10 card signals (from the snapshot top), so 10 cards show on load; user can deselect to filter.
-  const defaultSignals = allCards.map((c) => c.signal);
-  let selected = new Set((params.get('topics') ? params.get('topics').split(',').filter(Boolean) : defaultSignals));
-  const chipsEl = $('#chips');
-  let signals = [...new Set(allCards.map((c) => c.signal))];
-  function rebuildChips(cardList) {
-    chipsEl.innerHTML = "";
-    signals = [...new Set(cardList.map((c) => c.signal))];
-    selected = new Set(signals);
-    signals.forEach((sig) => {
-      const b = document.createElement('button'); b.type = 'button'; b.textContent = sig; b.setAttribute('aria-pressed', selected.has(sig) ? 'true' : 'false');
-      b.addEventListener('click', () => { selected.has(sig) ? selected.delete(sig) : selected.add(sig); syncUrl(); render(); });
-      chipsEl.appendChild(b);
-    });
-  }
-  rebuildChips(allCards);
-  $('#allChips').addEventListener('click', () => { selected = new Set(signals); syncUrl(); render(); });
-  function syncUrl() {
-    const u = new URLSearchParams(location.search);
-    u.set('topics', [...selected].join(',')); u.set('dark', document.body.classList.contains('dark') ? '1' : '0');
-    history.replaceState(null, '', '?' + u.toString());
-    [...chipsEl.children].forEach((b) => b.setAttribute('aria-pressed', selected.has(b.textContent) ? 'true' : 'false'));
-  }
-  // Generation signals for the current seed: seed matches, closest fallback, or all.
-  function generationSignals() {
-    const res = seedSignals(snap, $('#seed').value);
-    if (res.mode === "closest") return { list: res.closest, mode: "closest", closest: res.closest };
-    return { list: res.list, mode: res.mode, closest: [] };
-  }
-  function applyGeneration(offset, label) {
-    const gen = generationSignals();
-    currentCards = buildCardsFromSignals(snap, gen.list, offset);
-    // Closest-match cards must carry the label on the card itself, not
-    // only in the status line (browser check 2026-10-24 found the badge missing).
-    if (gen.mode === "closest") currentCards.forEach((c) => { c.contextLabel = "Closest-match — NOT evidence for your seed"; });
-    rebuildChips(currentCards);
-    syncUrl();
-    $('#genStatus').textContent = label(gen);
-    render();
-  }
-  $('#genForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    variant = 0;
-    if (!allCards.length) { $('#genStatus').textContent = 'No data yet — this snapshot is empty. No idea cards can be generated, and none are invented here.'; return; }
-    applyGeneration(0, (gen) => {
-      const seed = $('#seed').value.trim();
-      if (gen.mode === "closest") return `No evidence in this snapshot for “${seed}”. No card was invented for it. Showing closest snapshot signals instead: ${gen.closest.map((s) => s.name).join(', ')}. Evidence on these cards is for those signals, not for your seed.`;
-      if (gen.mode === "seed") return `Generated ${currentCards.length} new ideas from snapshot evidence for “${seed}”. Evidence numbers are from snapshot ${snapDate}, not new data — only the names and pitches are new.`;
-      return `Generated ${currentCards.length} new ideas from the full snapshot (no seed given). Evidence numbers are from snapshot ${snapDate}.`;
-    });
-  });
-  $('#moreBtn').addEventListener('click', () => {
-    if (!allCards.length) { $('#genStatus').textContent = 'No data yet — this snapshot is empty. No idea cards can be generated, and none are invented here.'; return; }
-    variant += 1;
-    applyGeneration(variant, (gen) => {
-      const seed = $('#seed').value.trim();
-      const base = gen.mode === "closest" ? `Closest snapshot signals for “${seed}”` : gen.mode === "seed" ? `Snapshot evidence for “${seed}”` : 'Full snapshot';
-      return `Variant ${variant + 1}: new names and pitches from the same evidence (${base}). Evidence numbers are unchanged — no new data was collected.`;
-    });
-  });
-  $('#resetBtn').addEventListener('click', () => {
-    variant = 0; currentCards = allCards; rebuildChips(allCards);
-    $('#genStatus').textContent = 'Back to the default 10 cards.';
-    render();
-  });
-  $('#searchCards').addEventListener('input', (e) => { searchText = e.target.value.trim().toLowerCase(); render(); });
-  $('#sortCards').addEventListener('change', (e) => { sortMode = e.target.value; render(); });
-  // Full repo package generator: one input -> everything in one package.
+  let trendingRepos = [];
+  let allRepos = [];
+  let mode = "trending"; // trending | search | search-empty | fallback
+  let currentQuery = "";
+  let exploration = false;
+  let sourceLabel = "loading…";
+  let selectedLang = null;
+  let sortMode = "stars";
+  let filterText = "";
+  let pkgRepo = null;
   let pkgVariant = 0;
   let pkg = null;
-  function renderPackage() {
-    const res = packageFor(snap, snapDate, $('#pkgDesc').value, $('#pkgTopic').value, pkgVariant);
-    if (res.error) { $('#packageStatus').textContent = res.error; $('#package').innerHTML = ""; pkg = null; return; }
-    pkg = res;
-    $('#packageStatus').textContent = res.status;
-    $('#package').innerHTML = res.html;
+
+  function setSource(text) { $("sourceStatus").textContent = text; }
+  function showBanner(text) { const b = $("banner"); if (text) { b.hidden = false; b.textContent = text; } else { b.hidden = true; } }
+
+  async function loadTrending() {
+    setSource("Loading trending repos (live GitHub Search)…");
+    showBanner("");
+    const cached = loadCache();
+    if (cached && cached.repos && cached.repos.length) {
+      const hours = ((Date.now() - cached.fetchedAt) / 3600000).toFixed(1);
+      trendingRepos = cached.repos.map(normalizeSnapshotRepo);
+      sourceLabel = `Live GitHub Search, cached ${hours}h ago (1h cache)`;
+      setSource(`Source: ${sourceLabel}.`);
+      return;
+    }
+    try {
+      const res = await fetchJson(githubSearchUrl(""));
+      if (res.status === 403 || res.status === 429) throw new Error("rate-limited");
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      trendingRepos = (data.items || []).map(normalizeApiRepo);
+      saveCache(trendingRepos);
+      sourceLabel = "Live GitHub Search just now (repos created in the last 7 days, sorted by stars)";
+      setSource(`Source: ${sourceLabel}.`);
+    } catch (e) {
+      // Fallback to the dated snapshot — labelled as fallback, never as live.
+      try {
+        const res = await fetch("data/snapshot.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("snapshot HTTP " + res.status);
+        const snap = await res.json();
+        trendingRepos = (snap.repos || []).map(normalizeSnapshotRepo);
+        sourceLabel = `Snapshot fallback from ${snap.generated_at || "unknown date"}`;
+        setSource(`Source: ${sourceLabel}.`);
+        showBanner(`Showing snapshot fallback from ${snap.generated_at || "unknown date"} — live search unavailable (${e.message}). Snapshot data is NOT live data.`);
+      } catch (e2) {
+        trendingRepos = [];
+        sourceLabel = "unavailable";
+        setSource("Source unavailable — live search and snapshot fallback both failed. No repos are shown, and none are invented.");
+        showBanner(`Could not load repos: live search failed (${e.message}) and snapshot fallback failed (${e2.message}).`);
+      }
+    }
   }
-  $('#pkgForm').addEventListener('submit', (e) => { e.preventDefault(); pkgVariant = 0; renderPackage(); });
-  // Click handler in addition to submit: a click must never fall through to
-  // a native form submit (which reloads to "/?" and clears the inputs) even
-  // if the submit path is ever bypassed. Enter in an input still works via submit.
-  $('#pkgGenBtn').addEventListener('click', () => { pkgVariant = 0; renderPackage(); });
-  $('#pkgMoreBtn').addEventListener('click', () => { pkgVariant += 1; renderPackage(); });
-  $('#package').addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-pkg-export]');
+
+  function filteredRepos() {
+    let list = [...allRepos];
+    if (selectedLang) list = list.filter((r) => (r.language || "Unknown") === selectedLang);
+    if (filterText) {
+      const q = filterText.toLowerCase();
+      list = list.filter((r) => `${r.full_name} ${r.description} ${r.language} ${(r.topics || []).join(" ")}`.toLowerCase().includes(q));
+    }
+    if (sortMode === "velocity") list.sort((a, b) => b.stars_per_day - a.stars_per_day);
+    else if (sortMode === "recent") list.sort((a, b) => new Date(b.created_at) - new Date(a.created_at) || b.stars - a.stars);
+    else list.sort((a, b) => b.stars - a.stars);
+    return list;
+  }
+  function renderLangs() {
+    const counts = new Map();
+    for (const r of allRepos) counts.set(r.language || "Unknown", (counts.get(r.language || "Unknown") || 0) + 1);
+    const langs = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+    $("langChips").innerHTML = "";
+    for (const [lang, n] of langs) {
+      const b = document.createElement("button");
+      b.type = "button"; b.textContent = `${lang} (${n})`; b.setAttribute("aria-pressed", selectedLang === lang ? "true" : "false");
+      b.addEventListener("click", () => { selectedLang = selectedLang === lang ? null : lang; renderAll(); });
+      $("langChips").appendChild(b);
+    }
+  }
+  function renderTrending() {
+    const list = filteredRepos();
+    $("trendingCount").textContent = list.length
+      ? `${list.length} repos shown from ${allRepos.length} fetched${mode === "search" ? ` for search “${currentQuery}”` : mode === "search-empty" ? " (exploration only — unrelated to your search)" : ""}.`
+      : "No repos match the current filter. Clear the filter or choose All languages.";
+    $("listHeading").textContent = mode === "search" ? `Search results for “${currentQuery}”` : mode === "search-empty" ? "Trending now (exploration only — unrelated to your search)" : "Trending now";
+    $("trendingList").innerHTML = list.map((r) => `<article class="reporow">
+      <h4><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a></h4>
+      <p>${esc(descShort(r))}</p>
+      <div class="stats">
+        <span class="stat">★ ${r.stars} stars</span>
+        <span class="stat">${r.stars_per_day}/day</span>
+        <span class="stat">${esc(r.language)}</span>
+        <span class="stat">created ${fmtDate(r.created_at)}</span>
+        <span class="stat">last push ${fmtDate(r.pushed_at || r.updated_at)}</span>
+      </div>
+      <p class="topic">Topics: ${esc((r.topics || []).join(", ") || "none listed")}</p>
+      <button type="button" data-gen-repo="${esc(r.full_name)}">Generate from this repo</button>
+    </article>`).join("");
+    $("trendingList").querySelectorAll("[data-gen-repo]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const repo = allRepos.find((r) => r.full_name === btn.dataset.genRepo);
+        if (repo) { renderPackage(repo, 0); $("packageSection").scrollIntoView({ behavior: "smooth" }); }
+      });
+    });
+  }
+  function renderIdeas() {
+    const top = [...filteredRepos()].sort((a, b) => b.stars - a.stars).slice(0, 10);
+    $("ideasList").innerHTML = top.map((r) => {
+      const idea = ideaFor(r, 0);
+      const score = interestScore(r, allRepos);
+      return `<article class="card">
+        <h3>${esc(idea.name)} <span class="small">— SUGGESTION</span></h3>
+        <p>${esc(idea.pitch)}</p>
+        <p class="small"><strong>Angle (hypothesis):</strong> ${esc(idea.angle.label)} — based only on listed topics/language, not a proven gap.</p>
+        <p class="small">From <a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a> — ${r.stars} stars, ${r.stars_per_day}/day, interest ${score}/100 (relative to the ${allRepos.length} fetched).</p>
+        <button type="button" data-gen-repo="${esc(r.full_name)}">Open full package</button>
+      </article>`;
+    }).join("");
+    $("ideasList").querySelectorAll("[data-gen-repo]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const repo = allRepos.find((r) => r.full_name === btn.dataset.genRepo);
+        if (repo) { renderPackage(repo, 0); $("packageSection").scrollIntoView({ behavior: "smooth" }); }
+      });
+    });
+  }
+  function renderAll() { renderLangs(); renderTrending(); renderIdeas(); }
+  function renderPackage(repo, variant) {
+    pkgRepo = repo; pkgVariant = variant;
+    pkg = packageFor(repo, variant, allRepos, { exploration, sourceLabel });
+    $("packageStatus").textContent = exploration
+      ? "Exploration package — this repo is unrelated to your search query. It is not evidence for it."
+      : `Package generated from ${repo.full_name}. Evidence numbers are from the fetched set; name, pitch, features and stack are suggestions.`;
+    $("package").innerHTML = pkg.html;
+    $("variantBtn").disabled = false;
+  }
+  $("variantBtn").addEventListener("click", () => {
+    if (!pkgRepo) return;
+    renderPackage(pkgRepo, pkgVariant + 1);
+  });
+  $("package").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-pkg-export]");
     if (!btn || !pkg) return;
     const kind = btn.dataset.pkgExport;
     const text = kind === "full" || kind === "readme" ? pkg.markdown : kind === "hn" ? pkg.hn : kind === "x" ? pkg.x : pkg.issue;
     copyText(btn, text);
   });
-  render = () => {
-    let shown = selected.size ? currentCards.filter((c) => selected.has(c.signal)) : currentCards;
-    if (searchText) shown = shown.filter((c) => `${c.name} ${c.signal} ${c.pitch}`.toLowerCase().includes(searchText));
-    if (sortMode === "velocity") shown = [...shown].sort((a, b) => b.avgVel - a.avgVel);
-    else if (sortMode === "stars") shown = [...shown].sort((a, b) => b.total - a.total);
-    else if (sortMode === "name") shown = [...shown].sort((a, b) => a.name.localeCompare(b.name));
-    else shown = [...shown].sort((a, b) => b.score - a.score);
-    if (!allCards.length) {
-      $('#emptyNote').hidden = false; $('#emptyNote').textContent = 'No data yet — this snapshot is empty. No idea cards can be generated from an empty snapshot, and none are invented here.';
-      $('#cards').innerHTML = ''; return;
-    }
-    $('#emptyNote').hidden = true;
-    $('#cards').innerHTML = shown.map((c) => cardHtml(c, snapDate)).join('') || '<p>No cards match the selected topics or search. Choose “All” to reset, or clear the search.</p>';
-    drawHeat($('#heat'), snap, shown.length ? shown : currentCards);
-    document.querySelectorAll('[data-export]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const cardEl = btn.closest('.card'); const card = currentCards.find((c) => c.name === cardEl.querySelector('h3').textContent.split(' —')[0]) || allCards.find((c) => c.name === cardEl.querySelector('h3').textContent.split(' —')[0]);
-        if (card) copyText(btn, exportText(btn.dataset.export, card));
-      });
-    });
-  };
-  syncUrl(); render();
 
-  // Live-call attempt: one GitHub Search call, snapshot stays the source of truth.
-  try {
-    const ctl = new AbortController(); setTimeout(() => ctl.abort(), 8000);
-    const r = await fetch('https://api.github.com/search/repositories?q=created:%3E2026-10-17&sort=stars&order=desc&per_page=1', { signal: ctl.signal });
-    $('#liveNote').textContent = (r.ok ? 'Live check: GitHub Search API reachable just now. ' : 'Live calls unavailable just now (GitHub returned ' + r.status + ') — showing the snapshot. ') + ($('#liveNote').textContent || '');
-  } catch {
-    $('#liveNote').textContent = 'Live calls unavailable just now (network or CORS) — showing the snapshot. ' + ($('#liveNote').textContent || '');
-  }
+  $("searchForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const q = $("query").value.trim();
+    if (!q) { currentQuery = ""; mode = "trending"; exploration = false; allRepos = trendingRepos; $("searchStatus").textContent = "Back to trending now."; renderAll(); return; }
+    currentQuery = q;
+    $("searchStatus").textContent = `Searching live GitHub for “${q}”…`;
+    try {
+      const res = await fetchJson(githubSearchUrl(q));
+      if (res.status === 403 || res.status === 429) throw new Error("rate-limited");
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      const results = (data.items || []).map(normalizeApiRepo);
+      if (!results.length) {
+        mode = "search-empty"; exploration = true; allRepos = trendingRepos;
+        $("searchStatus").textContent = `No recently-created repos matched “${q}” — no idea is invented for this. Below are trending repos for exploration only, labelled as unrelated, NOT as evidence for your query.`;
+        renderAll(); return;
+      }
+      mode = "search"; exploration = false; allRepos = results; selectedLang = null;
+      sourceLabel = `Live GitHub Search just now for “${q}”`;
+      setSource(`Source: ${sourceLabel}.`);
+      $("searchStatus").textContent = `Live search for “${q}”: ${results.length} repos created in the last 7 days, sorted by stars.`;
+    } catch (err) {
+      mode = "search-empty"; exploration = true; allRepos = trendingRepos;
+      $("searchStatus").textContent = `Live search unavailable (${err.message}) — showing trending repos as fallback. These are NOT evidence for “${q}”.`;
+      showBanner(`Live search failed (${err.message}). Showing the trending set as fallback — do not treat it as search evidence.`);
+    }
+    renderAll();
+  });
+  $("genFromSearchBtn").addEventListener("click", () => {
+    if (!allRepos.length) { $("searchStatus").textContent = "No repos loaded yet — wait for trending or search results first."; return; }
+    const top = [...allRepos].sort((a, b) => b.stars - a.stars)[0];
+    renderPackage(top, 0);
+    $("packageSection").scrollIntoView({ behavior: "smooth" });
+  });
+  $("clearSearchBtn").addEventListener("click", () => {
+    $("query").value = ""; currentQuery = ""; mode = "trending"; exploration = false; allRepos = trendingRepos; selectedLang = null;
+    $("searchStatus").textContent = "Back to trending now.";
+    renderAll();
+  });
+  $("filterText").addEventListener("input", (e) => { filterText = e.target.value.trim().toLowerCase(); renderTrending(); renderIdeas(); });
+  $("sortSel").addEventListener("change", (e) => { sortMode = e.target.value; renderTrending(); });
+  $("allLangsBtn").addEventListener("click", () => { selectedLang = null; renderAll(); });
+
+  await loadTrending();
+  allRepos = trendingRepos;
+  if (trendingRepos.length && sourceLabel.includes("Snapshot")) mode = "fallback";
+  $("sourcesNote").textContent = `Sources: ${sourceLabel}. Live search: GitHub Search API, no key, cached 1 hour. Fallback: data/snapshot.json (daily workflow).`;
+  renderAll();
 }
-main().catch((e) => { $('#freshness').textContent = 'Page failed to start: ' + e.message; });
+main().catch((e) => {
+  const el = $("sourceStatus");
+  if (el) el.textContent = "Page failed to start: " + e.message;
+});

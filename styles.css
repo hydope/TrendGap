@@ -53,6 +53,11 @@ main{max-width:1020px;margin:0 auto;padding:8px 16px 32px}
 .evidence{background:var(--soft);border-radius:10px;padding:12px;margin:12px 0}
 .evidence p{margin:4px 0}
 code{overflow-wrap:anywhere}
+table.probeTable{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
+table.probeTable th,table.probeTable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.probeTable th{background:var(--soft)}
+.verdict-missing{font-weight:800;color:var(--accent)}
+.verdict-exists{color:var(--muted)}
 footer{max-width:1020px;margin:0 auto;padding:0 16px 32px;color:var(--muted)}
 @media(min-width:700px){
   .cards{grid-template-columns:1fr 1fr}

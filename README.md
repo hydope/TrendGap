@@ -1,4 +1,17 @@
-# TrendGap v5
+# TrendGap v5.2
+
+**Tagline:** Find what's missing, then build it — market-gap ideas backed by GitHub Search evidence.
+
+## What v5.2 does (built locally, not yet pushed)
+
+v5.2 replaces the spin-off framing with a **market-gap generator**, which is the product; the trending list is supporting evidence underneath, not the product.
+
+- **Gap generator (hero).** Enter a topic (e.g. "Meta rayban video"). The page fetches the topic's top repos (all stages, all-time, in names/descriptions) and shows them as **saturated clusters** — what already exists. It then runs 10 missing-cluster probes (`backup, blur, transcript, captions, dual, search, translate, offline, sync, editor`) as "topic + probe" searches, shows **all 10 probe results** (never hiding non-missing ones), and generates up to 5 gap ideas, one per missing probe (0 matches, or only a repo under 5 stars). Each gap idea has: what's missing, exact probe evidence, a concrete fix (3 features), a 72-hour MVP (build vs cut), a suggested stack (most common language among the topic's top repos, labelled suggestion), what NOT to build (saturated clusters with stars), and exports (full package, README draft, HN title, X opener).
+- **Search fix (v5.1's two bugs).** v5.1 stopped at the first non-empty stage, so "Meta rayban video connect" stopped at the "meta ray-ban video connect" variant (1 repo, a DAT plugin) and never reached "Meta rayban video" (2 on-topic video repos); and it called the rayban→ray-ban change "dropped" when it was transformed. v5.2 evaluates **all** stages, dedupes by repo, and ranks by words matched, then relevance (name 3 / description 2 / topic 1), then stars — and shows every stage tried, which stage each repo came from, and transformed vs dropped words separately. A new search also clears the previous package (v5.1 left it stale).
+- **Honesty, unchanged and tightened.** A "gap" means only "no repo found by this GitHub search (or only one under 5 stars)" — never "nothing exists in the world". No idea is guaranteed to trend or be "top in the world": trending also needs execution, timing and distribution. No package is ever generated from a repo outside the actual result set.
+- **Name kept.** TrendGap stays TrendGap (checked 2026-10-24: cleanest available name of the set; the name was not what held the product back — the generator quality was).
+
+# TrendGap v5 (superseded by v5.2 above)
 
 **Tagline:** Repo ideas with the evidence shown — and the crowded competitors shown too.
 

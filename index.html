@@ -3,27 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TrendGap v5 — What repo should you build next?</title>
-<meta name="description" content="TrendGap v5: live recently-created repos, most-starred first, with a specific spin-off idea for each one. Ideas are suggestions; only evidence numbers are data. GitHub has no official trending API.">
-<meta property="og:title" content="TrendGap v5 — What repo should you build next?">
-<meta property="og:description" content="Live recently-created repos with a specific spin-off idea for each one. Evidence shown, gaps labelled as hypotheses.">
+<title>TrendGap v5.2 — Find what's missing, then build it</title>
+<meta name="description" content="TrendGap v5.2: a market-gap generator. Enter a topic, see what already exists, see which angles GitHub Search finds nothing for, and get a concrete idea for each missing angle. Ideas are suggestions; only evidence numbers are data. GitHub has no official trending API.">
+<meta property="og:title" content="TrendGap v5.2 — Find what's missing, then build it">
+<meta property="og:description" content="Market-gap ideas backed by GitHub Search evidence: saturated clusters shown, missing angles probed, fixes spelled out. No guarantee any idea will trend.">
 <meta property="og:type" content="website">
-<!-- v5: bump ?v= on every deploy that changes app.js/styles.css so HTML and JS can never mismatch (2026-10-24 cache bug). -->
-<link rel="stylesheet" href="styles.css?v=20261024-4">
+<!-- v5.2: bump ?v= on every deploy that changes app.js/styles.css so HTML and JS can never mismatch (2026-10-24 cache bug). -->
+<link rel="stylesheet" href="styles.css?v=20261024-5">
 </head>
 <body>
 <header class="topbar">
   <div>
-    <p class="logo">TrendGap <span class="version">v5</span></p>
-    <h1>What repo should you build next?</h1>
-    <p class="tagline">Live recently-created repos, most-starred first — with a <strong>specific</strong> spin-off idea for each one, not a template.</p>
-    <p class="honest">This is <strong>NOT an official trending feed</strong> — GitHub has no official trending API. “Trending now” here means: repos created in the last 7 days, sorted by stars in GitHub Search, fetched live from your browser with no key. Ideas are <strong>SUGGESTIONS</strong>. Only the evidence numbers are data. Angles and gaps are <strong>hypotheses</strong>, never proven gaps. No virality prediction, no fake trending claim.</p>
+    <p class="logo">TrendGap <span class="version">v5.2</span></p>
+    <h1>Find what's missing — then build it.</h1>
+    <p class="tagline">A market-gap generator: enter a topic, see what already exists, see which angles GitHub Search finds <strong>nothing</strong> for, and get a concrete fix for each missing angle.</p>
+    <p class="honest">This is <strong>NOT an official trending feed</strong> — GitHub has no official trending API. “Trending now” below is supporting evidence only: repos created in the last 7 days, sorted by stars in GitHub Search, fetched live from your browser with no key. Ideas are <strong>SUGGESTIONS</strong>. Only the evidence numbers are data. A “gap” means <strong>no repo found by this GitHub search</strong> (or only one under 5 stars) — never “nothing exists in the world”. Trending also needs execution, timing and distribution: <strong>no idea here is guaranteed to trend or be “top in the world”</strong>.</p>
   </div>
   <button id="darkToggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
 </header>
 
 <main>
-  <section class="hero" aria-label="Search for a repo idea">
+  <section class="hero" aria-label="Market-gap generator">
+    <form id="gapForm">
+      <label for="gapTopic">What topic do you want a trending repo idea for?</label>
+      <input id="gapTopic" type="text" maxlength="200" placeholder="e.g. Meta rayban video" autocomplete="off">
+      <div class="formrow">
+        <button id="gapBtn" type="submit">Find gaps &amp; generate ideas</button>
+        <button id="gapClearBtn" type="button" class="secondary">Clear gap results</button>
+      </div>
+      <p class="small">How it works: (1) the topic's top repos are fetched (all stages, all-time, in names/descriptions) and shown as <strong>saturated clusters</strong> — what already exists; (2) 10 missing-cluster probes run — <code>backup, blur, transcript, captions, dual, search, translate, offline, sync, editor</code> — each as “topic + probe” in names/descriptions; (3) every probe with 0 matches, or only a repo under 5 stars, becomes <strong>one gap idea</strong> with what's missing, the exact probe evidence, a concrete fix, a 72-hour MVP, and what NOT to build. All 10 probe results are shown — non-missing probes are never hidden. If the topic itself matches nothing, no gap analysis is invented.</p>
+    </form>
+    <p id="gapStatus" role="status" aria-live="polite"></p>
+    <p id="gapStages" class="small"></p>
+    <div id="gapSaturated"></div>
+    <div id="gapProbes"></div>
+  </section>
+
+  <section id="gapPackageSection" aria-label="Generated gap ideas">
+    <h2>Generated gap idea</h2>
+    <p class="small">Gap ideas appear here, one per missing probe (up to 5). Each card is a full package: what's missing, probe evidence, how to fix it, 72-hour MVP, suggested stack, what NOT to build, and copy exports. “Missing” always means “no repo found by this GitHub search” — check the repos yourself before building.</p>
+    <p id="gapPackageStatus" role="status" aria-live="polite">No gap ideas yet — enter a topic above and run the gap finder.</p>
+    <div id="gapIdeas" class="cards"></div>
+  </section>
+
+  <section class="hero" aria-label="Plain topic search (secondary)">
+    <h2>Plain topic search (secondary)</h2>
+    <p class="small">The gap generator above is the product. This plain search is kept for exploring a topic's repos directly, with the same all-stages search as the gap finder.</p>
     <form id="searchForm">
       <label for="query">What do you want to build?</label>
       <input id="query" type="text" maxlength="200" placeholder="e.g. ai notes app, rust cli, android tv launcher" autocomplete="off">
@@ -35,6 +60,7 @@
       <p class="small">Search runs a <strong>live</strong> GitHub Search for your keywords in repo <strong>names and descriptions, all-time</strong> (not just the last 7 days — niche topics like Ray-Ban Meta have almost nothing new in 7 days), ranked by relevance (name match &gt; description match &gt; topic match), then stars. If your exact words match nothing, it tries shorter versions and <strong>tells you which words it dropped</strong>. If nothing matches at all, the page says so plainly, shows trending repos only as unrelated exploration, and <strong>generates no package from them</strong>.</p>
     </form>
     <p id="searchStatus" role="status" aria-live="polite"></p>
+    <p id="searchStages" class="small"></p>
     <p id="sourceStatus" class="source"></p>
     <p id="banner" class="banner" hidden></p>
   </section>
@@ -81,19 +107,20 @@
   <section aria-label="What this evidence is and is not">
     <h2>What this evidence is — and is not</h2>
     <ul>
-      <li><strong>Is:</strong> GitHub Search results for repos created in the last 7 days, sorted by stars, fetched live from your browser (no key, cached 1 hour), or — only if live search fails — the dated snapshot in <code>data/snapshot.json</code>, clearly labelled as a fallback with its date.</li>
-      <li><strong>Is not:</strong> an official trending feed, a complete market survey, or proof that a gap exists. Competitors are other repos <em>in the fetched set</em> with the same language or a shared topic, not a global top 3.</li>
-      <li><strong>Angles are hypotheses</strong> based only on the source repo's listed topics and language. A missing topic is not proof the repo lacks a feature — topics are not a feature list.</li>
+      <li><strong>Is:</strong> GitHub Search results — trending: repos created in the last 7 days, sorted by stars, fetched live from your browser (no key, cached 1 hour); topic and gap searches: all stages evaluated and merged, all-time, in names/descriptions, ranked by words matched, then relevance, then stars — or, only if live search fails, the dated snapshot in <code>data/snapshot.json</code>, clearly labelled as a fallback with its date.</li>
+      <li><strong>Is not:</strong> an official trending feed, a complete market survey, or proof that a gap exists in the world. A “gap” is only what one GitHub search did not find. Competitors are other repos <em>in the fetched set</em> with the same language or a shared topic, not a global top 3.</li>
+      <li><strong>Angles and gaps are hypotheses</strong> based only on listed topics, language, and search totals. A missing topic or a zero probe result is not proof a feature does not exist — topics and descriptions are not feature lists.</li>
       <li><strong>Names on ideas are suggestions only.</strong> Their npm / PyPI / domain availability was not checked here.</li>
-      <li><strong>Rate limits:</strong> unauthenticated GitHub Search is limited (about 10 searches/minute per IP in practice). If you hit it, the page says “rate-limited” and falls back to the snapshot — it never invents repos.</li>
+      <li><strong>Rate limits:</strong> unauthenticated GitHub Search is limited (about 10 searches/minute per IP in practice). A gap run makes up to ~15 searches (topic stages + 10 probes), so it can hit the limit — if it does, the page stops and says which probes were not checked, and never invents results. The trending list then falls back to the snapshot — it never invents repos.</li>
+      <li><strong>No trend guarantee:</strong> an idea with a real gap still needs execution, timing and distribution to trend. Nothing here promises stars, ranking, or “top in the world”.</li>
     </ul>
     <p id="sourcesNote" class="small"></p>
   </section>
 </main>
 
 <footer>
-  <p>TrendGap v5. Live at hydope.github.io/TrendGap. No backend, no secrets, no key required. Formerly RepoRadar — renamed because RepoRadar was taken (see README). If this page ever looks stale, close the tab completely and reopen, or add <code>?v=</code> with today's date to the URL.</p>
+  <p>TrendGap v5.2. Live at hydope.github.io/TrendGap. No backend, no secrets, no key required. Name kept — TrendGap is the cleanest available name for this job (see README). If this page ever looks stale, close the tab completely and reopen, or add <code>?v=20261024-5</code> to the URL.</p>
 </footer>
-<script type="module" src="app.js?v=20261024-4"></script>
+<script type="module" src="app.js?v=20261024-5"></script>
 </body>
 </html>

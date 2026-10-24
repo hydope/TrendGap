@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:44:56.163411+00:00",
+  "generated_at": "2026-10-24T14:02:10.509422+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -179,12 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4213,
-      "forks": 329,
+      "stars": 4222,
+      "forks": 331,
       "created_at": "2026-10-20T09:13:06Z",
       "pushed_at": "2026-10-24T13:06:33Z",
-      "updated_at": "2026-10-24T13:43:59Z",
-      "stars_per_day": 1053.2,
+      "updated_at": "2026-10-24T14:01:21Z",
+      "stars_per_day": 1055.5,
       "age_days": 4
     },
     {
@@ -206,12 +206,12 @@
         "tmdb",
         "webos"
       ],
-      "stars": 4120,
-      "forks": 649,
+      "stars": 4127,
+      "forks": 650,
       "created_at": "2026-10-19T19:29:01Z",
       "pushed_at": "2026-10-24T13:17:19Z",
-      "updated_at": "2026-10-24T13:43:11Z",
-      "stars_per_day": 1030.0,
+      "updated_at": "2026-10-24T14:02:00Z",
+      "stars_per_day": 1031.8,
       "age_days": 4
     },
     {
@@ -238,12 +238,12 @@
         "open-data",
         "primary-school"
       ],
-      "stars": 3040,
-      "forks": 699,
+      "stars": 3054,
+      "forks": 702,
       "created_at": "2026-10-18T09:04:43Z",
       "pushed_at": "2026-10-24T12:32:48Z",
-      "updated_at": "2026-10-24T13:44:34Z",
-      "stars_per_day": 506.7,
+      "updated_at": "2026-10-24T14:00:47Z",
+      "stars_per_day": 509.0,
       "age_days": 6
     },
     {
@@ -257,12 +257,12 @@
         "rea",
         "reverse-enginnering"
       ],
-      "stars": 1907,
-      "forks": 313,
+      "stars": 1912,
+      "forks": 315,
       "created_at": "2026-10-19T22:20:47Z",
       "pushed_at": "2026-10-21T00:32:22Z",
-      "updated_at": "2026-10-24T13:44:17Z",
-      "stars_per_day": 476.8,
+      "updated_at": "2026-10-24T13:56:18Z",
+      "stars_per_day": 478.0,
       "age_days": 4
     },
     {
@@ -272,12 +272,12 @@
       "description": "Offline FairPlay App Store IPA decryption with independent key derivation",
       "language": "C",
       "topics": [],
-      "stars": 1840,
-      "forks": 287,
+      "stars": 1844,
+      "forks": 288,
       "created_at": "2026-10-19T10:07:58Z",
       "pushed_at": "2026-10-23T10:58:42Z",
-      "updated_at": "2026-10-24T13:43:58Z",
-      "stars_per_day": 368.0,
+      "updated_at": "2026-10-24T13:58:05Z",
+      "stars_per_day": 368.8,
       "age_days": 5
     },
     {
@@ -302,12 +302,12 @@
         "waf-rules",
         "wordpress-security"
       ],
-      "stars": 1735,
+      "stars": 1736,
       "forks": 602,
       "created_at": "2026-10-21T07:55:16Z",
       "pushed_at": "2026-10-22T22:41:36Z",
-      "updated_at": "2026-10-24T13:38:18Z",
-      "stars_per_day": 578.3,
+      "updated_at": "2026-10-24T13:47:16Z",
+      "stars_per_day": 578.7,
       "age_days": 3
     },
     {
@@ -326,12 +326,12 @@
         "motion-graphics",
         "skills"
       ],
-      "stars": 1576,
+      "stars": 1578,
       "forks": 155,
       "created_at": "2026-10-18T12:19:27Z",
       "pushed_at": "2026-10-22T12:19:37Z",
-      "updated_at": "2026-10-24T13:32:37Z",
-      "stars_per_day": 262.7,
+      "updated_at": "2026-10-24T14:00:58Z",
+      "stars_per_day": 263.0,
       "age_days": 6
     },
     {
@@ -341,12 +341,12 @@
       "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
       "language": "C",
       "topics": [],
-      "stars": 1456,
-      "forks": 172,
+      "stars": 1494,
+      "forks": 179,
       "created_at": "2026-10-18T01:28:31Z",
       "pushed_at": "2026-10-24T00:41:18Z",
-      "updated_at": "2026-10-24T13:44:50Z",
-      "stars_per_day": 242.7,
+      "updated_at": "2026-10-24T14:02:05Z",
+      "stars_per_day": 249.0,
       "age_days": 6
     },
     {
@@ -356,11 +356,39 @@
       "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
       "language": "Swift",
       "topics": [],
-      "stars": 1438,
-      "forks": 227,
+      "stars": 1442,
+      "forks": 228,
       "created_at": "2026-10-21T19:38:50Z",
       "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-24T13:42:19Z",
+      "updated_at": "2026-10-24T14:01:01Z",
+      "stars_per_day": 721.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "xevrion/hatchzip",
+      "name": "hatchzip",
+      "html_url": "https://github.com/xevrion/hatchzip",
+      "description": "Extract huge archives in place: the archive shrinks as your files hatch, so you only need room for the output. ZIP, 7z, tar, split archives.",
+      "language": "Rust",
+      "topics": [
+        "7z",
+        "archive",
+        "cli",
+        "crash-safe",
+        "disk-space",
+        "extract",
+        "extractor",
+        "gui",
+        "rust",
+        "tar",
+        "unzip",
+        "zip"
+      ],
+      "stars": 1438,
+      "forks": 35,
+      "created_at": "2026-10-21T17:29:28Z",
+      "pushed_at": "2026-10-24T13:54:27Z",
+      "updated_at": "2026-10-24T14:01:57Z",
       "stars_per_day": 719.0,
       "age_days": 2
     },
@@ -399,41 +427,13 @@
         "smart-tv",
         "telemetry"
       ],
-      "stars": 1430,
+      "stars": 1431,
       "forks": 127,
       "created_at": "2026-10-18T17:04:12Z",
       "pushed_at": "2026-10-22T22:15:22Z",
-      "updated_at": "2026-10-24T13:09:09Z",
-      "stars_per_day": 286.0,
+      "updated_at": "2026-10-24T13:57:02Z",
+      "stars_per_day": 286.2,
       "age_days": 5
-    },
-    {
-      "full_name": "xevrion/hatchzip",
-      "name": "hatchzip",
-      "html_url": "https://github.com/xevrion/hatchzip",
-      "description": "Extract huge archives in place: the archive shrinks as your files hatch, so you only need room for the output. ZIP, 7z, tar, split archives.",
-      "language": "Rust",
-      "topics": [
-        "7z",
-        "archive",
-        "cli",
-        "crash-safe",
-        "disk-space",
-        "extract",
-        "extractor",
-        "gui",
-        "rust",
-        "tar",
-        "unzip",
-        "zip"
-      ],
-      "stars": 1429,
-      "forks": 35,
-      "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-24T13:44:26Z",
-      "updated_at": "2026-10-24T13:44:52Z",
-      "stars_per_day": 714.5,
-      "age_days": 2
     },
     {
       "full_name": "9bie/php2shell-bypass-aslr-exp",
@@ -473,7 +473,7 @@
       "language": "C",
       "topics": [],
       "stars": 1218,
-      "forks": 213,
+      "forks": 214,
       "created_at": "2026-10-22T06:20:11Z",
       "pushed_at": "2026-10-23T14:25:04Z",
       "updated_at": "2026-10-24T13:43:59Z",
@@ -487,12 +487,12 @@
       "description": "Import .sql files into TypeScript with full type inference and zero codegen.",
       "language": "Rust",
       "topics": [],
-      "stars": 1155,
+      "stars": 1157,
       "forks": 8,
       "created_at": "2026-10-21T00:16:54Z",
       "pushed_at": "2026-10-24T04:54:52Z",
-      "updated_at": "2026-10-24T13:40:41Z",
-      "stars_per_day": 385.0,
+      "updated_at": "2026-10-24T14:01:45Z",
+      "stars_per_day": 385.7,
       "age_days": 3
     },
     {
@@ -511,6 +511,27 @@
       "age_days": 3
     },
     {
+      "full_name": "Jakeschincariol/day-trader-skill",
+      "name": "day-trader-skill",
+      "html_url": "https://github.com/Jakeschincariol/day-trader-skill",
+      "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+      "language": "Python",
+      "topics": [
+        "backtesting",
+        "claude",
+        "claude-skills",
+        "day-trading",
+        "stock-market"
+      ],
+      "stars": 962,
+      "forks": 214,
+      "created_at": "2026-10-20T14:17:54Z",
+      "pushed_at": "2026-10-20T14:18:00Z",
+      "updated_at": "2026-10-24T14:01:17Z",
+      "stars_per_day": 320.7,
+      "age_days": 3
+    },
+    {
       "full_name": "eagle-hq/EAGLE-4",
       "name": "EAGLE-4",
       "html_url": "https://github.com/eagle-hq/EAGLE-4",
@@ -525,12 +546,12 @@
         "tokenspeed",
         "vllm"
       ],
-      "stars": 960,
+      "stars": 961,
       "forks": 32,
       "created_at": "2026-10-20T14:03:04Z",
       "pushed_at": "2026-10-24T08:34:16Z",
-      "updated_at": "2026-10-24T12:58:35Z",
-      "stars_per_day": 320.0,
+      "updated_at": "2026-10-24T13:47:45Z",
+      "stars_per_day": 320.3,
       "age_days": 3
     },
     {
@@ -540,34 +561,13 @@
       "description": "Ely Office: offline-first desktop apps in Rust and GPUI",
       "language": "Rust",
       "topics": [],
-      "stars": 957,
+      "stars": 958,
       "forks": 61,
       "created_at": "2026-10-19T23:04:42Z",
       "pushed_at": "2026-10-23T14:58:55Z",
-      "updated_at": "2026-10-24T13:35:11Z",
-      "stars_per_day": 239.2,
+      "updated_at": "2026-10-24T13:47:29Z",
+      "stars_per_day": 239.5,
       "age_days": 4
-    },
-    {
-      "full_name": "Jakeschincariol/day-trader-skill",
-      "name": "day-trader-skill",
-      "html_url": "https://github.com/Jakeschincariol/day-trader-skill",
-      "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
-      "language": "Python",
-      "topics": [
-        "backtesting",
-        "claude",
-        "claude-skills",
-        "day-trading",
-        "stock-market"
-      ],
-      "stars": 956,
-      "forks": 214,
-      "created_at": "2026-10-20T14:17:54Z",
-      "pushed_at": "2026-10-20T14:18:00Z",
-      "updated_at": "2026-10-24T13:44:39Z",
-      "stars_per_day": 318.7,
-      "age_days": 3
     },
     {
       "full_name": "UniXNU/UniXNU",
@@ -578,12 +578,12 @@
       "topics": [
         "unixnu"
       ],
-      "stars": 880,
+      "stars": 881,
       "forks": 161,
       "created_at": "2026-10-19T10:46:55Z",
       "pushed_at": "2026-10-24T11:48:52Z",
-      "updated_at": "2026-10-24T13:35:31Z",
-      "stars_per_day": 176.0,
+      "updated_at": "2026-10-24T13:54:11Z",
+      "stars_per_day": 176.2,
       "age_days": 5
     },
     {
@@ -593,12 +593,12 @@
       "description": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
       "language": "Python",
       "topics": [],
-      "stars": 832,
+      "stars": 834,
       "forks": 46,
       "created_at": "2026-10-22T01:40:05Z",
       "pushed_at": "2026-10-23T08:23:24Z",
-      "updated_at": "2026-10-24T13:37:53Z",
-      "stars_per_day": 416.0,
+      "updated_at": "2026-10-24T14:01:38Z",
+      "stars_per_day": 417.0,
       "age_days": 2
     },
     {
@@ -659,12 +659,12 @@
       "description": "PandaCode: a calm desktop workspace for coding agents",
       "language": "Rust",
       "topics": [],
-      "stars": 613,
+      "stars": 614,
       "forks": 119,
       "created_at": "2026-10-18T02:21:29Z",
       "pushed_at": "2026-10-24T11:46:05Z",
-      "updated_at": "2026-10-24T13:25:16Z",
-      "stars_per_day": 102.2,
+      "updated_at": "2026-10-24T13:54:30Z",
+      "stars_per_day": 102.3,
       "age_days": 6
     },
     {
@@ -704,12 +704,12 @@
       "description": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
       "language": "Python",
       "topics": [],
-      "stars": 551,
-      "forks": 109,
+      "stars": 559,
+      "forks": 110,
       "created_at": "2026-10-22T03:53:20Z",
       "pushed_at": "2026-10-24T03:40:18Z",
-      "updated_at": "2026-10-24T13:44:13Z",
-      "stars_per_day": 275.5,
+      "updated_at": "2026-10-24T14:01:47Z",
+      "stars_per_day": 279.5,
       "age_days": 2
     },
     {
@@ -719,12 +719,12 @@
       "description": "A personal home screen for Samsung The Frame. A starting point to fork and adapt.",
       "language": "JavaScript",
       "topics": [],
-      "stars": 546,
-      "forks": 89,
+      "stars": 548,
+      "forks": 91,
       "created_at": "2026-10-20T04:40:07Z",
       "pushed_at": "2026-10-20T04:40:58Z",
-      "updated_at": "2026-10-24T13:41:52Z",
-      "stars_per_day": 136.5,
+      "updated_at": "2026-10-24T13:58:35Z",
+      "stars_per_day": 137.0,
       "age_days": 4
     }
   ],
@@ -832,14 +832,14 @@
     {
       "title": "Dev Opportunity Radar #22: $50K Basis Fellowship, Perplexity AI Research Fellowship, and FC Barcelona Analytics Hackathon",
       "url": "https://dev.to/devengers/dev-opportunity-radar-22-50k-basis-fellowship-perplexity-ai-research-fellowship-and-fc-4806",
-      "reactions": 59,
+      "reactions": 60,
       "comments": 5,
       "published_at": "2026-10-23T18:29:07Z"
     },
     {
       "title": "Don't Be a Proxy Between Me and Your AI",
       "url": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn",
-      "reactions": 68,
+      "reactions": 70,
       "comments": 45,
       "published_at": "2026-10-22T04:31:09Z"
     },
@@ -853,7 +853,7 @@
     {
       "title": "is-kit Reached 100 Stars \u2b50\ud83c\udf89 Here\u2019s What Changed Since 50",
       "url": "https://dev.to/nyaomaru/is-kit-reached-100-stars-heres-what-changed-since-50-49pf",
-      "reactions": 101,
+      "reactions": 102,
       "comments": 29,
       "published_at": "2026-10-21T15:08:25Z"
     },

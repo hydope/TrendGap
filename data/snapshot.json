@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:29:01.374002+00:00",
+  "generated_at": "2026-10-24T13:35:38.685389+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -179,12 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4203,
+      "stars": 4207,
       "forks": 329,
       "created_at": "2026-10-20T09:13:06Z",
       "pushed_at": "2026-10-24T13:06:33Z",
-      "updated_at": "2026-10-24T13:28:27Z",
-      "stars_per_day": 1050.8,
+      "updated_at": "2026-10-24T13:35:08Z",
+      "stars_per_day": 1051.8,
       "age_days": 4
     },
     {
@@ -206,12 +206,12 @@
         "tmdb",
         "webos"
       ],
-      "stars": 4110,
-      "forks": 646,
+      "stars": 4112,
+      "forks": 647,
       "created_at": "2026-10-19T19:29:01Z",
       "pushed_at": "2026-10-24T13:17:19Z",
-      "updated_at": "2026-10-24T13:23:30Z",
-      "stars_per_day": 1027.5,
+      "updated_at": "2026-10-24T13:34:58Z",
+      "stars_per_day": 1028.0,
       "age_days": 4
     },
     {
@@ -238,12 +238,12 @@
         "open-data",
         "primary-school"
       ],
-      "stars": 3031,
+      "stars": 3035,
       "forks": 698,
       "created_at": "2026-10-18T09:04:43Z",
       "pushed_at": "2026-10-24T12:32:48Z",
-      "updated_at": "2026-10-24T13:24:32Z",
-      "stars_per_day": 505.2,
+      "updated_at": "2026-10-24T13:31:09Z",
+      "stars_per_day": 505.8,
       "age_days": 6
     },
     {
@@ -272,12 +272,12 @@
       "description": "Offline FairPlay App Store IPA decryption with independent key derivation",
       "language": "C",
       "topics": [],
-      "stars": 1834,
+      "stars": 1835,
       "forks": 285,
       "created_at": "2026-10-19T10:07:58Z",
       "pushed_at": "2026-10-23T10:58:42Z",
-      "updated_at": "2026-10-24T13:23:59Z",
-      "stars_per_day": 366.8,
+      "updated_at": "2026-10-24T13:30:49Z",
+      "stars_per_day": 367.0,
       "age_days": 5
     },
     {
@@ -326,12 +326,12 @@
         "motion-graphics",
         "skills"
       ],
-      "stars": 1574,
+      "stars": 1576,
       "forks": 155,
       "created_at": "2026-10-18T12:19:27Z",
       "pushed_at": "2026-10-22T12:19:37Z",
-      "updated_at": "2026-10-24T13:27:08Z",
-      "stars_per_day": 262.3,
+      "updated_at": "2026-10-24T13:32:37Z",
+      "stars_per_day": 262.7,
       "age_days": 6
     },
     {
@@ -350,18 +350,33 @@
       "age_days": 6
     },
     {
+      "full_name": "Zagitta/gpu-unlock",
+      "name": "gpu-unlock",
+      "html_url": "https://github.com/Zagitta/gpu-unlock",
+      "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
+      "language": "C",
+      "topics": [],
+      "stars": 1434,
+      "forks": 167,
+      "created_at": "2026-10-18T01:28:31Z",
+      "pushed_at": "2026-10-24T00:41:18Z",
+      "updated_at": "2026-10-24T13:35:18Z",
+      "stars_per_day": 239.0,
+      "age_days": 6
+    },
+    {
       "full_name": "wesbos/3d-model-anything",
       "name": "3d-model-anything",
       "html_url": "https://github.com/wesbos/3d-model-anything",
       "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
       "language": "Swift",
       "topics": [],
-      "stars": 1430,
-      "forks": 226,
+      "stars": 1433,
+      "forks": 227,
       "created_at": "2026-10-21T19:38:50Z",
       "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-24T13:28:01Z",
-      "stars_per_day": 715.0,
+      "updated_at": "2026-10-24T13:35:16Z",
+      "stars_per_day": 716.5,
       "age_days": 2
     },
     {
@@ -393,21 +408,6 @@
       "age_days": 5
     },
     {
-      "full_name": "Zagitta/gpu-unlock",
-      "name": "gpu-unlock",
-      "html_url": "https://github.com/Zagitta/gpu-unlock",
-      "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
-      "language": "C",
-      "topics": [],
-      "stars": 1419,
-      "forks": 166,
-      "created_at": "2026-10-18T01:28:31Z",
-      "pushed_at": "2026-10-24T00:41:18Z",
-      "updated_at": "2026-10-24T13:28:47Z",
-      "stars_per_day": 236.5,
-      "age_days": 6
-    },
-    {
       "full_name": "xevrion/hatchzip",
       "name": "hatchzip",
       "html_url": "https://github.com/xevrion/hatchzip",
@@ -427,12 +427,12 @@
         "unzip",
         "zip"
       ],
-      "stars": 1418,
+      "stars": 1422,
       "forks": 34,
       "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-24T13:20:50Z",
-      "updated_at": "2026-10-24T13:26:43Z",
-      "stars_per_day": 709.0,
+      "pushed_at": "2026-10-24T13:32:23Z",
+      "updated_at": "2026-10-24T13:35:27Z",
+      "stars_per_day": 711.0,
       "age_days": 2
     },
     {
@@ -473,7 +473,7 @@
       "language": "C",
       "topics": [],
       "stars": 1216,
-      "forks": 212,
+      "forks": 213,
       "created_at": "2026-10-22T06:20:11Z",
       "pushed_at": "2026-10-23T14:25:04Z",
       "updated_at": "2026-10-24T13:28:38Z",
@@ -540,12 +540,12 @@
       "description": "Ely Office: offline-first desktop apps in Rust and GPUI",
       "language": "Rust",
       "topics": [],
-      "stars": 956,
+      "stars": 957,
       "forks": 61,
       "created_at": "2026-10-19T23:04:42Z",
       "pushed_at": "2026-10-23T14:58:55Z",
-      "updated_at": "2026-10-24T13:14:39Z",
-      "stars_per_day": 239.0,
+      "updated_at": "2026-10-24T13:35:11Z",
+      "stars_per_day": 239.2,
       "age_days": 4
     },
     {
@@ -565,7 +565,7 @@
       "forks": 214,
       "created_at": "2026-10-20T14:17:54Z",
       "pushed_at": "2026-10-20T14:18:00Z",
-      "updated_at": "2026-10-24T13:02:19Z",
+      "updated_at": "2026-10-24T13:31:14Z",
       "stars_per_day": 318.0,
       "age_days": 3
     },
@@ -578,12 +578,12 @@
       "topics": [
         "unixnu"
       ],
-      "stars": 879,
+      "stars": 880,
       "forks": 161,
       "created_at": "2026-10-19T10:46:55Z",
       "pushed_at": "2026-10-24T11:48:52Z",
-      "updated_at": "2026-10-24T13:07:02Z",
-      "stars_per_day": 175.8,
+      "updated_at": "2026-10-24T13:35:31Z",
+      "stars_per_day": 176.0,
       "age_days": 5
     },
     {
@@ -593,12 +593,12 @@
       "description": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
       "language": "Python",
       "topics": [],
-      "stars": 829,
+      "stars": 831,
       "forks": 46,
       "created_at": "2026-10-22T01:40:05Z",
       "pushed_at": "2026-10-23T08:23:24Z",
-      "updated_at": "2026-10-24T13:26:46Z",
-      "stars_per_day": 414.5,
+      "updated_at": "2026-10-24T13:33:57Z",
+      "stars_per_day": 415.5,
       "age_days": 2
     },
     {
@@ -704,12 +704,12 @@
       "description": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
       "language": "Python",
       "topics": [],
-      "stars": 548,
+      "stars": 549,
       "forks": 107,
       "created_at": "2026-10-22T03:53:20Z",
       "pushed_at": "2026-10-24T03:40:18Z",
-      "updated_at": "2026-10-24T13:28:17Z",
-      "stars_per_day": 274.0,
+      "updated_at": "2026-10-24T13:35:29Z",
+      "stars_per_day": 274.5,
       "age_days": 2
     },
     {

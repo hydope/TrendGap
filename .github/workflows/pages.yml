@@ -35,6 +35,8 @@ jobs:
           git diff --cached --quiet || git commit -m "Refresh snapshot [skip ci]"
           git push || true
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

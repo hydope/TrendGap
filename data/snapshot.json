@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:06:40.172428+00:00",
+  "generated_at": "2026-10-24T13:07:07.398138+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -238,12 +238,12 @@
         "open-data",
         "primary-school"
       ],
-      "stars": 3026,
+      "stars": 3027,
       "forks": 695,
       "created_at": "2026-10-18T09:04:43Z",
       "pushed_at": "2026-10-24T12:32:48Z",
-      "updated_at": "2026-10-24T12:57:54Z",
-      "stars_per_day": 504.3,
+      "updated_at": "2026-10-24T13:07:05Z",
+      "stars_per_day": 504.5,
       "age_days": 6
     },
     {
@@ -578,12 +578,12 @@
       "topics": [
         "unixnu"
       ],
-      "stars": 878,
+      "stars": 879,
       "forks": 161,
       "created_at": "2026-10-19T10:46:55Z",
       "pushed_at": "2026-10-24T11:48:52Z",
-      "updated_at": "2026-10-24T11:48:56Z",
-      "stars_per_day": 175.6,
+      "updated_at": "2026-10-24T13:07:02Z",
+      "stars_per_day": 175.8,
       "age_days": 5
     },
     {
@@ -644,12 +644,12 @@
       "description": null,
       "language": "Python",
       "topics": [],
-      "stars": 634,
+      "stars": 635,
       "forks": 66,
       "created_at": "2026-10-20T17:09:40Z",
       "pushed_at": "2026-10-24T02:05:45Z",
-      "updated_at": "2026-10-24T12:58:34Z",
-      "stars_per_day": 211.3,
+      "updated_at": "2026-10-24T13:06:43Z",
+      "stars_per_day": 211.7,
       "age_days": 3
     },
     {

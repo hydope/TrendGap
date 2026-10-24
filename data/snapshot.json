@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:07:07.398138+00:00",
+  "generated_at": "2026-10-24T13:19:16.641809+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -179,12 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4190,
+      "stars": 4194,
       "forks": 329,
       "created_at": "2026-10-20T09:13:06Z",
       "pushed_at": "2026-10-24T13:06:33Z",
-      "updated_at": "2026-10-24T13:06:37Z",
-      "stars_per_day": 1047.5,
+      "updated_at": "2026-10-24T13:18:28Z",
+      "stars_per_day": 1048.5,
       "age_days": 4
     },
     {
@@ -206,12 +206,12 @@
         "tmdb",
         "webos"
       ],
-      "stars": 4106,
+      "stars": 4108,
       "forks": 646,
       "created_at": "2026-10-19T19:29:01Z",
-      "pushed_at": "2026-10-24T01:20:17Z",
-      "updated_at": "2026-10-24T13:04:31Z",
-      "stars_per_day": 1026.5,
+      "pushed_at": "2026-10-24T13:17:19Z",
+      "updated_at": "2026-10-24T13:17:24Z",
+      "stars_per_day": 1027.0,
       "age_days": 4
     },
     {
@@ -238,12 +238,12 @@
         "open-data",
         "primary-school"
       ],
-      "stars": 3027,
-      "forks": 695,
+      "stars": 3028,
+      "forks": 697,
       "created_at": "2026-10-18T09:04:43Z",
       "pushed_at": "2026-10-24T12:32:48Z",
-      "updated_at": "2026-10-24T13:07:05Z",
-      "stars_per_day": 504.5,
+      "updated_at": "2026-10-24T13:16:04Z",
+      "stars_per_day": 504.7,
       "age_days": 6
     },
     {
@@ -257,12 +257,12 @@
         "rea",
         "reverse-enginnering"
       ],
-      "stars": 1898,
+      "stars": 1900,
       "forks": 311,
       "created_at": "2026-10-19T22:20:47Z",
       "pushed_at": "2026-10-21T00:32:22Z",
-      "updated_at": "2026-10-24T13:04:42Z",
-      "stars_per_day": 474.5,
+      "updated_at": "2026-10-24T13:17:32Z",
+      "stars_per_day": 475.0,
       "age_days": 4
     },
     {
@@ -272,12 +272,12 @@
       "description": "Offline FairPlay App Store IPA decryption with independent key derivation",
       "language": "C",
       "topics": [],
-      "stars": 1828,
-      "forks": 284,
+      "stars": 1831,
+      "forks": 285,
       "created_at": "2026-10-19T10:07:58Z",
       "pushed_at": "2026-10-23T10:58:42Z",
-      "updated_at": "2026-10-24T13:01:08Z",
-      "stars_per_day": 365.6,
+      "updated_at": "2026-10-24T13:14:17Z",
+      "stars_per_day": 366.2,
       "age_days": 5
     },
     {
@@ -302,12 +302,12 @@
         "waf-rules",
         "wordpress-security"
       ],
-      "stars": 1731,
-      "forks": 602,
+      "stars": 1732,
+      "forks": 603,
       "created_at": "2026-10-21T07:55:16Z",
       "pushed_at": "2026-10-22T22:41:36Z",
-      "updated_at": "2026-10-24T12:49:16Z",
-      "stars_per_day": 577.0,
+      "updated_at": "2026-10-24T13:18:14Z",
+      "stars_per_day": 577.3,
       "age_days": 3
     },
     {
@@ -326,12 +326,12 @@
         "motion-graphics",
         "skills"
       ],
-      "stars": 1572,
+      "stars": 1573,
       "forks": 155,
       "created_at": "2026-10-18T12:19:27Z",
       "pushed_at": "2026-10-22T12:19:37Z",
-      "updated_at": "2026-10-24T12:37:57Z",
-      "stars_per_day": 262.0,
+      "updated_at": "2026-10-24T13:18:51Z",
+      "stars_per_day": 262.2,
       "age_days": 6
     },
     {
@@ -369,12 +369,12 @@
         "smart-tv",
         "telemetry"
       ],
-      "stars": 1429,
+      "stars": 1430,
       "forks": 127,
       "created_at": "2026-10-18T17:04:12Z",
       "pushed_at": "2026-10-22T22:15:22Z",
-      "updated_at": "2026-10-24T12:49:16Z",
-      "stars_per_day": 285.8,
+      "updated_at": "2026-10-24T13:09:09Z",
+      "stars_per_day": 286.0,
       "age_days": 5
     },
     {
@@ -384,12 +384,12 @@
       "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
       "language": "Swift",
       "topics": [],
-      "stars": 1418,
+      "stars": 1422,
       "forks": 226,
       "created_at": "2026-10-21T19:38:50Z",
       "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-24T13:04:06Z",
-      "stars_per_day": 709.0,
+      "updated_at": "2026-10-24T13:13:21Z",
+      "stars_per_day": 711.0,
       "age_days": 2
     },
     {
@@ -412,13 +412,28 @@
         "unzip",
         "zip"
       ],
-      "stars": 1402,
+      "stars": 1415,
       "forks": 34,
       "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-24T12:40:41Z",
-      "updated_at": "2026-10-24T13:06:06Z",
-      "stars_per_day": 701.0,
+      "pushed_at": "2026-10-24T13:13:11Z",
+      "updated_at": "2026-10-24T13:17:58Z",
+      "stars_per_day": 707.5,
       "age_days": 2
+    },
+    {
+      "full_name": "Zagitta/gpu-unlock",
+      "name": "gpu-unlock",
+      "html_url": "https://github.com/Zagitta/gpu-unlock",
+      "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
+      "language": "C",
+      "topics": [],
+      "stars": 1395,
+      "forks": 165,
+      "created_at": "2026-10-18T01:28:31Z",
+      "pushed_at": "2026-10-24T00:41:18Z",
+      "updated_at": "2026-10-24T13:17:46Z",
+      "stars_per_day": 232.5,
+      "age_days": 6
     },
     {
       "full_name": "9bie/php2shell-bypass-aslr-exp",
@@ -434,21 +449,6 @@
       "updated_at": "2026-10-24T12:38:19Z",
       "stars_per_day": 461.7,
       "age_days": 3
-    },
-    {
-      "full_name": "Zagitta/gpu-unlock",
-      "name": "gpu-unlock",
-      "html_url": "https://github.com/Zagitta/gpu-unlock",
-      "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
-      "language": "C",
-      "topics": [],
-      "stars": 1378,
-      "forks": 163,
-      "created_at": "2026-10-18T01:28:31Z",
-      "pushed_at": "2026-10-24T00:41:18Z",
-      "updated_at": "2026-10-24T13:06:21Z",
-      "stars_per_day": 229.7,
-      "age_days": 6
     },
     {
       "full_name": "openai/php2shell-checker",
@@ -472,12 +472,12 @@
       "description": null,
       "language": "C",
       "topics": [],
-      "stars": 1213,
-      "forks": 211,
+      "stars": 1215,
+      "forks": 212,
       "created_at": "2026-10-22T06:20:11Z",
       "pushed_at": "2026-10-23T14:25:04Z",
-      "updated_at": "2026-10-24T13:02:51Z",
-      "stars_per_day": 606.5,
+      "updated_at": "2026-10-24T13:16:16Z",
+      "stars_per_day": 607.5,
       "age_days": 2
     },
     {
@@ -487,12 +487,12 @@
       "description": "Import .sql files into TypeScript with full type inference and zero codegen.",
       "language": "Rust",
       "topics": [],
-      "stars": 1150,
+      "stars": 1151,
       "forks": 8,
       "created_at": "2026-10-21T00:16:54Z",
       "pushed_at": "2026-10-24T04:54:52Z",
-      "updated_at": "2026-10-24T13:01:31Z",
-      "stars_per_day": 383.3,
+      "updated_at": "2026-10-24T13:16:04Z",
+      "stars_per_day": 383.7,
       "age_days": 3
     },
     {
@@ -540,12 +540,12 @@
       "description": "Ely Office: offline-first desktop apps in Rust and GPUI",
       "language": "Rust",
       "topics": [],
-      "stars": 955,
+      "stars": 956,
       "forks": 61,
       "created_at": "2026-10-19T23:04:42Z",
       "pushed_at": "2026-10-23T14:58:55Z",
-      "updated_at": "2026-10-24T12:36:21Z",
-      "stars_per_day": 238.8,
+      "updated_at": "2026-10-24T13:14:39Z",
+      "stars_per_day": 239.0,
       "age_days": 4
     },
     {
@@ -593,12 +593,12 @@
       "description": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
       "language": "Python",
       "topics": [],
-      "stars": 827,
+      "stars": 828,
       "forks": 46,
       "created_at": "2026-10-22T01:40:05Z",
       "pushed_at": "2026-10-23T08:23:24Z",
-      "updated_at": "2026-10-24T13:03:19Z",
-      "stars_per_day": 413.5,
+      "updated_at": "2026-10-24T13:07:47Z",
+      "stars_per_day": 414.0,
       "age_days": 2
     },
     {
@@ -644,12 +644,12 @@
       "description": null,
       "language": "Python",
       "topics": [],
-      "stars": 635,
+      "stars": 636,
       "forks": 66,
       "created_at": "2026-10-20T17:09:40Z",
       "pushed_at": "2026-10-24T02:05:45Z",
-      "updated_at": "2026-10-24T13:06:43Z",
-      "stars_per_day": 211.7,
+      "updated_at": "2026-10-24T13:08:14Z",
+      "stars_per_day": 212.0,
       "age_days": 3
     },
     {
@@ -730,7 +730,7 @@
       "language": "JavaScript",
       "topics": [],
       "stars": 544,
-      "forks": 90,
+      "forks": 89,
       "created_at": "2026-10-20T04:40:07Z",
       "pushed_at": "2026-10-20T04:40:58Z",
       "updated_at": "2026-10-24T12:48:43Z",

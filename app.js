@@ -20,9 +20,11 @@ function signalStats(snap, sig) {
   const avgVel = m.length ? m.reduce((a, r) => a + r.stars_per_day, 0) / m.length : 0;
   return { m, total, avgVel, mentions: sig.hn_mentions + sig.devto_mentions };
 }
-function buildCards(snap) {
+function buildCardsFromSignals(snap, signalList, offset) {
   // Deterministic: signals sorted by count, then total stars — no preset stack, no randomness.
-  const withStats = snap.rising.map((sig) => ({ sig, ...signalStats(snap, sig) }));
+  // offset shifts the name suffix and pitch template, so "Generate more variants"
+  // produces new names/pitches from the SAME evidence (evidence numbers do not change).
+  const withStats = signalList.map((sig) => ({ sig, ...signalStats(snap, sig) }));
   withStats.sort((a, b) => (b.sig.count_in_snapshot - a.sig.count_in_snapshot) || (b.total - a.total) || a.sig.name.localeCompare(b.sig.name));
   const maxVel = Math.max(1, ...withStats.map((x) => x.avgVel));
   const maxTotal = Math.max(1, ...withStats.map((x) => x.total));
@@ -31,16 +33,35 @@ function buildCards(snap) {
     const score = Math.round(50 * (x.avgVel / maxVel) + 30 * (x.total / maxTotal) + 20 * (Math.min(x.mentions, 5) / 5));
     const comps = [...x.m].sort((a, b) => b.stars - a.stars).slice(0, 3);
     return {
-      name: clean(x.sig.name) + SUFFIXES[i % SUFFIXES.length],
+      name: clean(x.sig.name) + SUFFIXES[(i + offset) % SUFFIXES.length],
       signal: x.sig.name, kind: x.sig.kind, score, avgVel: x.avgVel, total: x.total, mentions: x.mentions,
       hn: x.sig.hn_mentions, devto: x.sig.devto_mentions,
-      pitch: PITCHES[i % PITCHES.length](x.sig.name, top ? top.full_name : 'the snapshot sample'),
+      pitch: PITCHES[(i + offset) % PITCHES.length](x.sig.name, top ? top.full_name : 'the snapshot sample'),
       topRepo: top || null, comps,
       hypothesis: top
         ? `Differentiation hypothesis (not proven): focus on the narrow job inside “${esc(top.description || top.full_name)}” and ship it with better docs and a single demo, instead of matching the top repos feature-for-feature.`
         : 'Differentiation hypothesis (not proven): no matching repo in this snapshot sample — verify against a wider search before building.',
     };
   });
+}
+function buildCards(snap) { return buildCardsFromSignals(snap, snap.rising, 0); }
+// Evidence-only seed matching: a seed selects snapshot signals by name.
+// It never creates evidence. If nothing matches, the caller must show the
+// closest signals and label them as closest-match, not as seed evidence.
+function seedSignals(snap, seedRaw) {
+  const seed = String(seedRaw || "").trim().toLowerCase();
+  if (!seed) return { mode: "all", list: snap.rising, closest: [] };
+  const words = seed.split(/[^a-z0-9]+/).filter((w) => w.length >= 2);
+  const matched = snap.rising.filter((sig) => {
+    const name = sig.name.toLowerCase();
+    return name.includes(seed) || seed.includes(name) ||
+      words.some((w) => name.includes(w) || w.includes(name));
+  });
+  if (matched.length) return { mode: "seed", list: matched, closest: [] };
+  const closest = [...snap.rising]
+    .sort((a, b) => (b.count_in_snapshot - a.count_in_snapshot) || a.name.localeCompare(b.name))
+    .slice(0, 3);
+  return { mode: "closest", list: [], closest };
 }
 function drawHeat(canvas, snap, cards) {
   const ctx = canvas.getContext('2d');
@@ -130,16 +151,26 @@ async function main() {
   $('#sources').innerHTML = 'Sources at build time: ' + (snap.sources || []).map((s) => `${esc(s.name)} — ${esc(s.status)}`).join('; ') + '.';
 
   const allCards = buildCards(snap);
+  let currentCards = allCards;
+  let variant = 0;
+  let searchText = "";
+  let sortMode = "interest";
   // Default = all 10 card signals (from the snapshot top), so 10 cards show on load; user can deselect to filter.
   const defaultSignals = allCards.map((c) => c.signal);
   let selected = new Set((params.get('topics') ? params.get('topics').split(',').filter(Boolean) : defaultSignals));
   const chipsEl = $('#chips');
-  const signals = [...new Set(allCards.map((c) => c.signal))];
-  signals.forEach((sig) => {
-    const b = document.createElement('button'); b.type = 'button'; b.textContent = sig; b.setAttribute('aria-pressed', selected.has(sig) ? 'true' : 'false');
-    b.addEventListener('click', () => { selected.has(sig) ? selected.delete(sig) : selected.add(sig); syncUrl(); render(); });
-    chipsEl.appendChild(b);
-  });
+  let signals = [...new Set(allCards.map((c) => c.signal))];
+  function rebuildChips(cardList) {
+    chipsEl.innerHTML = "";
+    signals = [...new Set(cardList.map((c) => c.signal))];
+    selected = new Set(signals);
+    signals.forEach((sig) => {
+      const b = document.createElement('button'); b.type = 'button'; b.textContent = sig; b.setAttribute('aria-pressed', selected.has(sig) ? 'true' : 'false');
+      b.addEventListener('click', () => { selected.has(sig) ? selected.delete(sig) : selected.add(sig); syncUrl(); render(); });
+      chipsEl.appendChild(b);
+    });
+  }
+  rebuildChips(allCards);
   $('#allChips').addEventListener('click', () => { selected = new Set(signals); syncUrl(); render(); });
   function syncUrl() {
     const u = new URLSearchParams(location.search);
@@ -147,18 +178,64 @@ async function main() {
     history.replaceState(null, '', '?' + u.toString());
     [...chipsEl.children].forEach((b) => b.setAttribute('aria-pressed', selected.has(b.textContent) ? 'true' : 'false'));
   }
+  // Generation signals for the current seed: seed matches, closest fallback, or all.
+  function generationSignals() {
+    const res = seedSignals(snap, $('#seed').value);
+    if (res.mode === "closest") return { list: res.closest, mode: "closest", closest: res.closest };
+    return { list: res.list, mode: res.mode, closest: [] };
+  }
+  function applyGeneration(offset, label) {
+    const gen = generationSignals();
+    currentCards = buildCardsFromSignals(snap, gen.list, offset);
+    rebuildChips(currentCards);
+    syncUrl();
+    $('#genStatus').textContent = label(gen);
+    render();
+  }
+  $('#genForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    variant = 0;
+    if (!allCards.length) { $('#genStatus').textContent = 'No data yet — this snapshot is empty. No idea cards can be generated, and none are invented here.'; return; }
+    applyGeneration(0, (gen) => {
+      const seed = $('#seed').value.trim();
+      if (gen.mode === "closest") return `No evidence in this snapshot for “${seed}”. No card was invented for it. Showing closest snapshot signals instead: ${gen.closest.map((s) => s.name).join(', ')}. Evidence on these cards is for those signals, not for your seed.`;
+      if (gen.mode === "seed") return `Generated ${currentCards.length} new ideas from snapshot evidence for “${seed}”. Evidence numbers are from snapshot ${snapDate}, not new data — only the names and pitches are new.`;
+      return `Generated ${currentCards.length} new ideas from the full snapshot (no seed given). Evidence numbers are from snapshot ${snapDate}.`;
+    });
+  });
+  $('#moreBtn').addEventListener('click', () => {
+    if (!allCards.length) { $('#genStatus').textContent = 'No data yet — this snapshot is empty. No idea cards can be generated, and none are invented here.'; return; }
+    variant += 1;
+    applyGeneration(variant, (gen) => {
+      const seed = $('#seed').value.trim();
+      const base = gen.mode === "closest" ? `Closest snapshot signals for “${seed}”` : gen.mode === "seed" ? `Snapshot evidence for “${seed}”` : 'Full snapshot';
+      return `Variant ${variant + 1}: new names and pitches from the same evidence (${base}). Evidence numbers are unchanged — no new data was collected.`;
+    });
+  });
+  $('#resetBtn').addEventListener('click', () => {
+    variant = 0; currentCards = allCards; rebuildChips(allCards);
+    $('#genStatus').textContent = 'Back to the default 10 cards.';
+    render();
+  });
+  $('#searchCards').addEventListener('input', (e) => { searchText = e.target.value.trim().toLowerCase(); render(); });
+  $('#sortCards').addEventListener('change', (e) => { sortMode = e.target.value; render(); });
   render = () => {
-    const shown = selected.size ? allCards.filter((c) => selected.has(c.signal)) : allCards;
+    let shown = selected.size ? currentCards.filter((c) => selected.has(c.signal)) : currentCards;
+    if (searchText) shown = shown.filter((c) => `${c.name} ${c.signal} ${c.pitch}`.toLowerCase().includes(searchText));
+    if (sortMode === "velocity") shown = [...shown].sort((a, b) => b.avgVel - a.avgVel);
+    else if (sortMode === "stars") shown = [...shown].sort((a, b) => b.total - a.total);
+    else if (sortMode === "name") shown = [...shown].sort((a, b) => a.name.localeCompare(b.name));
+    else shown = [...shown].sort((a, b) => b.score - a.score);
     if (!allCards.length) {
       $('#emptyNote').hidden = false; $('#emptyNote').textContent = 'No data yet — this snapshot is empty. No idea cards can be generated from an empty snapshot, and none are invented here.';
       $('#cards').innerHTML = ''; return;
     }
     $('#emptyNote').hidden = true;
-    $('#cards').innerHTML = shown.map((c) => cardHtml(c, snapDate)).join('') || '<p>No cards match the selected topics. Choose “All” to reset.</p>';
-    drawHeat($('#heat'), snap, shown.length ? shown : allCards);
+    $('#cards').innerHTML = shown.map((c) => cardHtml(c, snapDate)).join('') || '<p>No cards match the selected topics or search. Choose “All” to reset, or clear the search.</p>';
+    drawHeat($('#heat'), snap, shown.length ? shown : currentCards);
     document.querySelectorAll('[data-export]').forEach((btn) => {
       btn.addEventListener('click', () => {
-        const cardEl = btn.closest('.card'); const card = allCards.find((c) => c.name === cardEl.querySelector('h3').textContent.split(' —')[0]);
+        const cardEl = btn.closest('.card'); const card = currentCards.find((c) => c.name === cardEl.querySelector('h3').textContent.split(' —')[0]) || allCards.find((c) => c.name === cardEl.querySelector('h3').textContent.split(' —')[0]);
         if (card) copyText(btn, exportText(btn.dataset.export, card));
       });
     });

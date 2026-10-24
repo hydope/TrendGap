@@ -42,9 +42,31 @@
     <p class="small">Legend: darker = stronger on that axis. Numbers are from the snapshot sample only.</p>
   </section>
 
+  <section aria-label="Generate new ideas">
+    <h2>Generate new ideas</h2>
+    <p class="small">Like GitNym generates names, this generates new idea cards — but <strong>only from snapshot evidence</strong>. Type a topic or keyword (optional) to pick which snapshot signals to build from, then Generate. “Generate more variants” makes new names and pitches from the <em>same</em> evidence — the evidence numbers do not change, because no new data was collected. A seed with no matching signal gets <strong>no invented card</strong>: you get the closest snapshot signals instead, labelled as closest-match, not as evidence for your seed.</p>
+    <form id="genForm">
+      <label for="seed">Topic / keyword (optional)</label>
+      <input id="seed" type="text" maxlength="100" placeholder="e.g. android-tv, Rust, launcher" autocomplete="off">
+      <button id="genBtn" type="submit">Generate new ideas</button>
+      <button id="moreBtn" type="button">Generate more variants</button>
+      <button id="resetBtn" type="button">Back to default 10 cards</button>
+    </form>
+    <p id="genStatus" role="status" aria-live="polite"></p>
+  </section>
+
   <section aria-label="Idea cards">
-    <h2>10 idea cards</h2>
+    <h2>Idea cards</h2>
     <p class="small">Interest signal formula (published, ESTIMATE — not a virality prediction): <code>50 × (avg stars/day ÷ max avg stars/day in snapshot) + 30 × (sample stars ÷ max sample stars) + 20 × (min(HN + dev.to title mentions, 5) ÷ 5)</code>, rounded to 0–100. Components are shown on each card.</p>
+    <label for="searchCards">Search cards</label>
+    <input id="searchCards" type="search" placeholder="Search by name, signal or pitch…" autocomplete="off">
+    <label for="sortCards">Sort by</label>
+    <select id="sortCards">
+      <option value="interest">Interest signal (high first)</option>
+      <option value="velocity">Velocity — avg stars/day (high first)</option>
+      <option value="stars">Sample stars (high first)</option>
+      <option value="name">Name (A–Z)</option>
+    </select>
     <div id="cards" class="cards"></div>
   </section>
 
@@ -60,7 +82,7 @@
 </main>
 
 <footer>
-  <p>TrendGap — local build only, not published. See <a href="README.md">README</a> for how the snapshot is built and the rename note.</p>
+  <p>TrendGap — live at hydope.github.io/TrendGap. See <a href="README.md">README</a> for how the snapshot is built and the rename note.</p>
 </footer>
 
 <script type="module" src="app.js"></script>

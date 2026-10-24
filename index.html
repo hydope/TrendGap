@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrendGap — Repo ideas with the evidence shown</title>
+<meta name="description" content="TrendGap: repo ideas with the evidence shown — and the crowded competitors shown too. Deterministic suggestions from a dated snapshot sample. No official GitHub trending API is claimed.">
+<meta property="og:title" content="TrendGap — Repo ideas with the evidence shown">
+<meta property="og:description" content="Repo ideas with the evidence shown — and the crowded competitors shown too. Suggestions only; only the evidence numbers are data.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>TrendGap</h1>
+    <p class="tagline">Repo ideas with the evidence shown — and the crowded competitors shown too.</p>
+    <p class="honest">Generated ideas are <strong>SUGGESTIONS</strong>. Only the evidence numbers are data. Popularity is not proof of a gap, and there is <strong>no official GitHub trending API</strong> — this page uses a dated GitHub Search API sample (see snapshot note).</p>
+  </div>
+  <button id="darkToggle" type="button" aria-label="Toggle dark mode">Dark mode</button>
+</header>
+
+<main>
+  <section aria-label="Snapshot status" class="status">
+    <p id="freshness">Loading snapshot…</p>
+    <p id="liveNote"></p>
+    <p id="banner" class="banner" hidden></p>
+    <p id="emptyNote" class="banner" hidden></p>
+  </section>
+
+  <section aria-label="Topic filters">
+    <h2>Topics from this snapshot</h2>
+    <p class="small">Defaults come from the snapshot's top rising topics and languages — not from a preset list. Select chips to filter the cards. Use “All” to reset.</p>
+    <div id="chips" class="chips" role="group" aria-label="Filter by topic or language"></div>
+    <button id="allChips" type="button">All</button>
+  </section>
+
+  <section aria-label="Rising versus saturated heat chart">
+    <h2>Rising vs. saturated</h2>
+    <p class="small">Heat = average stars/day of matching repos in this snapshot sample. “Rising” leans on velocity; “Saturated” leans on how many repos already match. This is a sample view, not the whole of GitHub.</p>
+    <canvas id="heat" width="900" height="360" aria-label="Heat chart of rising versus saturated signals from the snapshot"></canvas>
+    <p class="small">Legend: darker = stronger on that axis. Numbers are from the snapshot sample only.</p>
+  </section>
+
+  <section aria-label="Idea cards">
+    <h2>10 idea cards</h2>
+    <p class="small">Interest signal formula (published, ESTIMATE — not a virality prediction): <code>50 × (avg stars/day ÷ max avg stars/day in snapshot) + 30 × (sample stars ÷ max sample stars) + 20 × (min(HN + dev.to title mentions, 5) ÷ 5)</code>, rounded to 0–100. Components are shown on each card.</p>
+    <div id="cards" class="cards"></div>
+  </section>
+
+  <section aria-label="About the evidence">
+    <h2>What this evidence is — and is not</h2>
+    <ul>
+      <li><strong>Is:</strong> a dated sample (first 30 GitHub Search results for repos created after 2026-10-17, sorted by stars), plus 10 HN Algolia stories and 10 dev.to articles from the same build.</li>
+      <li><strong>Is not:</strong> an official trending feed, a complete market survey, or proof that a gap exists. Competitor rows are the top matches <em>in this snapshot sample</em>, not a global top 3.</li>
+      <li><strong>Names on cards are suggestions only.</strong> Their npm / PyPI / domain availability was not checked here.</li>
+    </ul>
+    <p id="sources"></p>
+  </section>
+</main>
+
+<footer>
+  <p>TrendGap — local build only, not published. See <a href="README.md">README</a> for how the snapshot is built and the rename note.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

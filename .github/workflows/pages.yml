@@ -1,0 +1,42 @@
+name: Refresh snapshot and deploy to GitHub Pages
+# One workflow does both jobs: GITHUB_TOKEN commits do not trigger other
+# workflows, so the snapshot refresh and the Pages deploy must live here.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 9 * * *" # daily, 09:00 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build snapshot
+        run: python3 scripts/build_snapshot.py
+      - name: Commit refreshed snapshot back to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/snapshot.json
+          git diff --cached --quiet || git commit -m "Refresh snapshot [skip ci]"
+          git push || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

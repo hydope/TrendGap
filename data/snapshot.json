@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T14:02:10.509422+00:00",
+  "generated_at": "2026-10-24T14:10:47.557991+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -179,12 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4222,
+      "stars": 4228,
       "forks": 331,
       "created_at": "2026-10-20T09:13:06Z",
       "pushed_at": "2026-10-24T13:06:33Z",
-      "updated_at": "2026-10-24T14:01:21Z",
-      "stars_per_day": 1055.5,
+      "updated_at": "2026-10-24T14:07:34Z",
+      "stars_per_day": 1057.0,
       "age_days": 4
     },
     {
@@ -206,12 +206,12 @@
         "tmdb",
         "webos"
       ],
-      "stars": 4127,
+      "stars": 4132,
       "forks": 650,
       "created_at": "2026-10-19T19:29:01Z",
       "pushed_at": "2026-10-24T13:17:19Z",
-      "updated_at": "2026-10-24T14:02:00Z",
-      "stars_per_day": 1031.8,
+      "updated_at": "2026-10-24T14:10:40Z",
+      "stars_per_day": 1033.0,
       "age_days": 4
     },
     {
@@ -238,12 +238,12 @@
         "open-data",
         "primary-school"
       ],
-      "stars": 3054,
-      "forks": 702,
+      "stars": 3058,
+      "forks": 703,
       "created_at": "2026-10-18T09:04:43Z",
       "pushed_at": "2026-10-24T12:32:48Z",
-      "updated_at": "2026-10-24T14:00:47Z",
-      "stars_per_day": 509.0,
+      "updated_at": "2026-10-24T14:10:03Z",
+      "stars_per_day": 509.7,
       "age_days": 6
     },
     {
@@ -257,12 +257,12 @@
         "rea",
         "reverse-enginnering"
       ],
-      "stars": 1912,
+      "stars": 1913,
       "forks": 315,
       "created_at": "2026-10-19T22:20:47Z",
       "pushed_at": "2026-10-21T00:32:22Z",
-      "updated_at": "2026-10-24T13:56:18Z",
-      "stars_per_day": 478.0,
+      "updated_at": "2026-10-24T14:10:25Z",
+      "stars_per_day": 478.2,
       "age_days": 4
     },
     {
@@ -272,12 +272,12 @@
       "description": "Offline FairPlay App Store IPA decryption with independent key derivation",
       "language": "C",
       "topics": [],
-      "stars": 1844,
+      "stars": 1847,
       "forks": 288,
       "created_at": "2026-10-19T10:07:58Z",
       "pushed_at": "2026-10-23T10:58:42Z",
-      "updated_at": "2026-10-24T13:58:05Z",
-      "stars_per_day": 368.8,
+      "updated_at": "2026-10-24T14:09:02Z",
+      "stars_per_day": 369.4,
       "age_days": 5
     },
     {
@@ -326,12 +326,12 @@
         "motion-graphics",
         "skills"
       ],
-      "stars": 1578,
+      "stars": 1579,
       "forks": 155,
       "created_at": "2026-10-18T12:19:27Z",
       "pushed_at": "2026-10-22T12:19:37Z",
-      "updated_at": "2026-10-24T14:00:58Z",
-      "stars_per_day": 263.0,
+      "updated_at": "2026-10-24T14:05:19Z",
+      "stars_per_day": 263.2,
       "age_days": 6
     },
     {
@@ -341,12 +341,12 @@
       "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
       "language": "C",
       "topics": [],
-      "stars": 1494,
-      "forks": 179,
+      "stars": 1507,
+      "forks": 181,
       "created_at": "2026-10-18T01:28:31Z",
       "pushed_at": "2026-10-24T00:41:18Z",
-      "updated_at": "2026-10-24T14:02:05Z",
-      "stars_per_day": 249.0,
+      "updated_at": "2026-10-24T14:10:07Z",
+      "stars_per_day": 251.2,
       "age_days": 6
     },
     {
@@ -356,12 +356,12 @@
       "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
       "language": "Swift",
       "topics": [],
-      "stars": 1442,
-      "forks": 228,
+      "stars": 1447,
+      "forks": 230,
       "created_at": "2026-10-21T19:38:50Z",
       "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-24T14:01:01Z",
-      "stars_per_day": 721.0,
+      "updated_at": "2026-10-24T14:09:30Z",
+      "stars_per_day": 723.5,
       "age_days": 2
     },
     {
@@ -384,12 +384,12 @@
         "unzip",
         "zip"
       ],
-      "stars": 1438,
+      "stars": 1444,
       "forks": 35,
       "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-24T13:54:27Z",
-      "updated_at": "2026-10-24T14:01:57Z",
-      "stars_per_day": 719.0,
+      "pushed_at": "2026-10-24T14:03:23Z",
+      "updated_at": "2026-10-24T14:09:51Z",
+      "stars_per_day": 722.0,
       "age_days": 2
     },
     {
@@ -442,12 +442,12 @@
       "description": "A php2shell exploit that requires no modifications to the official version, and does not require display_errors or limit_memory.",
       "language": "Python",
       "topics": [],
-      "stars": 1387,
+      "stars": 1388,
       "forks": 404,
       "created_at": "2026-10-21T11:11:57Z",
       "pushed_at": "2026-10-23T20:40:43Z",
-      "updated_at": "2026-10-24T13:36:29Z",
-      "stars_per_day": 462.3,
+      "updated_at": "2026-10-24T14:02:46Z",
+      "stars_per_day": 462.7,
       "age_days": 3
     },
     {
@@ -472,12 +472,12 @@
       "description": null,
       "language": "C",
       "topics": [],
-      "stars": 1218,
+      "stars": 1219,
       "forks": 214,
       "created_at": "2026-10-22T06:20:11Z",
       "pushed_at": "2026-10-23T14:25:04Z",
-      "updated_at": "2026-10-24T13:43:59Z",
-      "stars_per_day": 609.0,
+      "updated_at": "2026-10-24T14:08:43Z",
+      "stars_per_day": 609.5,
       "age_days": 2
     },
     {
@@ -487,12 +487,12 @@
       "description": "Import .sql files into TypeScript with full type inference and zero codegen.",
       "language": "Rust",
       "topics": [],
-      "stars": 1157,
+      "stars": 1160,
       "forks": 8,
       "created_at": "2026-10-21T00:16:54Z",
       "pushed_at": "2026-10-24T04:54:52Z",
-      "updated_at": "2026-10-24T14:01:45Z",
-      "stars_per_day": 385.7,
+      "updated_at": "2026-10-24T14:10:42Z",
+      "stars_per_day": 386.7,
       "age_days": 3
     },
     {
@@ -503,7 +503,7 @@
       "language": "Shell",
       "topics": [],
       "stars": 981,
-      "forks": 243,
+      "forks": 245,
       "created_at": "2026-10-21T08:31:43Z",
       "pushed_at": "2026-10-22T07:19:20Z",
       "updated_at": "2026-10-24T13:39:32Z",
@@ -551,8 +551,8 @@
       "created_at": "2026-10-20T14:03:04Z",
       "pushed_at": "2026-10-24T08:34:16Z",
       "updated_at": "2026-10-24T13:47:45Z",
-      "stars_per_day": 320.3,
-      "age_days": 3
+      "stars_per_day": 240.2,
+      "age_days": 4
     },
     {
       "full_name": "ELY-Open-Source/ElyOffice",
@@ -579,7 +579,7 @@
         "unixnu"
       ],
       "stars": 881,
-      "forks": 161,
+      "forks": 162,
       "created_at": "2026-10-19T10:46:55Z",
       "pushed_at": "2026-10-24T11:48:52Z",
       "updated_at": "2026-10-24T13:54:11Z",
@@ -704,12 +704,12 @@
       "description": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
       "language": "Python",
       "topics": [],
-      "stars": 559,
-      "forks": 110,
+      "stars": 565,
+      "forks": 111,
       "created_at": "2026-10-22T03:53:20Z",
       "pushed_at": "2026-10-24T03:40:18Z",
-      "updated_at": "2026-10-24T14:01:47Z",
-      "stars_per_day": 279.5,
+      "updated_at": "2026-10-24T14:09:16Z",
+      "stars_per_day": 282.5,
       "age_days": 2
     },
     {
@@ -719,12 +719,12 @@
       "description": "A personal home screen for Samsung The Frame. A starting point to fork and adapt.",
       "language": "JavaScript",
       "topics": [],
-      "stars": 548,
+      "stars": 549,
       "forks": 91,
       "created_at": "2026-10-20T04:40:07Z",
       "pushed_at": "2026-10-20T04:40:58Z",
-      "updated_at": "2026-10-24T13:58:35Z",
-      "stars_per_day": 137.0,
+      "updated_at": "2026-10-24T14:05:12Z",
+      "stars_per_day": 137.2,
       "age_days": 4
     }
   ],

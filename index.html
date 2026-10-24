@@ -8,7 +8,11 @@
 <meta property="og:title" content="TrendGap — Repo ideas with the evidence shown">
 <meta property="og:description" content="Repo ideas with the evidence shown — and the crowded competitors shown too. Suggestions only; only the evidence numbers are data.">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="styles.css">
+<!-- Versioned subresources: GitHub Pages + browser caching previously served
+     new HTML with an old cached app.js, which broke the new generator form
+     (native form submit -> page reload, inputs cleared). Bump ?v= on every
+     deploy that changes app.js/styles.css so HTML and JS can never mismatch. -->
+<link rel="stylesheet" href="styles.css?v=20261024-2">
 </head>
 <body>
 <header class="top">
@@ -50,7 +54,7 @@
       <input id="pkgDesc" type="text" maxlength="200" placeholder="e.g. ai notes app" autocomplete="off">
       <label for="pkgTopic">Topic filter (optional, e.g. Rust, android-tv)</label>
       <input id="pkgTopic" type="text" maxlength="100" placeholder="Leave blank to use the strongest snapshot evidence" autocomplete="off">
-      <button id="pkgGenBtn" type="submit">Generate full repo idea</button>
+      <button id="pkgGenBtn" type="button">Generate full repo idea</button>
       <button id="pkgMoreBtn" type="button">Regenerate variant (same evidence)</button>
     </form>
     <p id="packageStatus" role="status" aria-live="polite"></p>
@@ -100,6 +104,6 @@
   <p>TrendGap — live at hydope.github.io/TrendGap. See <a href="README.md">README</a> for how the snapshot is built and the rename note.</p>
 </footer>
 
-<script type="module" src="app.js"></script>
+<script type="module" src="app.js?v=20261024-2"></script>
 </body>
 </html>

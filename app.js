@@ -298,6 +298,10 @@ async function main() {
     $('#package').innerHTML = res.html;
   }
   $('#pkgForm').addEventListener('submit', (e) => { e.preventDefault(); pkgVariant = 0; renderPackage(); });
+  // Click handler in addition to submit: a click must never fall through to
+  // a native form submit (which reloads to "/?" and clears the inputs) even
+  // if the submit path is ever bypassed. Enter in an input still works via submit.
+  $('#pkgGenBtn').addEventListener('click', () => { pkgVariant = 0; renderPackage(); });
   $('#pkgMoreBtn').addEventListener('click', () => { pkgVariant += 1; renderPackage(); });
   $('#package').addEventListener('click', (e) => {
     const btn = e.target.closest('[data-pkg-export]');

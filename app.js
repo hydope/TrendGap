@@ -88,7 +88,12 @@ function searchStageDefs(query) {
   const push = (toks, label) => { if (toks.length) defs.push({ tokens: [...toks], label: label || toks.join(" ") }); };
   push(tokens);
   if (tokens.includes("rayban")) push(tokens, tokens.map((t) => (t === "rayban" ? "ray-ban" : t)).join(" "));
-  for (let n = tokens.length - 1; n >= 1; n--) push(tokens.slice(0, n));
+  // v5.3: for 3+ token queries, drop-last stops at 2 words. The bare
+  // single-word stage ("meta" alone: 332,874 matches, 17 of 39 merged repos
+  // in the 2026-10-24 check) is pure noise and wastes rate budget. For 1–2
+  // token queries all stages are kept.
+  const minWords = tokens.length >= 3 ? 2 : 1;
+  for (let n = tokens.length - 1; n >= minWords; n--) push(tokens.slice(0, n));
   const seen = new Set();
   return defs.filter((d) => (seen.has(d.label) ? false : (seen.add(d.label), true)));
 }
@@ -112,6 +117,52 @@ function matchedInfo(repo, originalTokens) {
 }
 function relevanceScore(repo, stageQuery) {
   return matchedInfo(repo, queryTokens(stageQuery)).score;
+}
+// ---- v5.3 TIERED RELEVANCE: a repo whose NAME or TOPICS contain 2+
+// distinct query words is Tier A ("Name/topic match"); everything else
+// that matched is Tier B ("Description-only match"). Tier sorts BEFORE
+// words-matched/relevance/stars, because a name/topic match is a much
+// stronger intent signal than a description word. SDK/plugin/library repos
+// are demoted ONE tier when the topic is not about SDKs/plugins (their
+// name contains sdk/plugin/library but the topic words do not) — labelled
+// on the row, never silently excluded: they stay visible, just lower.
+// Example, "Meta rayban video connect": MetaRaybanCameraApp's name contains
+// meta+rayban = Tier A; flutter_meta_wearables' name contains meta only =
+// Tier B, and it is also an SDK/plugin-style name, so it drops further.
+function tierInfo(repo, originalTokens) {
+  const name = normFlat(repo.name);
+  const topics = normFlat((repo.topics || []).join(" "));
+  const nameWords = new Set();
+  const topicWords = new Set();
+  for (const raw of originalTokens) {
+    const t = normFlat(raw);
+    if (!t) continue;
+    if (name.includes(t)) nameWords.add(t);
+    if (topics.includes(t)) topicWords.add(t);
+  }
+  const strong = new Set([...nameWords, ...topicWords]);
+  let tier = strong.size >= 2 ? 0 : 1;
+  const topicFlat = new Set(originalTokens.map(normFlat));
+  const isSdkName = /(sdk|plugin|library)/.test(name);
+  const topicIsSdk = ["sdk", "plugin", "library"].some((w) => topicFlat.has(w));
+  const demoted = isSdkName && !topicIsSdk;
+  if (demoted) tier += 1;
+  return { tier, demoted, strongCount: strong.size,
+    label: tier === 0 ? "Tier A — Name/topic match" : tier === 1 ? "Tier B — Description-only match" : "Tier C — SDK/plugin building block" };
+}
+function strengthTier(repo) {
+  if (repo.stars >= 100) return "Established";
+  if (repo.stars >= 10) return "Emerging";
+  return "Early";
+}
+function interestTier(repo) {
+  if (repo.stars >= 1000) return "Breakout";
+  if (repo.stars >= 100) return "Strong";
+  if (repo.stars >= 10) return "Emerging";
+  return "Early (weak)";
+}
+function interestLine(repo) {
+  return `Interest: ${interestTier(repo)} — ${repo.stars} stars, ${repo.stars_per_day}/day`;
 }
 async function searchAllStages(query) {
   const original = queryTokens(query);
@@ -145,8 +196,9 @@ async function searchAllStages(query) {
     }
   }
   const merged = [...byName.values()]
-    .sort((a, b) => b.matched - a.matched || b.score - a.score || b.repo.stars - a.repo.stars)
-    .map((x) => { x.repo._sources = [...new Set(x.sources)]; x.repo._matched = x.matched; x.repo._score = x.score; return x.repo; });
+    .map((x) => { const t = tierInfo(x.repo, original); x.tier = t.tier; x.demoted = t.demoted; x.tierLabel = t.label; return x; })
+    .sort((a, b) => a.tier - b.tier || b.matched - a.matched || b.score - a.score || b.repo.stars - a.repo.stars)
+    .map((x) => { x.repo._sources = [...new Set(x.sources)]; x.repo._matched = x.matched; x.repo._score = x.score; x.repo._tier = x.tier; x.repo._tierLabel = x.tierLabel; x.repo._demoted = x.demoted; return x.repo; });
   const transformed = original.includes("rayban") ? ["rayban → ray-ban"] : [];
   const droppedInStages = [];
   for (const def of defs) {
@@ -219,15 +271,10 @@ function competitorsFor(repo, repos) {
     .sort((a, b) => b.stars - a.stars)
     .slice(0, 3);
 }
-function interestScore(repo, repos) {
-  const maxVel = Math.max(1, ...repos.map((r) => r.stars_per_day));
-  const maxStars = Math.max(1, ...repos.map((r) => r.stars));
-  return Math.round(50 * (repo.stars_per_day / maxVel) + 50 * (repo.stars / maxStars));
-}
 function packageFor(repo, variant, repos, opts) {
   const idea = ideaFor(repo, variant);
   const angle = idea.angle;
-  const score = interestScore(repo, repos);
+  const interest = interestLine(repo);
   const comps = competitorsFor(repo, repos);
   const topTopic = (repo.topics || [])[0] || repo.language;
   const features = [
@@ -239,7 +286,7 @@ function packageFor(repo, variant, repos, opts) {
   const explorationNote = opts && opts.exploration
     ? `EXPLORATION ONLY — ${repo.full_name} is a trending repo shown for exploration. It is NOT evidence for your search query and is unrelated to it.\n\n`
     : "";
-  const markdown = `# ${idea.name}\n\n${idea.pitch}\n\nSUGGESTION — only the evidence numbers are data.\n\n${explorationNote}## README outline\n\nProblem → Solution → Features → Demo → Evidence → Differentiation.\n\n## Problem / solution\n\n${idea.pitch}\n\n## Features (suggestions, tied to the source repo — not evidence)\n\n${features.map((f) => `- ${f}`).join("\n")}\n\n## Suggested stack\n\n${repo.language} (the source repo's language, from GitHub — the reason is that the idea is a spin-off of a ${repo.language} repo, not a market claim).\n\n## 72-hour MVP\n\nBuild: core ${angle.label.toLowerCase()} in ${repo.language}; one demo; docs + worked example.\nCut: accounts, payments, AI generation, mobile app (unless the angle itself is mobile — then cut accounts, payments, AI generation).\n\n## Evidence\n\n- Source repo: ${repo.full_name} — ${repo.html_url}\n- Stars: ${repo.stars}; stars/day: ${repo.stars_per_day} (stars ÷ ${repo.age_days} days); created ${fmtDate(repo.created_at)}; last push ${fmtDate(repo.pushed_at || repo.updated_at)}\n- Language: ${repo.language}; topics: ${(repo.topics || []).join(", ") || "none listed"}\n- Interest signal: ${score}/100 (ESTIMATE, relative to the ${repos.length} repos fetched, not to all of GitHub)\n- Source: ${opts && opts.sourceLabel ? opts.sourceLabel : "fetched set"}\n- Top competitors in fetched set:\n${comps.length ? comps.map((r) => `  - ${r.full_name} — ${r.stars} stars, ${r.stars_per_day}/day, last push ${fmtDate(r.pushed_at || r.updated_at)}`).join("\n") : "  None in this fetched set — marked unchecked, not “no competitors exist”."}\n\n## Differentiation hypothesis (not proven)\n\n${hypothesis}\n`;
+  const markdown = `# ${idea.name}\n\n${idea.pitch}\n\nSUGGESTION — only the evidence numbers are data.\n\n${explorationNote}## README outline\n\nProblem → Solution → Features → Demo → Evidence → Differentiation.\n\n## Problem / solution\n\n${idea.pitch}\n\n## Features (suggestions, tied to the source repo — not evidence)\n\n${features.map((f) => `- ${f}`).join("\n")}\n\n## Suggested stack\n\n${repo.language} (the source repo's language, from GitHub — the reason is that the idea is a spin-off of a ${repo.language} repo, not a market claim).\n\n## 72-hour MVP\n\nBuild: core ${angle.label.toLowerCase()} in ${repo.language}; one demo; docs + worked example.\nCut: accounts, payments, AI generation, mobile app (unless the angle itself is mobile — then cut accounts, payments, AI generation).\n\n## Evidence\n\n- Source repo: ${repo.full_name} — ${repo.html_url}\n- Stars: ${repo.stars}; stars/day: ${repo.stars_per_day} (stars ÷ ${repo.age_days} days); created ${fmtDate(repo.created_at)}; last push ${fmtDate(repo.pushed_at || repo.updated_at)}\n- Language: ${repo.language}; topics: ${(repo.topics || []).join(", ") || "none listed"}\n- ${interest} (absolute tiers by stars: 1000+ Breakout, 100+ Strong, 10+ Emerging, else Early — NOT relative to this fetched set)\n- Source: ${opts && opts.sourceLabel ? opts.sourceLabel : "fetched set"}\n- Top competitors in fetched set:\n${comps.length ? comps.map((r) => `  - ${r.full_name} — ${r.stars} stars, ${r.stars_per_day}/day, last push ${fmtDate(r.pushed_at || r.updated_at)}`).join("\n") : "  None in this fetched set — marked unchecked, not “no competitors exist”."}\n\n## Differentiation hypothesis (not proven)\n\n${hypothesis}\n`;
   const html = `<article class="package">
     <h3>${esc(idea.name)} <span class="small">— SUGGESTION${opts && opts.exploration ? ' · <strong>Exploration only — unrelated to your query</strong>' : ''}</span></h3>
     <p>${esc(idea.pitch)}</p>
@@ -251,7 +298,7 @@ function packageFor(repo, variant, repos, opts) {
     <div class="evidence">
       <p><strong>Evidence:</strong> Source repo <a href="${esc(repo.html_url)}" target="_blank" rel="noopener">${esc(repo.full_name)}</a> — ${repo.stars} stars, ${repo.stars_per_day}/day (stars ÷ ${repo.age_days} days), created ${fmtDate(repo.created_at)}, last push ${fmtDate(repo.pushed_at || repo.updated_at)}.</p>
       <p>Language: ${esc(repo.language)}; topics: ${esc((repo.topics || []).join(", ") || "none listed")}.</p>
-      <p>Interest signal: ${score}/100 (ESTIMATE, relative to the ${repos.length} repos fetched, not to all of GitHub).</p>
+      <p>${esc(interest)} (absolute tiers by stars — not relative to this fetched set, so a 2-star repo can never read "100/100").</p>
       <p>Source: ${esc(opts && opts.sourceLabel ? opts.sourceLabel : "fetched set")}.</p>
       <p><strong>Top competitors in fetched set:</strong></p><ul>${comps.length ? comps.map((r) => `<li><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a> — ${r.stars} stars, ${r.stars_per_day}/day, last push ${fmtDate(r.pushed_at || r.updated_at)}.</li>`).join("") : '<li>None in this fetched set — marked unchecked, not “no competitors exist”.</li>'}</ul>
     </div>
@@ -264,10 +311,10 @@ function packageFor(repo, variant, repos, opts) {
       <button type="button" data-pkg-export="issue">Copy as GitHub issue/plan</button>
     </div></article>`;
   return {
-    html, markdown, repo, angle, score,
+    html, markdown, repo, angle, interest,
     hn: `Show HN: ${idea.name} — ${idea.pitch}`,
     x: `${idea.name}: ${idea.pitch} (Suggestion — evidence in TrendGap, not proof of a gap.)`,
-    issue: `## Plan: ${idea.name}\n\nPitch: ${idea.pitch}\n\n72-hour MVP — Build: core, one demo, docs + example. Cut: accounts, payments, AI generation.\n\nInterest signal: ${score}/100 (ESTIMATE, relative to the fetched set). Differentiation hypothesis: see package — hypothesis, not proven.`,
+    issue: `## Plan: ${idea.name}\n\nPitch: ${idea.pitch}\n\n72-hour MVP — Build: core, one demo, docs + example. Cut: accounts, payments, AI generation.\n\n${interest}. Differentiation hypothesis: see package — hypothesis, not proven.`,
   };
 }
 async function copyText(btn, text) {
@@ -335,7 +382,34 @@ function gapIdea(topic, probeResult, saturated, stack) {
   const aiCore = ["transcript", "captions", "translate", "blur"].includes(probe);
   const cut = aiCore ? "accounts, payments, mobile app" : "accounts, payments, AI generation, mobile app";
   const notBuild = [...saturated].sort((a, b) => b.stars - a.stars).slice(0, 3);
-  const markdown = `# ${name}\n\nSUGGESTION — a market-gap idea, not a proven gap. Only the evidence numbers are data.\n\n## What's missing\n\n${missingLine} For ${topic}, the "${probe}" angle is the missing piece this idea fixes.\n\n## Evidence (what GitHub Search actually found — not a world survey)\n\n- Probe query: "${probeResult.query}" in:name,description — total matches: ${probeResult.total}${probeResult.top ? `\n- Nearest repo found: ${probeResult.top.full_name} — ${probeResult.top.stars} stars, ${probeResult.top.stars_per_day}/day, created ${fmtDate(probeResult.top.created_at)} — ${descShort(probeResult.top)}` : "\n- Nearest repo found: none."}\n- Topic's top repos (saturated clusters): ${saturated.slice(0, 3).map((r) => `${r.full_name} (${r.stars} stars)`).join(", ") || "none shown"}.\n- "Missing" here means: no repo found by this GitHub search, or only a repo under 5 stars. A feature can exist in a repo whose name/description does not contain the probe word — verify against the repos themselves before building.\n\n## How to fix it (concrete build plan)\n\n${features.map((f) => `- ${f}`).join("\n")}\n\n## 72-hour MVP\n\nBuild: the "${probe}" core feature for ${topic}; one working demo on real footage; docs + worked example.\nCut: ${cut}.\n\n## Suggested stack\n\n${stack.language} (suggestion only — the most common language among the topic's top repos: ${stack.count} of ${stack.total} shown), because the saturated repos around this topic are mostly ${stack.language}.\n\n## What NOT to build (already saturated — with stars)\n\n${notBuild.map((r) => `- ${r.full_name} — ${r.stars} stars: ${descShort(r)}`).join("\n")}\n\n## Honesty note\n\nTrending also needs execution, timing and distribution. This idea is not guaranteed to trend or to be "top in the world" — the gap evidence above is the only claim being made, and it is limited to what GitHub Search found.\n`;
+  // ---- v5.3 "Why this could work (evidence)": every point cites a number
+  // from THIS run — never a generic claim. No number, no point. Heading is
+  // "Why this could work (evidence)", never "Why this WILL work", and never
+  // a guarantee. Plus one honest "What could kill it" counter-line.
+  const demandTop = [...saturated].sort((a, b) => b.stars - a.stars)[0];
+  const totalTop10 = saturated.reduce((s, r) => s + (r.stars || 0), 0);
+  const topicWords = queryTokens(topic);
+  let adjacent = null; let adjacentShared = 0;
+  for (const r of saturated) {
+    const hay = normFlat(`${r.name} ${r.description} ${(r.topics || []).join(" ")}`);
+    let shared = 0;
+    for (const w of topicWords) if (hay.includes(normFlat(w))) shared += 1;
+    if (r.language === stack.language) shared += 1;
+    if (!adjacent || shared > adjacentShared || (shared === adjacentShared && r.stars > adjacent.stars)) { adjacent = r; adjacentShared = shared; }
+  }
+  const established = [...saturated].filter((r) => r.stars >= 100).sort((a, b) => b.stars - a.stars)[0];
+  const killLine = established
+    ? `An Established competitor, ${established.full_name} (${established.stars} stars), could add the "${probe}" feature itself and out-ship a brand-new repo.`
+    : totalTop10 < 100
+    ? `Topic demand is small: the topic's top 10 total only ${totalTop10} stars, so even a good idea may find few users.`
+    : `A platform change could break it: if the glasses SDK, store rules, or APIs this idea depends on change, the core feature may need rebuilding.`;
+  const evidencePoints = [
+    `Topic demand: the top repo in this topic, ${demandTop ? demandTop.full_name : "none shown"} (${demandTop ? demandTop.stars : 0} stars), and the topic's top 10 total ${totalTop10} stars — people actually build and star things in this topic.`,
+    `Unserved slice: GitHub Search for "${probeResult.query}" found ${probeResult.total} repo(s)${probeResult.top ? `; nearest is ${probeResult.top.full_name} (${probeResult.top.stars} stars)` : "; nearest repo: none"} — this slice specifically is unserved.`,
+    `Adjacent proof: ${adjacent ? adjacent.full_name : "none shown"} (${adjacent ? adjacent.stars : 0} stars) shares ${adjacentShared} topic word(s)/stack match(es) with this idea — a neighbouring single-purpose tool in this space already found users.`,
+    `Buildability: ${stack.language} is the stack of ${stack.count} of ${stack.total} top repos, and the MVP is one "${probe}" core feature with one demo in 72 hours — small scope, not a moonshot.`,
+  ];
+  const markdown = `# ${name}\n\nSUGGESTION — a market-gap idea, not a proven gap. Only the evidence numbers are data.\n\n## What's missing\n\n${missingLine} For ${topic}, the "${probe}" angle is the missing piece this idea fixes.\n\n## Evidence (what GitHub Search actually found — not a world survey)\n\n- Probe query: "${probeResult.query}" in:name,description — total matches: ${probeResult.total}${probeResult.top ? `\n- Nearest repo found: ${probeResult.top.full_name} — ${probeResult.top.stars} stars, ${probeResult.top.stars_per_day}/day, created ${fmtDate(probeResult.top.created_at)} — ${descShort(probeResult.top)}` : "\n- Nearest repo found: none."}\n- Topic's top repos (existing repos, tiered by stars): ${saturated.slice(0, 3).map((r) => `${r.full_name} (${r.stars} stars)`).join(", ") || "none shown"}.\n- "Missing" here means: no repo found by this GitHub search, or only a repo under 5 stars. A feature can exist in a repo whose name/description does not contain the probe word — verify against the repos themselves before building.\n\n## How to fix it (concrete build plan)\n\n${features.map((f) => `- ${f}`).join("\n")}\n\n## 72-hour MVP\n\nBuild: the "${probe}" core feature for ${topic}; one working demo on real footage; docs + worked example.\nCut: ${cut}.\n\n## Suggested stack\n\n${stack.language} (suggestion only — the most common language among the topic's top repos: ${stack.count} of ${stack.total} shown), because the existing repos around this topic are mostly ${stack.language}.\n\n## What already exists (top repos — with stars)\n\n${notBuild.map((r) => `- ${r.full_name} — ${r.stars} stars: ${descShort(r)}`).join("\n")}\n\n## Why this could work (evidence)\n\n${evidencePoints.map((p, i) => `${i + 1}. ${p}`).join("\n")}\n\n**What could kill it:** ${killLine}\n\n## Honesty note\n\nTrending also needs execution, timing and distribution. This idea is not guaranteed to trend or to be "top in the world" — the gap evidence above is the only claim being made, and it is limited to what GitHub Search found.\n`;
   const html = `<article class="package">
     <h3>${esc(name)} <span class="small">— SUGGESTION · GAP IDEA for "${esc(probe)}"</span></h3>
     <p><strong>What's missing:</strong> ${esc(missingLine)}</p>
@@ -346,7 +420,10 @@ function gapIdea(topic, probeResult, saturated, stack) {
     <p><strong>How to fix it:</strong></p><ul>${features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
     <p><strong>72-hour MVP — Build:</strong> the "${esc(probe)}" core feature for ${esc(topic)}; one working demo on real footage; docs + worked example. <strong>Cut:</strong> ${esc(cut)}.</p>
     <p><strong>Suggested stack:</strong> ${esc(stack.language)} — suggestion only, the most common language among the topic's top repos (${stack.count} of ${stack.total} shown).</p>
-    <p><strong>What NOT to build (already saturated):</strong></p><ul>${notBuild.map((r) => `<li><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a> — ${r.stars} stars: ${esc(descShort(r))}</li>`).join("")}</ul>
+    <p><strong>What already exists (top repos — only Established ones are truly saturated):</strong></p><ul>${notBuild.map((r) => `<li><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a> — ${r.stars} stars: ${esc(descShort(r))}</li>`).join("")}</ul>
+    <h4>Why this could work (evidence)</h4>
+    <ol>${evidencePoints.map((p) => `<li>${esc(p)}</li>`).join("")}</ol>
+    <p><strong>What could kill it:</strong> ${esc(killLine)}</p>
     <p class="small">Trending also needs execution, timing and distribution. This idea is not guaranteed to trend or to be "top in the world".</p>
     <div class="export">
       <button type="button" data-gap-export="full">Copy full package</button>
@@ -355,7 +432,7 @@ function gapIdea(topic, probeResult, saturated, stack) {
       <button type="button" data-gap-export="x">Copy X opener</button>
     </div></article>`;
   return {
-    html, markdown, name, probe,
+    html, markdown, name, probe, evidencePoints, killLine,
     hn: `Show HN: ${name} — the missing ${probe} piece for ${topic} (gap idea, evidence in TrendGap)`,
     x: `${name}: the missing ${probe} angle for ${topic}. Gap evidence in TrendGap — suggestion, not a guarantee it will trend.`,
   };
@@ -470,6 +547,7 @@ async function main() {
         <span class="stat">last push ${fmtDate(r.pushed_at || r.updated_at)}</span>
       </div>
       <p class="topic">Topics: ${esc((r.topics || []).join(", ") || "none listed")}</p>
+      ${r._tierLabel ? `<p class="small">${esc(r._tierLabel)}${r._demoted ? " · SDK/plugin building block — ranked below end-user tools" : ""} · ${esc(strengthTier(r))} (${r.stars} stars)</p>` : ""}
       <button type="button" data-gen-repo="${esc(r.full_name)}">Generate from this repo</button>
     </article>`).join("");
     $("trendingList").querySelectorAll("[data-gen-repo]").forEach((btn) => {
@@ -480,15 +558,16 @@ async function main() {
     });
   }
   function renderIdeas() {
-    const top = [...filteredRepos()].sort((a, b) => b.stars - a.stars).slice(0, 10);
+    // v5.3: in search mode keep the tiered merged order (tier, words, relevance, stars) — do not re-sort by stars alone, which would undo the tier ranking.
+    const pool = mode === "search" ? filteredRepos() : [...filteredRepos()].sort((a, b) => b.stars - a.stars);
+    const top = pool.slice(0, 10);
     $("ideasList").innerHTML = top.map((r) => {
       const idea = ideaFor(r, 0);
-      const score = interestScore(r, allRepos);
       return `<article class="card">
         <h3>${esc(idea.name)} <span class="small">— SUGGESTION</span></h3>
         <p>${esc(idea.pitch)}</p>
         <p class="small"><strong>Angle (hypothesis):</strong> ${esc(idea.angle.label)} — based only on listed topics/language, not a proven gap.</p>
-        <p class="small">From <a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a> — ${r.stars} stars, ${r.stars_per_day}/day, interest ${score}/100 (relative to the ${allRepos.length} fetched).</p>
+        <p class="small">From <a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a> — ${interestLine(r)}${r._tierLabel ? ` · ${esc(r._tierLabel)}` : ""}.</p>
         <button type="button" data-gen-repo="${esc(r.full_name)}">Open full package</button>
       </article>`;
     }).join("");
@@ -568,7 +647,7 @@ async function main() {
       mode = "search"; exploration = false; allRepos = found.repos; selectedLang = null;
       sourceLabel = `Live GitHub Search just now, all stages in:name,description, all-time, ranked by words matched, then relevance, then stars`;
       setSource(`Source: ${sourceLabel}.`);
-      $("searchStatus").textContent = `Live search for “${q}”: ${found.repos.length} merged repos. Ranked by how many of your words each repo matches, then relevance (name 3 / description 2 / topic 1), then stars. Every repo shown contains at least one query word in its name, description or topics.`;
+      $("searchStatus").textContent = `Live search for “${q}”: ${found.repos.length} merged repos. Ranked by tier first (Tier A = name or topics contain 2+ of your words; Tier B = description-only match; SDK/plugin building blocks ranked one tier below end-user tools unless your topic is about SDKs/plugins), then words matched, then relevance (name 3 / description 2 / topic 1), then stars. Every repo shown contains at least one query word in its name, description or topics.`;
     } catch (err) {
       mode = "search-empty"; exploration = true; allRepos = trendingRepos;
       $("searchStatus").textContent = `Live search unavailable (${err.message}) — showing trending repos as fallback. These are NOT evidence for “${q}”, and no package is generated from them.`;
@@ -588,14 +667,124 @@ async function main() {
   });
 
   // ---- v5.2 GAP GENERATOR handlers (hero section, above the trending list).
+  // v5.2.1 rate-limit fix (2026-10-24): probes are paced at one per ~7s
+  // (GitHub unauthenticated search ≈ 10/minute), a 403/429 captures GitHub's
+  // X-RateLimit-Reset time, and unchecked probes can be retried on their own
+  // instead of re-running the whole gap check. The status line counts probes
+  // ACTUALLY checked — the v5.2 bug was claiming "all 10 checked" when 9
+  // were unchecked.
   let gapPackages = [];
+  let lastGapTopic = "";
+  let lastGapSaturated = [];
+  let lastGapProbes = [];
+  let lastGapCovered = [];
+  let gapRateLimitResetAt = null;
+  // v5.3 topic-derived covered features: word frequency over the ALREADY
+  // fetched top repos' descriptions + topics — zero extra API calls, so
+  // zero rate-limit cost. Topic words and stopwords are excluded; the count
+  // is repos containing the word, not raw occurrences. This is topic-aware
+  // evidence (what existing repos already cover), unlike the fixed probes.
+  const COVER_STOPWORDS = new Set("the a an and for to of with from by in on at into via using use used app tool tools that this these those are is was were be been can will just not more most other all any per its also than then when one two free open source based built simple fast real new".split(" "));
+  function coveredFeatures(repos, topic) {
+    const topicSet = new Set(queryTokens(topic));
+    const counts = new Map();
+    for (const r of repos) {
+      const words = new Set(String(`${r.description} ${(r.topics || []).join(" ")}`).toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length >= 3 && !COVER_STOPWORDS.has(w) && !topicSet.has(w)));
+      for (const w of words) counts.set(w, (counts.get(w) || 0) + 1);
+    }
+    return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 8);
+  }
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const PROBE_DELAY_MS = 7000;
   function clearGap() {
     gapPackages = [];
+    lastGapTopic = ""; lastGapSaturated = []; lastGapProbes = []; lastGapCovered = []; gapRateLimitResetAt = null;
+    $("gapRetryBtn").hidden = true;
     $("gapSaturated").innerHTML = "";
     $("gapProbes").innerHTML = "";
     $("gapIdeas").innerHTML = "";
     $("gapPackageStatus").textContent = "No gap ideas yet — enter a topic above and run the gap finder.";
+  }
+  function gapVerdict(p) {
+    if (p.total === null || p.error) return "UNCHECKED";
+    if (p.total === 0 || (p.top && p.top.stars < 5)) return "MISSING";
+    return "EXISTS";
+  }
+  function gapSummary(topic, saturated, probes, packages) {
+    const checked = probes.filter((p) => p.total !== null && !p.error).length;
+    const unchecked = probes.length - checked;
+    const missing = probes.filter((p) => gapVerdict(p) === "MISSING").length;
+    // v5.3: "saturated" is said ONLY about Established repos. The summary
+    // counts the strength tiers of the top 10 so a list of 0-star repos is
+    // never called saturated.
+    const est = saturated.filter((r) => strengthTier(r) === "Established").length;
+    const emg = saturated.filter((r) => strengthTier(r) === "Emerging").length;
+    const ear = saturated.filter((r) => strengthTier(r) === "Early").length;
+    let s = `Gap check done for “${topic}”: ${saturated.length} existing repos (${est} Established, ${emg} Emerging, ${ear} Early — only Established counts as truly saturated), ${checked} of ${probes.length} probes checked, ${missing} missing probe(s) → ${packages.length} gap idea(s)${packages.length ? ": " + packages.map((g) => g.name).join(", ") : ""}.`;
+    if (unchecked) s += ` ${unchecked} probe(s) unchecked (rate-limited) — use “Retry unchecked probes” to check them; unchecked probes never become ideas.`;
+    if (gapRateLimitResetAt) s += ` GitHub's search limit resets at ${gapRateLimitResetAt}.`;
+    s += ` "Missing" means no repo found by this GitHub search (or only one under 5 stars) — not that nothing exists in the world. Trending also needs execution, timing and distribution; no idea here is guaranteed to trend.`;
+    return s;
+  }
+  async function runGapProbes(topic, probeNames, onProgress) {
+    const out = [];
+    let stopped = false;
+    for (let i = 0; i < probeNames.length; i++) {
+      const probe = probeNames[i];
+      if (stopped) { out.push({ probe, query: `${topic} ${probe}`, total: null, top: null, error: "not checked — search stopped after the rate limit" }); continue; }
+      if (onProgress) onProgress(i, probe);
+      await sleep(PROBE_DELAY_MS);
+      try {
+        const u = new URL("https://api.github.com/search/repositories");
+        u.searchParams.set("q", `${topic} ${probe} in:name,description`);
+        u.searchParams.set("sort", "stars");
+        u.searchParams.set("order", "desc");
+        u.searchParams.set("per_page", "5");
+        const res = await fetchJson(u.toString());
+        if (res.status === 403 || res.status === 429) {
+          const reset = res.headers ? res.headers.get("x-ratelimit-reset") : null;
+          if (reset) gapRateLimitResetAt = new Date(parseInt(reset, 10) * 1000).toLocaleTimeString();
+          throw new Error("rate-limited");
+        }
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        const items = (data.items || []).map(normalizeApiRepo);
+        out.push({ probe, query: `${topic} ${probe}`, total: data.total_count || 0, top: items[0] || null });
+      } catch (err) {
+        out.push({ probe, query: `${topic} ${probe}`, total: null, top: null, error: `not checked — live search failed (${err.message})` });
+        stopped = true;
+      }
+    }
+    return out;
+  }
+  function renderGapResults(topic, saturated, probes) {
+    $("gapProbes").innerHTML = `<h3>Missing-cluster probes — all 10, nothing hidden</h3>
+      <p class="small">"MISSING" means this GitHub search found 0 repos, or only a repo under 5 stars. It does NOT mean nothing exists in the world. Non-missing probes are shown with their repo instead of being hidden. UNCHECKED means the search was never run (rate limit) — it is not evidence either way.</p>
+      <p class="small">Probes are a fixed starter set — for topics where a probe word makes no sense (e.g. 'blur' for a CLI topic), ignore that probe; its 0 does not prove a gap.</p>
+      <table class="probeTable"><thead><tr><th>Probe</th><th>Search query</th><th>Total matches</th><th>Top repo</th><th>Verdict</th></tr></thead><tbody>
+      ${probes.map((p) => `<tr><td>${esc(p.probe)}</td><td><code>${esc(p.query)}</code></td><td>${p.total === null ? "—" : p.total}</td><td>${p.top ? `<a href="${esc(p.top.html_url)}" target="_blank" rel="noopener">${esc(p.top.full_name)}</a> (${p.top.stars}★)` : (p.error || "none")}</td><td class="${gapVerdict(p) === "MISSING" ? "verdict-missing" : "verdict-exists"}">${gapVerdict(p)}</td></tr>`).join("")}
+      </tbody></table>`;
+    const missing = probes
+      .filter((p) => gapVerdict(p) === "MISSING")
+      .sort((a, b) => (a.total || 0) - (b.total || 0) || ((a.top ? a.top.stars : 0) - (b.top ? b.top.stars : 0)))
+      .slice(0, 5);
+    if (!missing.length) {
+      gapPackages = [];
+      $("gapIdeas").innerHTML = "";
+      $("gapPackageStatus").textContent = "No missing probes found for this topic — every checked probe returned a repo with 5+ stars, so no gap ideas are invented. (Unchecked probes, if any, are not counted as missing.)";
+      $("gapStatus").textContent = gapSummary(topic, saturated, probes, []);
+      $("gapRetryBtn").hidden = !probes.some((p) => p.total === null || p.error);
+      return;
+    }
+    const langCounts = new Map();
+    for (const r of saturated) langCounts.set(r.language || "Unknown", (langCounts.get(r.language || "Unknown") || 0) + 1);
+    const stack = [...langCounts.entries()].sort((a, b) => b[1] - a[1])[0];
+    const stackInfo = { language: stack ? stack[0] : "Unknown", count: stack ? stack[1] : 0, total: saturated.length };
+    gapPackages = missing.map((p) => gapIdea(topic, p, saturated, stackInfo));
+    $("gapIdeas").innerHTML = gapPackages.map((g) => g.html).join("");
+    $("gapPackageStatus").textContent = `${gapPackages.length} gap idea(s) generated from the missing probes below. Each one says exactly what GitHub Search found — and what it did not.`;
+    $("gapStatus").textContent = gapSummary(topic, saturated, probes, gapPackages);
+    $("gapRetryBtn").hidden = !probes.some((p) => p.total === null || p.error);
   }
   $("gapForm").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -606,79 +795,89 @@ async function main() {
     $("packageStatus").textContent = "No package yet — generate one from a repo below.";
     $("variantBtn").disabled = true;
     if (!topic) { $("gapStatus").textContent = "Enter a topic first — for example, “Meta rayban video”."; return; }
-    $("gapStatus").textContent = `Finding gaps for “${topic}”… first the topic's top repos, then one GitHub search per missing-cluster probe. Unauthenticated GitHub Search is rate-limited, so if it hits the limit the run stops honestly instead of inventing results.`;
+    // v5.3 shareable URL state: the gap run's link reopens the same run.
+    try { history.replaceState(null, "", "?topic=" + encodeURIComponent(topic)); } catch { /* URL state is optional */ }
+    $("gapStatus").textContent = `Finding gaps for “${topic}”… first the topic's top repos, then one GitHub search per missing-cluster probe, paced at one per ~7 seconds for GitHub's ~10/minute unauthenticated limit. If it hits the limit the run stops honestly, marks the rest UNCHECKED with the reset time, and offers “Retry unchecked probes” — it never invents results.`;
     try {
       const found = await searchAllStages(topic);
       const stageLines = found.stages.map((s) => `“${s.label}” — ${s.total} total matches`).join(" · ");
-      $("gapStages").textContent = `Topic stages tried (all evaluated, merged): ${stageLines}. Transformed: ${found.transformed.length ? found.transformed.join(", ") : "none"} (transformed is NOT dropped). Words dropped in shorter stages: ${found.droppedInStages.length ? found.droppedInStages.map((w) => `“${w}”`).join(", ") : "none"}. Merged ranking: words matched, then relevance, then stars.`;
+      $("gapStages").textContent = `Topic stages tried (all evaluated, merged): ${stageLines}. Transformed: ${found.transformed.length ? found.transformed.join(", ") : "none"} (transformed is NOT dropped). Words dropped in shorter stages: ${found.droppedInStages.length ? found.droppedInStages.map((w) => `“${w}”`).join(", ") : "none"}. Merged ranking: tier first (name/topic match before description-only; SDK/plugin building blocks one tier below end-user tools), then words matched, then relevance, then stars.`;
       if (!found.repos.length) {
         $("gapStatus").textContent = `No repos matched “${topic}” in name or description at any stage — no gap analysis is invented, and no gap ideas are generated.`;
         return;
       }
       const saturated = found.repos.slice(0, 10);
-      $("gapSaturated").innerHTML = `<h3>Saturated clusters — what already exists for “${esc(topic)}”</h3>
-        <p class="small">Top ${saturated.length} repos from the merged topic search, ranked by words matched, then relevance, then stars. These are what NOT to rebuild.</p>
+      const covered = coveredFeatures(saturated, topic);
+      lastGapCovered = covered;
+      const tierCounts = { Established: 0, Emerging: 0, Early: 0 };
+      for (const r of saturated) tierCounts[strengthTier(r)] += 1;
+      $("gapSaturated").innerHTML = `<h3>Existing repos — what already exists for “${esc(topic)}”</h3>
+        <p class="small">Top ${saturated.length} repos from the merged topic search, ranked by tier, then words matched, then relevance, then stars. Strength tiers by stars: Established 100+, Emerging 10–99, Early 0–9. This list: ${tierCounts.Established} Established, ${tierCounts.Emerging} Emerging, ${tierCounts.Early} Early — only Established counts as truly saturated; Early repos are barely started, not crowded markets.</p>
         <div class="repolist">${saturated.map((r) => `<article class="reporow">
           <h4><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.full_name)}</a></h4>
           <p>${esc(descShort(r))}</p>
-          <p class="small">★ ${r.stars} stars · ${r.stars_per_day}/day · ${esc(r.language)} · matched ${r._matched} of ${queryTokens(topic).length} topic words · from stage(s): ${esc((r._sources || []).join(", "))}</p>
-        </article>`).join("")}</div>`;
-      // Missing-cluster probes, one search each, in order. Rate-limit stops the run.
-      const probes = [];
-      let stopped = false;
-      for (const probe of GAP_PROBES) {
-        if (stopped) { probes.push({ probe, query: `${topic} ${probe}`, total: null, top: null, error: "not checked — search stopped after the rate limit" }); continue; }
-        await sleep(250);
-        try {
-          const u = new URL("https://api.github.com/search/repositories");
-          u.searchParams.set("q", `${topic} ${probe} in:name,description`);
-          u.searchParams.set("sort", "stars");
-          u.searchParams.set("order", "desc");
-          u.searchParams.set("per_page", "5");
-          const res = await fetchJson(u.toString());
-          if (res.status === 403 || res.status === 429) throw new Error("rate-limited");
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const data = await res.json();
-          const items = (data.items || []).map(normalizeApiRepo);
-          probes.push({ probe, query: `${topic} ${probe}`, total: data.total_count || 0, top: items[0] || null });
-        } catch (err) {
-          probes.push({ probe, query: `${topic} ${probe}`, total: null, top: null, error: `not checked — live search failed (${err.message})` });
-          stopped = true;
-        }
-      }
-      const verdict = (p) => {
-        if (p.error) return "UNCHECKED";
-        if (p.total === 0 || (p.top && p.top.stars < 5)) return "MISSING";
-        return "EXISTS";
-      };
-      $("gapProbes").innerHTML = `<h3>Missing-cluster probes — all 10, nothing hidden</h3>
-        <p class="small">"MISSING" means this GitHub search found 0 repos, or only a repo under 5 stars. It does NOT mean nothing exists in the world. Non-missing probes are shown with their repo instead of being hidden.</p>
-        <table class="probeTable"><thead><tr><th>Probe</th><th>Search query</th><th>Total matches</th><th>Top repo</th><th>Verdict</th></tr></thead><tbody>
-        ${probes.map((p) => `<tr><td>${esc(p.probe)}</td><td><code>${esc(p.query)}</code></td><td>${p.total === null ? "—" : p.total}</td><td>${p.top ? `<a href="${esc(p.top.html_url)}" target="_blank" rel="noopener">${esc(p.top.full_name)}</a> (${p.top.stars}★)` : (p.error || "none")}</td><td class="${verdict(p) === "MISSING" ? "verdict-missing" : "verdict-exists"}">${verdict(p)}</td></tr>`).join("")}
-        </tbody></table>`;
-      const missing = probes
-        .filter((p) => verdict(p) === "MISSING")
-        .sort((a, b) => (a.total || 0) - (b.total || 0) || ((a.top ? a.top.stars : 0) - (b.top ? b.top.stars : 0)))
-        .slice(0, 5);
-      if (!missing.length) {
-        $("gapPackageStatus").textContent = "No missing probes found for this topic — every probe returned a repo with 5+ stars, so no gap ideas are invented.";
-        $("gapStatus").textContent = `Gap check done for “${topic}”: ${saturated.length} saturated repos shown, all ${probes.length} probes checked, none missing by the 5-star rule.`;
-        return;
-      }
-      const langCounts = new Map();
-      for (const r of saturated) langCounts.set(r.language || "Unknown", (langCounts.get(r.language || "Unknown") || 0) + 1);
-      const stack = [...langCounts.entries()].sort((a, b) => b[1] - a[1])[0];
-      const stackInfo = { language: stack ? stack[0] : "Unknown", count: stack ? stack[1] : 0, total: saturated.length };
-      gapPackages = missing.map((p) => gapIdea(topic, p, saturated, stackInfo));
-      $("gapIdeas").innerHTML = gapPackages.map((g) => g.html).join("");
-      $("gapPackageStatus").textContent = `${gapPackages.length} gap idea(s) generated from the missing probes below. Each one says exactly what GitHub Search found — and what it did not.`;
-      $("gapStatus").textContent = `Gap check done for “${topic}”: ${saturated.length} saturated repos, ${probes.length} probes checked, ${missing.length} missing probe(s) → ${gapPackages.length} gap idea(s): ${gapPackages.map((g) => g.name).join(", ")}. "Missing" means no repo found by this GitHub search (or only one under 5 stars) — not that nothing exists in the world. Trending also needs execution, timing and distribution; no idea here is guaranteed to trend.`;
+          <p class="small">★ ${r.stars} stars · ${r.stars_per_day}/day · ${esc(r.language)} · ${esc(strengthTier(r))} · matched ${r._matched} of ${queryTokens(topic).length} topic words · from stage(s): ${esc((r._sources || []).join(", "))}${r._tierLabel ? ` · ${esc(r._tierLabel)}` : ""}${r._demoted ? " · SDK/plugin building block — ranked below end-user tools" : ""}</p>
+        </article>`).join("")}</div>
+        <h4>What the existing repos already cover (from their own descriptions/topics, no extra searches)</h4>
+        ${covered.length ? `<p class="small">${covered.map(([w, n]) => `${esc(w)} (${n} repos)`).join(" · ")}</p>` : `<p class="small">No shared descriptive words found among these repos' descriptions/topics.</p>`}
+        <p class="small">Covered words come from the repos already fetched for this topic — they cost zero extra GitHub searches. A word appearing here means existing repos already talk about it; it does not mean the feature is well built.</p>`;
+      // Missing-cluster probes, one search each, in order, PACED at one per
+      // ~7s (GitHub unauthenticated search ≈ 10/minute). A 403/429 stops the
+      // run, captures GitHub's reset time, and leaves the rest UNCHECKED —
+      // never invented. "Retry unchecked probes" re-runs only those.
+      lastGapTopic = topic; lastGapSaturated = saturated;
+      const probes = await runGapProbes(topic, GAP_PROBES, (pi, probe) => {
+        $("gapStatus").textContent = `Finding gaps for “${topic}”… checking probe ${pi + 1} of ${GAP_PROBES.length} (“${probe}”) — paced at one search per ~7 seconds for GitHub's limit.`;
+      });
+      lastGapProbes = probes;
+      renderGapResults(topic, saturated, probes);
     } catch (err) {
       $("gapStatus").textContent = `Gap check failed (${err.message}) — no gap ideas are invented from a failed search. Try again in a minute if this was a rate limit.`;
     }
   });
   $("gapClearBtn").addEventListener("click", () => {
     $("gapTopic").value = ""; $("gapStatus").textContent = ""; $("gapStages").textContent = ""; clearGap();
+    try { history.replaceState(null, "", location.pathname); } catch { /* URL state is optional */ }
+  });
+  // v5.3 shareable gap report: plain text, no accounts, no backend, no
+  // tracking — the link in it reopens the same gap run via ?topic=.
+  $("gapReportBtn").addEventListener("click", () => {
+    if (!lastGapTopic) { $("gapPackageStatus").textContent = "No gap report yet — run the gap finder first."; return; }
+    const lines = [];
+    lines.push(`TrendGap gap report — topic: ${lastGapTopic}`);
+    lines.push(`Page: ${location.href}`);
+    lines.push("");
+    lines.push("Existing repos (top 5):");
+    for (const r of [...lastGapSaturated].sort((a, b) => b.stars - a.stars).slice(0, 5)) lines.push(`- ${r.full_name} — ${r.stars} stars, ${r.stars_per_day}/day (${strengthTier(r)})`);
+    lines.push("");
+    lines.push("Probes:");
+    for (const p of lastGapProbes) lines.push(`- ${p.probe}: total ${p.total === null ? "unchecked" : p.total} — ${gapVerdict(p)}${p.top ? ` (nearest: ${p.top.full_name}, ${p.top.stars} stars)` : ""}`);
+    if (lastGapCovered.length) { lines.push(""); lines.push("What existing repos already cover: " + lastGapCovered.map(([w, n]) => `${w} (${n} repos)`).join(", ")); }
+    lines.push("");
+    lines.push("Gap ideas:");
+    if (!gapPackages.length) lines.push("- none (no missing probes checked)");
+    for (const g of gapPackages) {
+      lines.push(`- ${g.name} (${g.probe}):`);
+      for (const pt of (g.evidencePoints || [])) lines.push(`  - ${pt}`);
+      lines.push(`  - What could kill it: ${g.killLine}`);
+    }
+    lines.push("");
+    lines.push("Note: a gap means no repo found by this GitHub search (or only one under 5 stars) — not that nothing exists in the world. No idea here is guaranteed to trend.");
+    copyText($("gapReportBtn"), lines.join("\n"));
+  });
+  $("gapRetryBtn").addEventListener("click", async () => {
+    if (!lastGapTopic || !lastGapProbes.length) return;
+    $("gapRetryBtn").disabled = true;
+    const unchecked = lastGapProbes.filter((p) => p.total === null || p.error).map((p) => p.probe);
+    if (!unchecked.length) { $("gapRetryBtn").disabled = false; return; }
+    $("gapStatus").textContent = `Retrying ${unchecked.length} unchecked probe(s) for “${lastGapTopic}”… paced at one search per ~7 seconds for GitHub's limit.`;
+    const retried = await runGapProbes(lastGapTopic, unchecked, (pi, probe) => {
+      $("gapStatus").textContent = `Retrying unchecked probe ${pi + 1} of ${unchecked.length} (“${probe}”)…`;
+    });
+    const byProbe = new Map(retried.map((p) => [p.probe, p]));
+    lastGapProbes = lastGapProbes.map((p) => byProbe.get(p.probe) || p);
+    renderGapResults(lastGapTopic, lastGapSaturated, lastGapProbes);
+    $("gapRetryBtn").disabled = false;
   });
   $("gapIdeas").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-gap-export]");
@@ -700,6 +899,17 @@ async function main() {
   if (trendingRepos.length && sourceLabel.includes("Snapshot")) mode = "fallback";
   $("sourcesNote").textContent = `Sources: ${sourceLabel}. Live search: GitHub Search API, no key, cached 1 hour. Fallback: data/snapshot.json (daily workflow).`;
   renderAll();
+  // v5.3 URL state: ?topic=... from a shared gap-report link fills the gap
+  // topic and auto-runs the gap finder exactly once (only if the input was
+  // empty, so a typed topic is never overwritten).
+  try {
+    const urlTopic = new URLSearchParams(location.search).get("topic");
+    if (urlTopic && !$("gapTopic").value) {
+      $("gapTopic").value = urlTopic;
+      if ($("gapForm").requestSubmit) $("gapForm").requestSubmit();
+      else $("gapBtn").click();
+    }
+  } catch { /* URL state is optional */ }
 }
 main().catch((e) => {
   const el = $("sourceStatus");

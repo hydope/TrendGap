@@ -1,8 +1,21 @@
-# TrendGap v5.2
+# TrendGap v5.3 (built locally, not yet pushed)
 
-**Tagline:** Find what's missing, then build it — market-gap ideas backed by GitHub Search evidence.
+**Tagline:** Find what's missing, then build it — market-gap ideas backed by GitHub Search evidence, with an evidence-backed reason each one could work.
 
-## What v5.2 does (built locally, not yet pushed)
+## What v5.3 does (on top of v5.2 + the v5.2.1 wording/rate-limit fixes)
+
+- **Tiered relevance.** Search ranking now starts with a tier: Tier A = the repo's name or topics contain 2+ distinct query words; Tier B = description-only match. SDK/plugin/library repos are demoted one tier (labelled on the row, never hidden) unless the topic itself is about SDKs/plugins — demotion is name-based per spec, so a repo that is a plugin only in its description (e.g. flutter_meta_wearables, name: meta only) lands in Tier B but is not demoted; it still ranks below every Tier A repo. For "Meta rayban video connect", MetaRaybanCameraApp (name: meta + rayban) is Tier A, above the flutter_meta_wearables plugin in Tier B.
+- **Honest interest.** The relative "/100 (relative to the fetched set)" score is gone from all user-visible text. Interest is now absolute tiers by stars: Breakout 1000+, Strong 100+, Emerging 10+, Early (weak) under 10 — so a 2-star repo can never read "100/100".
+- **Existing-repo strength tiers.** The old "saturated clusters" heading is now "Existing repos — what already exists", tiered Established 100+ / Emerging 10–99 / Early 0–9, with counts in the summary. "Saturated" is said only about Established repos.
+- **Topic-derived covered features.** From the already-fetched top repos' descriptions + topics (zero extra API calls), the page shows the top 8 shared words: what existing repos already cover. The fixed 10 probes stay, with a required honesty line: for topics where a probe word makes no sense (e.g. 'blur' for a CLI topic), ignore that probe — its 0 does not prove a gap.
+- **Fewer noisy stages.** For 3+ word queries the bare single-word stage is no longer run (it contributed 17 noise repos from "meta" alone and wasted rate budget). 1–2 word queries keep all stages.
+- **Shareable gap report + URL state.** "Copy gap report" copies topic, top 5 existing repos, all 10 probe results, and each gap idea with its evidence points and what could kill it, plus a link. A gap run sets `?topic=…` (replaceState, no reload); opening such a link fills the topic and auto-runs the gap finder once.
+- **"Why this could work (evidence)" on every gap idea.** Four points, each citing a number from that run: (1) topic demand — top repo stars + top-10 total stars; (2) unserved slice — probe total + nearest repo; (3) adjacent proof — closest related top-10 repo by shared words/language, with stars; (4) buildability — stack frequency among the top 10 + 72-hour MVP scope. Plus one "What could kill it" counter-line (Established competitor, small demand, or platform change). Heading is "could", never "will", never a guarantee. The section is in the card, the full-package markdown, and the gap report.
+- **Cache visibility.** Header badge says v5.3; footer gives the build number (v20261024-7) and tells users to close the tab completely and reopen if the page looks older than v5.3.
+
+# TrendGap v5.2 (superseded by v5.3 above)
+
+## What v5.2 does
 
 v5.2 replaces the spin-off framing with a **market-gap generator**, which is the product; the trending list is supporting evidence underneath, not the product.
 

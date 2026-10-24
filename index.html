@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TrendGap v5.2 — Find what's missing, then build it</title>
-<meta name="description" content="TrendGap v5.2: a market-gap generator. Enter a topic, see what already exists, see which angles GitHub Search finds nothing for, and get a concrete idea for each missing angle. Ideas are suggestions; only evidence numbers are data. GitHub has no official trending API.">
-<meta property="og:title" content="TrendGap v5.2 — Find what's missing, then build it">
-<meta property="og:description" content="Market-gap ideas backed by GitHub Search evidence: saturated clusters shown, missing angles probed, fixes spelled out. No guarantee any idea will trend.">
+<title>TrendGap v5.3 — Find what's missing, then build it</title>
+<meta name="description" content="TrendGap v5.3: a market-gap generator. Enter a topic, see what already exists, see which angles GitHub Search finds nothing for, and get a concrete idea for each missing angle. Ideas are suggestions; only evidence numbers are data. GitHub has no official trending API.">
+<meta property="og:title" content="TrendGap v5.3 — Find what's missing, then build it">
+<meta property="og:description" content="Market-gap ideas backed by GitHub Search evidence: existing repos shown and tiered by stars, missing angles probed, fixes spelled out. No guarantee any idea will trend.">
 <meta property="og:type" content="website">
-<!-- v5.2: bump ?v= on every deploy that changes app.js/styles.css so HTML and JS can never mismatch (2026-10-24 cache bug). -->
-<link rel="stylesheet" href="styles.css?v=20261024-5">
+<!-- v5.3: bump ?v= on every deploy that changes app.js/styles.css so HTML and JS can never mismatch (2026-10-24 cache bug). -->
+<link rel="stylesheet" href="styles.css?v=20261024-7">
 </head>
 <body>
 <header class="topbar">
   <div>
-    <p class="logo">TrendGap <span class="version">v5.2</span></p>
+    <p class="logo">TrendGap <span class="version">v5.3</span></p>
     <h1>Find what's missing — then build it.</h1>
     <p class="tagline">A market-gap generator: enter a topic, see what already exists, see which angles GitHub Search finds <strong>nothing</strong> for, and get a concrete fix for each missing angle.</p>
     <p class="honest">This is <strong>NOT an official trending feed</strong> — GitHub has no official trending API. “Trending now” below is supporting evidence only: repos created in the last 7 days, sorted by stars in GitHub Search, fetched live from your browser with no key. Ideas are <strong>SUGGESTIONS</strong>. Only the evidence numbers are data. A “gap” means <strong>no repo found by this GitHub search</strong> (or only one under 5 stars) — never “nothing exists in the world”. Trending also needs execution, timing and distribution: <strong>no idea here is guaranteed to trend or be “top in the world”</strong>.</p>
@@ -29,9 +29,10 @@
       <input id="gapTopic" type="text" maxlength="200" placeholder="e.g. Meta rayban video" autocomplete="off">
       <div class="formrow">
         <button id="gapBtn" type="submit">Find gaps &amp; generate ideas</button>
+        <button id="gapRetryBtn" type="button" class="secondary" hidden>Retry unchecked probes</button>
         <button id="gapClearBtn" type="button" class="secondary">Clear gap results</button>
       </div>
-      <p class="small">How it works: (1) the topic's top repos are fetched (all stages, all-time, in names/descriptions) and shown as <strong>saturated clusters</strong> — what already exists; (2) 10 missing-cluster probes run — <code>backup, blur, transcript, captions, dual, search, translate, offline, sync, editor</code> — each as “topic + probe” in names/descriptions; (3) every probe with 0 matches, or only a repo under 5 stars, becomes <strong>one gap idea</strong> with what's missing, the exact probe evidence, a concrete fix, a 72-hour MVP, and what NOT to build. All 10 probe results are shown — non-missing probes are never hidden. If the topic itself matches nothing, no gap analysis is invented.</p>
+      <p class="small">How it works: (1) the topic's top repos are fetched (all stages, all-time, in names/descriptions) and shown as <strong>existing repos</strong> — what already exists, tiered by stars (Established 100+, Emerging 10–99, Early 0–9; only Established counts as truly saturated); (2) 10 missing-cluster probes run — <code>backup, blur, transcript, captions, dual, search, translate, offline, sync, editor</code> — each as “topic + probe” in names/descriptions; (3) every probe with 0 matches, or only a repo under 5 stars, becomes <strong>one gap idea</strong> with what's missing, the exact probe evidence, a concrete fix, a 72-hour MVP, and what NOT to build. All 10 probe results are shown — non-missing probes are never hidden. If the topic itself matches nothing, no gap analysis is invented.</p>
     </form>
     <p id="gapStatus" role="status" aria-live="polite"></p>
     <p id="gapStages" class="small"></p>
@@ -43,6 +44,8 @@
     <h2>Generated gap idea</h2>
     <p class="small">Gap ideas appear here, one per missing probe (up to 5). Each card is a full package: what's missing, probe evidence, how to fix it, 72-hour MVP, suggested stack, what NOT to build, and copy exports. “Missing” always means “no repo found by this GitHub search” — check the repos yourself before building.</p>
     <p id="gapPackageStatus" role="status" aria-live="polite">No gap ideas yet — enter a topic above and run the gap finder.</p>
+    <div class="formrow"><button id="gapReportBtn" type="button" class="secondary">Copy gap report</button></div>
+    <p class="small">“Copy gap report” copies a plain-text report — topic, top 5 existing repos, all 10 probe results, and each gap idea with its evidence points and what could kill it — plus a link (?topic=…) that reopens the same gap run. No account, no backend, no tracking.</p>
     <div id="gapIdeas" class="cards"></div>
   </section>
 
@@ -57,7 +60,7 @@
         <button id="genFromSearchBtn" type="button">Generate idea from top result</button>
         <button id="clearSearchBtn" type="button" class="secondary">Back to trending now</button>
       </div>
-      <p class="small">Search runs a <strong>live</strong> GitHub Search for your keywords in repo <strong>names and descriptions, all-time</strong> (not just the last 7 days — niche topics like Ray-Ban Meta have almost nothing new in 7 days), ranked by relevance (name match &gt; description match &gt; topic match), then stars. If your exact words match nothing, it tries shorter versions and <strong>tells you which words it dropped</strong>. If nothing matches at all, the page says so plainly, shows trending repos only as unrelated exploration, and <strong>generates no package from them</strong>.</p>
+      <p class="small">Search runs a <strong>live</strong> GitHub Search for your keywords in repo <strong>names and descriptions, all-time</strong> (not just the last 7 days — niche topics like Ray-Ban Meta have almost nothing new in 7 days), ranked by tier first (name/topic match before description-only; SDK/plugin building blocks ranked below end-user tools), then words matched, then relevance, then stars. If your exact words match nothing, it tries shorter versions and <strong>tells you which words it dropped</strong>. If nothing matches at all, the page says so plainly, shows trending repos only as unrelated exploration, and <strong>generates no package from them</strong>.</p>
     </form>
     <p id="searchStatus" role="status" aria-live="polite"></p>
     <p id="searchStages" class="small"></p>
@@ -100,18 +103,18 @@
     <div id="trendingList" class="repolist"></div>
 
     <h3>Spin-off ideas — one per top repo</h3>
-    <p class="small">Each idea below is built from one specific repo: its name, its description, its language and its topics. Open any one for the full package. Interest signal formula (ESTIMATE, relative to the fetched set, <strong>not</strong> to all of GitHub): <code>50 × (stars/day ÷ max stars/day in fetched set) + 50 × (stars ÷ max stars in fetched set)</code>, rounded 0–100, components shown on each package.</p>
+    <p class="small">Each idea below is built from one specific repo: its name, its description, its language and its topics. Open any one for the full package. Interest is shown as absolute tiers by stars, <strong>not</strong> relative to the fetched set: Breakout 1000+, Strong 100+, Emerging 10+, Early under 10 — so a 2-star repo can never read "100/100".</p>
     <div id="ideasList" class="cards"></div>
   </section>
 
   <section aria-label="What this evidence is and is not">
     <h2>What this evidence is — and is not</h2>
     <ul>
-      <li><strong>Is:</strong> GitHub Search results — trending: repos created in the last 7 days, sorted by stars, fetched live from your browser (no key, cached 1 hour); topic and gap searches: all stages evaluated and merged, all-time, in names/descriptions, ranked by words matched, then relevance, then stars — or, only if live search fails, the dated snapshot in <code>data/snapshot.json</code>, clearly labelled as a fallback with its date.</li>
+      <li><strong>Is:</strong> GitHub Search results — trending: repos created in the last 7 days, sorted by stars, fetched live from your browser (no key, cached 1 hour); topic and gap searches: all stages evaluated and merged, all-time, in names/descriptions, ranked by tier, then words matched, then relevance, then stars — or, only if live search fails, the dated snapshot in <code>data/snapshot.json</code>, clearly labelled as a fallback with its date.</li>
       <li><strong>Is not:</strong> an official trending feed, a complete market survey, or proof that a gap exists in the world. A “gap” is only what one GitHub search did not find. Competitors are other repos <em>in the fetched set</em> with the same language or a shared topic, not a global top 3.</li>
       <li><strong>Angles and gaps are hypotheses</strong> based only on listed topics, language, and search totals. A missing topic or a zero probe result is not proof a feature does not exist — topics and descriptions are not feature lists.</li>
       <li><strong>Names on ideas are suggestions only.</strong> Their npm / PyPI / domain availability was not checked here.</li>
-      <li><strong>Rate limits:</strong> unauthenticated GitHub Search is limited (about 10 searches/minute per IP in practice). A gap run makes up to ~15 searches (topic stages + 10 probes), so it can hit the limit — if it does, the page stops and says which probes were not checked, and never invents results. The trending list then falls back to the snapshot — it never invents repos.</li>
+      <li><strong>Rate limits:</strong> unauthenticated GitHub Search is limited (about 10 searches/minute per IP in practice). A gap run makes up to ~15 searches (topic stages + 10 probes), so probes are paced at about one per 7 seconds and the run can still hit the limit — if it does, the page stops, says exactly how many probes were actually checked, marks the rest UNCHECKED with GitHub's reset time when available, and offers a "Retry unchecked probes" button. It never invents results. The trending list then falls back to the snapshot — it never invents repos.</li>
       <li><strong>No trend guarantee:</strong> an idea with a real gap still needs execution, timing and distribution to trend. Nothing here promises stars, ranking, or “top in the world”.</li>
     </ul>
     <p id="sourcesNote" class="small"></p>
@@ -119,8 +122,8 @@
 </main>
 
 <footer>
-  <p>TrendGap v5.2. Live at hydope.github.io/TrendGap. No backend, no secrets, no key required. Name kept — TrendGap is the cleanest available name for this job (see README). If this page ever looks stale, close the tab completely and reopen, or add <code>?v=20261024-5</code> to the URL.</p>
+  <p>TrendGap v5.3. Live at hydope.github.io/TrendGap. No backend, no secrets, no key required. Build v20261024-7. If this page looks older than v5.3 (check the badge above), close this tab completely and reopen it — a plain refresh can serve a cached copy.</p>
 </footer>
-<script type="module" src="app.js?v=20261024-5"></script>
+<script type="module" src="app.js?v=20261024-7"></script>
 </body>
 </html>

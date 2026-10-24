@@ -26,8 +26,13 @@ function buildCardsFromSignals(snap, signalList, offset) {
   // produces new names/pitches from the SAME evidence (evidence numbers do not change).
   const withStats = signalList.map((sig) => ({ sig, ...signalStats(snap, sig) }));
   withStats.sort((a, b) => (b.sig.count_in_snapshot - a.sig.count_in_snapshot) || (b.total - a.total) || a.sig.name.localeCompare(b.sig.name));
-  const maxVel = Math.max(1, ...withStats.map((x) => x.avgVel));
-  const maxTotal = Math.max(1, ...withStats.map((x) => x.total));
+  // Interest scores must be comparable across views, so normalise against
+  // the FULL snapshot, not the currently filtered set. (Bug found by the
+  // 2026-10-24 browser check: Rust scored 29/80/51 in different views
+  // while its evidence components never changed.)
+  const allStats = snap.rising.map((sig) => signalStats(snap, sig));
+  const maxVel = Math.max(1, ...allStats.map((x) => x.avgVel));
+  const maxTotal = Math.max(1, ...allStats.map((x) => x.total));
   return withStats.slice(0, 10).map((x, i) => {
     const top = [...x.m].sort((a, b) => b.stars - a.stars)[0];
     const score = Math.round(50 * (x.avgVel / maxVel) + 30 * (x.total / maxTotal) + 20 * (Math.min(x.mentions, 5) / 5));
@@ -94,7 +99,7 @@ function cardHtml(c, snapDate) {
     : '<li>None in this snapshot sample — marked unchecked, not “no competitors exist”.</li>';
   const pad = c.comps.length < 3 ? `<li>${3 - c.comps.length} further competitor slot(s): unchecked in this snapshot sample.</li>` : '';
   return `<article class="card" data-signal="${esc(c.signal)}">
-    <h3>${esc(c.name)} <span class="small">— SUGGESTION</span></h3>
+    <h3>${esc(c.name)} <span class="small">— SUGGESTION</span>${c.contextLabel ? ` <span class="small"><strong>${esc(c.contextLabel)}</strong></span>` : ''}</h3>
     <p>${esc(c.pitch)}</p>
     <p><strong>Interest signal: ${c.score}/100 — ESTIMATE, not a virality prediction.</strong><br><span class="small">Components: avg velocity ${c.avgVel.toFixed(1)}/day; sample stars ${c.total}; HN title mentions ${c.hn}; dev.to title mentions ${c.devto}. Triggering evidence: ${c.topRepo ? esc(c.topRepo.full_name) + ' (' + c.topRepo.stars + ' stars, created ' + fmtDate(c.topRepo.created_at) + ')' : 'none in snapshot sample'}; snapshot generated ${snapDate}.</span></p>
     <p><strong>72-hour MVP — Build:</strong> core in ${esc(c.signal)}; one demo from the snapshot evidence; docs + worked example. <strong>Cut:</strong> accounts, payments, AI generation, mobile app.</p>
@@ -187,6 +192,9 @@ async function main() {
   function applyGeneration(offset, label) {
     const gen = generationSignals();
     currentCards = buildCardsFromSignals(snap, gen.list, offset);
+    // Closest-match cards must carry the label on the card itself, not
+    // only in the status line (browser check 2026-10-24 found the badge missing).
+    if (gen.mode === "closest") currentCards.forEach((c) => { c.contextLabel = "Closest-match — NOT evidence for your seed"; });
     rebuildChips(currentCards);
     syncUrl();
     $('#genStatus').textContent = label(gen);

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:03:38.136640+00:00",
+  "generated_at": "2026-10-24T13:06:40.172428+00:00",
   "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
@@ -179,12 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4189,
-      "forks": 328,
+      "stars": 4190,
+      "forks": 329,
       "created_at": "2026-10-20T09:13:06Z",
-      "pushed_at": "2026-10-24T12:52:13Z",
-      "updated_at": "2026-10-24T13:00:10Z",
-      "stars_per_day": 1047.2,
+      "pushed_at": "2026-10-24T13:06:33Z",
+      "updated_at": "2026-10-24T13:06:37Z",
+      "stars_per_day": 1047.5,
       "age_days": 4
     },
     {
@@ -206,12 +206,12 @@
         "tmdb",
         "webos"
       ],
-      "stars": 4105,
+      "stars": 4106,
       "forks": 646,
       "created_at": "2026-10-19T19:29:01Z",
       "pushed_at": "2026-10-24T01:20:17Z",
-      "updated_at": "2026-10-24T12:49:13Z",
-      "stars_per_day": 1026.2,
+      "updated_at": "2026-10-24T13:04:31Z",
+      "stars_per_day": 1026.5,
       "age_days": 4
     },
     {
@@ -257,12 +257,12 @@
         "rea",
         "reverse-enginnering"
       ],
-      "stars": 1897,
+      "stars": 1898,
       "forks": 311,
       "created_at": "2026-10-19T22:20:47Z",
       "pushed_at": "2026-10-21T00:32:22Z",
-      "updated_at": "2026-10-24T13:02:40Z",
-      "stars_per_day": 474.2,
+      "updated_at": "2026-10-24T13:04:42Z",
+      "stars_per_day": 474.5,
       "age_days": 4
     },
     {
@@ -273,7 +273,7 @@
       "language": "C",
       "topics": [],
       "stars": 1828,
-      "forks": 283,
+      "forks": 284,
       "created_at": "2026-10-19T10:07:58Z",
       "pushed_at": "2026-10-23T10:58:42Z",
       "updated_at": "2026-10-24T13:01:08Z",
@@ -341,12 +341,12 @@
       "description": "Make an old Android TV fast again with Claude Code or Codex: a tiny ad-free home screen plus the prompt to clean it up",
       "language": "Java",
       "topics": [],
-      "stars": 1435,
+      "stars": 1436,
       "forks": 149,
       "created_at": "2026-10-18T06:42:29Z",
       "pushed_at": "2026-10-24T07:07:45Z",
-      "updated_at": "2026-10-24T12:59:48Z",
-      "stars_per_day": 239.2,
+      "updated_at": "2026-10-24T13:03:49Z",
+      "stars_per_day": 239.3,
       "age_days": 6
     },
     {
@@ -384,12 +384,12 @@
       "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
       "language": "Swift",
       "topics": [],
-      "stars": 1417,
+      "stars": 1418,
       "forks": 226,
       "created_at": "2026-10-21T19:38:50Z",
       "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-24T12:59:28Z",
-      "stars_per_day": 708.5,
+      "updated_at": "2026-10-24T13:04:06Z",
+      "stars_per_day": 709.0,
       "age_days": 2
     },
     {
@@ -412,12 +412,12 @@
         "unzip",
         "zip"
       ],
-      "stars": 1399,
+      "stars": 1402,
       "forks": 34,
       "created_at": "2026-10-21T17:29:28Z",
       "pushed_at": "2026-10-24T12:40:41Z",
-      "updated_at": "2026-10-24T13:03:00Z",
-      "stars_per_day": 699.5,
+      "updated_at": "2026-10-24T13:06:06Z",
+      "stars_per_day": 701.0,
       "age_days": 2
     },
     {
@@ -442,12 +442,12 @@
       "description": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
       "language": "C",
       "topics": [],
-      "stars": 1365,
+      "stars": 1378,
       "forks": 163,
       "created_at": "2026-10-18T01:28:31Z",
       "pushed_at": "2026-10-24T00:41:18Z",
-      "updated_at": "2026-10-24T13:02:37Z",
-      "stars_per_day": 227.5,
+      "updated_at": "2026-10-24T13:06:21Z",
+      "stars_per_day": 229.7,
       "age_days": 6
     },
     {
@@ -730,7 +730,7 @@
       "language": "JavaScript",
       "topics": [],
       "stars": 544,
-      "forks": 89,
+      "forks": 90,
       "created_at": "2026-10-20T04:40:07Z",
       "pushed_at": "2026-10-20T04:40:58Z",
       "updated_at": "2026-10-24T12:48:43Z",

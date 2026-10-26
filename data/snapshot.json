@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-25T13:26:47.639406+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-18, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-10-26T15:36:41.688182+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-19, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-10-18&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-10-19&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -26,14 +26,14 @@
     {
       "name": "Python",
       "kind": "language",
-      "count_in_snapshot": 10,
+      "count_in_snapshot": 13,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "Rust",
       "kind": "language",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 5,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -45,6 +45,13 @@
       "devto_mentions": 24
     },
     {
+      "name": "rust",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
       "name": "JavaScript",
       "kind": "language",
       "count_in_snapshot": 2,
@@ -52,21 +59,42 @@
       "devto_mentions": 0
     },
     {
-      "name": "Swift",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 1,
-      "devto_mentions": 0
-    },
-    {
-      "name": "TypeScript",
+      "name": "Kotlin",
       "kind": "language",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "rust",
+      "name": "adb",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "agent-skills",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "claude-code",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "claude-skills",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "debloat",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -87,14 +115,7 @@
       "devto_mentions": 0
     },
     {
-      "name": "Java",
-      "kind": "language",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Kotlin",
+      "name": "HTML",
       "kind": "language",
       "count_in_snapshot": 1,
       "hn_mentions": 0,
@@ -108,14 +129,28 @@
       "devto_mentions": 0
     },
     {
-      "name": "ai",
-      "kind": "topic",
+      "name": "Swift",
+      "kind": "language",
       "count_in_snapshot": 1,
-      "hn_mentions": 3,
-      "devto_mentions": 3
+      "hn_mentions": 1,
+      "devto_mentions": 0
     },
     {
-      "name": "ai-safety",
+      "name": "TypeScript",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "ai-agent",
+      "kind": "topic",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "android",
       "kind": "topic",
       "count_in_snapshot": 1,
       "hn_mentions": 0,
@@ -134,41 +169,6 @@
       "count_in_snapshot": 1,
       "hn_mentions": 0,
       "devto_mentions": 0
-    },
-    {
-      "name": "archive-extractor",
-      "kind": "topic",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "audio-player",
-      "kind": "topic",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "backtesting",
-      "kind": "topic",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "bittorrent",
-      "kind": "topic",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "claude",
-      "kind": "topic",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
     }
   ],
   "repos": [
@@ -179,73 +179,12 @@
       "description": "\u7ed9\u56fd\u4ea7\u7535\u89c6\u7684\u4e00\u5757\u5e72\u51c0\u684c\u9762\uff1a\u53c2\u7167 tvOS \u8bbe\u8ba1\u7684\u5f00\u6e90 Android TV \u684c\u9762\uff0c\u6ca1\u6709\u5e7f\u544a\uff0c\u5f00\u673a\u81ea\u52a8\u63a5\u7ba1\u3002A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "topics": [],
-      "stars": 4793,
-      "forks": 374,
+      "stars": 5956,
+      "forks": 501,
       "created_at": "2026-10-20T09:13:06Z",
-      "pushed_at": "2026-10-25T09:17:15Z",
-      "updated_at": "2026-10-25T13:25:57Z",
-      "stars_per_day": 958.6,
-      "age_days": 5
-    },
-    {
-      "full_name": "simbasjungles/free-my-tv",
-      "name": "free-my-tv",
-      "html_url": "https://github.com/simbasjungles/free-my-tv",
-      "description": "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
-      "language": "Java",
-      "topics": [
-        "android-tv",
-        "claude-code",
-        "google-tv",
-        "home-screen",
-        "launcher",
-        "no-ads",
-        "open-source",
-        "samsung-tizen",
-        "tizen",
-        "tmdb",
-        "webos"
-      ],
-      "stars": 4432,
-      "forks": 728,
-      "created_at": "2026-10-19T19:29:01Z",
-      "pushed_at": "2026-10-24T20:35:07Z",
-      "updated_at": "2026-10-25T13:26:33Z",
-      "stars_per_day": 886.4,
-      "age_days": 5
-    },
-    {
-      "full_name": "JoasASantos/REA-Prompts",
-      "name": "REA-Prompts",
-      "html_url": "https://github.com/JoasASantos/REA-Prompts",
-      "description": "REAP - Prompts for you to use REA (Reverse Engineer Anything), get the most out of it, and clone or break down any program",
-      "language": null,
-      "topics": [
-        "prompt-engineering",
-        "rea",
-        "reverse-enginnering"
-      ],
-      "stars": 2299,
-      "forks": 401,
-      "created_at": "2026-10-19T22:20:47Z",
-      "pushed_at": "2026-10-21T00:32:22Z",
-      "updated_at": "2026-10-25T13:21:43Z",
-      "stars_per_day": 459.8,
-      "age_days": 5
-    },
-    {
-      "full_name": "EthanArbuckle/fairplay-decrypt",
-      "name": "fairplay-decrypt",
-      "html_url": "https://github.com/EthanArbuckle/fairplay-decrypt",
-      "description": "Offline FairPlay App Store IPA decryption with independent key derivation",
-      "language": "C",
-      "topics": [],
-      "stars": 2043,
-      "forks": 315,
-      "created_at": "2026-10-19T10:07:58Z",
-      "pushed_at": "2026-10-24T21:59:52Z",
-      "updated_at": "2026-10-25T13:08:34Z",
-      "stars_per_day": 340.5,
+      "pushed_at": "2026-10-26T14:44:41Z",
+      "updated_at": "2026-10-26T15:36:22Z",
+      "stars_per_day": 992.7,
       "age_days": 6
     },
     {
@@ -255,13 +194,28 @@
       "description": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
       "language": "C",
       "topics": [],
-      "stars": 1979,
-      "forks": 247,
+      "stars": 3648,
+      "forks": 490,
       "created_at": "2026-10-23T21:00:53Z",
-      "pushed_at": "2026-10-24T22:55:49Z",
-      "updated_at": "2026-10-25T13:26:39Z",
-      "stars_per_day": 1979.0,
-      "age_days": 1
+      "pushed_at": "2026-10-26T04:24:46Z",
+      "updated_at": "2026-10-26T15:31:12Z",
+      "stars_per_day": 1824.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "wesbos/3d-model-anything",
+      "name": "3d-model-anything",
+      "html_url": "https://github.com/wesbos/3d-model-anything",
+      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "language": "Swift",
+      "topics": [],
+      "stars": 2033,
+      "forks": 297,
+      "created_at": "2026-10-21T19:38:50Z",
+      "pushed_at": "2026-10-22T13:10:22Z",
+      "updated_at": "2026-10-26T15:29:55Z",
+      "stars_per_day": 508.2,
+      "age_days": 4
     },
     {
       "full_name": "xevrion/hatchzip",
@@ -291,28 +245,34 @@
         "windows",
         "zip"
       ],
-      "stars": 1872,
-      "forks": 47,
+      "stars": 2016,
+      "forks": 56,
       "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-25T09:13:42Z",
-      "updated_at": "2026-10-25T13:18:37Z",
-      "stars_per_day": 624.0,
-      "age_days": 3
+      "pushed_at": "2026-10-25T17:45:27Z",
+      "updated_at": "2026-10-26T15:32:03Z",
+      "stars_per_day": 504.0,
+      "age_days": 4
     },
     {
-      "full_name": "wesbos/3d-model-anything",
-      "name": "3d-model-anything",
-      "html_url": "https://github.com/wesbos/3d-model-anything",
-      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
-      "language": "Swift",
-      "topics": [],
-      "stars": 1839,
-      "forks": 275,
-      "created_at": "2026-10-21T19:38:50Z",
-      "pushed_at": "2026-10-22T13:10:22Z",
-      "updated_at": "2026-10-25T13:20:07Z",
-      "stars_per_day": 613.0,
-      "age_days": 3
+      "full_name": "Jakeschincariol/day-trader-skill",
+      "name": "day-trader-skill",
+      "html_url": "https://github.com/Jakeschincariol/day-trader-skill",
+      "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+      "language": "Python",
+      "topics": [
+        "backtesting",
+        "claude",
+        "claude-skills",
+        "day-trading",
+        "stock-market"
+      ],
+      "stars": 1932,
+      "forks": 406,
+      "created_at": "2026-10-20T14:17:54Z",
+      "pushed_at": "2026-10-20T14:18:00Z",
+      "updated_at": "2026-10-26T15:34:32Z",
+      "stars_per_day": 322.0,
+      "age_days": 6
     },
     {
       "full_name": "ikow/php2shell-poc",
@@ -336,12 +296,51 @@
         "waf-rules",
         "wordpress-security"
       ],
-      "stars": 1782,
-      "forks": 615,
+      "stars": 1823,
+      "forks": 629,
       "created_at": "2026-10-21T07:55:16Z",
       "pushed_at": "2026-10-22T22:41:36Z",
-      "updated_at": "2026-10-25T13:06:30Z",
-      "stars_per_day": 445.5,
+      "updated_at": "2026-10-26T15:23:35Z",
+      "stars_per_day": 364.6,
+      "age_days": 5
+    },
+    {
+      "full_name": "rddmwmddr/android-ad-cleaner",
+      "name": "android-ad-cleaner",
+      "html_url": "https://github.com/rddmwmddr/android-ad-cleaner",
+      "description": "\u5173\u6389\u56fd\u4ea7\u5b89\u5353\u624b\u673a\u7cfb\u7edf\u91cc\u7684\u5e7f\u544a\u3001\u70ed\u641c\u3001\u8d44\u8baf\u63a8\u8350\u548c\u8425\u9500\u63a8\u9001\u3002\u4e0d root\uff0c\u53ef\u8fd8\u539f\uff0c\u652f\u6301 AI \u667a\u80fd\u4f53\u4e00\u952e\u6267\u884c\u3002",
+      "language": "Python",
+      "topics": [
+        "adb",
+        "ai-agent",
+        "android",
+        "coloros",
+        "debloat",
+        "hyperos",
+        "magicos",
+        "originos"
+      ],
+      "stars": 1699,
+      "forks": 141,
+      "created_at": "2026-10-24T05:35:47Z",
+      "pushed_at": "2026-10-25T16:46:03Z",
+      "updated_at": "2026-10-26T15:36:28Z",
+      "stars_per_day": 849.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "oosexgang/hackios-xnu-kernel",
+      "name": "hackios-xnu-kernel",
+      "html_url": "https://github.com/oosexgang/hackios-xnu-kernel",
+      "description": null,
+      "language": "C",
+      "topics": [],
+      "stars": 1607,
+      "forks": 290,
+      "created_at": "2026-10-22T06:20:11Z",
+      "pushed_at": "2026-10-26T10:14:10Z",
+      "updated_at": "2026-10-26T15:35:51Z",
+      "stars_per_day": 401.8,
       "age_days": 4
     },
     {
@@ -351,13 +350,41 @@
       "description": "A php2shell exploit that requires no modifications to the official version, and does not require display_errors or limit_memory.",
       "language": "Python",
       "topics": [],
-      "stars": 1418,
-      "forks": 416,
+      "stars": 1469,
+      "forks": 425,
       "created_at": "2026-10-21T11:11:57Z",
       "pushed_at": "2026-10-23T20:40:43Z",
-      "updated_at": "2026-10-25T13:08:39Z",
-      "stars_per_day": 354.5,
-      "age_days": 4
+      "updated_at": "2026-10-26T14:30:58Z",
+      "stars_per_day": 293.8,
+      "age_days": 5
+    },
+    {
+      "full_name": "designfuchen/word-atlas",
+      "name": "word-atlas",
+      "html_url": "https://github.com/designfuchen/word-atlas",
+      "description": "\u8bcd\u5149 \u00b7 Word Atlas \u2014 Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
+      "language": "TypeScript",
+      "topics": [
+        "chinese",
+        "dataset",
+        "english-learning",
+        "flashcards",
+        "fsrs",
+        "ielts",
+        "language-learning",
+        "pwa",
+        "react",
+        "spaced-repetition",
+        "vocabulary",
+        "webgl"
+      ],
+      "stars": 1462,
+      "forks": 369,
+      "created_at": "2026-10-25T08:27:22Z",
+      "pushed_at": "2026-10-26T13:47:33Z",
+      "updated_at": "2026-10-26T15:36:37Z",
+      "stars_per_day": 1462.0,
+      "age_days": 1
     },
     {
       "full_name": "openai/php2shell-checker",
@@ -366,49 +393,13 @@
       "description": null,
       "language": "JavaScript",
       "topics": [],
-      "stars": 1392,
-      "forks": 128,
+      "stars": 1409,
+      "forks": 134,
       "created_at": "2026-10-21T00:29:12Z",
       "pushed_at": "2026-10-22T22:55:16Z",
-      "updated_at": "2026-10-25T13:19:16Z",
-      "stars_per_day": 348.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "oosexgang/hackios-xnu-kernel",
-      "name": "hackios-xnu-kernel",
-      "html_url": "https://github.com/oosexgang/hackios-xnu-kernel",
-      "description": null,
-      "language": "C",
-      "topics": [],
-      "stars": 1376,
-      "forks": 241,
-      "created_at": "2026-10-22T06:20:11Z",
-      "pushed_at": "2026-10-24T18:09:50Z",
-      "updated_at": "2026-10-25T13:25:36Z",
-      "stars_per_day": 458.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "Jakeschincariol/day-trader-skill",
-      "name": "day-trader-skill",
-      "html_url": "https://github.com/Jakeschincariol/day-trader-skill",
-      "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
-      "language": "Python",
-      "topics": [
-        "backtesting",
-        "claude",
-        "claude-skills",
-        "day-trading",
-        "stock-market"
-      ],
-      "stars": 1340,
-      "forks": 302,
-      "created_at": "2026-10-20T14:17:54Z",
-      "pushed_at": "2026-10-20T14:18:00Z",
-      "updated_at": "2026-10-25T13:23:34Z",
-      "stars_per_day": 335.0,
-      "age_days": 4
+      "updated_at": "2026-10-26T14:47:46Z",
+      "stars_per_day": 281.8,
+      "age_days": 5
     },
     {
       "full_name": "colinhacks/reylo",
@@ -417,13 +408,74 @@
       "description": "Import .sql files into TypeScript with full type inference and zero codegen.",
       "language": "Rust",
       "topics": [],
-      "stars": 1243,
-      "forks": 9,
+      "stars": 1294,
+      "forks": 12,
       "created_at": "2026-10-21T00:16:54Z",
-      "pushed_at": "2026-10-25T04:54:52Z",
-      "updated_at": "2026-10-25T13:02:57Z",
-      "stars_per_day": 310.8,
-      "age_days": 4
+      "pushed_at": "2026-10-25T16:05:29Z",
+      "updated_at": "2026-10-26T15:31:24Z",
+      "stars_per_day": 258.8,
+      "age_days": 5
+    },
+    {
+      "full_name": "lyramakesmusic/neuron-explorer",
+      "name": "neuron-explorer",
+      "html_url": "https://github.com/lyramakesmusic/neuron-explorer",
+      "description": "Steering-first neuron explorer for Qwen3.5-4B: push every MLP neuron, keep every rollout, browse the results",
+      "language": "Python",
+      "topics": [
+        "interpretability",
+        "mechanistic-interpretability",
+        "qwen",
+        "steering"
+      ],
+      "stars": 1128,
+      "forks": 123,
+      "created_at": "2026-10-21T04:09:05Z",
+      "pushed_at": "2026-10-26T15:13:39Z",
+      "updated_at": "2026-10-26T15:33:27Z",
+      "stars_per_day": 225.6,
+      "age_days": 5
+    },
+    {
+      "full_name": "morganlinton/BeautifulRust",
+      "name": "BeautifulRust",
+      "html_url": "https://github.com/morganlinton/BeautifulRust",
+      "description": "Agent Skills that teach coding agents to write, review, and port idiomatic Rust, plus a tested clippy config. Works with Claude Code, Codex, Copilot, Cursor, and Gemini CLI.",
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "claude-plugin",
+        "claude-skills",
+        "clippy",
+        "code-review",
+        "coding-agent",
+        "cursor",
+        "rust",
+        "style-guide"
+      ],
+      "stars": 1121,
+      "forks": 47,
+      "created_at": "2026-10-23T03:01:11Z",
+      "pushed_at": "2026-10-26T13:45:53Z",
+      "updated_at": "2026-10-26T15:34:58Z",
+      "stars_per_day": 373.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "t3dotgg/tstack",
+      "name": "tstack",
+      "html_url": "https://github.com/t3dotgg/tstack",
+      "description": "The agent skills I use every day. Works with Claude Code and Codex.",
+      "language": "Python",
+      "topics": [],
+      "stars": 1115,
+      "forks": 48,
+      "created_at": "2026-10-24T05:00:20Z",
+      "pushed_at": "2026-10-25T02:25:51Z",
+      "updated_at": "2026-10-26T15:35:56Z",
+      "stars_per_day": 557.5,
+      "age_days": 2
     },
     {
       "full_name": "eness/php2shell-CVE-2026-109618-CVE-2026-109619-PoC",
@@ -432,27 +484,12 @@
       "description": "Proof-of-Concept (PoC) exploit for php2shell (CVE-2026-109618 / CVE-2026-109619), demonstrating remote code execution in vulnerable PHP environments. For security research and educational purposes only.",
       "language": "Shell",
       "topics": [],
-      "stars": 994,
-      "forks": 254,
+      "stars": 1018,
+      "forks": 256,
       "created_at": "2026-10-21T08:31:43Z",
       "pushed_at": "2026-10-22T07:19:20Z",
-      "updated_at": "2026-10-25T12:52:18Z",
-      "stars_per_day": 248.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "ELY-Open-Source/ElyOffice",
-      "name": "ElyOffice",
-      "html_url": "https://github.com/ELY-Open-Source/ElyOffice",
-      "description": "Ely Office: offline-first desktop apps in Rust and GPUI",
-      "language": "Rust",
-      "topics": [],
-      "stars": 981,
-      "forks": 64,
-      "created_at": "2026-10-19T23:04:42Z",
-      "pushed_at": "2026-10-23T14:58:55Z",
-      "updated_at": "2026-10-25T13:19:20Z",
-      "stars_per_day": 196.2,
+      "updated_at": "2026-10-26T15:07:07Z",
+      "stars_per_day": 203.6,
       "age_days": 5
     },
     {
@@ -470,29 +507,12 @@
         "tokenspeed",
         "vllm"
       ],
-      "stars": 980,
-      "forks": 34,
+      "stars": 1003,
+      "forks": 35,
       "created_at": "2026-10-20T14:03:04Z",
       "pushed_at": "2026-10-24T08:34:16Z",
-      "updated_at": "2026-10-25T10:48:59Z",
-      "stars_per_day": 245.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "UniXNU/UniXNU",
-      "name": "UniXNU",
-      "html_url": "https://github.com/UniXNU/UniXNU",
-      "description": "Run iOS and macOS on non-Apple ARM64 hardware through UEFI.",
-      "language": "Python",
-      "topics": [
-        "unixnu"
-      ],
-      "stars": 937,
-      "forks": 172,
-      "created_at": "2026-10-19T10:46:55Z",
-      "pushed_at": "2026-10-25T05:38:04Z",
-      "updated_at": "2026-10-25T13:23:35Z",
-      "stars_per_day": 156.2,
+      "updated_at": "2026-10-26T14:54:35Z",
+      "stars_per_day": 167.2,
       "age_days": 6
     },
     {
@@ -502,13 +522,13 @@
       "description": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
       "language": "Python",
       "topics": [],
-      "stars": 925,
-      "forks": 53,
+      "stars": 969,
+      "forks": 57,
       "created_at": "2026-10-22T01:40:05Z",
       "pushed_at": "2026-10-25T05:05:43Z",
-      "updated_at": "2026-10-25T13:08:11Z",
-      "stars_per_day": 308.3,
-      "age_days": 3
+      "updated_at": "2026-10-26T15:33:44Z",
+      "stars_per_day": 242.2,
+      "age_days": 4
     },
     {
       "full_name": "assetnote/php2shell-scanner",
@@ -517,48 +537,118 @@
       "description": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
       "language": "Python",
       "topics": [],
-      "stars": 890,
-      "forks": 130,
+      "stars": 923,
+      "forks": 133,
       "created_at": "2026-10-22T03:53:20Z",
       "pushed_at": "2026-10-24T03:40:18Z",
-      "updated_at": "2026-10-25T12:32:09Z",
-      "stars_per_day": 296.7,
+      "updated_at": "2026-10-26T14:03:51Z",
+      "stars_per_day": 230.8,
+      "age_days": 4
+    },
+    {
+      "full_name": "enesozturk/dimensional-drawing",
+      "name": "dimensional-drawing",
+      "html_url": "https://github.com/enesozturk/dimensional-drawing",
+      "description": null,
+      "language": "HTML",
+      "topics": [],
+      "stars": 831,
+      "forks": 49,
+      "created_at": "2026-10-23T12:20:16Z",
+      "pushed_at": "2026-10-24T09:41:54Z",
+      "updated_at": "2026-10-26T15:29:38Z",
+      "stars_per_day": 277.0,
       "age_days": 3
     },
     {
-      "full_name": "stackedlol/ascii-sharks",
-      "name": "ascii-sharks",
-      "html_url": "https://github.com/stackedlol/ascii-sharks",
-      "description": "ascii shark components in typescript",
-      "language": "TypeScript",
+      "full_name": "KillaBoi/StealMyBitcoin-PoC",
+      "name": "StealMyBitcoin-PoC",
+      "html_url": "https://github.com/KillaBoi/StealMyBitcoin-PoC",
+      "description": "A public release of the Steal My Bitcoin challenge",
+      "language": "Python",
       "topics": [],
-      "stars": 825,
-      "forks": 63,
-      "created_at": "2026-10-19T21:54:19Z",
-      "pushed_at": "2026-10-24T16:07:32Z",
-      "updated_at": "2026-10-25T13:24:08Z",
-      "stars_per_day": 165.0,
+      "stars": 710,
+      "forks": 102,
+      "created_at": "2026-10-25T21:48:32Z",
+      "pushed_at": "2026-10-26T11:25:47Z",
+      "updated_at": "2026-10-26T15:34:32Z",
+      "stars_per_day": 710.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "udhaykumarbala/cleanyourtv-app",
+      "name": "cleanyourtv-app",
+      "html_url": "https://github.com/udhaykumarbala/cleanyourtv-app",
+      "description": "A community-built phone app for Clean Your TV: clean up an Android TV from your phone. No laptop, no coding agent, nothing uninstalled.",
+      "language": "Kotlin",
+      "topics": [
+        "adb",
+        "android-tv",
+        "debloat",
+        "fire-tv",
+        "google-tv",
+        "launcher"
+      ],
+      "stars": 698,
+      "forks": 64,
+      "created_at": "2026-10-21T12:42:09Z",
+      "pushed_at": "2026-10-26T12:01:11Z",
+      "updated_at": "2026-10-26T15:31:02Z",
+      "stars_per_day": 139.6,
       "age_days": 5
     },
     {
-      "full_name": "Hugo-Dz/spritefusion-sprite-normals",
-      "name": "spritefusion-sprite-normals",
-      "html_url": "https://github.com/Hugo-Dz/spritefusion-sprite-normals",
-      "description": "A tool to generate normal maps from any sprite and animated sprite sheet.",
-      "language": "Rust",
+      "full_name": "DenisSergeevitch/ex-ussr-kinship-research",
+      "name": "ex-ussr-kinship-research",
+      "html_url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "description": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.",
+      "language": "Python",
       "topics": [
-        "gamedev",
-        "normal-map",
-        "normal-mapping",
-        "pixel-art",
-        "sprites"
+        "agent-skills",
+        "archives",
+        "claude-code",
+        "codex",
+        "family-history",
+        "familysearch",
+        "genealogy",
+        "ussr"
       ],
-      "stars": 663,
-      "forks": 48,
-      "created_at": "2026-10-19T13:26:45Z",
-      "pushed_at": "2026-10-20T10:31:00Z",
-      "updated_at": "2026-10-25T11:56:24Z",
-      "stars_per_day": 110.5,
+      "stars": 698,
+      "forks": 69,
+      "created_at": "2026-10-25T10:05:56Z",
+      "pushed_at": "2026-10-26T11:04:37Z",
+      "updated_at": "2026-10-26T15:29:21Z",
+      "stars_per_day": 698.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "mizorewww/gdirect",
+      "name": "gdirect",
+      "html_url": "https://github.com/mizorewww/gdirect",
+      "description": "Rust Google Drive direct downloader using pinned libaria2",
+      "language": "Rust",
+      "topics": [],
+      "stars": 690,
+      "forks": 44,
+      "created_at": "2026-10-25T05:52:22Z",
+      "pushed_at": "2026-10-26T11:07:58Z",
+      "updated_at": "2026-10-26T15:36:27Z",
+      "stars_per_day": 690.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "impacifist/Windows-GPU-UNLOCK",
+      "name": "Windows-GPU-UNLOCK",
+      "html_url": "https://github.com/impacifist/Windows-GPU-UNLOCK",
+      "description": "Windows GPU UNLOCK: RTX3090 UEFI port, Korean no-reset Windows boot guide, verified source and benchmark evidence",
+      "language": "C",
+      "topics": [],
+      "stars": 667,
+      "forks": 64,
+      "created_at": "2026-10-20T04:41:07Z",
+      "pushed_at": "2026-10-26T12:40:39Z",
+      "updated_at": "2026-10-26T15:36:28Z",
+      "stars_per_day": 111.2,
       "age_days": 6
     },
     {
@@ -568,57 +658,12 @@
       "description": null,
       "language": "Python",
       "topics": [],
-      "stars": 653,
-      "forks": 68,
+      "stars": 666,
+      "forks": 69,
       "created_at": "2026-10-20T17:09:40Z",
-      "pushed_at": "2026-10-25T03:24:37Z",
-      "updated_at": "2026-10-25T12:34:54Z",
-      "stars_per_day": 163.2,
-      "age_days": 4
-    },
-    {
-      "full_name": "dominikmartn/harp",
-      "name": "harp",
-      "html_url": "https://github.com/dominikmartn/harp",
-      "description": "Run many Claude Code and Codex agents side by side, in one sidebar that tells you which one needs you. An unofficial fork of Warp.",
-      "language": "Rust",
-      "topics": [],
-      "stars": 608,
-      "forks": 41,
-      "created_at": "2026-10-20T10:39:43Z",
-      "pushed_at": "2026-10-21T10:29:54Z",
-      "updated_at": "2026-10-25T09:20:45Z",
-      "stars_per_day": 121.6,
-      "age_days": 5
-    },
-    {
-      "full_name": "nthnclrk/CleanFrame",
-      "name": "CleanFrame",
-      "html_url": "https://github.com/nthnclrk/CleanFrame",
-      "description": "A personal home screen for Samsung The Frame. A starting point to fork and adapt.",
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 591,
-      "forks": 105,
-      "created_at": "2026-10-20T04:40:07Z",
-      "pushed_at": "2026-10-20T04:40:58Z",
-      "updated_at": "2026-10-25T13:00:10Z",
-      "stars_per_day": 118.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "VictorTaelin/uniichat",
-      "name": "uniichat",
-      "html_url": "https://github.com/VictorTaelin/uniichat",
-      "description": null,
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 589,
-      "forks": 59,
-      "created_at": "2026-10-19T15:26:48Z",
-      "pushed_at": "2026-10-19T16:45:08Z",
-      "updated_at": "2026-10-25T12:23:56Z",
-      "stars_per_day": 117.8,
+      "pushed_at": "2026-10-26T14:49:28Z",
+      "updated_at": "2026-10-26T15:36:32Z",
+      "stars_per_day": 133.2,
       "age_days": 5
     },
     {
@@ -641,81 +686,58 @@
         "torrent",
         "video-player"
       ],
-      "stars": 572,
-      "forks": 8,
+      "stars": 654,
+      "forks": 13,
       "created_at": "2026-10-20T19:44:10Z",
       "pushed_at": "2026-10-24T15:43:34Z",
-      "updated_at": "2026-10-25T13:10:17Z",
-      "stars_per_day": 143.0,
-      "age_days": 4
+      "updated_at": "2026-10-26T15:26:39Z",
+      "stars_per_day": 130.8,
+      "age_days": 5
     },
     {
-      "full_name": "Alejandros17487/ai-jailbreaks",
-      "name": "ai-jailbreaks",
-      "html_url": "https://github.com/Alejandros17487/ai-jailbreaks",
-      "description": "AI jailbreaks: 35 paste-ready AI jailbreak prompts for 25+ frontier and open-weight models - system prompts, AGENTS.md specs, and Ollama Modelfiles. Built for AI security research and red-team testing.",
-      "language": null,
-      "topics": [
-        "ai",
-        "ai-safety",
-        "jailbreak",
-        "jailbreaking",
-        "privacy",
-        "safety",
-        "security"
-      ],
-      "stars": 543,
-      "forks": 101,
-      "created_at": "2026-10-21T14:44:06Z",
-      "pushed_at": "2026-10-21T14:49:16Z",
-      "updated_at": "2026-10-25T12:48:00Z",
-      "stars_per_day": 181.0,
-      "age_days": 3
-    },
-    {
-      "full_name": "zita-ch/supermimic_vibed",
-      "name": "supermimic_vibed",
-      "html_url": "https://github.com/zita-ch/supermimic_vibed",
-      "description": "vibe coded supermimic within 1h, LAFAN passed within 1.5 gpuh training",
-      "language": "Python",
+      "full_name": "nthnclrk/CleanFrame",
+      "name": "CleanFrame",
+      "html_url": "https://github.com/nthnclrk/CleanFrame",
+      "description": "A personal home screen for Samsung The Frame. A starting point to fork and adapt.",
+      "language": "JavaScript",
       "topics": [],
-      "stars": 501,
-      "forks": 45,
-      "created_at": "2026-10-21T17:29:28Z",
-      "pushed_at": "2026-10-21T20:39:39Z",
-      "updated_at": "2026-10-25T12:59:47Z",
-      "stars_per_day": 167.0,
-      "age_days": 3
-    },
-    {
-      "full_name": "timhengc/mai-shen-zai-ci",
-      "name": "mai-shen-zai-ci",
-      "html_url": "https://github.com/timhengc/mai-shen-zai-ci",
-      "description": "\u9ea6\u95e8\u5c01\u795e\u699c\uff5c\u4f60\u5728\u9ea6\u95e8\u7b97\u8001\u51e0\uff1f\u9886\u53d6\u4f60\u7684\u9ea6\u95e8\u4e13\u5c5e\u8eab\u4efd",
-      "language": "Python",
-      "topics": [],
-      "stars": 487,
-      "forks": 48,
-      "created_at": "2026-10-19T06:49:32Z",
-      "pushed_at": "2026-10-19T12:44:54Z",
-      "updated_at": "2026-10-25T10:52:58Z",
-      "stars_per_day": 81.2,
+      "stars": 640,
+      "forks": 124,
+      "created_at": "2026-10-20T04:40:07Z",
+      "pushed_at": "2026-10-20T04:40:58Z",
+      "updated_at": "2026-10-26T15:04:54Z",
+      "stars_per_day": 106.7,
       "age_days": 6
     },
     {
-      "full_name": "rossark0/rossark-motion-skill",
-      "name": "rossark-motion-skill",
-      "html_url": "https://github.com/rossark0/rossark-motion-skill",
-      "description": "Turn any SVG into a professional 60 fps animation. A Claude Code skill that brings anything drawn to life: live faces, full-body acting and whole scenes, in React Native and SwiftUI.",
-      "language": "Swift",
+      "full_name": "dominikmartn/harp",
+      "name": "harp",
+      "html_url": "https://github.com/dominikmartn/harp",
+      "description": "Run many Claude Code and Codex agents side by side, in one sidebar that tells you which one needs you. An unofficial fork of Warp.",
+      "language": "Rust",
       "topics": [],
-      "stars": 480,
-      "forks": 35,
-      "created_at": "2026-10-22T03:33:03Z",
-      "pushed_at": "2026-10-22T06:38:46Z",
-      "updated_at": "2026-10-25T11:27:08Z",
-      "stars_per_day": 160.0,
-      "age_days": 3
+      "stars": 635,
+      "forks": 42,
+      "created_at": "2026-10-20T10:39:43Z",
+      "pushed_at": "2026-10-21T10:29:54Z",
+      "updated_at": "2026-10-26T15:16:38Z",
+      "stars_per_day": 105.8,
+      "age_days": 6
+    },
+    {
+      "full_name": "unclebob/ub-mode",
+      "name": "ub-mode",
+      "html_url": "https://github.com/unclebob/ub-mode",
+      "description": null,
+      "language": null,
+      "topics": [],
+      "stars": 604,
+      "forks": 27,
+      "created_at": "2026-10-25T16:04:09Z",
+      "pushed_at": "2026-10-25T16:07:59Z",
+      "updated_at": "2026-10-26T15:32:25Z",
+      "stars_per_day": 604.0,
+      "age_days": 1
     }
   ],
   "hn_items": [
@@ -794,82 +816,82 @@
     {
       "title": "How to Become a Tech Conference Speaker (And Why You Might Regret It)",
       "url": "https://dev.to/sylwia-lask/how-to-become-a-tech-conference-speaker-and-why-you-might-regret-it-2ink",
-      "reactions": 201,
-      "comments": 101,
+      "reactions": 217,
+      "comments": 113,
       "published_at": "2026-10-21T08:05:30Z"
     },
     {
-      "title": "I Got Tired of Coming Into My Lab To Check the Pressure of My Cryocooler so I Built a Tool To Do It for Me",
-      "url": "https://dev.to/pahorton/i-got-tired-of-coming-into-my-lab-to-check-the-pressure-of-my-cryocooler-so-i-built-a-tool-to-do-it-4ob7",
-      "reactions": 58,
-      "comments": 22,
-      "published_at": "2026-10-21T16:59:00Z"
+      "title": "I Earned a Seat at GitHub Universe. It'll Stay Empty, and That's Not Fair",
+      "url": "https://dev.to/georgekobaidze/i-earned-a-seat-at-github-universe-itll-stay-empty-and-thats-not-fair-3d7k",
+      "reactions": 73,
+      "comments": 50,
+      "published_at": "2026-10-25T06:44:20Z"
     },
     {
       "title": "Dev Opportunity Radar #22: $50K Basis Fellowship, Perplexity AI Research Fellowship, and FC Barcelona Analytics Hackathon",
       "url": "https://dev.to/devengers/dev-opportunity-radar-22-50k-basis-fellowship-perplexity-ai-research-fellowship-and-fc-4806",
-      "reactions": 79,
-      "comments": 8,
+      "reactions": 84,
+      "comments": 9,
       "published_at": "2026-10-23T18:29:07Z"
+    },
+    {
+      "title": "I Got Tired of Coming Into My Lab To Check the Pressure of My Cryocooler so I Built a Tool To Do It for Me",
+      "url": "https://dev.to/pahorton/i-got-tired-of-coming-into-my-lab-to-check-the-pressure-of-my-cryocooler-so-i-built-a-tool-to-do-it-4ob7",
+      "reactions": 60,
+      "comments": 23,
+      "published_at": "2026-10-21T16:59:00Z"
     },
     {
       "title": "Stuck in the same dev.to topics? An open model fixed it.",
       "url": "https://dev.to/thomasbnt/stuck-in-the-same-devto-topics-an-open-model-fixed-it-4mbc",
-      "reactions": 67,
-      "comments": 36,
+      "reactions": 75,
+      "comments": 38,
       "published_at": "2026-10-21T02:13:00Z"
     },
     {
       "title": "Don't Be a Proxy Between Me and Your AI",
       "url": "https://dev.to/adamthedeveloper/dont-be-a-proxy-between-me-and-your-ai-mcn",
-      "reactions": 80,
-      "comments": 48,
+      "reactions": 122,
+      "comments": 82,
       "published_at": "2026-10-22T04:31:09Z"
+    },
+    {
+      "title": "I'm Not on the DEV Team. I Still Debugged Their Missing Badges From Public Code. (And My First Test Was Wrong.)",
+      "url": "https://dev.to/dj29/im-not-on-the-dev-team-i-still-debugged-their-missing-badges-from-public-code-and-my-first-test-18oo",
+      "reactions": 64,
+      "comments": 30,
+      "published_at": "2026-10-24T18:12:54Z"
     },
     {
       "title": "is-kit Reached 100 Stars \u2b50\ud83c\udf89 Here\u2019s What Changed Since 50",
       "url": "https://dev.to/nyaomaru/is-kit-reached-100-stars-heres-what-changed-since-50-49pf",
-      "reactions": 113,
-      "comments": 31,
+      "reactions": 120,
+      "comments": 34,
       "published_at": "2026-10-21T15:08:25Z"
-    },
-    {
-      "title": "\ud83d\udc3e DEV Pet Corner #2: Show Us Your Pets!",
-      "url": "https://dev.to/hemapriya_kanagala/dev-pet-corner-2-show-us-your-pets-37nj",
-      "reactions": 86,
-      "comments": 33,
-      "published_at": "2026-10-18T13:48:11Z"
     },
     {
       "title": "How to publish posts via the dev.to API",
       "url": "https://dev.to/julies1/how-to-publish-posts-via-the-devto-api-2fkd",
-      "reactions": 29,
-      "comments": 13,
+      "reactions": 36,
+      "comments": 14,
       "published_at": "2026-10-21T07:01:00Z"
     },
     {
       "title": "I Built slothd: A Local-First, Offline-Capable AI Daemon That Patiently Organizes Your Messy Workspace",
       "url": "https://dev.to/dj29/i-built-slothd-a-local-first-offline-capable-ai-daemon-that-patiently-organizes-your-messy-53e7",
-      "reactions": 81,
-      "comments": 32,
+      "reactions": 92,
+      "comments": 40,
       "published_at": "2026-10-21T21:51:28Z"
-    },
-    {
-      "title": "Somewhere, Coding Stopped Being Allowed to Be Fun",
-      "url": "https://dev.to/james_anderson_h/somewhere-coding-stopped-being-allowed-to-be-fun-14pe",
-      "reactions": 90,
-      "comments": 109,
-      "published_at": "2026-10-20T05:35:46Z"
     }
   ],
   "languages": [
     [
       "Python",
-      10
+      13
     ],
     [
       "Rust",
-      6
+      5
     ],
     [
       "C",
@@ -880,29 +902,49 @@
       2
     ],
     [
-      "Swift",
-      2
-    ],
-    [
-      "TypeScript",
-      2
-    ],
-    [
-      "Java",
-      1
-    ],
-    [
       "Kotlin",
+      2
+    ],
+    [
+      "HTML",
       1
     ],
     [
       "Shell",
+      1
+    ],
+    [
+      "Swift",
+      1
+    ],
+    [
+      "TypeScript",
       1
     ]
   ],
   "topics": [
     [
       "rust",
+      3
+    ],
+    [
+      "adb",
+      2
+    ],
+    [
+      "agent-skills",
+      2
+    ],
+    [
+      "claude-code",
+      2
+    ],
+    [
+      "claude-skills",
+      2
+    ],
+    [
+      "debloat",
       2
     ],
     [
@@ -914,11 +956,11 @@
       1
     ],
     [
-      "ai",
+      "ai-agent",
       1
     ],
     [
-      "ai-safety",
+      "android",
       1
     ],
     [
@@ -934,6 +976,10 @@
       1
     ],
     [
+      "archives",
+      1
+    ],
+    [
       "audio-player",
       1
     ],
@@ -946,19 +992,39 @@
       1
     ],
     [
+      "chinese",
+      1
+    ],
+    [
       "claude",
       1
     ],
     [
-      "claude-code",
-      1
-    ],
-    [
-      "claude-skills",
+      "claude-plugin",
       1
     ],
     [
       "cli",
+      1
+    ],
+    [
+      "clippy",
+      1
+    ],
+    [
+      "code-review",
+      1
+    ],
+    [
+      "codex",
+      1
+    ],
+    [
+      "coding-agent",
+      1
+    ],
+    [
+      "coloros",
       1
     ],
     [
@@ -970,11 +1036,19 @@
       1
     ],
     [
+      "cursor",
+      1
+    ],
+    [
       "cve-2026-109618",
       1
     ],
     [
       "cve-2026-109619",
+      1
+    ],
+    [
+      "dataset",
       1
     ],
     [
@@ -998,6 +1072,10 @@
       1
     ],
     [
+      "english-learning",
+      1
+    ],
+    [
       "exploit",
       1
     ],
@@ -1010,7 +1088,27 @@
       1
     ],
     [
-      "gamedev",
+      "family-history",
+      1
+    ],
+    [
+      "familysearch",
+      1
+    ],
+    [
+      "fire-tv",
+      1
+    ],
+    [
+      "flashcards",
+      1
+    ],
+    [
+      "fsrs",
+      1
+    ],
+    [
+      "genealogy",
       1
     ],
     [
@@ -1026,7 +1124,11 @@
       1
     ],
     [
-      "home-screen",
+      "hyperos",
+      1
+    ],
+    [
+      "ielts",
       1
     ],
     [
@@ -1034,11 +1136,11 @@
       1
     ],
     [
-      "jailbreak",
+      "interpretability",
       1
     ],
     [
-      "jailbreaking",
+      "language-learning",
       1
     ],
     [
@@ -1058,23 +1160,19 @@
       1
     ],
     [
+      "magicos",
+      1
+    ],
+    [
+      "mechanistic-interpretability",
+      1
+    ],
+    [
       "media-player",
       1
     ],
     [
-      "no-ads",
-      1
-    ],
-    [
-      "normal-map",
-      1
-    ],
-    [
-      "normal-mapping",
-      1
-    ],
-    [
-      "open-source",
+      "originos",
       1
     ],
     [
@@ -1094,19 +1192,15 @@
       1
     ],
     [
-      "pixel-art",
-      1
-    ],
-    [
       "poc",
       1
     ],
     [
-      "privacy",
+      "pwa",
       1
     ],
     [
-      "prompt-engineering",
+      "qwen",
       1
     ],
     [
@@ -1118,23 +1212,7 @@
       1
     ],
     [
-      "rea",
-      1
-    ],
-    [
-      "reverse-enginnering",
-      1
-    ],
-    [
-      "safety",
-      1
-    ],
-    [
-      "samsung-tizen",
-      1
-    ],
-    [
-      "security",
+      "react",
       1
     ],
     [
@@ -1146,11 +1224,15 @@
       1
     ],
     [
+      "spaced-repetition",
+      1
+    ],
+    [
       "speculative-decoding",
       1
     ],
     [
-      "sprites",
+      "steering",
       1
     ],
     [
@@ -1159,6 +1241,10 @@
     ],
     [
       "streaming",
+      1
+    ],
+    [
+      "style-guide",
       1
     ],
     [
@@ -1178,23 +1264,11 @@
       1
     ],
     [
-      "tizen",
-      1
-    ],
-    [
-      "tmdb",
-      1
-    ],
-    [
       "tokenspeed",
       1
     ],
     [
       "torrent",
-      1
-    ],
-    [
-      "unixnu",
       1
     ],
     [
@@ -1206,11 +1280,19 @@
       1
     ],
     [
+      "ussr",
+      1
+    ],
+    [
       "video-player",
       1
     ],
     [
       "vllm",
+      1
+    ],
+    [
+      "vocabulary",
       1
     ],
     [
@@ -1222,7 +1304,7 @@
       1
     ],
     [
-      "webos",
+      "webgl",
       1
     ],
     [

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-31T14:54:10.312216+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-24, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-01T15:34:16.448849+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-25, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-10-24&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-10-25&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -28,25 +28,18 @@
       "kind": "language",
       "count_in_snapshot": 8,
       "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Python",
-      "kind": "language",
-      "count_in_snapshot": 6,
-      "hn_mentions": 0,
-      "devto_mentions": 0
+      "devto_mentions": 1
     },
     {
       "name": "JavaScript",
       "kind": "language",
-      "count_in_snapshot": 4,
+      "count_in_snapshot": 6,
       "hn_mentions": 0,
       "devto_mentions": 1
     },
     {
-      "name": "claude-code",
-      "kind": "topic",
+      "name": "Python",
+      "kind": "language",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
@@ -59,13 +52,6 @@
       "devto_mentions": 0
     },
     {
-      "name": "Go",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
       "name": "HTML",
       "kind": "language",
       "count_in_snapshot": 2,
@@ -73,8 +59,8 @@
       "devto_mentions": 0
     },
     {
-      "name": "agent-skills",
-      "kind": "topic",
+      "name": "Kotlin",
+      "kind": "language",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
@@ -101,28 +87,14 @@
       "devto_mentions": 0
     },
     {
-      "name": "chinese",
+      "name": "claude-code-plugin",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "codex",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "coding-agent",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "deepseek-harness",
+      "name": "deepseek",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -150,13 +122,6 @@
       "devto_mentions": 0
     },
     {
-      "name": "webgl",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
       "name": "3d-modeling",
       "kind": "topic",
       "count_in_snapshot": 1,
@@ -168,24 +133,59 @@
       "kind": "language",
       "count_in_snapshot": 1,
       "hn_mentions": 18,
-      "devto_mentions": 12
+      "devto_mentions": 11
+    },
+    {
+      "name": "C++",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Go",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Lua",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "PowerShell",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Rust",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
     }
   ],
   "repos": [
     {
-      "full_name": "unclebob/ub-mode",
-      "name": "ub-mode",
-      "html_url": "https://github.com/unclebob/ub-mode",
-      "description": null,
-      "language": null,
+      "full_name": "deepseek-ai/dsh-superagent-prototype",
+      "name": "dsh-superagent-prototype",
+      "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "description": "Towards a More Autonomous Agent System",
+      "language": "TypeScript",
       "topics": [],
-      "stars": 5549,
-      "forks": 301,
-      "created_at": "2026-10-25T16:04:09Z",
-      "pushed_at": "2026-10-25T16:07:59Z",
-      "updated_at": "2026-10-31T14:53:07Z",
-      "stars_per_day": 1109.8,
-      "age_days": 5
+      "stars": 6137,
+      "forks": 594,
+      "created_at": "2026-10-31T09:32:46Z",
+      "pushed_at": "2026-10-31T12:05:51Z",
+      "updated_at": "2026-11-01T15:34:13Z",
+      "stars_per_day": 6137.0,
+      "age_days": 1
     },
     {
       "full_name": "anhao/ai-pose-gallery-zh",
@@ -203,83 +203,13 @@
         "reference-images",
         "static-site"
       ],
-      "stars": 4511,
-      "forks": 1142,
+      "stars": 5068,
+      "forks": 1291,
       "created_at": "2026-10-27T12:24:37Z",
-      "pushed_at": "2026-10-31T11:59:07Z",
-      "updated_at": "2026-10-31T14:54:09Z",
-      "stars_per_day": 1127.8,
-      "age_days": 4
-    },
-    {
-      "full_name": "interplains/Zero-Breach-Toolkit",
-      "name": "Zero-Breach-Toolkit",
-      "html_url": "https://github.com/interplains/Zero-Breach-Toolkit",
-      "description": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and Linux, Android phones and iPhone backups.",
-      "language": "Python",
-      "topics": [],
-      "stars": 3959,
-      "forks": 423,
-      "created_at": "2026-10-25T14:41:34Z",
-      "pushed_at": "2026-10-31T08:52:25Z",
-      "updated_at": "2026-10-31T14:53:59Z",
-      "stars_per_day": 659.8,
-      "age_days": 6
-    },
-    {
-      "full_name": "designfuchen/word-atlas",
-      "name": "word-atlas",
-      "html_url": "https://github.com/designfuchen/word-atlas",
-      "description": "\u8bcd\u5149 \u00b7 Word Atlas \u2014 Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
-      "language": "TypeScript",
-      "topics": [
-        "chinese",
-        "dataset",
-        "english-learning",
-        "flashcards",
-        "fsrs",
-        "ielts",
-        "language-learning",
-        "pwa",
-        "react",
-        "spaced-repetition",
-        "vocabulary",
-        "webgl"
-      ],
-      "stars": 3506,
-      "forks": 765,
-      "created_at": "2026-10-25T08:27:22Z",
-      "pushed_at": "2026-10-31T11:37:01Z",
-      "updated_at": "2026-10-31T14:50:06Z",
-      "stars_per_day": 584.3,
-      "age_days": 6
-    },
-    {
-      "full_name": "ccch1mneyyy/dsh-Go",
-      "name": "dsh-Go",
-      "html_url": "https://github.com/ccch1mneyyy/dsh-Go",
-      "description": "dsh-go \u2014 DeepSeek Harness \u88c5\u8fdb\u53e3\u888b\uff1a\u624b\u673a\u672c\u673a\u8fd0\u884c\uff0c\u4e5f\u80fd\u9065\u63a7\u4f60\u7684\u7535\u8111\u3002",
-      "language": "Dart",
-      "topics": [
-        "ai-agent",
-        "android",
-        "android-app",
-        "coding-agent",
-        "deepseek",
-        "deepseek-harness",
-        "dsh",
-        "dsh-plugin",
-        "dsh-tui",
-        "flutter",
-        "llm"
-      ],
-      "stars": 3341,
-      "forks": 152,
-      "created_at": "2026-10-25T08:09:52Z",
-      "pushed_at": "2026-10-31T10:48:22Z",
-      "updated_at": "2026-10-31T14:54:03Z",
-      "stars_per_day": 556.8,
-      "age_days": 6
+      "pushed_at": "2026-11-01T13:59:20Z",
+      "updated_at": "2026-11-01T15:33:52Z",
+      "stars_per_day": 1013.6,
+      "age_days": 5
     },
     {
       "full_name": "heydamir/unslop",
@@ -288,19 +218,19 @@
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "language": "JavaScript",
       "topics": [],
-      "stars": 2709,
-      "forks": 133,
+      "stars": 4394,
+      "forks": 220,
       "created_at": "2026-10-29T15:41:21Z",
-      "pushed_at": "2026-10-29T16:17:15Z",
-      "updated_at": "2026-10-31T14:53:31Z",
-      "stars_per_day": 2709.0,
-      "age_days": 1
+      "pushed_at": "2026-11-01T00:06:01Z",
+      "updated_at": "2026-11-01T15:33:45Z",
+      "stars_per_day": 2197.0,
+      "age_days": 2
     },
     {
       "full_name": "wangzan101/Mika",
       "name": "Mika",
       "html_url": "https://github.com/wangzan101/Mika",
-      "description": "Mika \u2014 \u4f60\u624b\u673a\u4e0a\u7684\u79c1\u4eba AI \u52a9\u7406\uff0c\u66ff\u4f60\u64cd\u4f5c App\u3001\u4e0a\u7f51\u3001\u628a\u4e8b\u529e\u6210\u3002An on-device AI agent for Android that operates apps and the web to get things done for you.",
+      "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "language": "Kotlin",
       "topics": [
         "accessibility",
@@ -312,13 +242,13 @@
         "llm",
         "mobile-agent"
       ],
-      "stars": 2325,
-      "forks": 372,
+      "stars": 3539,
+      "forks": 626,
       "created_at": "2026-10-29T14:34:07Z",
-      "pushed_at": "2026-10-31T13:52:10Z",
-      "updated_at": "2026-10-31T14:54:07Z",
-      "stars_per_day": 1162.5,
-      "age_days": 2
+      "pushed_at": "2026-11-01T14:46:30Z",
+      "updated_at": "2026-11-01T15:32:44Z",
+      "stars_per_day": 1179.7,
+      "age_days": 3
     },
     {
       "full_name": "valentderah/totk-pc-recomp",
@@ -327,54 +257,37 @@
       "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows x86-64, with a Vulkan renderer. Game files not included.",
       "language": "C",
       "topics": [],
-      "stars": 2225,
-      "forks": 157,
+      "stars": 2967,
+      "forks": 240,
       "created_at": "2026-10-29T12:32:46Z",
-      "pushed_at": "2026-10-31T12:37:46Z",
-      "updated_at": "2026-10-31T14:53:59Z",
-      "stars_per_day": 1112.5,
-      "age_days": 2
+      "pushed_at": "2026-11-01T14:45:55Z",
+      "updated_at": "2026-11-01T15:34:03Z",
+      "stars_per_day": 989.0,
+      "age_days": 3
     },
     {
-      "full_name": "qybaihe/bla",
-      "name": "bla",
-      "html_url": "https://github.com/qybaihe/bla",
-      "description": "\ud83d\udee1\ufe0f BLA (Blind LLM Agents) \u2014 Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate.",
-      "language": "TypeScript",
+      "full_name": "patch-gg/pixelfx",
+      "name": "pixelfx",
+      "html_url": "https://github.com/patch-gg/pixelfx",
+      "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
+      "language": "JavaScript",
       "topics": [
-        "adversarial-ai",
-        "claude-code",
-        "cursor",
-        "electron-security",
-        "llm-security",
-        "mcp",
-        "mcp-server",
-        "obfuscation",
-        "reverse-engineering",
-        "webassembly"
+        "agent-skills",
+        "animation",
+        "canvas",
+        "claude-code-plugin",
+        "gamedev",
+        "pixel-art",
+        "sprite-sheet",
+        "vfx"
       ],
-      "stars": 1643,
-      "forks": 224,
-      "created_at": "2026-10-25T05:25:45Z",
-      "pushed_at": "2026-10-30T18:16:20Z",
-      "updated_at": "2026-10-31T14:47:02Z",
-      "stars_per_day": 273.8,
-      "age_days": 6
-    },
-    {
-      "full_name": "andyhuo520/digital-human-koubo",
-      "name": "digital-human-koubo",
-      "html_url": "https://github.com/andyhuo520/digital-human-koubo",
-      "description": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy \u2026",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 1577,
-      "forks": 359,
-      "created_at": "2026-10-26T04:34:09Z",
-      "pushed_at": "2026-10-31T12:05:46Z",
-      "updated_at": "2026-10-31T14:42:18Z",
-      "stars_per_day": 315.4,
-      "age_days": 5
+      "stars": 2277,
+      "forks": 291,
+      "created_at": "2026-10-30T06:43:25Z",
+      "pushed_at": "2026-10-31T08:44:14Z",
+      "updated_at": "2026-11-01T15:34:06Z",
+      "stars_per_day": 1138.5,
+      "age_days": 2
     },
     {
       "full_name": "paipiange/nvzhuang",
@@ -383,13 +296,28 @@
       "description": "1407 \u5f20 AI \u5973\u88c5\u53c2\u8003\u56fe\u96c6\u4e0e\u865a\u62df\u8bd5\u7a7f\u7f51\u7ad9\uff0c\u652f\u6301\u4e2d\u82f1\u68c0\u7d22\u3001OpenAI Images / Gemini / \u8c46\u5305\u53ca\u81ea\u5b9a\u4e49 Base URL\u3001API Key\u3001\u6a21\u578b\u3002https://github.com/paipiange/nvzhuang",
       "language": "Go",
       "topics": [],
-      "stars": 1576,
-      "forks": 428,
+      "stars": 1847,
+      "forks": 486,
       "created_at": "2026-10-29T06:08:00Z",
-      "pushed_at": "2026-10-31T04:23:30Z",
-      "updated_at": "2026-10-31T14:50:56Z",
-      "stars_per_day": 788.0,
-      "age_days": 2
+      "pushed_at": "2026-10-31T17:01:39Z",
+      "updated_at": "2026-11-01T15:28:21Z",
+      "stars_per_day": 615.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "Djihads80/Eglantine",
+      "name": "Eglantine",
+      "html_url": "https://github.com/Djihads80/Eglantine",
+      "description": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "C++",
+      "topics": [],
+      "stars": 1695,
+      "forks": 206,
+      "created_at": "2026-10-29T00:25:18Z",
+      "pushed_at": "2026-11-01T15:20:02Z",
+      "updated_at": "2026-11-01T15:29:29Z",
+      "stars_per_day": 565.0,
+      "age_days": 3
     },
     {
       "full_name": "aschmelyun/print-my-profile-pic",
@@ -398,36 +326,27 @@
       "description": "Say cheese! Star this repo and your profile picture gets printed out on a receipt printer.",
       "language": null,
       "topics": [],
-      "stars": 1482,
-      "forks": 3,
+      "stars": 1683,
+      "forks": 6,
       "created_at": "2026-10-27T20:40:05Z",
       "pushed_at": "2026-10-29T03:34:22Z",
-      "updated_at": "2026-10-31T14:53:34Z",
-      "stars_per_day": 494.0,
-      "age_days": 3
+      "updated_at": "2026-11-01T14:29:58Z",
+      "stars_per_day": 420.8,
+      "age_days": 4
     },
     {
-      "full_name": "DenisSergeevitch/ex-ussr-kinship-research",
-      "name": "ex-ussr-kinship-research",
-      "html_url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
-      "description": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.",
-      "language": "Python",
-      "topics": [
-        "agent-skills",
-        "archives",
-        "claude-code",
-        "codex",
-        "family-history",
-        "familysearch",
-        "genealogy",
-        "ussr"
-      ],
-      "stars": 1385,
-      "forks": 144,
-      "created_at": "2026-10-25T10:05:56Z",
-      "pushed_at": "2026-10-30T21:06:20Z",
-      "updated_at": "2026-10-31T14:39:50Z",
-      "stars_per_day": 230.8,
+      "full_name": "andyhuo520/digital-human-koubo",
+      "name": "digital-human-koubo",
+      "html_url": "https://github.com/andyhuo520/digital-human-koubo",
+      "description": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy \u2026",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 1624,
+      "forks": 368,
+      "created_at": "2026-10-26T04:34:09Z",
+      "pushed_at": "2026-10-31T12:05:46Z",
+      "updated_at": "2026-11-01T15:02:39Z",
+      "stars_per_day": 270.7,
       "age_days": 6
     },
     {
@@ -437,13 +356,13 @@
       "description": "Git for Global Law: the law of every country as one git history, each country's record a submodule, every commit one law taking effect",
       "language": "HTML",
       "topics": [],
-      "stars": 1280,
-      "forks": 104,
+      "stars": 1522,
+      "forks": 131,
       "created_at": "2026-10-28T13:34:16Z",
-      "pushed_at": "2026-10-31T14:53:06Z",
-      "updated_at": "2026-10-31T14:53:37Z",
-      "stars_per_day": 426.7,
-      "age_days": 3
+      "pushed_at": "2026-11-01T15:34:03Z",
+      "updated_at": "2026-11-01T15:34:01Z",
+      "stars_per_day": 380.5,
+      "age_days": 4
     },
     {
       "full_name": "Motionsites-AI/claude-skill",
@@ -452,12 +371,40 @@
       "description": "Free Claude skill: make Claude build award-level, cinematic landing pages. By MotionSites.",
       "language": "Python",
       "topics": [],
-      "stars": 1244,
-      "forks": 126,
+      "stars": 1368,
+      "forks": 136,
       "created_at": "2026-10-26T06:58:45Z",
       "pushed_at": "2026-10-26T07:04:24Z",
-      "updated_at": "2026-10-31T14:49:31Z",
-      "stars_per_day": 248.8,
+      "updated_at": "2026-11-01T15:30:10Z",
+      "stars_per_day": 228.0,
+      "age_days": 6
+    },
+    {
+      "full_name": "haydenschmitty/floorplan",
+      "name": "floorplan",
+      "html_url": "https://github.com/haydenschmitty/floorplan",
+      "description": "See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.",
+      "language": "JavaScript",
+      "topics": [
+        "ai-coding",
+        "architecture-diagram",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "codebase-visualization",
+        "codex",
+        "codex-plugin",
+        "developer-tools",
+        "onboarding",
+        "openai",
+        "vibe-coding"
+      ],
+      "stars": 1285,
+      "forks": 89,
+      "created_at": "2026-10-27T12:03:01Z",
+      "pushed_at": "2026-11-01T14:22:38Z",
+      "updated_at": "2026-11-01T15:31:07Z",
+      "stars_per_day": 257.0,
       "age_days": 5
     },
     {
@@ -479,13 +426,38 @@
         "threejs",
         "webgl"
       ],
-      "stars": 1159,
-      "forks": 309,
+      "stars": 1247,
+      "forks": 331,
       "created_at": "2026-10-28T04:29:29Z",
       "pushed_at": "2026-10-28T11:35:35Z",
-      "updated_at": "2026-10-31T14:50:17Z",
-      "stars_per_day": 386.3,
-      "age_days": 3
+      "updated_at": "2026-11-01T15:21:53Z",
+      "stars_per_day": 311.8,
+      "age_days": 4
+    },
+    {
+      "full_name": "kevinraymond/florilegium",
+      "name": "florilegium",
+      "html_url": "https://github.com/kevinraymond/florilegium",
+      "description": "Procedurally generated Delft-blue floral page margins for LuaLaTeX, drawn in Lua",
+      "language": "Lua",
+      "topics": [
+        "generative-art",
+        "latex",
+        "latex-package",
+        "lua",
+        "lualatex",
+        "postscript",
+        "procedural-generation",
+        "svg",
+        "typography"
+      ],
+      "stars": 1242,
+      "forks": 31,
+      "created_at": "2026-10-30T07:49:05Z",
+      "pushed_at": "2026-10-31T15:30:14Z",
+      "updated_at": "2026-11-01T15:31:47Z",
+      "stars_per_day": 621.0,
+      "age_days": 2
     },
     {
       "full_name": "deepopen-com/deepopen-3d-webs",
@@ -502,118 +474,9 @@
       "forks": 111,
       "created_at": "2026-10-26T12:13:47Z",
       "pushed_at": "2026-10-27T06:48:29Z",
-      "updated_at": "2026-10-31T12:59:25Z",
-      "stars_per_day": 226.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "kevinraymond/florilegium",
-      "name": "florilegium",
-      "html_url": "https://github.com/kevinraymond/florilegium",
-      "description": "Procedurally generated Delft-blue floral page margins for LuaLaTeX, drawn in Lua",
-      "language": "Lua",
-      "topics": [],
-      "stars": 1031,
-      "forks": 24,
-      "created_at": "2026-10-30T07:49:05Z",
-      "pushed_at": "2026-10-31T09:25:19Z",
-      "updated_at": "2026-10-31T14:48:31Z",
-      "stars_per_day": 1031.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "KillaBoi/StealMyBitcoin-PoC",
-      "name": "StealMyBitcoin-PoC",
-      "html_url": "https://github.com/KillaBoi/StealMyBitcoin-PoC",
-      "description": "A public release of the Steal My Bitcoin challenge",
-      "language": "Python",
-      "topics": [],
-      "stars": 1021,
-      "forks": 147,
-      "created_at": "2026-10-25T21:48:32Z",
-      "pushed_at": "2026-10-26T11:25:47Z",
-      "updated_at": "2026-10-31T13:14:12Z",
-      "stars_per_day": 204.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "patch-gg/pixelfx",
-      "name": "pixelfx",
-      "html_url": "https://github.com/patch-gg/pixelfx",
-      "description": "232 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
-      "language": "JavaScript",
-      "topics": [
-        "agent-skills",
-        "animation",
-        "canvas",
-        "claude-code-plugin",
-        "gamedev",
-        "pixel-art",
-        "sprite-sheet",
-        "vfx"
-      ],
-      "stars": 939,
-      "forks": 116,
-      "created_at": "2026-10-30T06:43:25Z",
-      "pushed_at": "2026-10-31T08:44:14Z",
-      "updated_at": "2026-10-31T14:53:41Z",
-      "stars_per_day": 939.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "ZiChuanLan/agent-purge",
-      "name": "agent-purge",
-      "html_url": "https://github.com/ZiChuanLan/agent-purge",
-      "description": "One persona, many coding agents. Replace or inject system prompts across codex, claude, opencode, grok, omp, hermes, pi, zcode - with a local web console.",
-      "language": "JavaScript",
-      "topics": [
-        "claude-code",
-        "codex",
-        "coding-agent",
-        "deepseek-harness",
-        "harness",
-        "omp",
-        "opencode",
-        "pi",
-        "system-prompt"
-      ],
-      "stars": 933,
-      "forks": 676,
-      "created_at": "2026-10-25T06:06:02Z",
-      "pushed_at": "2026-10-30T12:06:34Z",
-      "updated_at": "2026-10-31T14:44:35Z",
-      "stars_per_day": 155.5,
+      "updated_at": "2026-11-01T02:10:51Z",
+      "stars_per_day": 188.5,
       "age_days": 6
-    },
-    {
-      "full_name": "Djihads80/Eglantine",
-      "name": "Eglantine",
-      "html_url": "https://github.com/Djihads80/Eglantine",
-      "description": "VERY experimental Nintendo Switch 2 emulator",
-      "language": "C++",
-      "topics": [],
-      "stars": 873,
-      "forks": 108,
-      "created_at": "2026-10-29T00:25:18Z",
-      "pushed_at": "2026-10-31T14:39:50Z",
-      "updated_at": "2026-10-31T14:53:33Z",
-      "stars_per_day": 436.5,
-      "age_days": 2
-    },
-    {
-      "full_name": "kargulstudio/calender-app-design",
-      "name": "calender-app-design",
-      "html_url": "https://github.com/kargulstudio/calender-app-design",
-      "description": null,
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 833,
-      "forks": 102,
-      "created_at": "2026-10-26T18:38:56Z",
-      "pushed_at": "2026-10-26T20:34:05Z",
-      "updated_at": "2026-10-31T14:42:08Z",
-      "stars_per_day": 208.2,
-      "age_days": 4
     },
     {
       "full_name": "BryceYuuu/RUN",
@@ -622,28 +485,51 @@
       "description": "RUN \u00b7 \u6da6\uff1a\u6d77\u5916\u79fb\u5c45\u624b\u518c\uff08\u6b27\u6d32 36 \u56fd \u00b7 110 \u6761\u8def\u7ebf \u00b7 \u4e3b\u8981\u79fb\u6c11\u5730\u533a\uff09",
       "language": "Python",
       "topics": [],
-      "stars": 832,
-      "forks": 54,
+      "stars": 1114,
+      "forks": 66,
       "created_at": "2026-10-29T11:28:43Z",
       "pushed_at": "2026-10-29T11:40:12Z",
-      "updated_at": "2026-10-31T14:49:37Z",
-      "stars_per_day": 416.0,
-      "age_days": 2
+      "updated_at": "2026-11-01T15:25:16Z",
+      "stars_per_day": 371.3,
+      "age_days": 3
     },
     {
-      "full_name": "DrWhax/unfairplay",
-      "name": "unfairplay",
-      "html_url": "https://github.com/DrWhax/unfairplay",
-      "description": "Decrypt IPA's on MacOS",
-      "language": "Go",
+      "full_name": "Arjun-Ingole/hop",
+      "name": "hop",
+      "html_url": "https://github.com/Arjun-Ingole/hop",
+      "description": "Install Linux next to Windows without a USB stick",
+      "language": "PowerShell",
       "topics": [],
-      "stars": 821,
-      "forks": 164,
-      "created_at": "2026-10-25T21:22:20Z",
-      "pushed_at": "2026-10-31T14:31:13Z",
-      "updated_at": "2026-10-31T14:37:26Z",
-      "stars_per_day": 164.2,
-      "age_days": 5
+      "stars": 1042,
+      "forks": 35,
+      "created_at": "2026-10-30T19:40:45Z",
+      "pushed_at": "2026-11-01T09:40:31Z",
+      "updated_at": "2026-11-01T15:32:02Z",
+      "stars_per_day": 1042.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "D3voz/openjutsu",
+      "name": "openjutsu",
+      "html_url": "https://github.com/D3voz/openjutsu",
+      "description": "One-click character swap for videos: an open-source, local Higgsfield Genjutsu alternative built on ComfyUI and MiniMax H3, with FLUX.3 Klein relighting.",
+      "language": "TypeScript",
+      "topics": [
+        "character-swap",
+        "comfyui",
+        "minimax-h3",
+        "nextjs",
+        "open-weights",
+        "opensourcehiggsfield",
+        "video-generation"
+      ],
+      "stars": 978,
+      "forks": 147,
+      "created_at": "2026-10-26T13:48:11Z",
+      "pushed_at": "2026-10-30T07:49:51Z",
+      "updated_at": "2026-11-01T15:24:47Z",
+      "stars_per_day": 163.0,
+      "age_days": 6
     },
     {
       "full_name": "HRuiCcc/RuiC-PoseAtlas",
@@ -663,28 +549,58 @@
         "trilingual",
         "vanilla-javascript"
       ],
-      "stars": 808,
-      "forks": 213,
+      "stars": 946,
+      "forks": 241,
       "created_at": "2026-10-28T07:00:53Z",
-      "pushed_at": "2026-10-30T14:48:17Z",
-      "updated_at": "2026-10-31T14:49:45Z",
-      "stars_per_day": 269.3,
-      "age_days": 3
+      "pushed_at": "2026-11-01T09:05:36Z",
+      "updated_at": "2026-11-01T15:29:43Z",
+      "stars_per_day": 236.5,
+      "age_days": 4
     },
     {
-      "full_name": "mizorewww/gdirect",
-      "name": "gdirect",
-      "html_url": "https://github.com/mizorewww/gdirect",
-      "description": "Rust Google Drive direct downloader using pinned libaria2",
+      "full_name": "physicsdolphin/nv-uefi-unlocker",
+      "name": "nv-uefi-unlocker",
+      "html_url": "https://github.com/physicsdolphin/nv-uefi-unlocker",
+      "description": "UEFI pre-driver NVIDIA GPU unlocker for Windows Linux Hackintosh and all EFI-bootable system (Rust): SEC2 scrubber -> FWSEC/WPR2 -> signed Booter -> V67 four-write payload, read-back verified. Verified on most RTX 20 30 40 Series.",
       "language": "Rust",
       "topics": [],
-      "stars": 775,
-      "forks": 52,
-      "created_at": "2026-10-25T05:52:22Z",
-      "pushed_at": "2026-10-26T11:07:58Z",
-      "updated_at": "2026-10-31T10:22:20Z",
-      "stars_per_day": 129.2,
+      "stars": 925,
+      "forks": 87,
+      "created_at": "2026-10-26T06:22:24Z",
+      "pushed_at": "2026-11-01T15:32:29Z",
+      "updated_at": "2026-11-01T15:33:45Z",
+      "stars_per_day": 154.2,
       "age_days": 6
+    },
+    {
+      "full_name": "kargulstudio/calender-app-design",
+      "name": "calender-app-design",
+      "html_url": "https://github.com/kargulstudio/calender-app-design",
+      "description": null,
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 838,
+      "forks": 102,
+      "created_at": "2026-10-26T18:38:56Z",
+      "pushed_at": "2026-10-26T20:34:05Z",
+      "updated_at": "2026-11-01T11:43:42Z",
+      "stars_per_day": 167.6,
+      "age_days": 5
+    },
+    {
+      "full_name": "elvarofficial/teardown",
+      "name": "teardown",
+      "html_url": "https://github.com/elvarofficial/teardown",
+      "description": "A Claude Code skill that turns any machine into a 3D simulator you can take apart",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 788,
+      "forks": 134,
+      "created_at": "2026-10-30T09:29:01Z",
+      "pushed_at": "2026-10-31T14:01:06Z",
+      "updated_at": "2026-11-01T15:30:48Z",
+      "stars_per_day": 394.0,
+      "age_days": 2
     },
     {
       "full_name": "yaojingang/GEOInflow",
@@ -700,28 +616,28 @@
         "self-hosted",
         "web-analytics"
       ],
-      "stars": 768,
-      "forks": 240,
+      "stars": 776,
+      "forks": 242,
       "created_at": "2026-10-26T03:12:45Z",
-      "pushed_at": "2026-10-30T04:51:17Z",
-      "updated_at": "2026-10-31T13:55:35Z",
-      "stars_per_day": 153.6,
-      "age_days": 5
+      "pushed_at": "2026-11-01T03:26:35Z",
+      "updated_at": "2026-11-01T13:13:28Z",
+      "stars_per_day": 129.3,
+      "age_days": 6
     },
     {
-      "full_name": "deepseek-ai/dsh-superagent-prototype",
-      "name": "dsh-superagent-prototype",
-      "html_url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
-      "description": "Towards a More Autonomous Agent System",
+      "full_name": "BookracyFOS/bookracy",
+      "name": "bookracy",
+      "html_url": "https://github.com/BookracyFOS/bookracy",
+      "description": "Free, open-source book search, reader and library.",
       "language": "TypeScript",
       "topics": [],
-      "stars": 715,
-      "forks": 48,
-      "created_at": "2026-10-31T09:32:46Z",
-      "pushed_at": "2026-10-31T12:05:51Z",
-      "updated_at": "2026-10-31T14:54:07Z",
-      "stars_per_day": 715.0,
-      "age_days": 1
+      "stars": 754,
+      "forks": 49,
+      "created_at": "2026-10-26T14:02:02Z",
+      "pushed_at": "2026-10-26T14:02:09Z",
+      "updated_at": "2026-11-01T15:33:20Z",
+      "stars_per_day": 125.7,
+      "age_days": 6
     },
     {
       "full_name": "OpenBMB/MiniCPM-OCR",
@@ -734,13 +650,87 @@
         "minicpm-v",
         "ocr"
       ],
-      "stars": 712,
-      "forks": 47,
+      "stars": 732,
+      "forks": 49,
       "created_at": "2026-10-27T13:22:00Z",
       "pushed_at": "2026-10-30T05:22:04Z",
-      "updated_at": "2026-10-31T14:30:23Z",
-      "stars_per_day": 178.0,
+      "updated_at": "2026-11-01T13:53:04Z",
+      "stars_per_day": 146.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "jacke-pp/open-yoki",
+      "name": "open-yoki",
+      "html_url": "https://github.com/jacke-pp/open-yoki",
+      "description": "An AI live-stream host that runs on one server: voice, face, chat, memory, posts. The base yoki runs on. By Jacke_pp \u00b7 contact: DM @Jacke_pp on X",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 706,
+      "forks": 46,
+      "created_at": "2026-10-28T08:58:27Z",
+      "pushed_at": "2026-10-28T09:21:00Z",
+      "updated_at": "2026-11-01T09:22:16Z",
+      "stars_per_day": 176.5,
       "age_days": 4
+    },
+    {
+      "full_name": "benderandrew069/deepseek-api-pricing-2026",
+      "name": "deepseek-api-pricing-2026",
+      "html_url": "https://github.com/benderandrew069/deepseek-api-pricing-2026",
+      "description": "DeepSeek API pricing guide for models, cache hits, and peak hours (2026).",
+      "language": null,
+      "topics": [
+        "api-pricing",
+        "cost-calculator",
+        "deepseek",
+        "deepseek-api",
+        "prompt-caching"
+      ],
+      "stars": 699,
+      "forks": 1,
+      "created_at": "2026-10-27T06:22:04Z",
+      "pushed_at": "2026-10-27T07:09:46Z",
+      "updated_at": "2026-11-01T13:41:15Z",
+      "stars_per_day": 139.8,
+      "age_days": 5
+    },
+    {
+      "full_name": "jackwener/DSH-Android",
+      "name": "DSH-Android",
+      "html_url": "https://github.com/jackwener/DSH-Android",
+      "description": "\u514d ROOT \u514d Termux\uff0c\u4e00\u4e2a APK \u5728\u5b89\u5353\u624b\u673a\u4e0a\u8dd1 DeepSeek Harness\u3002\u5f15\u64ce\u5185\u5d4c App \u8fdb\u7a0b \u00b7 \u8bfb\u5c4f\u64cd\u4f5c App \u00b7 \u6539\u7cfb\u7edf\u8bbe\u7f6e \u00b7 \u5b9a\u65f6/\u6761\u4ef6\u81ea\u52a8\u5316 \u00b7 \u53ef\u9009 Shizuku",
+      "language": "Kotlin",
+      "topics": [
+        "ai-agent",
+        "android",
+        "deepseek",
+        "deepseek-harness",
+        "llm",
+        "phone-agent",
+        "shizuku"
+      ],
+      "stars": 687,
+      "forks": 70,
+      "created_at": "2026-10-27T19:26:12Z",
+      "pushed_at": "2026-11-01T14:48:04Z",
+      "updated_at": "2026-11-01T15:31:42Z",
+      "stars_per_day": 171.8,
+      "age_days": 4
+    },
+    {
+      "full_name": "Fractal-Compute-Orchestrations/.github",
+      "name": ".github",
+      "html_url": "https://github.com/Fractal-Compute-Orchestrations/.github",
+      "description": null,
+      "language": null,
+      "topics": [],
+      "stars": 652,
+      "forks": 0,
+      "created_at": "2026-10-26T06:04:48Z",
+      "pushed_at": "2026-10-26T06:05:28Z",
+      "updated_at": "2026-11-01T15:32:16Z",
+      "stars_per_day": 108.7,
+      "age_days": 6
     }
   ],
   "hn_items": [
@@ -819,50 +809,36 @@
     {
       "title": "Your DEV posts have a beautiful new share card \u2728",
       "url": "https://dev.to/devteam/your-dev-posts-have-a-beautiful-new-share-card-4be8",
-      "reactions": 150,
-      "comments": 34,
+      "reactions": 161,
+      "comments": 35,
       "published_at": "2026-10-27T16:44:29Z"
-    },
-    {
-      "title": "I Earned a Seat at GitHub Universe. It'll Stay Empty, and That's Not Fair",
-      "url": "https://dev.to/georgekobaidze/i-earned-a-seat-at-github-universe-itll-stay-empty-and-thats-not-fair-3d7k",
-      "reactions": 142,
-      "comments": 94,
-      "published_at": "2026-10-25T06:44:20Z"
-    },
-    {
-      "title": "I'm Not on the DEV Team. I Still Debugged Their Missing Badges From Public Code. (And My First Test Was Wrong.)",
-      "url": "https://dev.to/dj29/im-not-on-the-dev-team-i-still-debugged-their-missing-badges-from-public-code-and-my-first-test-18oo",
-      "reactions": 139,
-      "comments": 64,
-      "published_at": "2026-10-24T18:12:54Z"
     },
     {
       "title": "Yes, {} + [] = 0. No, JavaScript Isn\u2019t Broken",
       "url": "https://dev.to/sylwia-lask/yes-0-no-javascript-isnt-broken-14ob",
-      "reactions": 110,
-      "comments": 73,
+      "reactions": 121,
+      "comments": 85,
       "published_at": "2026-10-29T20:08:53Z"
     },
     {
       "title": "Doors I Walked Through to Reach DEV",
       "url": "https://dev.to/devengers/doors-i-walked-through-to-reach-dev-5294",
-      "reactions": 149,
+      "reactions": 152,
       "comments": 94,
       "published_at": "2026-10-26T16:46:19Z"
     },
     {
       "title": "No Human Will Ever Write Code Better Than LLMs? Better at What?",
       "url": "https://dev.to/dannwaneri/no-human-will-ever-write-code-better-than-llms-better-at-what-1dme",
-      "reactions": 50,
-      "comments": 47,
+      "reactions": 53,
+      "comments": 50,
       "published_at": "2026-10-29T09:34:19Z"
     },
     {
       "title": "Stratagems #32: The AI Logged a Withdrawal. P Took It as Proof.",
       "url": "https://dev.to/xulingfeng/stratagems-32-the-ai-logged-a-withdrawal-p-took-it-as-proof-2jo2",
-      "reactions": 110,
-      "comments": 83,
+      "reactions": 115,
+      "comments": 85,
       "published_at": "2026-10-27T16:46:17Z"
     },
     {
@@ -873,17 +849,31 @@
       "published_at": "2026-10-25T22:10:22Z"
     },
     {
-      "title": "When Recovering From Burnout, Writing Became My Therapy. And This Week My First Coding Book Turns 1 Year Old. Ask Me Anything!",
-      "url": "https://dev.to/canro91/to-recover-from-burnout-writing-became-my-therapy-and-this-week-my-first-coding-book-turns-1-year-388e",
-      "reactions": 41,
-      "comments": 42,
-      "published_at": "2026-10-26T05:00:00Z"
+      "title": "What was your win this week?",
+      "url": "https://dev.to/devteam/what-was-your-win-this-week-47ci",
+      "reactions": 26,
+      "comments": 26,
+      "published_at": "2026-10-30T13:00:00Z"
+    },
+    {
+      "title": "Ghost in the Shell: Can a Log File Hijack an AI?",
+      "url": "https://dev.to/gramli/ghost-in-the-shell-can-a-log-file-hijack-an-ai-3gk",
+      "reactions": 98,
+      "comments": 91,
+      "published_at": "2026-10-29T07:02:39Z"
+    },
+    {
+      "title": "I Compared 6 TypeScript Validation Libraries. Here's What Surprised Me \ud83e\udd14",
+      "url": "https://dev.to/nyaomaru/i-compared-6-typescript-validation-libraries-heres-what-surprised-me-325g",
+      "reactions": 111,
+      "comments": 49,
+      "published_at": "2026-10-28T15:37:53Z"
     },
     {
       "title": "Is Tech Actually Welcoming to Beginners, or Do We Just Say It Is?",
       "url": "https://dev.to/sizzlebop/is-tech-actually-welcoming-to-beginners-or-do-we-just-say-it-is-3d6p",
-      "reactions": 44,
-      "comments": 43,
+      "reactions": 47,
+      "comments": 47,
       "published_at": "2026-10-29T16:58:14Z"
     }
   ],
@@ -893,19 +883,19 @@
       8
     ],
     [
-      "Python",
+      "JavaScript",
       6
     ],
     [
-      "JavaScript",
-      4
-    ],
-    [
-      "Go",
-      2
+      "Python",
+      3
     ],
     [
       "HTML",
+      2
+    ],
+    [
+      "Kotlin",
       2
     ],
     [
@@ -917,15 +907,15 @@
       1
     ],
     [
-      "Dart",
-      1
-    ],
-    [
-      "Kotlin",
+      "Go",
       1
     ],
     [
       "Lua",
+      1
+    ],
+    [
+      "PowerShell",
       1
     ],
     [
@@ -935,15 +925,7 @@
   ],
   "topics": [
     [
-      "claude-code",
-      3
-    ],
-    [
       "3d",
-      2
-    ],
-    [
-      "agent-skills",
       2
     ],
     [
@@ -959,19 +941,11 @@
       2
     ],
     [
-      "chinese",
+      "claude-code-plugin",
       2
     ],
     [
-      "codex",
-      2
-    ],
-    [
-      "coding-agent",
-      2
-    ],
-    [
-      "deepseek-harness",
+      "deepseek",
       2
     ],
     [
@@ -987,10 +961,6 @@
       2
     ],
     [
-      "webgl",
-      2
-    ],
-    [
       "3d-modeling",
       1
     ],
@@ -999,7 +969,7 @@
       1
     ],
     [
-      "adversarial-ai",
+      "agent-skills",
       1
     ],
     [
@@ -1007,7 +977,7 @@
       1
     ],
     [
-      "android-app",
+      "ai-coding",
       1
     ],
     [
@@ -1015,7 +985,11 @@
       1
     ],
     [
-      "archives",
+      "api-pricing",
+      1
+    ],
+    [
+      "architecture-diagram",
       1
     ],
     [
@@ -1035,11 +1009,23 @@
       1
     ],
     [
+      "character-swap",
+      1
+    ],
+    [
       "chemistry",
       1
     ],
     [
-      "claude-code-plugin",
+      "chinese",
+      1
+    ],
+    [
+      "claude",
+      1
+    ],
+    [
+      "claude-code",
       1
     ],
     [
@@ -1047,59 +1033,39 @@
       1
     ],
     [
-      "cursor",
+      "codebase-visualization",
       1
     ],
     [
-      "dataset",
+      "codex",
       1
     ],
     [
-      "deepseek",
+      "codex-plugin",
       1
     ],
     [
-      "dsh",
+      "comfyui",
       1
     ],
     [
-      "dsh-plugin",
+      "cost-calculator",
       1
     ],
     [
-      "dsh-tui",
+      "deepseek-api",
+      1
+    ],
+    [
+      "deepseek-harness",
+      1
+    ],
+    [
+      "developer-tools",
       1
     ],
     [
       "education",
-      1
-    ],
-    [
-      "electron-security",
-      1
-    ],
-    [
-      "english-learning",
-      1
-    ],
-    [
-      "family-history",
-      1
-    ],
-    [
-      "familysearch",
-      1
-    ],
-    [
-      "flashcards",
-      1
-    ],
-    [
-      "flutter",
-      1
-    ],
-    [
-      "fsrs",
       1
     ],
     [
@@ -1115,7 +1081,7 @@
       1
     ],
     [
-      "genealogy",
+      "generative-art",
       1
     ],
     [
@@ -1127,19 +1093,11 @@
       1
     ],
     [
-      "harness",
-      1
-    ],
-    [
       "high-school",
       1
     ],
     [
       "i18n",
-      1
-    ],
-    [
-      "ielts",
       1
     ],
     [
@@ -1159,23 +1117,27 @@
       1
     ],
     [
-      "language-learning",
+      "latex",
       1
     ],
     [
-      "llm-security",
+      "latex-package",
       1
     ],
     [
-      "mcp",
+      "lua",
       1
     ],
     [
-      "mcp-server",
+      "lualatex",
       1
     ],
     [
       "minicpm-v",
+      1
+    ],
+    [
+      "minimax-h3",
       1
     ],
     [
@@ -1187,7 +1149,7 @@
       1
     ],
     [
-      "obfuscation",
+      "nextjs",
       1
     ],
     [
@@ -1195,7 +1157,7 @@
       1
     ],
     [
-      "omp",
+      "onboarding",
       1
     ],
     [
@@ -1203,7 +1165,19 @@
       1
     ],
     [
-      "opencode",
+      "open-weights",
+      1
+    ],
+    [
+      "openai",
+      1
+    ],
+    [
+      "opensourcehiggsfield",
+      1
+    ],
+    [
+      "phone-agent",
       1
     ],
     [
@@ -1212,10 +1186,6 @@
     ],
     [
       "physics",
-      1
-    ],
-    [
-      "pi",
       1
     ],
     [
@@ -1235,19 +1205,19 @@
       1
     ],
     [
-      "pwa",
+      "postscript",
       1
     ],
     [
-      "react",
+      "procedural-generation",
+      1
+    ],
+    [
+      "prompt-caching",
       1
     ],
     [
       "reference-images",
-      1
-    ],
-    [
-      "reverse-engineering",
       1
     ],
     [
@@ -1259,7 +1229,7 @@
       1
     ],
     [
-      "spaced-repetition",
+      "shizuku",
       1
     ],
     [
@@ -1267,7 +1237,7 @@
       1
     ],
     [
-      "system-prompt",
+      "svg",
       1
     ],
     [
@@ -1279,7 +1249,7 @@
       1
     ],
     [
-      "ussr",
+      "typography",
       1
     ],
     [
@@ -1291,7 +1261,11 @@
       1
     ],
     [
-      "vocabulary",
+      "vibe-coding",
+      1
+    ],
+    [
+      "video-generation",
       1
     ],
     [
@@ -1299,7 +1273,7 @@
       1
     ],
     [
-      "webassembly",
+      "webgl",
       1
     ]
   ]

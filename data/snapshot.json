@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-04T16:40:27.040249+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-28, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-05T16:56:30.931978+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-29, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-10-28&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-10-29&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -24,7 +24,7 @@
   "unavailable_sources": [],
   "rising": [
     {
-      "name": "Python",
+      "name": "TypeScript",
       "kind": "language",
       "count_in_snapshot": 7,
       "hn_mentions": 0,
@@ -38,21 +38,28 @@
       "devto_mentions": 1
     },
     {
-      "name": "TypeScript",
-      "kind": "language",
+      "name": "cli",
+      "kind": "topic",
       "count_in_snapshot": 5,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "claude-code",
+      "name": "Python",
+      "kind": "language",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "android",
       "kind": "topic",
       "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "cli",
+      "name": "claude-code",
       "kind": "topic",
       "count_in_snapshot": 4,
       "hn_mentions": 0,
@@ -66,16 +73,23 @@
       "devto_mentions": 0
     },
     {
-      "name": "agent-skills",
+      "name": "codex",
       "kind": "topic",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "C++",
-      "kind": "language",
-      "count_in_snapshot": 2,
+      "name": "privacy",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "windows",
+      "kind": "topic",
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -87,42 +101,21 @@
       "devto_mentions": 0
     },
     {
+      "name": "Rust",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "agent-skills",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
       "name": "ai-agents",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "android",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "animation",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "automation",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "claude-skills",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "codex",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -140,7 +133,7 @@
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
-      "devto_mentions": 1
+      "devto_mentions": 0
     },
     {
       "name": "macos",
@@ -164,11 +157,18 @@
       "devto_mentions": 0
     },
     {
-      "name": "C",
+      "name": "typescript",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "C++",
       "kind": "language",
       "count_in_snapshot": 1,
-      "hn_mentions": 18,
-      "devto_mentions": 14
+      "hn_mentions": 0,
+      "devto_mentions": 0
     }
   ],
   "repos": [
@@ -179,13 +179,13 @@
       "description": "Towards a More Autonomous Agent System",
       "language": "TypeScript",
       "topics": [],
-      "stars": 18391,
-      "forks": 2035,
+      "stars": 19359,
+      "forks": 2206,
       "created_at": "2026-10-31T09:32:46Z",
       "pushed_at": "2026-11-03T09:29:14Z",
-      "updated_at": "2026-11-04T16:37:10Z",
-      "stars_per_day": 4597.8,
-      "age_days": 4
+      "updated_at": "2026-11-05T16:44:02Z",
+      "stars_per_day": 3871.8,
+      "age_days": 5
     },
     {
       "full_name": "storytold/craft-anything",
@@ -194,73 +194,13 @@
       "description": "Craft Anything: understand how any software works, and craft your own.",
       "language": "Rust",
       "topics": [],
-      "stars": 10646,
-      "forks": 1764,
+      "stars": 14376,
+      "forks": 2454,
       "created_at": "2026-10-31T14:50:00Z",
-      "pushed_at": "2026-11-04T14:47:50Z",
-      "updated_at": "2026-11-04T16:40:13Z",
-      "stars_per_day": 2661.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "heydamir/unslop",
-      "name": "unslop",
-      "html_url": "https://github.com/heydamir/unslop",
-      "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 8303,
-      "forks": 412,
-      "created_at": "2026-10-29T15:41:21Z",
-      "pushed_at": "2026-11-01T16:46:10Z",
-      "updated_at": "2026-11-04T16:37:49Z",
-      "stars_per_day": 1383.8,
-      "age_days": 6
-    },
-    {
-      "full_name": "wangzan101/Mika",
-      "name": "Mika",
-      "html_url": "https://github.com/wangzan101/Mika",
-      "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
-      "language": "Kotlin",
-      "topics": [
-        "accessibility",
-        "ai-agent",
-        "android",
-        "automation",
-        "jetpack-compose",
-        "kotlin",
-        "llm",
-        "mobile-agent"
-      ],
-      "stars": 6546,
-      "forks": 1397,
-      "created_at": "2026-10-29T14:34:07Z",
-      "pushed_at": "2026-11-04T15:56:55Z",
-      "updated_at": "2026-11-04T16:37:47Z",
-      "stars_per_day": 1091.0,
-      "age_days": 6
-    },
-    {
-      "full_name": "valentderah/totk-pc-recomp",
-      "name": "totk-pc-recomp",
-      "html_url": "https://github.com/valentderah/totk-pc-recomp",
-      "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
-      "language": "C",
-      "topics": [
-        "game",
-        "linux",
-        "port",
-        "recompilation",
-        "windows"
-      ],
-      "stars": 4742,
-      "forks": 383,
-      "created_at": "2026-10-29T12:32:46Z",
-      "pushed_at": "2026-11-04T16:10:12Z",
-      "updated_at": "2026-11-04T16:38:38Z",
-      "stars_per_day": 790.3,
-      "age_days": 6
+      "pushed_at": "2026-11-05T15:45:06Z",
+      "updated_at": "2026-11-05T16:56:15Z",
+      "stars_per_day": 2875.2,
+      "age_days": 5
     },
     {
       "full_name": "patch-gg/pixelfx",
@@ -278,42 +218,12 @@
         "sprite-sheet",
         "vfx"
       ],
-      "stars": 4589,
-      "forks": 614,
+      "stars": 5197,
+      "forks": 690,
       "created_at": "2026-10-30T06:43:25Z",
       "pushed_at": "2026-10-31T08:44:14Z",
-      "updated_at": "2026-11-04T16:38:50Z",
-      "stars_per_day": 917.8,
-      "age_days": 5
-    },
-    {
-      "full_name": "BryceYuuu/RUN",
-      "name": "RUN",
-      "html_url": "https://github.com/BryceYuuu/RUN",
-      "description": "RUN \u00b7 \u6da6\uff1a\u6d77\u5916\u79fb\u5c45\u624b\u518c\uff08\u6b27\u6d32 36 \u56fd \u00b7 110 \u6761\u8def\u7ebf \u00b7 \u4e3b\u8981\u79fb\u6c11\u5730\u533a\uff09",
-      "language": "Python",
-      "topics": [],
-      "stars": 3583,
-      "forks": 257,
-      "created_at": "2026-10-29T11:28:43Z",
-      "pushed_at": "2026-11-03T07:23:28Z",
-      "updated_at": "2026-11-04T16:33:36Z",
-      "stars_per_day": 597.2,
-      "age_days": 6
-    },
-    {
-      "full_name": "Djihads80/Eglantine",
-      "name": "Eglantine",
-      "html_url": "https://github.com/Djihads80/Eglantine",
-      "description": "VERY experimental Nintendo Switch 2 emulator",
-      "language": "C++",
-      "topics": [],
-      "stars": 3427,
-      "forks": 390,
-      "created_at": "2026-10-29T00:25:18Z",
-      "pushed_at": "2026-11-04T16:28:22Z",
-      "updated_at": "2026-11-04T16:37:38Z",
-      "stars_per_day": 571.2,
+      "updated_at": "2026-11-05T16:56:26Z",
+      "stars_per_day": 866.2,
       "age_days": 6
     },
     {
@@ -335,28 +245,13 @@
         "typescript",
         "workflow"
       ],
-      "stars": 2299,
-      "forks": 464,
+      "stars": 3162,
+      "forks": 590,
       "created_at": "2026-11-03T08:02:11Z",
-      "pushed_at": "2026-11-04T14:34:19Z",
-      "updated_at": "2026-11-04T16:40:21Z",
-      "stars_per_day": 2299.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "paipiange/nvzhuang",
-      "name": "nvzhuang",
-      "html_url": "https://github.com/paipiange/nvzhuang",
-      "description": "1407 \u5f20 AI \u5973\u88c5\u53c2\u8003\u56fe\u96c6\u4e0e\u865a\u62df\u8bd5\u7a7f\u7f51\u7ad9\uff0c\u652f\u6301\u4e2d\u82f1\u68c0\u7d22\u3001OpenAI Images / Gemini / \u8c46\u5305\u53ca\u81ea\u5b9a\u4e49 Base URL\u3001API Key\u3001\u6a21\u578b\u3002https://github.com/paipiange/nvzhuang",
-      "language": "HTML",
-      "topics": [],
-      "stars": 2188,
-      "forks": 554,
-      "created_at": "2026-10-29T06:08:00Z",
-      "pushed_at": "2026-11-04T15:09:47Z",
-      "updated_at": "2026-11-04T15:09:55Z",
-      "stars_per_day": 364.7,
-      "age_days": 6
+      "pushed_at": "2026-11-05T16:53:19Z",
+      "updated_at": "2026-11-05T16:52:37Z",
+      "stars_per_day": 1581.0,
+      "age_days": 2
     },
     {
       "full_name": "Verlintas/NOIR",
@@ -386,13 +281,13 @@
         "terminal-ui",
         "tui"
       ],
-      "stars": 1954,
-      "forks": 162,
+      "stars": 2413,
+      "forks": 218,
       "created_at": "2026-10-31T21:34:39Z",
-      "pushed_at": "2026-11-04T14:01:10Z",
-      "updated_at": "2026-11-04T16:37:01Z",
-      "stars_per_day": 651.3,
-      "age_days": 3
+      "pushed_at": "2026-11-05T09:57:51Z",
+      "updated_at": "2026-11-05T16:51:26Z",
+      "stars_per_day": 603.2,
+      "age_days": 4
     },
     {
       "full_name": "elvarofficial/teardown",
@@ -401,13 +296,51 @@
       "description": "A Claude Code skill that turns any machine into a 3D simulator you can take apart",
       "language": "JavaScript",
       "topics": [],
-      "stars": 1853,
-      "forks": 277,
+      "stars": 2123,
+      "forks": 330,
       "created_at": "2026-10-30T09:29:01Z",
       "pushed_at": "2026-10-31T14:01:06Z",
-      "updated_at": "2026-11-04T16:33:16Z",
-      "stars_per_day": 370.6,
-      "age_days": 5
+      "updated_at": "2026-11-05T16:49:07Z",
+      "stars_per_day": 353.8,
+      "age_days": 6
+    },
+    {
+      "full_name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+      "name": "Google_AI_Pro_2Year_ZeroCost_Auto",
+      "html_url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+      "description": "Google_AI_Pro_2Year_ZeroCost_Auto",
+      "language": "Python",
+      "topics": [],
+      "stars": 2009,
+      "forks": 873,
+      "created_at": "2026-11-04T14:54:56Z",
+      "pushed_at": "2026-11-04T14:57:03Z",
+      "updated_at": "2026-11-05T16:55:45Z",
+      "stars_per_day": 2009.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "govijr/terminal-mac",
+      "name": "terminal-mac",
+      "html_url": "https://github.com/govijr/terminal-mac",
+      "description": "Entire MacOS running in your terminal.",
+      "language": "Swift",
+      "topics": [
+        "cli",
+        "gui",
+        "macos",
+        "shell",
+        "swift",
+        "terminal",
+        "tui"
+      ],
+      "stars": 1873,
+      "forks": 115,
+      "created_at": "2026-11-03T03:22:56Z",
+      "pushed_at": "2026-11-05T12:21:59Z",
+      "updated_at": "2026-11-05T16:49:49Z",
+      "stars_per_day": 936.5,
+      "age_days": 2
     },
     {
       "full_name": "caru-ini/stack-diagram",
@@ -425,43 +358,28 @@
         "system-architecture",
         "tech-stack"
       ],
-      "stars": 1726,
-      "forks": 75,
+      "stars": 1850,
+      "forks": 87,
       "created_at": "2026-11-01T05:35:12Z",
       "pushed_at": "2026-11-03T03:42:46Z",
-      "updated_at": "2026-11-04T16:35:25Z",
-      "stars_per_day": 575.3,
-      "age_days": 3
-    },
-    {
-      "full_name": "Pika-Labs/Pika-H3-Flex",
-      "name": "Pika-H3-Flex",
-      "html_url": "https://github.com/Pika-Labs/Pika-H3-Flex",
-      "description": "Pika H3 Flex: video and audio generation inference",
-      "language": "Python",
-      "topics": [],
-      "stars": 1567,
-      "forks": 31,
-      "created_at": "2026-10-29T17:08:59Z",
-      "pushed_at": "2026-11-02T09:07:29Z",
-      "updated_at": "2026-11-04T16:30:19Z",
-      "stars_per_day": 313.4,
-      "age_days": 5
-    },
-    {
-      "full_name": "Arjun-Ingole/hop",
-      "name": "hop",
-      "html_url": "https://github.com/Arjun-Ingole/hop",
-      "description": "Install Linux next to Windows without a USB stick",
-      "language": "PowerShell",
-      "topics": [],
-      "stars": 1499,
-      "forks": 53,
-      "created_at": "2026-10-30T19:40:45Z",
-      "pushed_at": "2026-11-03T01:08:16Z",
-      "updated_at": "2026-11-04T16:09:15Z",
-      "stars_per_day": 374.8,
+      "updated_at": "2026-11-05T16:52:36Z",
+      "stars_per_day": 462.5,
       "age_days": 4
+    },
+    {
+      "full_name": "zortos293/Lichii",
+      "name": "Lichii",
+      "html_url": "https://github.com/zortos293/Lichii",
+      "description": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "C++",
+      "topics": [],
+      "stars": 1750,
+      "forks": 230,
+      "created_at": "2026-10-31T14:17:26Z",
+      "pushed_at": "2026-11-05T16:46:26Z",
+      "updated_at": "2026-11-05T16:55:01Z",
+      "stars_per_day": 350.0,
+      "age_days": 5
     },
     {
       "full_name": "mromidev/claude-animated-shorts",
@@ -470,13 +388,57 @@
       "description": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
       "language": "TypeScript",
       "topics": [],
-      "stars": 1441,
-      "forks": 335,
+      "stars": 1669,
+      "forks": 373,
       "created_at": "2026-11-01T05:50:38Z",
       "pushed_at": "2026-11-01T05:57:14Z",
-      "updated_at": "2026-11-04T16:34:04Z",
-      "stars_per_day": 480.3,
-      "age_days": 3
+      "updated_at": "2026-11-05T16:54:44Z",
+      "stars_per_day": 417.2,
+      "age_days": 4
+    },
+    {
+      "full_name": "Arjun-Ingole/hop",
+      "name": "hop",
+      "html_url": "https://github.com/Arjun-Ingole/hop",
+      "description": "Install Linux next to Windows without a USB stick",
+      "language": "PowerShell",
+      "topics": [],
+      "stars": 1525,
+      "forks": 53,
+      "created_at": "2026-10-30T19:40:45Z",
+      "pushed_at": "2026-11-03T01:08:16Z",
+      "updated_at": "2026-11-05T16:17:09Z",
+      "stars_per_day": 305.0,
+      "age_days": 5
+    },
+    {
+      "full_name": "wquguru/cicada",
+      "name": "cicada",
+      "html_url": "https://github.com/wquguru/cicada",
+      "description": "\u77e5\u4e86 Cicada \u00b7 \u4efb\u4f55\u4f1a\u8bae\u548c\u76f4\u64ad\u7684\u5b9e\u65f6\u5b57\u5e55\u3001\u540c\u58f0\u4f20\u8bd1\u3001AI \u4f1a\u8bae\u7eaa\u8981\uff0cMac\u3001Windows\u3001Linux\u3001Android \u514d\u8d39\u5f00\u6e90\u3002Live subtitles, interpreting and meeting notes for any call or stream, on Mac, Windows, Linux and Android.",
+      "language": "Swift",
+      "topics": [
+        "android",
+        "linux",
+        "live-captions",
+        "macos",
+        "meeting-notes",
+        "menubar-app",
+        "simultaneous-interpretation",
+        "speech-recognition",
+        "subtitles",
+        "swift",
+        "swiftui",
+        "translation",
+        "windows"
+      ],
+      "stars": 1460,
+      "forks": 263,
+      "created_at": "2026-11-01T05:41:23Z",
+      "pushed_at": "2026-11-05T16:49:57Z",
+      "updated_at": "2026-11-05T16:52:31Z",
+      "stars_per_day": 365.0,
+      "age_days": 4
     },
     {
       "full_name": "kevinraymond/florilegium",
@@ -495,115 +457,13 @@
         "svg",
         "typography"
       ],
-      "stars": 1424,
-      "forks": 39,
+      "stars": 1436,
+      "forks": 41,
       "created_at": "2026-10-30T07:49:05Z",
-      "pushed_at": "2026-11-04T15:21:22Z",
-      "updated_at": "2026-11-04T15:39:49Z",
-      "stars_per_day": 284.8,
-      "age_days": 5
-    },
-    {
-      "full_name": "govijr/terminal-mac",
-      "name": "terminal-mac",
-      "html_url": "https://github.com/govijr/terminal-mac",
-      "description": "Entire MacOS running in your terminal.",
-      "language": "Swift",
-      "topics": [
-        "cli",
-        "gui",
-        "macos",
-        "shell",
-        "swift",
-        "terminal",
-        "tui"
-      ],
-      "stars": 1221,
-      "forks": 79,
-      "created_at": "2026-11-03T03:22:56Z",
-      "pushed_at": "2026-11-03T12:34:41Z",
-      "updated_at": "2026-11-04T16:39:27Z",
-      "stars_per_day": 1221.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "NiazMorshed2007/reanimate",
-      "name": "reanimate",
-      "html_url": "https://github.com/NiazMorshed2007/reanimate",
-      "description": "A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same.",
-      "language": "JavaScript",
-      "topics": [
-        "agent-skills",
-        "animation",
-        "claude-code",
-        "claude-skills",
-        "frontend",
-        "motion",
-        "playwright"
-      ],
-      "stars": 1149,
-      "forks": 108,
-      "created_at": "2026-10-29T06:20:59Z",
-      "pushed_at": "2026-10-31T12:49:35Z",
-      "updated_at": "2026-11-04T16:18:05Z",
-      "stars_per_day": 191.5,
+      "pushed_at": "2026-11-05T15:51:52Z",
+      "updated_at": "2026-11-05T14:18:36Z",
+      "stars_per_day": 239.3,
       "age_days": 6
-    },
-    {
-      "full_name": "wquguru/cicada",
-      "name": "cicada",
-      "html_url": "https://github.com/wquguru/cicada",
-      "description": "\u77e5\u4e86 Cicada \u00b7 \u4efb\u610f\u4f1a\u8bae\u4e0e\u76f4\u64ad\u7684\u5b9e\u65f6\u5b57\u5e55\u3001\u540c\u58f0\u4f20\u8bd1\u3001AI \u4f1a\u8bae\u7eaa\u8981\uff08macOS\uff09\u3002Live subtitles, interpreting and meeting notes for any call or stream on your Mac.",
-      "language": "Swift",
-      "topics": [
-        "live-captions",
-        "macos",
-        "meeting-notes",
-        "menubar-app",
-        "simultaneous-interpretation",
-        "speech-recognition",
-        "subtitles",
-        "swift",
-        "swiftui",
-        "translation"
-      ],
-      "stars": 1033,
-      "forks": 207,
-      "created_at": "2026-11-01T05:41:23Z",
-      "pushed_at": "2026-11-03T08:19:06Z",
-      "updated_at": "2026-11-04T16:37:07Z",
-      "stars_per_day": 344.3,
-      "age_days": 3
-    },
-    {
-      "full_name": "RikiyaT/lm_understand-logs",
-      "name": "lm_understand-logs",
-      "html_url": "https://github.com/RikiyaT/lm_understand-logs",
-      "description": "Complete logs of the experiments in the blog post 'LLMs can understand and write neural network weights'",
-      "language": "Python",
-      "topics": [],
-      "stars": 878,
-      "forks": 108,
-      "created_at": "2026-10-29T04:17:30Z",
-      "pushed_at": "2026-10-29T04:47:12Z",
-      "updated_at": "2026-11-04T16:39:45Z",
-      "stars_per_day": 146.3,
-      "age_days": 6
-    },
-    {
-      "full_name": "hyz317/HairDeck",
-      "name": "HairDeck",
-      "html_url": "https://github.com/hyz317/HairDeck",
-      "description": "HairDeck: Animation-Ready Stylized Hair Cards from a Single Image",
-      "language": "Python",
-      "topics": [],
-      "stars": 803,
-      "forks": 56,
-      "created_at": "2026-10-29T17:16:13Z",
-      "pushed_at": "2026-11-03T07:10:18Z",
-      "updated_at": "2026-11-04T15:51:35Z",
-      "stars_per_day": 160.6,
-      "age_days": 5
     },
     {
       "full_name": "N1nEmAn/sapper-v2",
@@ -620,13 +480,50 @@
         "multi-agent",
         "pentest"
       ],
-      "stars": 742,
-      "forks": 552,
+      "stars": 1267,
+      "forks": 733,
       "created_at": "2026-10-30T15:12:35Z",
       "pushed_at": "2026-11-03T12:47:08Z",
-      "updated_at": "2026-11-04T16:27:35Z",
-      "stars_per_day": 148.4,
-      "age_days": 5
+      "updated_at": "2026-11-05T16:51:29Z",
+      "stars_per_day": 211.2,
+      "age_days": 6
+    },
+    {
+      "full_name": "Minireel/HGhub",
+      "name": "HGhub",
+      "html_url": "https://github.com/Minireel/HGhub",
+      "description": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "topics": [
+        "android",
+        "drama",
+        "free",
+        "movie-web-app",
+        "reels",
+        "windows"
+      ],
+      "stars": 1075,
+      "forks": 862,
+      "created_at": "2026-11-03T14:04:27Z",
+      "pushed_at": "2026-11-05T08:41:19Z",
+      "updated_at": "2026-11-05T16:52:55Z",
+      "stars_per_day": 537.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "s1dashu/quiet-md",
+      "name": "quiet-md",
+      "html_url": "https://github.com/s1dashu/quiet-md",
+      "description": "Blazing-fast native notes app for macOS & Windows. Rust + GPUI, local-first, compatible with Feishu/Lark DocxXML.",
+      "language": "Rust",
+      "topics": [],
+      "stars": 1016,
+      "forks": 88,
+      "created_at": "2026-11-01T14:22:53Z",
+      "pushed_at": "2026-11-05T16:15:45Z",
+      "updated_at": "2026-11-05T16:56:25Z",
+      "stars_per_day": 254.0,
+      "age_days": 4
     },
     {
       "full_name": "anthropics/FlashProve",
@@ -635,13 +532,49 @@
       "description": "A research prototype for zero-knowledge proofs of AI inference. Not maintained.",
       "language": "Lean",
       "topics": [],
-      "stars": 736,
-      "forks": 67,
+      "stars": 899,
+      "forks": 83,
       "created_at": "2026-10-30T19:29:59Z",
       "pushed_at": "2026-10-30T21:00:23Z",
-      "updated_at": "2026-11-04T16:33:02Z",
-      "stars_per_day": 184.0,
-      "age_days": 4
+      "updated_at": "2026-11-05T16:52:28Z",
+      "stars_per_day": 179.8,
+      "age_days": 5
+    },
+    {
+      "full_name": "UncensoredLabs/uncensored-ai-api",
+      "name": "uncensored-ai-api",
+      "html_url": "https://github.com/UncensoredLabs/uncensored-ai-api",
+      "description": "Uncensored AI API and browser chat: DeepSeek and GLM models, streaming, Python and TypeScript examples, pricing and setup guides.",
+      "language": "JavaScript",
+      "topics": [
+        "abliterated-models",
+        "ai-models",
+        "chat-api",
+        "deepseek",
+        "deepseek-flash-uncensored",
+        "deepseek-v4-1-flash-abliterated",
+        "developer-tools",
+        "glm",
+        "glm-abliterated",
+        "glm-uncensored",
+        "streaming-api",
+        "typescript",
+        "uncensored-ai",
+        "uncensored-ai-api",
+        "uncensored-ai-list",
+        "uncensored-chat",
+        "uncensored-llm",
+        "uncensored-models",
+        "unfiltered-ai",
+        "unfiltered-chat"
+      ],
+      "stars": 825,
+      "forks": 29,
+      "created_at": "2026-11-01T20:53:34Z",
+      "pushed_at": "2026-11-01T20:57:07Z",
+      "updated_at": "2026-11-05T16:48:41Z",
+      "stars_per_day": 275.0,
+      "age_days": 3
     },
     {
       "full_name": "AssassinCreator/steam-stash-value-report-card",
@@ -659,46 +592,28 @@
         "steam-market",
         "valuation"
       ],
-      "stars": 727,
+      "stars": 799,
       "forks": 57,
       "created_at": "2026-11-02T00:40:47Z",
       "pushed_at": "2026-11-03T16:23:22Z",
-      "updated_at": "2026-11-04T16:21:05Z",
-      "stars_per_day": 363.5,
-      "age_days": 2
+      "updated_at": "2026-11-05T16:54:10Z",
+      "stars_per_day": 266.3,
+      "age_days": 3
     },
     {
-      "full_name": "joeblau/subvox",
-      "name": "subvox",
-      "html_url": "https://github.com/joeblau/subvox",
-      "description": null,
-      "language": "Swift",
+      "full_name": "andrew-babo/muse4ai",
+      "name": "muse4ai",
+      "html_url": "https://github.com/andrew-babo/muse4ai",
+      "description": "Muse4AI \u2014 let your AI agent make the pictures and the videos. Local Windows bridge for Muse via REST, MCP, and OAuth.",
+      "language": "TypeScript",
       "topics": [],
-      "stars": 726,
-      "forks": 97,
-      "created_at": "2026-10-31T01:48:19Z",
-      "pushed_at": "2026-10-31T01:49:45Z",
-      "updated_at": "2026-11-04T16:00:05Z",
-      "stars_per_day": 181.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "sleepy-zone/ai-ref-library-cn",
-      "name": "ai-ref-library-cn",
-      "html_url": "https://github.com/sleepy-zone/ai-ref-library-cn",
-      "description": "AI \u4f5c\u56fe\u7d20\u6750\u5e93 \u00b7 \u4e2d\u6587\u7248\uff08\u8138 / \u59ff\u52bf / \u670d\u88c5\uff09",
-      "language": "JavaScript",
-      "topics": [
-        "ai",
-        "gpt"
-      ],
-      "stars": 715,
-      "forks": 176,
-      "created_at": "2026-10-29T15:28:16Z",
-      "pushed_at": "2026-11-04T12:36:26Z",
-      "updated_at": "2026-11-04T15:55:34Z",
-      "stars_per_day": 119.2,
-      "age_days": 6
+      "stars": 778,
+      "forks": 167,
+      "created_at": "2026-11-03T17:45:18Z",
+      "pushed_at": "2026-11-04T17:38:46Z",
+      "updated_at": "2026-11-05T16:47:35Z",
+      "stars_per_day": 778.0,
+      "age_days": 1
     },
     {
       "full_name": "ramenvr/autopilot",
@@ -707,43 +622,187 @@
       "description": "Play any game",
       "language": "Python",
       "topics": [],
-      "stars": 704,
-      "forks": 56,
+      "stars": 772,
+      "forks": 65,
       "created_at": "2026-10-30T03:47:28Z",
-      "pushed_at": "2026-11-04T15:21:38Z",
-      "updated_at": "2026-11-04T15:51:55Z",
-      "stars_per_day": 140.8,
+      "pushed_at": "2026-11-04T21:46:43Z",
+      "updated_at": "2026-11-05T16:48:42Z",
+      "stars_per_day": 128.7,
+      "age_days": 6
+    },
+    {
+      "full_name": "joeblau/subvox",
+      "name": "subvox",
+      "html_url": "https://github.com/joeblau/subvox",
+      "description": null,
+      "language": "Swift",
+      "topics": [],
+      "stars": 739,
+      "forks": 97,
+      "created_at": "2026-10-31T01:48:19Z",
+      "pushed_at": "2026-10-31T01:49:45Z",
+      "updated_at": "2026-11-05T16:50:57Z",
+      "stars_per_day": 147.8,
       "age_days": 5
     },
     {
-      "full_name": "zortos293/Lichii",
-      "name": "Lichii",
-      "html_url": "https://github.com/zortos293/Lichii",
-      "description": "VERY experimental Nintendo Switch 2 emulator",
-      "language": "C++",
+      "full_name": "alchaincyf/huashu-bird-sticker",
+      "name": "huashu-bird-sticker",
+      "html_url": "https://github.com/alchaincyf/huashu-bird-sticker",
+      "description": "\u82b1\u53d4\u5f00\u6e90\u7684\u5168\u7403\u9e1f\u7c7b\u8d34\u7eb8\u5e93 \u00b7 Stickers for all 11,064 living bird species, with names in 43 languages and structured data",
+      "language": null,
+      "topics": [
+        "ai-generated",
+        "biodiversity",
+        "birding",
+        "birds",
+        "birdwatching",
+        "claude-code",
+        "codex",
+        "dataset",
+        "illustration",
+        "ioc-world-bird-list",
+        "multilingual",
+        "open-data",
+        "ornithology",
+        "stickers",
+        "taxonomy"
+      ],
+      "stars": 673,
+      "forks": 122,
+      "created_at": "2026-10-30T05:19:33Z",
+      "pushed_at": "2026-11-05T12:02:05Z",
+      "updated_at": "2026-11-05T16:42:26Z",
+      "stars_per_day": 112.2,
+      "age_days": 6
+    },
+    {
+      "full_name": "Minglink/dsh-jailbreak-workflow",
+      "name": "dsh-jailbreak-workflow",
+      "html_url": "https://github.com/Minglink/dsh-jailbreak-workflow",
+      "description": "DSH \u7834\u7532\u8bcd\u5236\u4f5c\u4f5c\u5de5\u4f5c\u6d41 ",
+      "language": "TypeScript",
       "topics": [],
-      "stars": 677,
-      "forks": 54,
-      "created_at": "2026-10-31T14:17:26Z",
-      "pushed_at": "2026-11-04T15:07:51Z",
-      "updated_at": "2026-11-04T16:38:10Z",
-      "stars_per_day": 169.2,
+      "stars": 668,
+      "forks": 233,
+      "created_at": "2026-11-01T04:50:41Z",
+      "pushed_at": "2026-11-05T12:53:38Z",
+      "updated_at": "2026-11-05T16:40:07Z",
+      "stars_per_day": 167.0,
       "age_days": 4
     },
     {
-      "full_name": "rerun-build/rerun",
-      "name": "rerun",
-      "html_url": "https://github.com/rerun-build/rerun",
-      "description": "AI coworkers that run your work. Self-hostable, AGPL-3.0.",
-      "language": "TypeScript",
+      "full_name": "brightsongwrath/personal-data-deletor-osint",
+      "name": "personal-data-deletor-osint",
+      "html_url": "https://github.com/brightsongwrath/personal-data-deletor-osint",
+      "description": "Ask 970 data brokers to delete your data. Free, local, no account, no server.",
+      "language": "JavaScript",
+      "topics": [
+        "ccpa",
+        "data-brokers",
+        "delete-me",
+        "opsec",
+        "opt-out",
+        "portable",
+        "privacy",
+        "windows"
+      ],
+      "stars": 638,
+      "forks": 113,
+      "created_at": "2026-11-03T16:47:18Z",
+      "pushed_at": "2026-11-03T16:47:56Z",
+      "updated_at": "2026-11-05T16:25:22Z",
+      "stars_per_day": 319.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "Balanov/uncut",
+      "name": "uncut",
+      "html_url": "https://github.com/Balanov/uncut",
+      "description": "The lossless, headless coding agent harness. One 7 MB static binary, four tools, plain stdin/stdout, no silent cuts.",
+      "language": "Go",
+      "topics": [
+        "agent-harness",
+        "cli",
+        "coding-agent",
+        "go",
+        "headless",
+        "llm",
+        "local-models"
+      ],
+      "stars": 604,
+      "forks": 16,
+      "created_at": "2026-11-01T17:19:30Z",
+      "pushed_at": "2026-11-02T20:58:19Z",
+      "updated_at": "2026-11-05T14:39:54Z",
+      "stars_per_day": 201.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "Gezine/CivSwitch",
+      "name": "CivSwitch",
+      "html_url": "https://github.com/Gezine/CivSwitch",
+      "description": "Nintendo Switch userland code execution using Civilization 7 game cartridge",
+      "language": "JavaScript",
       "topics": [],
-      "stars": 653,
-      "forks": 67,
-      "created_at": "2026-10-29T16:09:54Z",
-      "pushed_at": "2026-11-04T16:30:10Z",
-      "updated_at": "2026-11-04T16:33:49Z",
-      "stars_per_day": 108.8,
-      "age_days": 6
+      "stars": 597,
+      "forks": 123,
+      "created_at": "2026-11-01T13:30:59Z",
+      "pushed_at": "2026-11-05T08:29:51Z",
+      "updated_at": "2026-11-05T16:56:20Z",
+      "stars_per_day": 149.2,
+      "age_days": 4
+    },
+    {
+      "full_name": "arpanjot-coding/AVault",
+      "name": "AVault",
+      "html_url": "https://github.com/arpanjot-coding/AVault",
+      "description": "AVault - Call Recorder (No Root Required) | Privacy-first, hardware-encrypted audio vault for Android 12-16+. Rootless call recording via Shizuku with AES-256-GCM, biometrics & auto-cleanup.",
+      "language": "Kotlin",
+      "topics": [
+        "aes-256",
+        "android",
+        "android-14",
+        "android-15",
+        "android-16",
+        "android-call-recorder",
+        "audio-recorder",
+        "biometrics",
+        "call-recorder",
+        "call-recording",
+        "encryption",
+        "foss",
+        "jetpack-compose",
+        "kotlin",
+        "open-source",
+        "privacy",
+        "rootless",
+        "security",
+        "shizuku",
+        "vault"
+      ],
+      "stars": 595,
+      "forks": 31,
+      "created_at": "2026-10-31T19:21:27Z",
+      "pushed_at": "2026-11-02T11:13:11Z",
+      "updated_at": "2026-11-05T16:40:51Z",
+      "stars_per_day": 148.8,
+      "age_days": 4
+    },
+    {
+      "full_name": "jyotipmahes/ML-Interview-Prep",
+      "name": "ML-Interview-Prep",
+      "html_url": "https://github.com/jyotipmahes/ML-Interview-Prep",
+      "description": null,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 594,
+      "forks": 103,
+      "created_at": "2026-10-31T21:25:37Z",
+      "pushed_at": "2026-11-01T18:03:53Z",
+      "updated_at": "2026-11-05T16:51:58Z",
+      "stars_per_day": 148.5,
+      "age_days": 4
     }
   ],
   "hn_items": [
@@ -820,6 +879,13 @@
   ],
   "devto_items": [
     {
+      "title": "We're Building AI to Replace Ourselves. What's the Plan?",
+      "url": "https://dev.to/sylwia-lask/were-building-ai-to-replace-ourselves-whats-the-plan-4oll",
+      "reactions": 148,
+      "comments": 99,
+      "published_at": "2026-11-04T08:06:25Z"
+    },
+    {
       "title": "Yes, {} + [] = 0. No, JavaScript Isn\u2019t Broken",
       "url": "https://dev.to/sylwia-lask/yes-0-no-javascript-isnt-broken-14ob",
       "reactions": 170,
@@ -827,17 +893,10 @@
       "published_at": "2026-10-29T20:08:53Z"
     },
     {
-      "title": "We're Building AI to Replace Ourselves. What's the Plan?",
-      "url": "https://dev.to/sylwia-lask/were-building-ai-to-replace-ourselves-whats-the-plan-4oll",
-      "reactions": 71,
-      "comments": 39,
-      "published_at": "2026-11-04T08:06:25Z"
-    },
-    {
       "title": "This is my first HacktoberFest, and I don't know what to feel.",
       "url": "https://dev.to/francistrdev/this-is-my-first-hacktoberfest-and-i-dont-know-what-to-feel-449f",
-      "reactions": 98,
-      "comments": 63,
+      "reactions": 123,
+      "comments": 71,
       "published_at": "2026-11-02T16:11:59Z"
     },
     {
@@ -848,32 +907,32 @@
       "published_at": "2026-10-30T11:35:31Z"
     },
     {
-      "title": "No Human Will Ever Write Code Better Than LLMs? Better at What?",
-      "url": "https://dev.to/dannwaneri/no-human-will-ever-write-code-better-than-llms-better-at-what-1dme",
-      "reactions": 66,
-      "comments": 56,
-      "published_at": "2026-10-29T09:34:19Z"
+      "title": "Every Codebase Has a '// DO NOT TOUCH' File. I Built an AI Necromancer to Summon the Ghost of the Developer Who Wrote It \ud83d\udc80\ud83d\udd2e",
+      "url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5",
+      "reactions": 125,
+      "comments": 62,
+      "published_at": "2026-10-31T17:57:27Z"
     },
     {
       "title": "One Last Post, and a Proper Goodbye",
       "url": "https://dev.to/anchildress1/one-last-post-and-a-proper-goodbye-53a2",
-      "reactions": 45,
-      "comments": 8,
+      "reactions": 48,
+      "comments": 10,
       "published_at": "2026-11-03T16:08:07Z"
     },
     {
-      "title": "Ghost in the Shell: Can a Log File Hijack an AI?",
-      "url": "https://dev.to/gramli/ghost-in-the-shell-can-a-log-file-hijack-an-ai-3gk",
-      "reactions": 129,
-      "comments": 115,
-      "published_at": "2026-10-29T07:02:39Z"
+      "title": "That's a Wrap on Hacktoberfest 2026! \ud83c\udf83\ud83d\udc7b",
+      "url": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k",
+      "reactions": 60,
+      "comments": 14,
+      "published_at": "2026-11-03T22:28:08Z"
     },
     {
-      "title": "Every Codebase Has a '// DO NOT TOUCH' File. I Built an AI Necromancer to Summon the Ghost of the Developer Who Wrote It \ud83d\udc80\ud83d\udd2e",
-      "url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5",
-      "reactions": 103,
-      "comments": 57,
-      "published_at": "2026-10-31T17:57:27Z"
+      "title": "Let's see where you code!",
+      "url": "https://dev.to/maame-codes/lets-see-where-you-code-147",
+      "reactions": 73,
+      "comments": 30,
+      "published_at": "2026-11-03T20:18:40Z"
     },
     {
       "title": "What was your win this week?",
@@ -883,16 +942,16 @@
       "published_at": "2026-10-30T13:00:00Z"
     },
     {
-      "title": "That's a Wrap on Hacktoberfest 2026! \ud83c\udf83\ud83d\udc7b",
-      "url": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k",
-      "reactions": 44,
-      "comments": 10,
-      "published_at": "2026-11-03T22:28:08Z"
+      "title": "I built a 3D game about my Nigerian childhood (and I'm not a game developer)",
+      "url": "https://dev.to/deborahemeni1/i-built-a-3d-game-about-my-nigerian-childhood-and-im-not-a-game-developer-281g",
+      "reactions": 34,
+      "comments": 8,
+      "published_at": "2026-11-02T13:31:20Z"
     }
   ],
   "languages": [
     [
-      "Python",
+      "TypeScript",
       7
     ],
     [
@@ -900,27 +959,31 @@
       5
     ],
     [
-      "TypeScript",
-      5
+      "Python",
+      4
     ],
     [
       "Swift",
       3
     ],
     [
-      "C++",
-      2
-    ],
-    [
       "Kotlin",
       2
     ],
     [
-      "C",
+      "Rust",
+      2
+    ],
+    [
+      "C++",
       1
     ],
     [
-      "HTML",
+      "Go",
+      1
+    ],
+    [
+      "Jupyter Notebook",
       1
     ],
     [
@@ -932,49 +995,41 @@
       1
     ],
     [
-      "Rust",
-      1
-    ],
-    [
       "TeX",
       1
     ]
   ],
   "topics": [
     [
+      "cli",
+      5
+    ],
+    [
+      "android",
+      4
+    ],
+    [
       "claude-code",
       4
     ],
     [
-      "cli",
-      4
-    ],
-    [
-      "agent-skills",
+      "codex",
       3
     ],
     [
+      "privacy",
+      3
+    ],
+    [
+      "windows",
+      3
+    ],
+    [
+      "agent-skills",
+      2
+    ],
+    [
       "ai-agents",
-      2
-    ],
-    [
-      "android",
-      2
-    ],
-    [
-      "animation",
-      2
-    ],
-    [
-      "automation",
-      2
-    ],
-    [
-      "claude-skills",
-      2
-    ],
-    [
-      "codex",
       2
     ],
     [
@@ -998,7 +1053,11 @@
       2
     ],
     [
-      "accessibility",
+      "typescript",
+      2
+    ],
+    [
+      "abliterated-models",
       1
     ],
     [
@@ -1006,11 +1065,35 @@
       1
     ],
     [
-      "ai",
+      "aes-256",
       1
     ],
     [
-      "ai-agent",
+      "agent-harness",
+      1
+    ],
+    [
+      "ai-generated",
+      1
+    ],
+    [
+      "ai-models",
+      1
+    ],
+    [
+      "android-14",
+      1
+    ],
+    [
+      "android-15",
+      1
+    ],
+    [
+      "android-16",
+      1
+    ],
+    [
+      "android-call-recorder",
       1
     ],
     [
@@ -1026,6 +1109,10 @@
       1
     ],
     [
+      "animation",
+      1
+    ],
+    [
       "apk-analysis",
       1
     ],
@@ -1034,7 +1121,35 @@
       1
     ],
     [
+      "audio-recorder",
+      1
+    ],
+    [
+      "automation",
+      1
+    ],
+    [
       "autonomous-agents",
+      1
+    ],
+    [
+      "biodiversity",
+      1
+    ],
+    [
+      "biometrics",
+      1
+    ],
+    [
+      "birding",
+      1
+    ],
+    [
+      "birds",
+      1
+    ],
+    [
+      "birdwatching",
       1
     ],
     [
@@ -1042,11 +1157,35 @@
       1
     ],
     [
+      "call-recorder",
+      1
+    ],
+    [
+      "call-recording",
+      1
+    ],
+    [
       "canvas",
       1
     ],
     [
+      "ccpa",
+      1
+    ],
+    [
+      "chat-api",
+      1
+    ],
+    [
       "claude-code-plugin",
+      1
+    ],
+    [
+      "claude-skills",
+      1
+    ],
+    [
+      "coding-agent",
       1
     ],
     [
@@ -1058,7 +1197,35 @@
       1
     ],
     [
+      "data-brokers",
+      1
+    ],
+    [
+      "dataset",
+      1
+    ],
+    [
       "debloat",
+      1
+    ],
+    [
+      "deepseek",
+      1
+    ],
+    [
+      "deepseek-flash-uncensored",
+      1
+    ],
+    [
+      "deepseek-v4-1-flash-abliterated",
+      1
+    ],
+    [
+      "delete-me",
+      1
+    ],
+    [
+      "developer-tools",
       1
     ],
     [
@@ -1066,15 +1233,23 @@
       1
     ],
     [
+      "drama",
+      1
+    ],
+    [
+      "encryption",
+      1
+    ],
+    [
       "event-driven",
       1
     ],
     [
-      "frontend",
+      "foss",
       1
     ],
     [
-      "game",
+      "free",
       1
     ],
     [
@@ -1086,7 +1261,19 @@
       1
     ],
     [
-      "gpt",
+      "glm",
+      1
+    ],
+    [
+      "glm-abliterated",
+      1
+    ],
+    [
+      "glm-uncensored",
+      1
+    ],
+    [
+      "go",
       1
     ],
     [
@@ -1094,7 +1281,19 @@
       1
     ],
     [
+      "headless",
+      1
+    ],
+    [
+      "illustration",
+      1
+    ],
+    [
       "inventory",
+      1
+    ],
+    [
+      "ioc-world-bird-list",
       1
     ],
     [
@@ -1126,6 +1325,10 @@
       1
     ],
     [
+      "local-models",
+      1
+    ],
+    [
       "lua",
       1
     ],
@@ -1146,11 +1349,7 @@
       1
     ],
     [
-      "mobile-agent",
-      1
-    ],
-    [
-      "motion",
+      "movie-web-app",
       1
     ],
     [
@@ -1158,7 +1357,31 @@
       1
     ],
     [
+      "multilingual",
+      1
+    ],
+    [
       "nodejs",
+      1
+    ],
+    [
+      "open-data",
+      1
+    ],
+    [
+      "open-source",
+      1
+    ],
+    [
+      "opsec",
+      1
+    ],
+    [
+      "opt-out",
+      1
+    ],
+    [
+      "ornithology",
       1
     ],
     [
@@ -1170,11 +1393,7 @@
       1
     ],
     [
-      "playwright",
-      1
-    ],
-    [
-      "port",
+      "portable",
       1
     ],
     [
@@ -1183,10 +1402,6 @@
     ],
     [
       "price-check",
-      1
-    ],
-    [
-      "privacy",
       1
     ],
     [
@@ -1202,11 +1417,19 @@
       1
     ],
     [
-      "recompilation",
+      "reels",
       1
     ],
     [
       "report-card",
+      1
+    ],
+    [
+      "rootless",
+      1
+    ],
+    [
+      "security",
       1
     ],
     [
@@ -1219,6 +1442,10 @@
     ],
     [
       "shell",
+      1
+    ],
+    [
+      "shizuku",
       1
     ],
     [
@@ -1246,6 +1473,14 @@
       1
     ],
     [
+      "stickers",
+      1
+    ],
+    [
+      "streaming-api",
+      1
+    ],
+    [
       "subtitles",
       1
     ],
@@ -1259,6 +1494,10 @@
     ],
     [
       "system-architecture",
+      1
+    ],
+    [
+      "taxonomy",
       1
     ],
     [
@@ -1282,11 +1521,39 @@
       1
     ],
     [
-      "typescript",
+      "typography",
       1
     ],
     [
-      "typography",
+      "uncensored-ai",
+      1
+    ],
+    [
+      "uncensored-ai-api",
+      1
+    ],
+    [
+      "uncensored-ai-list",
+      1
+    ],
+    [
+      "uncensored-chat",
+      1
+    ],
+    [
+      "uncensored-llm",
+      1
+    ],
+    [
+      "uncensored-models",
+      1
+    ],
+    [
+      "unfiltered-ai",
+      1
+    ],
+    [
+      "unfiltered-chat",
       1
     ],
     [
@@ -1294,11 +1561,11 @@
       1
     ],
     [
-      "vfx",
+      "vault",
       1
     ],
     [
-      "windows",
+      "vfx",
       1
     ],
     [

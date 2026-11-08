@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-07T15:15:48.778121+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-10-31, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-08T15:39:27.699261+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-01, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-10-31&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-01&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -26,14 +26,21 @@
     {
       "name": "Python",
       "kind": "language",
-      "count_in_snapshot": 7,
+      "count_in_snapshot": 10,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "TypeScript",
+      "name": "C",
       "kind": "language",
-      "count_in_snapshot": 7,
+      "count_in_snapshot": 3,
+      "hn_mentions": 18,
+      "devto_mentions": 15
+    },
+    {
+      "name": "JavaScript",
+      "kind": "language",
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -45,14 +52,14 @@
       "devto_mentions": 0
     },
     {
-      "name": "android",
-      "kind": "topic",
+      "name": "TypeScript",
+      "kind": "language",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "claude-code",
+      "name": "ai-agents",
       "kind": "topic",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
@@ -77,14 +84,7 @@
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "C",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 18,
-      "devto_mentions": 18
+      "devto_mentions": 1
     },
     {
       "name": "C++",
@@ -94,6 +94,13 @@
       "devto_mentions": 0
     },
     {
+      "name": "Go",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
       "name": "HTML",
       "kind": "language",
       "count_in_snapshot": 2,
@@ -101,49 +108,21 @@
       "devto_mentions": 0
     },
     {
-      "name": "JavaScript",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Swift",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 1,
-      "devto_mentions": 0
-    },
-    {
-      "name": "agent-skills",
+      "name": "automation",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "ai-agents",
+      "name": "claude-code",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "claude-skills",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "codex",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "macos",
+      "name": "mcp",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -157,17 +136,38 @@
       "devto_mentions": 0
     },
     {
-      "name": "speech-recognition",
+      "name": "rust",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "swift",
-      "kind": "topic",
-      "count_in_snapshot": 2,
+      "name": "Shell",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Swift",
+      "kind": "language",
+      "count_in_snapshot": 1,
       "hn_mentions": 1,
+      "devto_mentions": 0
+    },
+    {
+      "name": "agent-md",
+      "kind": "topic",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "agent-skills",
+      "kind": "topic",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
       "devto_mentions": 0
     }
   ],
@@ -191,13 +191,13 @@
         "typescript",
         "workflow"
       ],
-      "stars": 3908,
-      "forks": 711,
+      "stars": 4073,
+      "forks": 740,
       "created_at": "2026-11-03T08:02:11Z",
-      "pushed_at": "2026-11-07T13:41:31Z",
-      "updated_at": "2026-11-07T15:14:26Z",
-      "stars_per_day": 977.0,
-      "age_days": 4
+      "pushed_at": "2026-11-08T13:09:53Z",
+      "updated_at": "2026-11-08T15:38:01Z",
+      "stars_per_day": 814.6,
+      "age_days": 5
     },
     {
       "full_name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
@@ -206,12 +206,49 @@
       "description": "Google_AI_Pro_2Year_ZeroCost_Auto",
       "language": "Python",
       "topics": [],
-      "stars": 3010,
-      "forks": 1166,
+      "stars": 3207,
+      "forks": 1194,
       "created_at": "2026-11-04T14:54:56Z",
       "pushed_at": "2026-11-06T03:52:06Z",
-      "updated_at": "2026-11-07T15:15:15Z",
-      "stars_per_day": 1003.3,
+      "updated_at": "2026-11-08T15:37:38Z",
+      "stars_per_day": 801.8,
+      "age_days": 4
+    },
+    {
+      "full_name": "Minireel/HGhub",
+      "name": "HGhub",
+      "html_url": "https://github.com/Minireel/HGhub",
+      "description": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "topics": [
+        "android",
+        "drama",
+        "free",
+        "movie-web-app",
+        "reels",
+        "windows"
+      ],
+      "stars": 2862,
+      "forks": 1267,
+      "created_at": "2026-11-03T14:04:27Z",
+      "pushed_at": "2026-11-08T02:42:53Z",
+      "updated_at": "2026-11-08T15:39:07Z",
+      "stars_per_day": 572.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "NotRexed/Hookshot",
+      "name": "Hookshot",
+      "html_url": "https://github.com/NotRexed/Hookshot",
+      "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
+      "language": "C++",
+      "topics": [],
+      "stars": 2495,
+      "forks": 237,
+      "created_at": "2026-11-05T12:18:58Z",
+      "pushed_at": "2026-11-08T15:38:00Z",
+      "updated_at": "2026-11-08T15:39:10Z",
+      "stars_per_day": 831.7,
       "age_days": 3
     },
     {
@@ -229,103 +266,13 @@
         "terminal",
         "tui"
       ],
-      "stars": 2214,
-      "forks": 143,
+      "stars": 2354,
+      "forks": 156,
       "created_at": "2026-11-03T03:22:56Z",
       "pushed_at": "2026-11-07T05:58:26Z",
-      "updated_at": "2026-11-07T15:04:50Z",
-      "stars_per_day": 553.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "mromidev/claude-animated-shorts",
-      "name": "claude-animated-shorts",
-      "html_url": "https://github.com/mromidev/claude-animated-shorts",
-      "description": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 2148,
-      "forks": 467,
-      "created_at": "2026-11-01T05:50:38Z",
-      "pushed_at": "2026-11-01T05:57:14Z",
-      "updated_at": "2026-11-07T15:14:35Z",
-      "stars_per_day": 358.0,
-      "age_days": 6
-    },
-    {
-      "full_name": "Minireel/HGhub",
-      "name": "HGhub",
-      "html_url": "https://github.com/Minireel/HGhub",
-      "description": "YellowFruit third-party client",
-      "language": "TypeScript",
-      "topics": [
-        "android",
-        "drama",
-        "free",
-        "movie-web-app",
-        "reels",
-        "windows"
-      ],
-      "stars": 2056,
-      "forks": 1075,
-      "created_at": "2026-11-03T14:04:27Z",
-      "pushed_at": "2026-11-05T08:41:19Z",
-      "updated_at": "2026-11-07T15:15:46Z",
-      "stars_per_day": 514.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "caru-ini/stack-diagram",
-      "name": "stack-diagram",
-      "html_url": "https://github.com/caru-ini/stack-diagram",
-      "description": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
-      "language": "TypeScript",
-      "topics": [
-        "agent-skills",
-        "architecture-diagram",
-        "claude-code",
-        "claude-skills",
-        "codex",
-        "diagram",
-        "system-architecture",
-        "tech-stack"
-      ],
-      "stars": 2039,
-      "forks": 95,
-      "created_at": "2026-11-01T05:35:12Z",
-      "pushed_at": "2026-11-03T03:42:46Z",
-      "updated_at": "2026-11-07T15:15:33Z",
-      "stars_per_day": 339.8,
-      "age_days": 6
-    },
-    {
-      "full_name": "wquguru/cicada",
-      "name": "cicada",
-      "html_url": "https://github.com/wquguru/cicada",
-      "description": "\u77e5\u4e86 Cicada \u00b7 \u4efb\u4f55\u4f1a\u8bae\u548c\u76f4\u64ad\u7684\u5b9e\u65f6\u5b57\u5e55\u3001\u540c\u58f0\u4f20\u8bd1\u3001AI \u4f1a\u8bae\u7eaa\u8981\uff0cMac\u3001Windows\u3001Linux\u3001Android \u514d\u8d39\u5f00\u6e90\u3002Live subtitles, interpreting and meeting notes for any call or stream, on Mac, Windows, Linux and Android.",
-      "language": "Swift",
-      "topics": [
-        "android",
-        "linux",
-        "live-captions",
-        "macos",
-        "meeting-notes",
-        "menubar-app",
-        "simultaneous-interpretation",
-        "speech-recognition",
-        "subtitles",
-        "swift",
-        "swiftui",
-        "translation",
-        "windows"
-      ],
-      "stars": 1608,
-      "forks": 289,
-      "created_at": "2026-11-01T05:41:23Z",
-      "pushed_at": "2026-11-07T14:48:09Z",
-      "updated_at": "2026-11-07T15:11:02Z",
-      "stars_per_day": 268.0,
-      "age_days": 6
+      "updated_at": "2026-11-08T15:34:10Z",
+      "stars_per_day": 470.8,
+      "age_days": 5
     },
     {
       "full_name": "JenkinWoo/sheeridVerify",
@@ -334,43 +281,28 @@
       "description": null,
       "language": "JavaScript",
       "topics": [],
-      "stars": 1489,
-      "forks": 768,
+      "stars": 1835,
+      "forks": 983,
       "created_at": "2026-11-06T09:28:09Z",
       "pushed_at": "2026-11-06T09:54:37Z",
-      "updated_at": "2026-11-07T15:14:07Z",
-      "stars_per_day": 1489.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "s1dashu/quiet-md",
-      "name": "quiet-md",
-      "html_url": "https://github.com/s1dashu/quiet-md",
-      "description": "Blazing-fast native notes app for macOS & Windows. Rust + GPUI, local-first, compatible with Feishu/Lark DocxXML.",
-      "language": "Rust",
-      "topics": [],
-      "stars": 1252,
-      "forks": 116,
-      "created_at": "2026-11-01T14:22:53Z",
-      "pushed_at": "2026-11-07T05:11:58Z",
-      "updated_at": "2026-11-07T15:06:50Z",
-      "stars_per_day": 208.7,
-      "age_days": 6
-    },
-    {
-      "full_name": "NotRexed/Hookshot",
-      "name": "Hookshot",
-      "html_url": "https://github.com/NotRexed/Hookshot",
-      "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
-      "language": "C++",
-      "topics": [],
-      "stars": 1142,
-      "forks": 94,
-      "created_at": "2026-11-05T12:18:58Z",
-      "pushed_at": "2026-11-07T14:23:00Z",
-      "updated_at": "2026-11-07T15:13:57Z",
-      "stars_per_day": 571.0,
+      "updated_at": "2026-11-08T15:20:32Z",
+      "stars_per_day": 917.5,
       "age_days": 2
+    },
+    {
+      "full_name": "sarpstar/cinecode",
+      "name": "cinecode",
+      "html_url": "https://github.com/sarpstar/cinecode",
+      "description": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
+      "language": "Python",
+      "topics": [],
+      "stars": 1414,
+      "forks": 257,
+      "created_at": "2026-11-03T10:08:16Z",
+      "pushed_at": "2026-11-03T15:21:18Z",
+      "updated_at": "2026-11-08T15:36:43Z",
+      "stars_per_day": 282.8,
+      "age_days": 5
     },
     {
       "full_name": "livliv-dev/player",
@@ -388,28 +320,13 @@
         "vtuber",
         "webgl2"
       ],
-      "stars": 1126,
-      "forks": 119,
+      "stars": 1310,
+      "forks": 136,
       "created_at": "2026-11-04T03:28:33Z",
-      "pushed_at": "2026-11-07T09:56:32Z",
-      "updated_at": "2026-11-07T15:11:39Z",
-      "stars_per_day": 375.3,
-      "age_days": 3
-    },
-    {
-      "full_name": "mmdoctor/google-pro-helper",
-      "name": "google-pro-helper",
-      "html_url": "https://github.com/mmdoctor/google-pro-helper",
-      "description": null,
-      "language": "Python",
-      "topics": [],
-      "stars": 1100,
-      "forks": 413,
-      "created_at": "2026-11-05T04:52:28Z",
-      "pushed_at": "2026-11-05T09:41:40Z",
-      "updated_at": "2026-11-07T15:14:39Z",
-      "stars_per_day": 550.0,
-      "age_days": 2
+      "pushed_at": "2026-11-08T11:11:07Z",
+      "updated_at": "2026-11-08T15:32:31Z",
+      "stars_per_day": 327.5,
+      "age_days": 4
     },
     {
       "full_name": "Sandflow-ai/sand3d",
@@ -426,88 +343,58 @@
         "python",
         "usd"
       ],
-      "stars": 960,
-      "forks": 108,
+      "stars": 1297,
+      "forks": 143,
       "created_at": "2026-11-03T08:23:03Z",
       "pushed_at": "2026-11-06T11:03:55Z",
-      "updated_at": "2026-11-07T15:15:34Z",
-      "stars_per_day": 240.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "chadyi/StudyOnTV",
-      "name": "StudyOnTV",
-      "html_url": "https://github.com/chadyi/StudyOnTV",
-      "description": "StudyOnTV (Tiledaoti TV) \u2014 open-source Android TV app where kids unlock screen time by answering questions. Runs fully on the TV: no server, no account. Parents scan a QR code and manage questions from the LAN. Learn first. Watch later.",
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "android-tv",
-        "children",
-        "digital-wellbeing",
-        "edtech",
-        "education",
-        "family",
-        "kids",
-        "learn-first",
-        "learning",
-        "learning-app",
-        "open-source",
-        "parental-controls",
-        "parenting",
-        "quiz",
-        "screen-time",
-        "screen-time-management",
-        "smart-tv",
-        "study-app",
-        "tv-box"
-      ],
-      "stars": 820,
-      "forks": 197,
-      "created_at": "2026-11-01T15:31:22Z",
-      "pushed_at": "2026-11-07T13:37:02Z",
-      "updated_at": "2026-11-07T15:11:59Z",
-      "stars_per_day": 164.0,
+      "updated_at": "2026-11-08T15:37:08Z",
+      "stars_per_day": 259.4,
       "age_days": 5
     },
     {
-      "full_name": "AssassinCreator/steam-stash-value-report-card",
-      "name": "steam-stash-value-report-card",
-      "html_url": "https://github.com/AssassinCreator/steam-stash-value-report-card",
-      "description": "Value your Steam stash in the terminal and print it as a share card: per game, per market, what sold and what sits. One Windows portable build, no account.",
+      "full_name": "mmdoctor/google-pro-helper",
+      "name": "google-pro-helper",
+      "html_url": "https://github.com/mmdoctor/google-pro-helper",
+      "description": null,
       "language": "Python",
-      "topics": [
-        "cli",
-        "inventory",
-        "price-check",
-        "python",
-        "report-card",
-        "steam",
-        "steam-market",
-        "valuation"
-      ],
-      "stars": 789,
-      "forks": 56,
-      "created_at": "2026-11-02T00:40:47Z",
-      "pushed_at": "2026-11-07T02:23:15Z",
-      "updated_at": "2026-11-07T14:56:03Z",
-      "stars_per_day": 157.8,
+      "topics": [],
+      "stars": 1203,
+      "forks": 441,
+      "created_at": "2026-11-05T04:52:28Z",
+      "pushed_at": "2026-11-05T09:41:40Z",
+      "updated_at": "2026-11-08T15:33:16Z",
+      "stars_per_day": 401.0,
+      "age_days": 3
+    },
+    {
+      "full_name": "CzJam/gjgjxweb",
+      "name": "gjgjxweb",
+      "html_url": "https://github.com/CzJam/gjgjxweb",
+      "description": "\u300a\u641e\u673a\u5de5\u5177\u7bb1\u300bWeb\u79fb\u690d\u7248",
+      "language": "HTML",
+      "topics": [],
+      "stars": 1135,
+      "forks": 101,
+      "created_at": "2026-11-03T02:00:54Z",
+      "pushed_at": "2026-11-07T12:19:22Z",
+      "updated_at": "2026-11-08T15:39:22Z",
+      "stars_per_day": 227.0,
       "age_days": 5
     },
     {
-      "full_name": "Minglink/dsh-jailbreak-workflow",
-      "name": "dsh-jailbreak-workflow",
-      "html_url": "https://github.com/Minglink/dsh-jailbreak-workflow",
-      "description": "DSH \u7834\u7532\u8bcd\u5236\u4f5c\u4f5c\u5de5\u4f5c\u6d41 ",
-      "language": "TypeScript",
+      "full_name": "libracoder/kiri",
+      "name": "kiri",
+      "html_url": "https://github.com/libracoder/kiri",
+      "description": "A small, fast container runtime for macOS, Windows and Linux",
+      "language": "Rust",
       "topics": [],
-      "stars": 736,
-      "forks": 249,
-      "created_at": "2026-11-01T04:50:41Z",
-      "pushed_at": "2026-11-05T12:53:38Z",
-      "updated_at": "2026-11-07T15:10:15Z",
-      "stars_per_day": 122.7,
-      "age_days": 6
+      "stars": 1115,
+      "forks": 72,
+      "created_at": "2026-11-02T16:11:30Z",
+      "pushed_at": "2026-11-08T12:02:17Z",
+      "updated_at": "2026-11-08T15:35:04Z",
+      "stars_per_day": 223.0,
+      "age_days": 5
     },
     {
       "full_name": "voyager-so/vork",
@@ -527,28 +414,13 @@
         "vfx",
         "vulkan"
       ],
-      "stars": 699,
-      "forks": 40,
+      "stars": 1053,
+      "forks": 77,
       "created_at": "2026-11-05T22:37:07Z",
-      "pushed_at": "2026-11-07T03:34:18Z",
-      "updated_at": "2026-11-07T15:10:47Z",
-      "stars_per_day": 699.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "libracoder/kiri",
-      "name": "kiri",
-      "html_url": "https://github.com/libracoder/kiri",
-      "description": "A small, fast container runtime for macOS, Windows and Linux",
-      "language": "Rust",
-      "topics": [],
-      "stars": 677,
-      "forks": 49,
-      "created_at": "2026-11-02T16:11:30Z",
-      "pushed_at": "2026-11-07T09:53:34Z",
-      "updated_at": "2026-11-07T15:13:33Z",
-      "stars_per_day": 169.2,
-      "age_days": 4
+      "pushed_at": "2026-11-07T20:54:07Z",
+      "updated_at": "2026-11-08T15:38:16Z",
+      "stars_per_day": 526.5,
+      "age_days": 2
     },
     {
       "full_name": "Leviidev/Henge",
@@ -557,13 +429,13 @@
       "description": "Emulate macOS on iOS and iPadOS",
       "language": "C",
       "topics": [],
-      "stars": 654,
-      "forks": 43,
+      "stars": 988,
+      "forks": 75,
       "created_at": "2026-11-02T01:13:51Z",
-      "pushed_at": "2026-11-07T13:38:33Z",
-      "updated_at": "2026-11-07T15:15:24Z",
-      "stars_per_day": 130.8,
-      "age_days": 5
+      "pushed_at": "2026-11-08T15:21:46Z",
+      "updated_at": "2026-11-08T15:37:00Z",
+      "stars_per_day": 164.7,
+      "age_days": 6
     },
     {
       "full_name": "egoist/mygo-music",
@@ -572,57 +444,12 @@
       "description": "A native music player you extend with plugins",
       "language": "Go",
       "topics": [],
-      "stars": 643,
-      "forks": 110,
+      "stars": 942,
+      "forks": 147,
       "created_at": "2026-11-04T13:27:14Z",
-      "pushed_at": "2026-11-07T14:53:18Z",
-      "updated_at": "2026-11-07T15:15:04Z",
-      "stars_per_day": 214.3,
-      "age_days": 3
-    },
-    {
-      "full_name": "Gezine/CivSwitch",
-      "name": "CivSwitch",
-      "html_url": "https://github.com/Gezine/CivSwitch",
-      "description": "Nintendo Switch userland code execution using Civilization 7 game cartridge",
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 638,
-      "forks": 132,
-      "created_at": "2026-11-01T13:30:59Z",
-      "pushed_at": "2026-11-05T08:29:51Z",
-      "updated_at": "2026-11-07T14:42:38Z",
-      "stars_per_day": 106.3,
-      "age_days": 6
-    },
-    {
-      "full_name": "WoYun520/gif-factory",
-      "name": "gif-factory",
-      "html_url": "https://github.com/WoYun520/gif-factory",
-      "description": "GIF \u5de5\u5382\uff1a\u6309\u98ce\u683c\u5236\u4f5c\u50cf\u7d20\u3001\u4eba\u7269\u4e0e\u5ba0\u7269\u3001\u7c98\u571f\u5409\u7965\u7269\u3001\u5149\u6805\u5361\u4e0e\u52a8\u6001\u6d77\u62a5\u7684 GIF Skill\u3002",
-      "language": "Python",
-      "topics": [],
-      "stars": 612,
-      "forks": 73,
-      "created_at": "2026-11-05T04:08:24Z",
-      "pushed_at": "2026-11-07T08:24:23Z",
-      "updated_at": "2026-11-07T15:02:33Z",
-      "stars_per_day": 306.0,
-      "age_days": 2
-    },
-    {
-      "full_name": "CzJam/gjgjxweb",
-      "name": "gjgjxweb",
-      "html_url": "https://github.com/CzJam/gjgjxweb",
-      "description": "\u300a\u641e\u673a\u5de5\u5177\u7bb1\u300bWeb\u79fb\u690d\u7248",
-      "language": "HTML",
-      "topics": [],
-      "stars": 591,
-      "forks": 49,
-      "created_at": "2026-11-03T02:00:54Z",
-      "pushed_at": "2026-11-07T12:19:22Z",
-      "updated_at": "2026-11-07T15:14:43Z",
-      "stars_per_day": 147.8,
+      "pushed_at": "2026-11-08T05:50:42Z",
+      "updated_at": "2026-11-08T15:37:08Z",
+      "stars_per_day": 235.5,
       "age_days": 4
     },
     {
@@ -632,78 +459,134 @@
       "description": "Ocarina of Time running natively on Windows, no emulator. Built on your PC from your own copy. No game files included.",
       "language": "C",
       "topics": [],
-      "stars": 551,
-      "forks": 31,
+      "stars": 904,
+      "forks": 50,
       "created_at": "2026-11-06T22:24:03Z",
-      "pushed_at": "2026-11-07T15:14:53Z",
-      "updated_at": "2026-11-07T15:15:23Z",
-      "stars_per_day": 551.0,
+      "pushed_at": "2026-11-08T14:48:49Z",
+      "updated_at": "2026-11-08T15:38:40Z",
+      "stars_per_day": 904.0,
       "age_days": 1
     },
     {
-      "full_name": "kevintngo/looseleaf",
-      "name": "looseleaf",
-      "html_url": "https://github.com/kevintngo/looseleaf",
-      "description": "shadcn/ui, drawn by hand: 123 accessible React components that look drawn on paper, with a shadcn registry.",
-      "language": "TypeScript",
+      "full_name": "tangerineturtle1/NX2navi",
+      "name": "NX2navi",
+      "html_url": "https://github.com/tangerineturtle1/NX2navi",
+      "description": null,
+      "language": "C",
       "topics": [],
-      "stars": 533,
-      "forks": 31,
-      "created_at": "2026-11-01T05:16:00Z",
-      "pushed_at": "2026-11-01T18:25:55Z",
-      "updated_at": "2026-11-07T14:34:54Z",
-      "stars_per_day": 88.8,
+      "stars": 861,
+      "forks": 40,
+      "created_at": "2026-11-07T10:01:23Z",
+      "pushed_at": "2026-11-08T11:06:00Z",
+      "updated_at": "2026-11-08T15:38:17Z",
+      "stars_per_day": 861.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "Th0rgal/satmux",
+      "name": "satmux",
+      "html_url": "https://github.com/Th0rgal/satmux",
+      "description": "Accelerate high-latency GEO inflight Wi-Fi via warm BBR TCP multiplexing + 1-RTT Ground-TLS + zlib (zero dependencies)",
+      "language": "Python",
+      "topics": [],
+      "stars": 833,
+      "forks": 40,
+      "created_at": "2026-11-07T16:09:41Z",
+      "pushed_at": "2026-11-07T16:26:20Z",
+      "updated_at": "2026-11-08T15:37:52Z",
+      "stars_per_day": 833.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "AssassinCreator/steam-stash-value-report-card",
+      "name": "steam-stash-value-report-card",
+      "html_url": "https://github.com/AssassinCreator/steam-stash-value-report-card",
+      "description": "Value your Steam stash in the terminal and print it as a share card: per game, per market, what sold and what sits. One Windows portable build, no account.",
+      "language": "Python",
+      "topics": [
+        "cli",
+        "inventory",
+        "price-check",
+        "python",
+        "report-card",
+        "steam",
+        "steam-market",
+        "valuation"
+      ],
+      "stars": 790,
+      "forks": 57,
+      "created_at": "2026-11-02T00:40:47Z",
+      "pushed_at": "2026-11-08T08:17:00Z",
+      "updated_at": "2026-11-08T09:10:13Z",
+      "stars_per_day": 131.7,
       "age_days": 6
     },
     {
-      "full_name": "sarpstar/cinecode",
-      "name": "cinecode",
-      "html_url": "https://github.com/sarpstar/cinecode",
-      "description": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
+      "full_name": "WoYun520/gif-factory",
+      "name": "gif-factory",
+      "html_url": "https://github.com/WoYun520/gif-factory",
+      "description": "GIF \u5de5\u5382\uff1a\u6309\u98ce\u683c\u5236\u4f5c\u50cf\u7d20\u3001\u4eba\u7269\u4e0e\u5ba0\u7269\u3001\u7c98\u571f\u5409\u7965\u7269\u3001\u5149\u6805\u5361\u4e0e\u52a8\u6001\u6d77\u62a5\u7684 GIF Skill\u3002",
       "language": "Python",
       "topics": [],
-      "stars": 529,
-      "forks": 88,
-      "created_at": "2026-11-03T10:08:16Z",
-      "pushed_at": "2026-11-03T15:21:18Z",
-      "updated_at": "2026-11-07T15:13:57Z",
-      "stars_per_day": 132.2,
-      "age_days": 4
+      "stars": 785,
+      "forks": 96,
+      "created_at": "2026-11-05T04:08:24Z",
+      "pushed_at": "2026-11-08T11:44:48Z",
+      "updated_at": "2026-11-08T15:36:44Z",
+      "stars_per_day": 261.7,
+      "age_days": 3
     },
     {
-      "full_name": "majorminorlabs/hermes-voice",
-      "name": "hermes-voice",
-      "html_url": "https://github.com/majorminorlabs/hermes-voice",
-      "description": "Talk to a Hermes Agent profile through Home Assistant Assist",
+      "full_name": "shanselman/gputaskman",
+      "name": "gputaskman",
+      "html_url": "https://github.com/shanselman/gputaskman",
+      "description": "A GPU task manager for Windows, Linux, and WSL: per-process VRAM, GPU activity, and LLM model/KV-cache insights (Windows AMD and NVIDIA).",
       "language": "Python",
       "topics": [],
-      "stars": 486,
-      "forks": 27,
-      "created_at": "2026-11-05T05:28:37Z",
-      "pushed_at": "2026-11-06T21:59:50Z",
-      "updated_at": "2026-11-07T15:14:59Z",
-      "stars_per_day": 243.0,
-      "age_days": 2
-    },
-    {
-      "full_name": "drakolordx7/switch2-recomp",
-      "name": "switch2-recomp",
-      "html_url": "https://github.com/drakolordx7/switch2-recomp",
-      "description": "Nintendo Switch 2 games recompiled to run natively on PC.",
-      "language": "C++",
-      "topics": [
-        "recompilation",
-        "static-recompilation",
-        "switch2",
-        "windows"
-      ],
-      "stars": 483,
-      "forks": 47,
-      "created_at": "2026-11-02T03:10:30Z",
-      "pushed_at": "2026-11-04T20:05:33Z",
-      "updated_at": "2026-11-07T15:15:12Z",
-      "stars_per_day": 96.6,
+      "stars": 699,
+      "forks": 32,
+      "created_at": "2026-11-03T00:49:34Z",
+      "pushed_at": "2026-11-08T06:27:14Z",
+      "updated_at": "2026-11-08T15:38:34Z",
+      "stars_per_day": 139.8,
       "age_days": 5
+    },
+    {
+      "full_name": "DIYgod/pinky",
+      "name": "pinky",
+      "html_url": "https://github.com/DIYgod/pinky",
+      "description": "Let AI agents use your phone, with you in the loop.",
+      "language": "Go",
+      "topics": [],
+      "stars": 605,
+      "forks": 37,
+      "created_at": "2026-11-06T16:53:14Z",
+      "pushed_at": "2026-11-08T15:38:47Z",
+      "updated_at": "2026-11-08T15:36:41Z",
+      "stars_per_day": 605.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "JosssphZhou/poki",
+      "name": "poki",
+      "html_url": "https://github.com/JosssphZhou/poki",
+      "description": "Let AI agents operate a real iPhone. Local MCP server and agent, no jailbreak, no extra hardware.",
+      "language": "JavaScript",
+      "topics": [
+        "ai-agents",
+        "automation",
+        "ios",
+        "iphone",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "stars": 581,
+      "forks": 122,
+      "created_at": "2026-11-05T15:04:31Z",
+      "pushed_at": "2026-11-08T15:30:55Z",
+      "updated_at": "2026-11-08T15:36:43Z",
+      "stars_per_day": 193.7,
+      "age_days": 3
     },
     {
       "full_name": "zeekk0/OpenAmika",
@@ -721,13 +604,91 @@
         "speech-recognition",
         "text-to-speech"
       ],
-      "stars": 475,
-      "forks": 67,
+      "stars": 533,
+      "forks": 73,
       "created_at": "2026-11-03T17:47:08Z",
-      "pushed_at": "2026-11-05T13:31:30Z",
-      "updated_at": "2026-11-07T14:53:50Z",
-      "stars_per_day": 158.3,
+      "pushed_at": "2026-11-07T15:58:05Z",
+      "updated_at": "2026-11-08T14:58:55Z",
+      "stars_per_day": 133.2,
+      "age_days": 4
+    },
+    {
+      "full_name": "majorminorlabs/hermes-voice",
+      "name": "hermes-voice",
+      "html_url": "https://github.com/majorminorlabs/hermes-voice",
+      "description": "Talk to a Hermes Agent profile through Home Assistant Assist",
+      "language": "Python",
+      "topics": [],
+      "stars": 518,
+      "forks": 32,
+      "created_at": "2026-11-05T05:28:37Z",
+      "pushed_at": "2026-11-06T21:59:50Z",
+      "updated_at": "2026-11-08T15:23:29Z",
+      "stars_per_day": 172.7,
       "age_days": 3
+    },
+    {
+      "full_name": "riyadhHDA/wichforks",
+      "name": "wichforks",
+      "html_url": "https://github.com/riyadhHDA/wichforks",
+      "description": "Use-case guide to Nintendo Switch 2 emulator forks: builds, games, GPUs, Android, and community reports.",
+      "language": "Python",
+      "topics": [
+        "compatibility",
+        "eglantine",
+        "emulation",
+        "forks",
+        "switch-2"
+      ],
+      "stars": 505,
+      "forks": 4,
+      "created_at": "2026-11-05T14:47:29Z",
+      "pushed_at": "2026-11-07T18:00:59Z",
+      "updated_at": "2026-11-08T14:46:48Z",
+      "stars_per_day": 168.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "drakolordx7/switch2-recomp",
+      "name": "switch2-recomp",
+      "html_url": "https://github.com/drakolordx7/switch2-recomp",
+      "description": "Nintendo Switch 2 games recompiled to run natively on PC.",
+      "language": "C++",
+      "topics": [
+        "recompilation",
+        "static-recompilation",
+        "switch2",
+        "windows"
+      ],
+      "stars": 500,
+      "forks": 49,
+      "created_at": "2026-11-02T03:10:30Z",
+      "pushed_at": "2026-11-04T20:05:33Z",
+      "updated_at": "2026-11-08T13:26:17Z",
+      "stars_per_day": 83.3,
+      "age_days": 6
+    },
+    {
+      "full_name": "Renly1994/xiaotang-daozai",
+      "name": "xiaotang-daozai",
+      "html_url": "https://github.com/Renly1994/xiaotang-daozai",
+      "description": "\u5c9b\u4ed4 Daozai\uff1aRust \u6784\u5efa\u7684 Windows \u684c\u9762\u4fe1\u606f\u5c9b\u3002\u97f3\u4e50\u6b4c\u8bcd\u3001\u90ae\u4ef6\u9a8c\u8bc1\u7801\u3001\u65e5\u7a0b\u63d0\u9192\u3001\u5f85\u529e\u4e0e AI \u989d\u5ea6\uff0c\u8ba9\u91cd\u8981\u4fe1\u606f\u8f7b\u8f7b\u51fa\u73b0\u5728\u5c4f\u5e55\u9876\u90e8\u3002",
+      "language": "Rust",
+      "topics": [
+        "desktop-widget",
+        "dynamic-island",
+        "egui",
+        "productivity",
+        "rust",
+        "windows"
+      ],
+      "stars": 494,
+      "forks": 92,
+      "created_at": "2026-11-03T04:25:22Z",
+      "pushed_at": "2026-11-08T07:15:59Z",
+      "updated_at": "2026-11-08T13:57:14Z",
+      "stars_per_day": 98.8,
+      "age_days": 5
     },
     {
       "full_name": "mhfed/vn-law-check",
@@ -754,13 +715,34 @@
         "vietnam",
         "vietnam-law"
       ],
-      "stars": 470,
-      "forks": 102,
+      "stars": 479,
+      "forks": 107,
       "created_at": "2026-11-02T09:22:02Z",
-      "pushed_at": "2026-11-05T10:34:21Z",
-      "updated_at": "2026-11-07T14:56:13Z",
-      "stars_per_day": 94.0,
-      "age_days": 5
+      "pushed_at": "2026-11-07T17:26:54Z",
+      "updated_at": "2026-11-08T14:47:58Z",
+      "stars_per_day": 79.8,
+      "age_days": 6
+    },
+    {
+      "full_name": "woniuniuniu/dsh-media-desk",
+      "name": "dsh-media-desk",
+      "html_url": "https://github.com/woniuniuniu/dsh-media-desk",
+      "description": "DeepSeek Harness \u81ea\u5a92\u4f53\u5de5\u4f5c\u53f0\u63d2\u4ef6\uff1a\u4e00\u53e5\u8bdd\u8bb0\u7075\u611f\uff0c\u4e00\u952e\u751f\u6210\u811a\u672c\u3001\u5c01\u9762\u3001\u914d\u56fe\u548c\u5206\u955c",
+      "language": "JavaScript",
+      "topics": [
+        "content-creation",
+        "deepseek",
+        "deepseek-harness",
+        "dsh-plugin",
+        "xiaohongshu"
+      ],
+      "stars": 474,
+      "forks": 39,
+      "created_at": "2026-11-02T04:49:29Z",
+      "pushed_at": "2026-11-08T03:58:14Z",
+      "updated_at": "2026-11-08T15:25:45Z",
+      "stars_per_day": 79.0,
+      "age_days": 6
     }
   ],
   "hn_items": [
@@ -839,29 +821,29 @@
     {
       "title": "We're Building AI to Replace Ourselves. What's the Plan?",
       "url": "https://dev.to/sylwia-lask/were-building-ai-to-replace-ourselves-whats-the-plan-4oll",
-      "reactions": 203,
-      "comments": 175,
+      "reactions": 214,
+      "comments": 188,
       "published_at": "2026-11-04T08:06:25Z"
     },
     {
       "title": "Congrats to the Kaggle Benchmarking Challenge Winners!",
       "url": "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh",
-      "reactions": 120,
+      "reactions": 126,
       "comments": 25,
       "published_at": "2026-11-05T21:12:11Z"
     },
     {
       "title": "This is my first HacktoberFest, and I don't know what to feel.",
       "url": "https://dev.to/francistrdev/this-is-my-first-hacktoberfest-and-i-dont-know-what-to-feel-449f",
-      "reactions": 148,
-      "comments": 85,
+      "reactions": 150,
+      "comments": 86,
       "published_at": "2026-11-02T16:11:59Z"
     },
     {
       "title": "Scared to Publish Your First Technical Article? Don't Be. I'll Be There to Read It",
       "url": "https://dev.to/georgekobaidze/scared-to-publish-your-first-technical-article-dont-be-ill-be-there-to-read-it-1gg2",
-      "reactions": 121,
-      "comments": 78,
+      "reactions": 137,
+      "comments": 106,
       "published_at": "2026-11-04T17:11:22Z"
     },
     {
@@ -872,6 +854,13 @@
       "published_at": "2026-11-03T16:08:07Z"
     },
     {
+      "title": "An AI Testing Presentation Became the Final Push for Organizational Change at My Company",
+      "url": "https://dev.to/xulingfeng/an-ai-testing-presentation-became-the-final-push-for-organizational-change-at-my-company-12ag",
+      "reactions": 121,
+      "comments": 66,
+      "published_at": "2026-11-06T01:27:32Z"
+    },
+    {
       "title": "That's a Wrap on Hacktoberfest 2026! \ud83c\udf83\ud83d\udc7b",
       "url": "https://dev.to/devteam/thats-a-wrap-on-hacktoberfest-2026-148k",
       "reactions": 65,
@@ -879,53 +868,54 @@
       "published_at": "2026-11-03T22:28:08Z"
     },
     {
-      "title": "Every Codebase Has a '// DO NOT TOUCH' File. I Built an AI Necromancer to Summon the Ghost of the Developer Who Wrote It \ud83d\udc80\ud83d\udd2e",
-      "url": "https://dev.to/dj29/every-codebase-has-a-do-not-touch-file-i-built-an-ai-necromancer-to-summon-the-ghost-of-the-2no5",
-      "reactions": 124,
-      "comments": 63,
-      "published_at": "2026-10-31T17:57:27Z"
-    },
-    {
-      "title": "An AI Testing Presentation Became the Final Push for Organizational Change at My Company",
-      "url": "https://dev.to/xulingfeng/an-ai-testing-presentation-became-the-final-push-for-organizational-change-at-my-company-12ag",
-      "reactions": 119,
-      "comments": 65,
-      "published_at": "2026-11-06T01:27:32Z"
-    },
-    {
       "title": "Let's see where you code!",
       "url": "https://dev.to/maame-codes/lets-see-where-you-code-147",
-      "reactions": 89,
-      "comments": 43,
+      "reactions": 96,
+      "comments": 47,
       "published_at": "2026-11-03T20:18:40Z"
     },
     {
       "title": "What was your win this week?",
       "url": "https://dev.to/devteam/what-was-your-win-this-week-28dh",
-      "reactions": 81,
-      "comments": 53,
+      "reactions": 89,
+      "comments": 57,
       "published_at": "2026-11-06T14:00:00Z"
+    },
+    {
+      "title": "I built a 3D game about my Nigerian childhood (and I'm not a game developer)",
+      "url": "https://dev.to/deborahemeni1/i-built-a-3d-game-about-my-nigerian-childhood-and-im-not-a-game-developer-281g",
+      "reactions": 35,
+      "comments": 9,
+      "published_at": "2026-11-02T13:31:20Z"
     }
   ],
   "languages": [
     [
       "Python",
-      7
+      10
     ],
     [
-      "TypeScript",
-      7
+      "C",
+      3
+    ],
+    [
+      "JavaScript",
+      3
     ],
     [
       "Rust",
       3
     ],
     [
-      "C",
-      2
+      "TypeScript",
+      3
     ],
     [
       "C++",
+      2
+    ],
+    [
+      "Go",
       2
     ],
     [
@@ -933,33 +923,17 @@
       2
     ],
     [
-      "JavaScript",
-      2
+      "Shell",
+      1
     ],
     [
       "Swift",
-      2
-    ],
-    [
-      "Go",
-      1
-    ],
-    [
-      "Kotlin",
-      1
-    ],
-    [
-      "Shell",
       1
     ]
   ],
   "topics": [
     [
-      "android",
-      3
-    ],
-    [
-      "claude-code",
+      "ai-agents",
       3
     ],
     [
@@ -975,23 +949,15 @@
       2
     ],
     [
-      "agent-skills",
+      "automation",
       2
     ],
     [
-      "ai-agents",
+      "claude-code",
       2
     ],
     [
-      "claude-skills",
-      2
-    ],
-    [
-      "codex",
-      2
-    ],
-    [
-      "macos",
+      "mcp",
       2
     ],
     [
@@ -999,11 +965,7 @@
       2
     ],
     [
-      "speech-recognition",
-      2
-    ],
-    [
-      "swift",
+      "rust",
       2
     ],
     [
@@ -1011,19 +973,15 @@
       1
     ],
     [
+      "agent-skills",
+      1
+    ],
+    [
       "ai-companion",
       1
     ],
     [
-      "android-tv",
-      1
-    ],
-    [
-      "architecture-diagram",
-      1
-    ],
-    [
-      "automation",
+      "android",
       1
     ],
     [
@@ -1043,15 +1001,27 @@
       1
     ],
     [
-      "children",
-      1
-    ],
-    [
       "claude-plugin",
       1
     ],
     [
+      "claude-skills",
+      1
+    ],
+    [
+      "codex",
+      1
+    ],
+    [
+      "compatibility",
+      1
+    ],
+    [
       "compliance",
+      1
+    ],
+    [
+      "content-creation",
       1
     ],
     [
@@ -1067,11 +1037,15 @@
       1
     ],
     [
-      "diagram",
+      "deepseek",
       1
     ],
     [
-      "digital-wellbeing",
+      "deepseek-harness",
+      1
+    ],
+    [
+      "desktop-widget",
       1
     ],
     [
@@ -1079,15 +1053,27 @@
       1
     ],
     [
+      "dsh-plugin",
+      1
+    ],
+    [
+      "dynamic-island",
+      1
+    ],
+    [
       "ecommerce",
       1
     ],
     [
-      "edtech",
+      "eglantine",
       1
     ],
     [
-      "education",
+      "egui",
+      1
+    ],
+    [
+      "emulation",
       1
     ],
     [
@@ -1099,7 +1085,7 @@
       1
     ],
     [
-      "family",
+      "forks",
       1
     ],
     [
@@ -1119,19 +1105,11 @@
       1
     ],
     [
-      "kids",
+      "ios",
       1
     ],
     [
-      "learn-first",
-      1
-    ],
-    [
-      "learning",
-      1
-    ],
-    [
-      "learning-app",
+      "iphone",
       1
     ],
     [
@@ -1139,15 +1117,7 @@
       1
     ],
     [
-      "linux",
-      1
-    ],
-    [
       "lip-sync",
-      1
-    ],
-    [
-      "live-captions",
       1
     ],
     [
@@ -1163,11 +1133,7 @@
       1
     ],
     [
-      "mcp",
-      1
-    ],
-    [
-      "meeting-notes",
+      "macos",
       1
     ],
     [
@@ -1175,11 +1141,11 @@
       1
     ],
     [
-      "menubar-app",
+      "metal",
       1
     ],
     [
-      "metal",
+      "model-context-protocol",
       1
     ],
     [
@@ -1195,19 +1161,7 @@
       1
     ],
     [
-      "open-source",
-      1
-    ],
-    [
       "openrouter",
-      1
-    ],
-    [
-      "parental-controls",
-      1
-    ],
-    [
-      "parenting",
       1
     ],
     [
@@ -1231,7 +1185,7 @@
       1
     ],
     [
-      "quiz",
+      "productivity",
       1
     ],
     [
@@ -1255,27 +1209,11 @@
       1
     ],
     [
-      "rust",
-      1
-    ],
-    [
-      "screen-time",
-      1
-    ],
-    [
-      "screen-time-management",
-      1
-    ],
-    [
       "self-hosted",
       1
     ],
     [
       "shell",
-      1
-    ],
-    [
-      "simultaneous-interpretation",
       1
     ],
     [
@@ -1287,7 +1225,7 @@
       1
     ],
     [
-      "smart-tv",
+      "speech-recognition",
       1
     ],
     [
@@ -1303,27 +1241,15 @@
       1
     ],
     [
-      "study-app",
+      "swift",
       1
     ],
     [
-      "subtitles",
-      1
-    ],
-    [
-      "swiftui",
+      "switch-2",
       1
     ],
     [
       "switch2",
-      1
-    ],
-    [
-      "system-architecture",
-      1
-    ],
-    [
-      "tech-stack",
       1
     ],
     [
@@ -1335,15 +1261,7 @@
       1
     ],
     [
-      "translation",
-      1
-    ],
-    [
       "tui",
-      1
-    ],
-    [
-      "tv-box",
       1
     ],
     [
@@ -1392,6 +1310,10 @@
     ],
     [
       "workflow",
+      1
+    ],
+    [
+      "xiaohongshu",
       1
     ]
   ]

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-12T17:13:40.695583+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-05, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-13T16:50:46.722242+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-06, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-05&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-06&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -24,85 +24,64 @@
   "unavailable_sources": [],
   "rising": [
     {
-      "name": "automation",
-      "kind": "topic",
-      "count_in_snapshot": 22,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "developer-tools",
-      "kind": "topic",
-      "count_in_snapshot": 22,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "open-source",
-      "kind": "topic",
-      "count_in_snapshot": 22,
-      "hn_mentions": 4,
-      "devto_mentions": 0
-    },
-    {
-      "name": "python",
-      "kind": "topic",
-      "count_in_snapshot": 22,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "scripts",
-      "kind": "topic",
-      "count_in_snapshot": 22,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "software-engineering",
-      "kind": "topic",
-      "count_in_snapshot": 22,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "utility",
-      "kind": "topic",
-      "count_in_snapshot": 20,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "HTML",
-      "kind": "language",
-      "count_in_snapshot": 19,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "system",
-      "kind": "topic",
-      "count_in_snapshot": 18,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "windows-app",
-      "kind": "topic",
-      "count_in_snapshot": 17,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "desktop",
-      "kind": "topic",
-      "count_in_snapshot": 15,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
       "name": "TypeScript",
       "kind": "language",
+      "count_in_snapshot": 8,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Python",
+      "kind": "language",
+      "count_in_snapshot": 6,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "macos",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Go",
+      "kind": "language",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "ai-agents",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "claude-code",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "mcp",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
+      "name": "self-hosted",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "windows",
+      "kind": "topic",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
@@ -112,7 +91,21 @@
       "kind": "language",
       "count_in_snapshot": 2,
       "hn_mentions": 18,
-      "devto_mentions": 16
+      "devto_mentions": 15
+    },
+    {
+      "name": "C++",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Objective-C",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
     },
     {
       "name": "Swift",
@@ -122,51 +115,58 @@
       "devto_mentions": 0
     },
     {
-      "name": "C#",
-      "kind": "language",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Go",
-      "kind": "language",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "JavaScript",
-      "kind": "language",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Python",
-      "kind": "language",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "acer-nitro",
+      "name": "agent-skills",
       "kind": "topic",
-      "count_in_snapshot": 1,
+      "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "acrobat-dc-pro",
+      "name": "apple-silicon",
       "kind": "topic",
-      "count_in_snapshot": 1,
+      "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "acrobat-for-free-2026",
+      "name": "claude",
       "kind": "topic",
-      "count_in_snapshot": 1,
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "codex",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "collaboration",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "human-in-the-loop",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "ios",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "linux",
+      "kind": "topic",
+      "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     }
@@ -179,13 +179,13 @@
       "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
       "language": "Swift",
       "topics": [],
-      "stars": 6873,
-      "forks": 2533,
+      "stars": 7225,
+      "forks": 2591,
       "created_at": "2026-11-09T05:15:48Z",
-      "pushed_at": "2026-11-12T17:13:17Z",
-      "updated_at": "2026-11-12T17:11:50Z",
-      "stars_per_day": 2291.0,
-      "age_days": 3
+      "pushed_at": "2026-11-13T16:43:38Z",
+      "updated_at": "2026-11-13T16:43:46Z",
+      "stars_per_day": 1806.2,
+      "age_days": 4
     },
     {
       "full_name": "tangerineturtle1/NX2navi",
@@ -194,13 +194,13 @@
       "description": null,
       "language": "C",
       "topics": [],
-      "stars": 3462,
-      "forks": 239,
+      "stars": 3779,
+      "forks": 275,
       "created_at": "2026-11-07T10:01:23Z",
-      "pushed_at": "2026-11-12T17:07:34Z",
-      "updated_at": "2026-11-12T17:11:58Z",
-      "stars_per_day": 692.4,
-      "age_days": 5
+      "pushed_at": "2026-11-13T16:49:35Z",
+      "updated_at": "2026-11-13T16:47:12Z",
+      "stars_per_day": 629.8,
+      "age_days": 6
     },
     {
       "full_name": "jhaizhou-ops/S2Arm",
@@ -220,43 +220,13 @@
         "static-recompilation",
         "switch"
       ],
-      "stars": 2747,
-      "forks": 503,
+      "stars": 2852,
+      "forks": 521,
       "created_at": "2026-11-08T05:49:46Z",
-      "pushed_at": "2026-11-12T16:50:59Z",
-      "updated_at": "2026-11-12T17:03:44Z",
-      "stars_per_day": 686.8,
-      "age_days": 4
-    },
-    {
-      "full_name": "JenkinWoo/sheeridVerify",
-      "name": "sheeridVerify",
-      "html_url": "https://github.com/JenkinWoo/sheeridVerify",
-      "description": null,
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 2076,
-      "forks": 1126,
-      "created_at": "2026-11-06T09:28:09Z",
-      "pushed_at": "2026-11-06T09:54:37Z",
-      "updated_at": "2026-11-12T16:22:30Z",
-      "stars_per_day": 346.0,
-      "age_days": 6
-    },
-    {
-      "full_name": "DIYgod/pinky",
-      "name": "pinky",
-      "html_url": "https://github.com/DIYgod/pinky",
-      "description": "Let AI agents use your phone, with you in the loop.",
-      "language": "Go",
-      "topics": [],
-      "stars": 1988,
-      "forks": 208,
-      "created_at": "2026-11-06T16:53:14Z",
-      "pushed_at": "2026-11-12T17:12:46Z",
-      "updated_at": "2026-11-12T17:10:53Z",
-      "stars_per_day": 331.3,
-      "age_days": 6
+      "pushed_at": "2026-11-13T16:44:44Z",
+      "updated_at": "2026-11-13T16:38:16Z",
+      "stars_per_day": 570.4,
+      "age_days": 5
     },
     {
       "full_name": "Kianuni/Erosion-CN",
@@ -265,13 +235,13 @@
       "description": "iOS / iPadOS \u7cfb\u7edf\u914d\u7f6e\u4e0e MobileGestalt \u7814\u7a76\u5de5\u5177\u7bb1\uff08\u7b80\u4f53\u4e2d\u6587\u9632\u767d\u82f9\u679c\u5b89\u5168\u52a0\u56fa\u7248\uff09",
       "language": "Swift",
       "topics": [],
-      "stars": 1711,
-      "forks": 375,
+      "stars": 1886,
+      "forks": 403,
       "created_at": "2026-11-10T02:37:31Z",
-      "pushed_at": "2026-11-12T15:53:47Z",
-      "updated_at": "2026-11-12T17:11:23Z",
-      "stars_per_day": 855.5,
-      "age_days": 2
+      "pushed_at": "2026-11-13T15:38:08Z",
+      "updated_at": "2026-11-13T16:19:25Z",
+      "stars_per_day": 628.7,
+      "age_days": 3
     },
     {
       "full_name": "HybridRobotics/supermimic",
@@ -280,784 +250,510 @@
       "description": "Humanoid whole-body motion tracking with one differentiable world model.",
       "language": "Python",
       "topics": [],
-      "stars": 1285,
-      "forks": 84,
+      "stars": 1417,
+      "forks": 91,
       "created_at": "2026-11-10T10:46:56Z",
       "pushed_at": "2026-11-11T08:06:27Z",
-      "updated_at": "2026-11-12T17:11:41Z",
-      "stars_per_day": 642.5,
+      "updated_at": "2026-11-13T16:21:22Z",
+      "stars_per_day": 472.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "apex-compute/ANR",
+      "name": "ANR",
+      "html_url": "https://github.com/apex-compute/ANR",
+      "description": "Apex Neural Rendering (ANR) by Apex Compute",
+      "language": "C++",
+      "topics": [],
+      "stars": 1326,
+      "forks": 20,
+      "created_at": "2026-11-11T04:27:17Z",
+      "pushed_at": "2026-11-12T18:20:33Z",
+      "updated_at": "2026-11-13T16:49:46Z",
+      "stars_per_day": 663.0,
       "age_days": 2
     },
     {
-      "full_name": "mahmoudtawfik1998/secure-pdf-document-processor",
-      "name": "secure-pdf-document-processor",
-      "html_url": "https://github.com/mahmoudtawfik1998/secure-pdf-document-processor",
-      "description": "Adobe Acrobat Pro 2026: Secure Standalone PDF Document Processor for Desktop",
-      "language": "HTML",
-      "topics": [
-        "acrobat-dc-pro",
-        "acrobat-for-free-2026",
-        "acrobat-no-limits",
-        "acrobat-pdf",
-        "automation",
-        "desktop",
-        "developer-tools",
-        "forms-acrobat-pro",
-        "free-pdf-reader-windows",
-        "open-source",
-        "pdf-password",
-        "pro-acrobat",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1212,
-      "forks": 1,
-      "created_at": "2026-11-06T21:23:09Z",
-      "pushed_at": "2026-11-12T09:38:01Z",
-      "updated_at": "2026-11-12T15:35:11Z",
-      "stars_per_day": 242.4,
-      "age_days": 5
-    },
-    {
-      "full_name": "hembramneeraj3-create/aida-64-extreme",
-      "name": "aida-64-extreme",
-      "html_url": "https://github.com/hembramneeraj3-create/aida-64-extreme",
-      "description": "Aida 64 Extreme 2026: Complete Standalone Desktop Setup with Full Feature Configuration",
-      "language": "HTML",
-      "topics": [
-        "aida64",
-        "aida64-extreme-compatibility-check",
-        "aida64-extreme-detailed-reporting",
-        "aida64-extreme-hardware-diagnostics",
-        "aida64-extreme-setup",
-        "aida64-extreme-system-information",
-        "aida64-free-setup",
-        "automation",
-        "desktop",
-        "developer-tools",
-        "open-source",
-        "pc-diagnostics-windows-platform",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app",
-        "windows-cpu-gpu-status-check",
-        "windows-performance-benchmarking"
-      ],
-      "stars": 1207,
-      "forks": 0,
-      "created_at": "2026-11-06T20:33:44Z",
-      "pushed_at": "2026-11-12T09:09:04Z",
-      "updated_at": "2026-11-12T11:00:54Z",
-      "stars_per_day": 241.4,
-      "age_days": 5
-    },
-    {
-      "full_name": "abdulmannanmalik13-wq/adobe-substance-3d-studio",
-      "name": "adobe-substance-3d-studio",
-      "html_url": "https://github.com/abdulmannanmalik13-wq/adobe-substance-3d-studio",
-      "description": "Adobe Substance 3D Creative Studio 2026 - Secure Asset Pipeline Desktop Installer",
-      "language": "HTML",
-      "topics": [
-        "automation",
-        "desktop",
-        "developer-tools",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "substance",
-        "substance-3d",
-        "substance-3d-painter",
-        "substance-abuse",
-        "substance-designer",
-        "substance-designer-allegorithmic",
-        "substance-painter",
-        "substance-use",
-        "substance3d",
-        "substancedesigner",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1207,
-      "forks": 0,
-      "created_at": "2026-11-06T20:33:06Z",
-      "pushed_at": "2026-11-12T13:21:47Z",
-      "updated_at": "2026-11-12T14:21:51Z",
-      "stars_per_day": 241.4,
-      "age_days": 5
-    },
-    {
-      "full_name": "AleRibeiro44/archicad-desktop-setup",
-      "name": "archicad-desktop-setup",
-      "html_url": "https://github.com/AleRibeiro44/archicad-desktop-setup",
-      "description": "Archicad 2026 complete standalone desktop setup with pre-configured ready-to-run installation build",
-      "language": "HTML",
-      "topics": [
-        "archicad",
-        "archicad-2026",
-        "archicad-download",
-        "automation",
-        "desktop",
-        "developer-tools",
-        "graphisoft-archicad-install-setup-windows-2026",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1204,
-      "forks": 0,
-      "created_at": "2026-11-06T20:36:04Z",
-      "pushed_at": "2026-11-12T13:21:55Z",
-      "updated_at": "2026-11-12T14:21:58Z",
-      "stars_per_day": 240.8,
-      "age_days": 5
-    },
-    {
-      "full_name": "PHISHER420/autodesk-inventor-desktop-config",
-      "name": "autodesk-inventor-desktop-config",
-      "html_url": "https://github.com/PHISHER420/autodesk-inventor-desktop-config",
-      "description": "Autodesk Inventor 2026 Professional Desktop Installer with Pre-Configured Full Feature Set",
-      "language": "HTML",
-      "topics": [
-        "autodesk-inventor-pro",
-        "autodesk-inventor-pro-pc",
-        "automation",
-        "developer-tools",
-        "inventor",
-        "inventor-automation",
-        "inventor-design",
-        "inventor-parts",
-        "inventory-app",
-        "inventory-system",
-        "offsets-dump",
-        "open-source",
-        "python",
-        "real-time-inventory",
-        "scripts",
-        "software-engineering",
-        "stock-inventory",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1203,
-      "forks": 0,
-      "created_at": "2026-11-06T20:40:29Z",
-      "pushed_at": "2026-11-12T09:16:41Z",
-      "updated_at": "2026-11-12T11:00:58Z",
-      "stars_per_day": 240.6,
-      "age_days": 5
-    },
-    {
-      "full_name": "CodeSouvik/clion-standalone-enhancement",
-      "name": "clion-standalone-enhancement",
-      "html_url": "https://github.com/CodeSouvik/clion-standalone-enhancement",
-      "description": "CLion full installer: complete standalone setup, all features activated",
-      "language": "HTML",
-      "topics": [
-        "automation",
-        "clion-2026",
-        "clion-download-windows",
-        "cmake-ide",
-        "cpp-ide",
-        "desktop",
-        "developer-tools",
-        "jetbrains-clion",
-        "jetbrains-clion-install-setup-2026",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1201,
-      "forks": 0,
-      "created_at": "2026-11-06T20:48:32Z",
-      "pushed_at": "2026-11-12T09:14:50Z",
-      "updated_at": "2026-11-12T11:01:01Z",
-      "stars_per_day": 240.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "sajawal-12/cubase-studio-desktop",
-      "name": "cubase-studio-desktop",
-      "html_url": "https://github.com/sajawal-12/cubase-studio-desktop",
-      "description": "Cubase Studio 2026 desktop setup with full plugin suite and complete feature set",
-      "language": "HTML",
-      "topics": [
-        "automation",
-        "cubase",
-        "cubase-15",
-        "cubase-for-beginners",
-        "cubase-pro",
-        "cubase-pro-2026",
-        "cubase-setup",
-        "cubase-tutorial",
-        "cubase-windows-download",
-        "cubasecubase-pro",
-        "cube-solver",
-        "cubic-splines",
-        "developer-tools",
-        "mixing-and-mastering",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "steinberg-cubase",
-        "vst3-plugins"
-      ],
-      "stars": 1201,
-      "forks": 0,
-      "created_at": "2026-11-06T20:50:21Z",
-      "pushed_at": "2026-11-12T08:58:09Z",
-      "updated_at": "2026-11-12T11:01:02Z",
-      "stars_per_day": 240.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "Arda313131882/aion-2-trainer-tool",
-      "name": "aion-2-trainer-tool",
-      "html_url": "https://github.com/Arda313131882/aion-2-trainer-tool",
-      "description": "Aion 2 AI Prompt Engineering Toolkit - Standalone Desktop Trainer Setup",
-      "language": "HTML",
-      "topics": [
-        "aion-2",
-        "aion-2-2026",
-        "aion-2-game",
-        "aion-2-optimizer",
-        "aion-2-trainer",
-        "aion-2-trainer-tool",
-        "aion2-combat-analysis",
-        "aion2-meter",
-        "automation",
-        "desktop",
-        "developer-tools",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1199,
-      "forks": 0,
-      "created_at": "2026-11-06T20:34:15Z",
-      "pushed_at": "2026-11-12T09:27:32Z",
-      "updated_at": "2026-11-12T11:00:54Z",
-      "stars_per_day": 239.8,
-      "age_days": 5
-    },
-    {
-      "full_name": "ebtsamalhakmy-sketch/desktop-backup-suite",
-      "name": "desktop-backup-suite",
-      "html_url": "https://github.com/ebtsamalhakmy-sketch/desktop-backup-suite",
-      "description": "Aomei Backupper 2026: Full-Feature Desktop Backup and Recovery Suite",
+      "full_name": "agentes-chat/agentes-chat",
+      "name": "agentes-chat",
+      "html_url": "https://github.com/agentes-chat/agentes-chat",
+      "description": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
       "language": "TypeScript",
       "topics": [
-        "aomei",
-        "aomei-partition",
-        "aomei-setup",
-        "automation",
-        "developer-tools",
-        "disk-manager",
-        "disk-partitioning",
-        "merge-partitions",
-        "open-source",
-        "os-migration",
-        "partition-assistant",
-        "partition-manager",
-        "partition-recovery",
-        "partition-tool",
-        "python",
-        "resize-partition",
-        "scripts",
-        "software-engineering",
-        "split-partition",
-        "utility"
+        "agentic-ai",
+        "ai-agents",
+        "browser-automation",
+        "chat",
+        "claude",
+        "claude-code",
+        "codex",
+        "collaboration",
+        "computer-use",
+        "docker-compose",
+        "gemini",
+        "grok",
+        "human-in-the-loop",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "openai",
+        "self-hosted",
+        "slack-alternative",
+        "team-chat"
       ],
-      "stars": 1199,
-      "forks": 0,
-      "created_at": "2026-11-06T20:53:28Z",
-      "pushed_at": "2026-11-12T08:58:09Z",
-      "updated_at": "2026-11-12T11:01:03Z",
-      "stars_per_day": 239.8,
-      "age_days": 5
+      "stars": 1302,
+      "forks": 216,
+      "created_at": "2026-11-09T00:50:28Z",
+      "pushed_at": "2026-11-13T16:33:08Z",
+      "updated_at": "2026-11-13T16:25:33Z",
+      "stars_per_day": 325.5,
+      "age_days": 4
     },
     {
-      "full_name": "IsaiaR09/daemon-pro-desktop",
-      "name": "daemon-pro-desktop",
-      "html_url": "https://github.com/IsaiaR09/daemon-pro-desktop",
-      "description": "daemon-pro: Complete Standalone Desktop Setup with Full Feature setup",
-      "language": "HTML",
-      "topics": [
-        "automation",
-        "daemon-2026",
-        "daemon-tools",
-        "daemon-tools-install-setup-windows-2026",
-        "daemon-tools-pro-advanced",
-        "daemon-tools-pro-vs-ultra",
-        "daemon-tools-ultra",
-        "daemon-tools-ultra-2026",
-        "daemon-tools-ultra-download",
-        "desktop",
-        "developer-tools",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1198,
-      "forks": 0,
-      "created_at": "2026-11-06T20:50:44Z",
-      "pushed_at": "2026-11-12T09:02:29Z",
-      "updated_at": "2026-11-12T11:01:02Z",
-      "stars_per_day": 239.6,
-      "age_days": 5
-    },
-    {
-      "full_name": "tss878/delta-executor-toolkit",
-      "name": "delta-executor-toolkit",
-      "html_url": "https://github.com/tss878/delta-executor-toolkit",
-      "description": "Delta Executor for PC: Full Working Installer with All Tools Pre-Configured",
+      "full_name": "FrigadeHQ/yogurt",
+      "name": "yogurt",
+      "html_url": "https://github.com/FrigadeHQ/yogurt",
+      "description": "Private AI meeting notes. Free and open source.",
       "language": "TypeScript",
       "topics": [
-        "automation",
-        "delta-exec",
-        "delta-executor-26",
-        "delta-executor-exploit",
-        "delta-executor-for-free",
-        "delta-executor-for-pc-2026",
-        "delta-executor-for-win",
-        "delta-executor-lua",
-        "delta-executor-pc-2026",
-        "delta-for-pc",
-        "delta-for-pc-2026",
-        "delta-free-executor",
-        "delta-key-bypass",
-        "delta-lua-executor",
-        "developer-tools",
+        "ai-meeting-assistant",
+        "electron",
+        "linux",
+        "llama-cpp",
+        "local-ai",
+        "macos",
+        "mcp",
+        "meeting-notes",
         "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "utility"
+        "privacy",
+        "speech-to-text",
+        "transcription",
+        "whisper",
+        "whisper-cpp",
+        "windows"
       ],
       "stars": 1198,
-      "forks": 0,
-      "created_at": "2026-11-06T20:51:54Z",
-      "pushed_at": "2026-11-12T13:26:28Z",
-      "updated_at": "2026-11-12T14:26:31Z",
-      "stars_per_day": 239.6,
-      "age_days": 5
+      "forks": 47,
+      "created_at": "2026-11-10T20:01:01Z",
+      "pushed_at": "2026-11-13T16:42:23Z",
+      "updated_at": "2026-11-13T16:46:03Z",
+      "stars_per_day": 599.0,
+      "age_days": 2
     },
     {
-      "full_name": "JasonCharb/directory-opus",
-      "name": "directory-opus",
-      "html_url": "https://github.com/JasonCharb/directory-opus",
-      "description": "directory-opus: complete standalone desktop setup with all features pre-enabled, ready to run",
-      "language": "HTML",
+      "full_name": "Th0rgal/satmux",
+      "name": "satmux",
+      "html_url": "https://github.com/Th0rgal/satmux",
+      "description": "Accelerate high-latency GEO inflight Wi-Fi via warm BBR TCP multiplexing + 1-RTT Ground-TLS + zlib (zero dependencies)",
+      "language": "Python",
+      "topics": [],
+      "stars": 1071,
+      "forks": 51,
+      "created_at": "2026-11-07T16:09:41Z",
+      "pushed_at": "2026-11-07T16:26:20Z",
+      "updated_at": "2026-11-13T16:05:53Z",
+      "stars_per_day": 178.5,
+      "age_days": 6
+    },
+    {
+      "full_name": "HolyArrs/HolyArrs",
+      "name": "HolyArrs",
+      "html_url": "https://github.com/HolyArrs/HolyArrs",
+      "description": "One self-hosted app for your shows, movies and music.",
+      "language": "Go",
       "topics": [
-        "automation",
-        "desktop",
-        "developer-tools",
-        "directory-opus",
-        "directory-opus-crack-2026",
-        "directory-opus-for-win",
-        "directory-opus-free",
-        "directory-opus-free-2026",
-        "directory-opus-setup",
-        "open-source",
-        "opus-2026",
-        "opus-crack",
-        "opus-cracked",
-        "opus-free",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
+        "docker",
+        "homelab",
+        "jellyfin",
+        "media-server",
+        "plex",
+        "self-hosted"
       ],
-      "stars": 1197,
-      "forks": 0,
-      "created_at": "2026-11-06T20:54:11Z",
-      "pushed_at": "2026-11-12T09:14:56Z",
-      "updated_at": "2026-11-12T11:01:04Z",
-      "stars_per_day": 239.4,
-      "age_days": 5
+      "stars": 1071,
+      "forks": 57,
+      "created_at": "2026-11-09T23:53:25Z",
+      "pushed_at": "2026-11-12T18:04:47Z",
+      "updated_at": "2026-11-13T16:40:04Z",
+      "stars_per_day": 357.0,
+      "age_days": 3
     },
     {
-      "full_name": "kcgeekedup-hash/delta-force-trainer-tool",
-      "name": "delta-force-trainer-tool",
-      "html_url": "https://github.com/kcgeekedup-hash/delta-force-trainer-tool",
-      "description": "Delta Force Trainer Tool: Full Working Installer With All Tools and Configurations",
-      "language": "HTML",
+      "full_name": "Goblinmine/homelab-diagram",
+      "name": "homelab-diagram",
+      "html_url": "https://github.com/Goblinmine/homelab-diagram",
+      "description": "Renders an r/homelab-style network diagram from a YAML inventory (Python \u2192 SVG/PNG). Written with Claude.",
+      "language": "Python",
+      "topics": [],
+      "stars": 971,
+      "forks": 81,
+      "created_at": "2026-11-07T12:45:46Z",
+      "pushed_at": "2026-11-07T12:51:26Z",
+      "updated_at": "2026-11-13T16:07:43Z",
+      "stars_per_day": 161.8,
+      "age_days": 6
+    },
+    {
+      "full_name": "dabingfy-dot/solo-to-team-skills",
+      "name": "solo-to-team-skills",
+      "html_url": "https://github.com/dabingfy-dot/solo-to-team-skills",
+      "description": "Skills for human-led AI teams: delegate tasks, verify evidence, explain steps clearly, and learn from real cases. \u4e00\u4e2a\u4eba\u7edf\u7b79 AI \u56e2\u961f\uff1a\u6d3e\u6d3b\u3001\u6838\u8bc1\u3001\u6e05\u695a\u8bf4\u660e\u3001\u7ecf\u9a8c\u590d\u7528\u3002",
+      "language": null,
       "topics": [
-        "automation",
-        "delta-force",
-        "delta-force-aim-assist",
-        "desktop",
-        "developer-tools",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
+        "agent-skills",
+        "ai-agents",
+        "collaboration",
+        "human-in-the-loop",
+        "workflow"
       ],
-      "stars": 1197,
-      "forks": 0,
-      "created_at": "2026-11-06T20:51:48Z",
-      "pushed_at": "2026-11-12T09:07:09Z",
-      "updated_at": "2026-11-12T11:01:03Z",
-      "stars_per_day": 239.4,
-      "age_days": 5
+      "stars": 839,
+      "forks": 89,
+      "created_at": "2026-11-07T01:36:28Z",
+      "pushed_at": "2026-11-07T01:36:36Z",
+      "updated_at": "2026-11-13T15:44:59Z",
+      "stars_per_day": 139.8,
+      "age_days": 6
     },
     {
-      "full_name": "Elegantic/designcenter-nx-desktop",
-      "name": "designcenter-nx-desktop",
-      "html_url": "https://github.com/Elegantic/designcenter-nx-desktop",
-      "description": "Designcenter-NX: Full-Feature Desktop Installer for Immediate Deployment",
-      "language": "HTML",
+      "full_name": "kolbicz/WQFiles",
+      "name": "WQFiles",
+      "html_url": "https://github.com/kolbicz/WQFiles",
+      "description": "File browser, app data manager and cache cleaner for iOS 26 and 27 (worse_query, no jailbreak)",
+      "language": "Objective-C",
+      "topics": [],
+      "stars": 793,
+      "forks": 57,
+      "created_at": "2026-11-09T13:43:40Z",
+      "pushed_at": "2026-11-13T15:09:36Z",
+      "updated_at": "2026-11-13T16:41:53Z",
+      "stars_per_day": 198.2,
+      "age_days": 4
+    },
+    {
+      "full_name": "serveroshq/panel",
+      "name": "panel",
+      "html_url": "https://github.com/serveroshq/panel",
+      "description": "The open source ServerOS panel: one place to run the Linux servers you already own.",
+      "language": "PHP",
       "topics": [
-        "automation",
-        "desktop",
-        "developer-tools",
-        "nx-cad",
-        "nxopen",
+        "agpl",
+        "control-panel",
+        "devops",
+        "laravel",
         "open-source",
-        "python",
-        "scripts",
-        "siemens-2026",
-        "siemens-cad",
-        "siemens-nx",
-        "siemens-nx-2026",
-        "siemens-nx-download",
-        "siemens-nx-free",
-        "siemens-nx-pro-install-windows-2026",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
+        "self-hosted",
+        "server-management",
+        "serveros",
+        "vps"
       ],
-      "stars": 1182,
-      "forks": 0,
-      "created_at": "2026-11-06T20:52:51Z",
-      "pushed_at": "2026-11-12T09:16:41Z",
-      "updated_at": "2026-11-12T11:01:03Z",
-      "stars_per_day": 236.4,
-      "age_days": 5
+      "stars": 721,
+      "forks": 58,
+      "created_at": "2026-11-09T00:47:33Z",
+      "pushed_at": "2026-11-13T11:25:33Z",
+      "updated_at": "2026-11-13T16:49:43Z",
+      "stars_per_day": 180.2,
+      "age_days": 4
     },
     {
-      "full_name": "Vesuvio1/display-fusion",
-      "name": "display-fusion",
-      "html_url": "https://github.com/Vesuvio1/display-fusion",
-      "description": "Display Fusion 2026 standalone desktop setup with complete feature configuration",
-      "language": "HTML",
+      "full_name": "alexeyw/lot-map",
+      "name": "lot-map",
+      "html_url": "https://github.com/alexeyw/lot-map",
+      "description": "A live map beside the chat that shows what Claude Code is doing: tool calls, model steps, hooks, skills and subagents light up as they happen. Local only, in 7 languages.",
+      "language": "TypeScript",
       "topics": [
-        "automation",
-        "desktop-tools",
+        "agent-observability",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
         "developer-tools",
-        "display-management",
-        "displayfusion",
-        "displayfusion-2026",
-        "displayfusion-multi-monitor-install-windows-2026",
-        "displayfusion-pro",
-        "displayfusion-setup",
-        "dual-monitor",
-        "for-displayfusion-tools",
-        "monitor-profiles",
-        "monitor-setup",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "taskbar-tools",
-        "utility"
+        "svg-animation",
+        "typescript",
+        "visualization"
       ],
-      "stars": 1174,
-      "forks": 0,
-      "created_at": "2026-11-06T20:54:55Z",
-      "pushed_at": "2026-11-12T09:25:51Z",
-      "updated_at": "2026-11-12T11:01:04Z",
-      "stars_per_day": 234.8,
+      "stars": 698,
+      "forks": 82,
+      "created_at": "2026-11-09T19:13:52Z",
+      "pushed_at": "2026-11-13T14:41:33Z",
+      "updated_at": "2026-11-13T16:39:12Z",
+      "stars_per_day": 232.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "Goldoire/fefw-recomp",
+      "name": "fefw-recomp",
+      "html_url": "https://github.com/Goldoire/fefw-recomp",
+      "description": "Native Windows PC port of Fire Emblem: Fortune's Weave by static recompilation. Bring your own dump; no game files included.",
+      "language": "C++",
+      "topics": [
+        "pc-port",
+        "recompilation",
+        "static-recompilation",
+        "vulkan",
+        "windows"
+      ],
+      "stars": 695,
+      "forks": 55,
+      "created_at": "2026-11-07T21:58:07Z",
+      "pushed_at": "2026-11-13T01:36:30Z",
+      "updated_at": "2026-11-13T16:45:01Z",
+      "stars_per_day": 139.0,
       "age_days": 5
     },
     {
-      "full_name": "sostenesfreitas/ocarina-recomp",
-      "name": "ocarina-recomp",
-      "html_url": "https://github.com/sostenesfreitas/ocarina-recomp",
-      "description": "Ocarina of Time running natively on Windows, no emulator. Built on your PC from your own copy. No game files included.",
+      "full_name": "adriadam10/mkw-recomp",
+      "name": "mkw-recomp",
+      "html_url": "https://github.com/adriadam10/mkw-recomp",
+      "description": "Static recompilation of Mario Kart World (Nintendo Switch 2) to a native PC program",
       "language": "C",
       "topics": [],
-      "stars": 1157,
-      "forks": 76,
-      "created_at": "2026-11-06T22:24:03Z",
-      "pushed_at": "2026-11-11T19:20:58Z",
-      "updated_at": "2026-11-12T15:18:39Z",
-      "stars_per_day": 231.4,
-      "age_days": 5
+      "stars": 654,
+      "forks": 32,
+      "created_at": "2026-11-09T15:40:06Z",
+      "pushed_at": "2026-11-13T14:53:08Z",
+      "updated_at": "2026-11-13T16:43:53Z",
+      "stars_per_day": 163.5,
+      "age_days": 4
     },
     {
-      "full_name": "Sanidhya0510/dvd-creator-game-enhancement",
-      "name": "dvd-creator-game-enhancement",
-      "html_url": "https://github.com/Sanidhya0510/dvd-creator-game-enhancement",
-      "description": "DVD-Creator 2026: Full Desktop Build, Every Feature Enabled",
-      "language": "HTML",
-      "topics": [
-        "acer-nitro",
-        "ais-data",
-        "aiseesoft-data-recovery-speed-comparison",
-        "aiseesoft-fonelab-for-ios",
-        "aiseesoft-recover-deleted-files",
-        "aiseesoft-video-converter-pc",
-        "aosp-build",
-        "automation",
-        "compound-engineering",
-        "developer-tools",
-        "dvd-authoring-on-windows",
-        "dvd-menu-customization-windows",
-        "ios-open-source",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1155,
-      "forks": 0,
-      "created_at": "2026-11-06T20:55:25Z",
-      "pushed_at": "2026-11-12T13:20:47Z",
-      "updated_at": "2026-11-12T14:20:51Z",
-      "stars_per_day": 231.0,
-      "age_days": 5
+      "full_name": "lxe/phoneuse",
+      "name": "phoneuse",
+      "html_url": "https://github.com/lxe/phoneuse",
+      "description": "See and operate an unmodified iPhone from a Linux PC: AirPlay mirror in, Bluetooth HID mouse/keyboard out, plus a CLI and skill for agents.",
+      "language": "Python",
+      "topics": [],
+      "stars": 647,
+      "forks": 61,
+      "created_at": "2026-11-07T01:28:30Z",
+      "pushed_at": "2026-11-13T06:24:18Z",
+      "updated_at": "2026-11-13T14:25:18Z",
+      "stars_per_day": 107.8,
+      "age_days": 6
     },
     {
-      "full_name": "RyoTheOne/dxo-photolab-10-config",
-      "name": "dxo-photolab-10-config",
-      "html_url": "https://github.com/RyoTheOne/dxo-photolab-10-config",
-      "description": "dxo-photolab-10: complete standalone config, ready to run, nothing held back",
-      "language": "HTML",
-      "topics": [
-        "automation",
-        "desktop",
-        "developer-tools",
-        "digital-photography",
-        "dxo-photolab-coupon",
-        "dxo-photolab-discount-code",
-        "dxo-photolab-elite",
-        "dxo-photolab-elite-download",
-        "dxo-photolab-essential",
-        "dxo-photolab-pro-install-windows-raw-editor",
-        "dxo-photolab-sale",
-        "open-source",
-        "pro-photo",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
-      ],
-      "stars": 1144,
-      "forks": 0,
-      "created_at": "2026-11-06T20:56:41Z",
-      "pushed_at": "2026-11-12T07:00:39Z",
-      "updated_at": "2026-11-12T11:01:05Z",
-      "stars_per_day": 228.8,
-      "age_days": 5
-    },
-    {
-      "full_name": "Luk177Master/easy-worship-desktop",
-      "name": "easy-worship-desktop",
-      "html_url": "https://github.com/Luk177Master/easy-worship-desktop",
-      "description": "Easy-Worship 2026: Complete Standalone Desktop Setup with All Features Enabled",
-      "language": "HTML",
-      "topics": [
-        "automation",
-        "church-presentation",
-        "desktop",
-        "developer-tools",
-        "easyworship",
-        "easyworship-pro",
-        "open-source",
-        "praise-worship",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app",
-        "worship",
-        "worship-lyrics"
-      ],
-      "stars": 1113,
-      "forks": 0,
-      "created_at": "2026-11-06T20:57:14Z",
-      "pushed_at": "2026-11-12T09:05:28Z",
-      "updated_at": "2026-11-12T11:01:06Z",
-      "stars_per_day": 222.6,
-      "age_days": 5
-    },
-    {
-      "full_name": "RolandoV3/metatrader-5-bot",
-      "name": "metatrader-5-bot",
-      "html_url": "https://github.com/RolandoV3/metatrader-5-bot",
-      "description": "Community-driven MetaTrader 5 bot with full features ready for desktop use",
+      "full_name": "JDhruv14/line-art-animation",
+      "name": "line-art-animation",
+      "html_url": "https://github.com/JDhruv14/line-art-animation",
+      "description": "A Claude skill and TypeScript library for animated line-art SVG components: ink figures that walk and react, scenes with a day/night cycle.",
       "language": "TypeScript",
       "topics": [
-        "automation",
-        "background-process",
-        "developer-tools",
-        "metatrader5-no-gui",
-        "mt5-api",
-        "mt5-bot",
-        "mt5-ea",
-        "mt5-headless",
-        "mt5-no-gui",
-        "mt5-python",
-        "mt5-run-background",
-        "mt5-stealth",
-        "mt5-stealth-mode",
-        "open-source",
-        "pymt5",
-        "pymt5-application",
-        "python",
-        "scripts",
-        "software-engineering",
-        "xauusd"
+        "claude-skill",
+        "line-art",
+        "svg-animation",
+        "typescript"
       ],
-      "stars": 1108,
-      "forks": 0,
-      "created_at": "2026-11-06T21:09:36Z",
-      "pushed_at": "2026-11-12T13:25:23Z",
-      "updated_at": "2026-11-12T14:34:49Z",
-      "stars_per_day": 221.6,
+      "stars": 643,
+      "forks": 103,
+      "created_at": "2026-11-10T09:25:25Z",
+      "pushed_at": "2026-11-10T09:25:38Z",
+      "updated_at": "2026-11-13T16:40:58Z",
+      "stars_per_day": 214.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "forcequitOS/worse_query",
+      "name": "worse_query",
+      "html_url": "https://github.com/forcequitOS/worse_query",
+      "description": "A sandbox escape for iOS 26 and 27, again",
+      "language": "Objective-C",
+      "topics": [],
+      "stars": 607,
+      "forks": 148,
+      "created_at": "2026-11-08T17:00:03Z",
+      "pushed_at": "2026-11-08T20:05:55Z",
+      "updated_at": "2026-11-13T16:37:57Z",
+      "stars_per_day": 151.8,
+      "age_days": 4
+    },
+    {
+      "full_name": "LNPANDY/HGhub-MacOS-iOS-Version",
+      "name": "HGhub-MacOS-iOS-Version",
+      "html_url": "https://github.com/LNPANDY/HGhub-MacOS-iOS-Version",
+      "description": "HGhub \u8de8\u5e73\u53f0\u5ba2\u6237\u7aef (macOS & iOS \u589e\u5f3a\u7248) \u00b7 \u652f\u6301 Apple Silicon / Intel \u53cc\u67b6\u6784 DMG \u4e0e iOS \u514d\u7b7e IPA \u00b7 \u6c89\u6d78\u5f0f\u5237\u5267 / \u624b\u52bf\u7f29\u653e / \u539f\u751f\u6a2a\u5c4f\u5168\u5c4f / \u591a\u7ebf\u8def\u955c\u50cf\u6d4b\u901f",
+      "language": null,
+      "topics": [
+        "apple-silicon",
+        "dmg",
+        "ios",
+        "ipa",
+        "macos",
+        "react",
+        "rust",
+        "tauri"
+      ],
+      "stars": 511,
+      "forks": 315,
+      "created_at": "2026-11-07T20:39:55Z",
+      "pushed_at": "2026-11-13T14:35:43Z",
+      "updated_at": "2026-11-13T16:46:36Z",
+      "stars_per_day": 102.2,
       "age_days": 5
     },
     {
-      "full_name": "dikshantghimire321-droid/kontakt-8-config",
-      "name": "kontakt-8-config",
-      "html_url": "https://github.com/dikshantghimire321-droid/kontakt-8-config",
-      "description": "Kontakt 8 desktop utility config: opinionated dotfiles, ready to run",
-      "language": "HTML",
-      "topics": [
-        "automation",
-        "desktop",
-        "developer-tools",
-        "kontakt",
-        "kontakt-full-library",
-        "kontakt-full-library-pc",
-        "open-source",
-        "orchestral",
-        "python",
-        "scripts",
-        "software-engineering",
-        "studio-recording",
-        "system",
-        "utility",
-        "virtual-instrument",
-        "vst-plugins",
-        "windows-app"
-      ],
-      "stars": 1104,
-      "forks": 0,
-      "created_at": "2026-11-06T21:07:23Z",
-      "pushed_at": "2026-11-12T13:26:40Z",
-      "updated_at": "2026-11-12T14:26:45Z",
-      "stars_per_day": 220.8,
+      "full_name": "luobinger/PerkRadar",
+      "name": "PerkRadar",
+      "html_url": "https://github.com/luobinger/PerkRadar",
+      "description": "PerkRadar \u2014 A self-hosted deals aggregator that fetches freebies, limited-time offers, and discounts from multiple sources every two hours, with source status tracking, expiration handling, and personal bookmarks.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 491,
+      "forks": 97,
+      "created_at": "2026-11-08T08:22:48Z",
+      "pushed_at": "2026-11-13T12:27:57Z",
+      "updated_at": "2026-11-13T12:27:41Z",
+      "stars_per_day": 98.2,
       "age_days": 5
     },
     {
-      "full_name": "janitoff0/ninjatrader-bot",
-      "name": "ninjatrader-bot",
-      "html_url": "https://github.com/janitoff0/ninjatrader-bot",
-      "description": "Ninjatrader Bot 2026: a friendly, community-driven trading companion packed with powerful features",
-      "language": "HTML",
+      "full_name": "Robbyant/lingbot-touch",
+      "name": "lingbot-touch",
+      "html_url": "https://github.com/Robbyant/lingbot-touch",
+      "description": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
+      "language": "Python",
+      "topics": [],
+      "stars": 483,
+      "forks": 5,
+      "created_at": "2026-11-09T09:02:29Z",
+      "pushed_at": "2026-11-11T02:28:03Z",
+      "updated_at": "2026-11-13T16:17:36Z",
+      "stars_per_day": 120.8,
+      "age_days": 4
+    },
+    {
+      "full_name": "Dodaios/ste80-humanizer",
+      "name": "ste80-humanizer",
+      "html_url": "https://github.com/Dodaios/ste80-humanizer",
+      "description": "STE80 Humanizer: agent skill that removes AI tells and rewrites text 80% of the way to ASD-STE100 (Simplified Technical English), the method Andrej Karpathy shared.",
+      "language": "Python",
       "topics": [
-        "automation",
-        "desktop",
-        "developer-tools",
-        "ninjatrader",
-        "ninjatrader-8",
-        "ninjatrader-addon",
-        "ninjatrader-indicators",
-        "open-source",
-        "python",
-        "scripts",
-        "snipe-run",
-        "software-engineering",
-        "system",
-        "trade-copier",
-        "utility",
-        "whale-tracker",
-        "windows-app"
+        "agent-skills",
+        "ai-writing",
+        "asd-ste100",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "humanize-ai-text",
+        "humanizer",
+        "karpathy",
+        "llm",
+        "plain-language",
+        "simplified-technical-english",
+        "writing"
       ],
-      "stars": 1104,
-      "forks": 0,
-      "created_at": "2026-11-06T21:13:59Z",
-      "pushed_at": "2026-11-12T13:22:20Z",
-      "updated_at": "2026-11-12T14:22:26Z",
-      "stars_per_day": 220.8,
+      "stars": 482,
+      "forks": 29,
+      "created_at": "2026-11-09T17:18:59Z",
+      "pushed_at": "2026-11-10T08:52:47Z",
+      "updated_at": "2026-11-13T16:44:45Z",
+      "stars_per_day": 160.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "AIRzZ90/study-materials-fork",
+      "name": "study-materials-fork",
+      "html_url": "https://github.com/AIRzZ90/study-materials-fork",
+      "description": "A cross-platform Tauri 2 interface and interaction practice project",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 482,
+      "forks": 705,
+      "created_at": "2026-11-12T10:52:32Z",
+      "pushed_at": "2026-11-12T11:06:34Z",
+      "updated_at": "2026-11-13T16:25:21Z",
+      "stars_per_day": 482.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "21stware/bowel",
+      "name": "bowel",
+      "html_url": "https://github.com/21stware/bowel",
+      "description": "Bowel is a mihomo client for macOS, Windows, Linux and Android.",
+      "language": "Go",
+      "topics": [
+        "android",
+        "clash",
+        "clash-meta",
+        "linux",
+        "macos",
+        "mcp",
+        "mihomo",
+        "proxy-client",
+        "windows"
+      ],
+      "stars": 476,
+      "forks": 24,
+      "created_at": "2026-11-07T17:45:52Z",
+      "pushed_at": "2026-11-13T16:47:24Z",
+      "updated_at": "2026-11-13T14:23:12Z",
+      "stars_per_day": 95.2,
       "age_days": 5
     },
     {
-      "full_name": "leanislizarzado/ibm-spss-desktop-suite",
-      "name": "ibm-spss-desktop-suite",
-      "html_url": "https://github.com/leanislizarzado/ibm-spss-desktop-suite",
-      "description": "IBM SPSS Statistics 2026 Standalone Setup with Full Feature Configuration",
-      "language": "HTML",
+      "full_name": "TooonyChen/finallyshell",
+      "name": "finallyshell",
+      "html_url": "https://github.com/TooonyChen/finallyshell",
+      "description": "\u7c7bfinalshell\u7684ssh\u5ba2\u6237\u7aef // An source-available finalshell copy, with go runtime and mygo UI",
+      "language": "Go",
       "topics": [
-        "analytics-suite",
-        "automation",
-        "desktop",
-        "developer-tools",
-        "ibm-analytics",
-        "ibm-spss",
-        "ibm-spss-install-setup-windows-2026",
-        "ibm-watson-services",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "spss",
-        "spss-2026",
-        "spss-sav",
-        "spss-statistics-2026",
-        "spss-statistics-download",
-        "system",
-        "utility",
-        "windows-app"
+        "finalshell",
+        "libghostty",
+        "mygo-ui",
+        "ssh",
+        "ssh-client",
+        "terminal"
       ],
-      "stars": 1104,
-      "forks": 0,
-      "created_at": "2026-11-06T21:04:22Z",
-      "pushed_at": "2026-11-12T15:01:58Z",
-      "updated_at": "2026-11-12T16:02:02Z",
-      "stars_per_day": 220.8,
-      "age_days": 5
+      "stars": 468,
+      "forks": 46,
+      "created_at": "2026-11-07T00:34:42Z",
+      "pushed_at": "2026-11-11T05:07:00Z",
+      "updated_at": "2026-11-13T16:08:58Z",
+      "stars_per_day": 78.0,
+      "age_days": 6
+    },
+    {
+      "full_name": "deepseek-ai/chat-demo",
+      "name": "chat-demo",
+      "html_url": "https://github.com/deepseek-ai/chat-demo",
+      "description": "Chat Demo",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 438,
+      "forks": 85,
+      "created_at": "2026-11-12T08:08:19Z",
+      "pushed_at": "2026-11-13T14:33:08Z",
+      "updated_at": "2026-11-13T16:49:13Z",
+      "stars_per_day": 438.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "makepad/relax",
+      "name": "relax",
+      "html_url": "https://github.com/makepad/relax",
+      "description": "Relax Rust JIT",
+      "language": "Rust",
+      "topics": [],
+      "stars": 437,
+      "forks": 26,
+      "created_at": "2026-11-11T19:12:58Z",
+      "pushed_at": "2026-11-13T14:56:57Z",
+      "updated_at": "2026-11-13T16:47:52Z",
+      "stars_per_day": 437.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "paulirish/chrome-capture",
+      "name": "chrome-capture",
+      "html_url": "https://github.com/paulirish/chrome-capture",
+      "description": "60-120fps / 2160p tab video/audio capture from Chrome",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 429,
+      "forks": 7,
+      "created_at": "2026-11-08T20:07:38Z",
+      "pushed_at": "2026-11-11T01:40:29Z",
+      "updated_at": "2026-11-13T16:26:30Z",
+      "stars_per_day": 107.2,
+      "age_days": 4
     }
   ],
   "hn_items": [
@@ -1134,87 +830,99 @@
   ],
   "devto_items": [
     {
+      "title": "Long Live Rails",
+      "url": "https://dev.to/ben/long-live-rails-3p21",
+      "reactions": 118,
+      "comments": 17,
+      "published_at": "2026-11-12T15:30:50Z"
+    },
+    {
       "title": "Our Looping Factory Cut DEV Page Load Time by 75% and Counting",
       "url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf",
-      "reactions": 126,
-      "comments": 33,
+      "reactions": 134,
+      "comments": 35,
       "published_at": "2026-11-09T16:12:25Z"
     },
     {
       "title": "How do you truly stand out in Tech?",
       "url": "https://dev.to/francistrdev/how-do-you-truly-stand-out-in-tech-478a",
-      "reactions": 164,
-      "comments": 94,
+      "reactions": 186,
+      "comments": 107,
       "published_at": "2026-11-09T15:11:22Z"
     },
     {
       "title": "How did you end up in tech, and are you staying?",
       "url": "https://dev.to/maame-codes/how-did-you-end-up-in-tech-and-are-you-staying-4l9b",
-      "reactions": 139,
-      "comments": 55,
+      "reactions": 147,
+      "comments": 60,
       "published_at": "2026-11-09T23:02:37Z"
-    },
-    {
-      "title": "Congrats to the Kaggle Benchmarking Challenge Winners!",
-      "url": "https://dev.to/devteam/congrats-to-the-kaggle-benchmarking-challenge-winners-2moh",
-      "reactions": 143,
-      "comments": 32,
-      "published_at": "2026-11-05T21:12:11Z"
-    },
-    {
-      "title": "Necoz Has a New Home on DEV! \ud83d\udc08\ud83c\udf89",
-      "url": "https://dev.to/necoz/necoz-has-a-new-home-on-dev-3454",
-      "reactions": 162,
-      "comments": 114,
-      "published_at": "2026-11-08T11:50:29Z"
-    },
-    {
-      "title": "Long Live Rails",
-      "url": "https://dev.to/ben/long-live-rails-3p21",
-      "reactions": 60,
-      "comments": 6,
-      "published_at": "2026-11-12T15:30:50Z"
-    },
-    {
-      "title": "What was your win this week?",
-      "url": "https://dev.to/devteam/what-was-your-win-this-week-28dh",
-      "reactions": 121,
-      "comments": 87,
-      "published_at": "2026-11-06T14:00:00Z"
-    },
-    {
-      "title": "The C Trilogy: How Dennis Ritchie, Bjarne Stroustrup, and Anders Hejlsberg Built the Modern World \ud83c\udfdb\ufe0f",
-      "url": "https://dev.to/devengers/the-c-trilogy-how-dennis-ritchie-bjarne-stroustrup-and-anders-hejlsberg-built-the-modern-world-1onp",
-      "reactions": 121,
-      "comments": 40,
-      "published_at": "2026-11-09T15:30:54Z"
-    },
-    {
-      "title": "An AI Testing Presentation Became the Final Push for Organizational Change at My Company",
-      "url": "https://dev.to/xulingfeng/an-ai-testing-presentation-became-the-final-push-for-organizational-change-at-my-company-12ag",
-      "reactions": 133,
-      "comments": 76,
-      "published_at": "2026-11-06T01:27:32Z"
     },
     {
       "title": "MCP Is Dead Simple. And That's Exactly the Problem",
       "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
-      "reactions": 64,
-      "comments": 34,
+      "reactions": 126,
+      "comments": 92,
       "published_at": "2026-11-12T08:14:36Z"
+    },
+    {
+      "title": "Necoz Has a New Home on DEV! \ud83d\udc08\ud83c\udf89",
+      "url": "https://dev.to/necoz/necoz-has-a-new-home-on-dev-3454",
+      "reactions": 171,
+      "comments": 119,
+      "published_at": "2026-11-08T11:50:29Z"
+    },
+    {
+      "title": "The C Trilogy: How Dennis Ritchie, Bjarne Stroustrup, and Anders Hejlsberg Built the Modern World \ud83c\udfdb\ufe0f",
+      "url": "https://dev.to/devengers/the-c-trilogy-how-dennis-ritchie-bjarne-stroustrup-and-anders-hejlsberg-built-the-modern-world-1onp",
+      "reactions": 135,
+      "comments": 45,
+      "published_at": "2026-11-09T15:30:54Z"
+    },
+    {
+      "title": "A 10 years old developer who has become a DEV.to Trusted Member! \ud83d\ude31",
+      "url": "https://dev.to/necoz/a-10-years-old-developer-who-has-become-a-devto-trusted-member-49c8",
+      "reactions": 93,
+      "comments": 48,
+      "published_at": "2026-11-12T11:18:53Z"
+    },
+    {
+      "title": "How much does it cost to run a text game with LLMs",
+      "url": "https://dev.to/hiper2d/how-much-does-it-cost-to-run-a-text-game-with-llms-57o7",
+      "reactions": 84,
+      "comments": 88,
+      "published_at": "2026-11-08T18:46:19Z"
+    },
+    {
+      "title": "We Keep Hearing About AI Productivity. The QA Group Chat Told a Different Story.",
+      "url": "https://dev.to/xulingfeng/we-keep-hearing-about-ai-productivity-the-qa-group-chat-told-a-different-story-2nma",
+      "reactions": 108,
+      "comments": 110,
+      "published_at": "2026-11-11T08:35:15Z"
     }
   ],
   "languages": [
     [
-      "HTML",
-      19
+      "TypeScript",
+      8
     ],
     [
-      "TypeScript",
+      "Python",
+      6
+    ],
+    [
+      "Go",
       3
     ],
     [
       "C",
+      2
+    ],
+    [
+      "C++",
+      2
+    ],
+    [
+      "Objective-C",
       2
     ],
     [
@@ -1226,193 +934,113 @@
       1
     ],
     [
-      "Go",
+      "PHP",
       1
     ],
     [
-      "JavaScript",
-      1
-    ],
-    [
-      "Python",
+      "Rust",
       1
     ]
   ],
   "topics": [
     [
-      "automation",
-      22
+      "macos",
+      4
     ],
     [
-      "developer-tools",
-      22
+      "ai-agents",
+      3
     ],
     [
-      "open-source",
-      22
+      "claude-code",
+      3
     ],
     [
-      "python",
-      22
+      "mcp",
+      3
     ],
     [
-      "scripts",
-      22
+      "self-hosted",
+      3
     ],
     [
-      "software-engineering",
-      22
+      "windows",
+      3
     ],
     [
-      "utility",
-      20
-    ],
-    [
-      "system",
-      18
-    ],
-    [
-      "windows-app",
-      17
-    ],
-    [
-      "desktop",
-      15
-    ],
-    [
-      "acer-nitro",
-      1
-    ],
-    [
-      "acrobat-dc-pro",
-      1
-    ],
-    [
-      "acrobat-for-free-2026",
-      1
-    ],
-    [
-      "acrobat-no-limits",
-      1
-    ],
-    [
-      "acrobat-pdf",
-      1
-    ],
-    [
-      "aida64",
-      1
-    ],
-    [
-      "aida64-extreme-compatibility-check",
-      1
-    ],
-    [
-      "aida64-extreme-detailed-reporting",
-      1
-    ],
-    [
-      "aida64-extreme-hardware-diagnostics",
-      1
-    ],
-    [
-      "aida64-extreme-setup",
-      1
-    ],
-    [
-      "aida64-extreme-system-information",
-      1
-    ],
-    [
-      "aida64-free-setup",
-      1
-    ],
-    [
-      "aion-2",
-      1
-    ],
-    [
-      "aion-2-2026",
-      1
-    ],
-    [
-      "aion-2-game",
-      1
-    ],
-    [
-      "aion-2-optimizer",
-      1
-    ],
-    [
-      "aion-2-trainer",
-      1
-    ],
-    [
-      "aion-2-trainer-tool",
-      1
-    ],
-    [
-      "aion2-combat-analysis",
-      1
-    ],
-    [
-      "aion2-meter",
-      1
-    ],
-    [
-      "ais-data",
-      1
-    ],
-    [
-      "aiseesoft-data-recovery-speed-comparison",
-      1
-    ],
-    [
-      "aiseesoft-fonelab-for-ios",
-      1
-    ],
-    [
-      "aiseesoft-recover-deleted-files",
-      1
-    ],
-    [
-      "aiseesoft-video-converter-pc",
-      1
-    ],
-    [
-      "analytics-suite",
-      1
-    ],
-    [
-      "aomei",
-      1
-    ],
-    [
-      "aomei-partition",
-      1
-    ],
-    [
-      "aomei-setup",
-      1
-    ],
-    [
-      "aosp-build",
-      1
+      "agent-skills",
+      2
     ],
     [
       "apple-silicon",
+      2
+    ],
+    [
+      "claude",
+      2
+    ],
+    [
+      "codex",
+      2
+    ],
+    [
+      "collaboration",
+      2
+    ],
+    [
+      "human-in-the-loop",
+      2
+    ],
+    [
+      "ios",
+      2
+    ],
+    [
+      "linux",
+      2
+    ],
+    [
+      "llm",
+      2
+    ],
+    [
+      "open-source",
+      2
+    ],
+    [
+      "static-recompilation",
+      2
+    ],
+    [
+      "svg-animation",
+      2
+    ],
+    [
+      "typescript",
+      2
+    ],
+    [
+      "agent-observability",
       1
     ],
     [
-      "archicad",
+      "agentic-ai",
       1
     ],
     [
-      "archicad-2026",
+      "agpl",
       1
     ],
     [
-      "archicad-download",
+      "ai-meeting-assistant",
+      1
+    ],
+    [
+      "ai-writing",
+      1
+    ],
+    [
+      "android",
       1
     ],
     [
@@ -1420,299 +1048,75 @@
       1
     ],
     [
-      "autodesk-inventor-pro",
+      "asd-ste100",
       1
     ],
     [
-      "autodesk-inventor-pro-pc",
+      "browser-automation",
       1
     ],
     [
-      "background-process",
+      "chat",
       1
     ],
     [
-      "church-presentation",
+      "clash",
       1
     ],
     [
-      "clion-2026",
+      "clash-meta",
       1
     ],
     [
-      "clion-download-windows",
+      "claude-code-plugin",
       1
     ],
     [
-      "cmake-ide",
+      "claude-skill",
       1
     ],
     [
-      "compound-engineering",
+      "claude-skills",
       1
     ],
     [
-      "cpp-ide",
+      "computer-use",
       1
     ],
     [
-      "cubase",
+      "control-panel",
       1
     ],
     [
-      "cubase-15",
+      "cursor",
       1
     ],
     [
-      "cubase-for-beginners",
+      "developer-tools",
       1
     ],
     [
-      "cubase-pro",
+      "devops",
       1
     ],
     [
-      "cubase-pro-2026",
+      "dmg",
       1
     ],
     [
-      "cubase-setup",
+      "docker",
       1
     ],
     [
-      "cubase-tutorial",
+      "docker-compose",
       1
     ],
     [
-      "cubase-windows-download",
+      "electron",
       1
     ],
     [
-      "cubasecubase-pro",
-      1
-    ],
-    [
-      "cube-solver",
-      1
-    ],
-    [
-      "cubic-splines",
-      1
-    ],
-    [
-      "daemon-2026",
-      1
-    ],
-    [
-      "daemon-tools",
-      1
-    ],
-    [
-      "daemon-tools-install-setup-windows-2026",
-      1
-    ],
-    [
-      "daemon-tools-pro-advanced",
-      1
-    ],
-    [
-      "daemon-tools-pro-vs-ultra",
-      1
-    ],
-    [
-      "daemon-tools-ultra",
-      1
-    ],
-    [
-      "daemon-tools-ultra-2026",
-      1
-    ],
-    [
-      "daemon-tools-ultra-download",
-      1
-    ],
-    [
-      "delta-exec",
-      1
-    ],
-    [
-      "delta-executor-26",
-      1
-    ],
-    [
-      "delta-executor-exploit",
-      1
-    ],
-    [
-      "delta-executor-for-free",
-      1
-    ],
-    [
-      "delta-executor-for-pc-2026",
-      1
-    ],
-    [
-      "delta-executor-for-win",
-      1
-    ],
-    [
-      "delta-executor-lua",
-      1
-    ],
-    [
-      "delta-executor-pc-2026",
-      1
-    ],
-    [
-      "delta-for-pc",
-      1
-    ],
-    [
-      "delta-for-pc-2026",
-      1
-    ],
-    [
-      "delta-force",
-      1
-    ],
-    [
-      "delta-force-aim-assist",
-      1
-    ],
-    [
-      "delta-free-executor",
-      1
-    ],
-    [
-      "delta-key-bypass",
-      1
-    ],
-    [
-      "delta-lua-executor",
-      1
-    ],
-    [
-      "desktop-tools",
-      1
-    ],
-    [
-      "digital-photography",
-      1
-    ],
-    [
-      "directory-opus",
-      1
-    ],
-    [
-      "directory-opus-crack-2026",
-      1
-    ],
-    [
-      "directory-opus-for-win",
-      1
-    ],
-    [
-      "directory-opus-free",
-      1
-    ],
-    [
-      "directory-opus-free-2026",
-      1
-    ],
-    [
-      "directory-opus-setup",
-      1
-    ],
-    [
-      "disk-manager",
-      1
-    ],
-    [
-      "disk-partitioning",
-      1
-    ],
-    [
-      "display-management",
-      1
-    ],
-    [
-      "displayfusion",
-      1
-    ],
-    [
-      "displayfusion-2026",
-      1
-    ],
-    [
-      "displayfusion-multi-monitor-install-windows-2026",
-      1
-    ],
-    [
-      "displayfusion-pro",
-      1
-    ],
-    [
-      "displayfusion-setup",
-      1
-    ],
-    [
-      "dual-monitor",
-      1
-    ],
-    [
-      "dvd-authoring-on-windows",
-      1
-    ],
-    [
-      "dvd-menu-customization-windows",
-      1
-    ],
-    [
-      "dxo-photolab-coupon",
-      1
-    ],
-    [
-      "dxo-photolab-discount-code",
-      1
-    ],
-    [
-      "dxo-photolab-elite",
-      1
-    ],
-    [
-      "dxo-photolab-elite-download",
-      1
-    ],
-    [
-      "dxo-photolab-essential",
-      1
-    ],
-    [
-      "dxo-photolab-pro-install-windows-raw-editor",
-      1
-    ],
-    [
-      "dxo-photolab-sale",
-      1
-    ],
-    [
-      "easyworship",
-      1
-    ],
-    [
-      "easyworship-pro",
-      1
-    ],
-    [
-      "for-displayfusion-tools",
-      1
-    ],
-    [
-      "forms-acrobat-pro",
-      1
-    ],
-    [
-      "free-pdf-reader-windows",
+      "finalshell",
       1
     ],
     [
@@ -1720,55 +1124,27 @@
       1
     ],
     [
-      "graphisoft-archicad-install-setup-windows-2026",
+      "gemini",
       1
     ],
     [
-      "ibm-analytics",
+      "grok",
       1
     ],
     [
-      "ibm-spss",
+      "homelab",
       1
     ],
     [
-      "ibm-spss-install-setup-windows-2026",
+      "humanize-ai-text",
       1
     ],
     [
-      "ibm-watson-services",
+      "humanizer",
       1
     ],
     [
-      "inventor",
-      1
-    ],
-    [
-      "inventor-automation",
-      1
-    ],
-    [
-      "inventor-design",
-      1
-    ],
-    [
-      "inventor-parts",
-      1
-    ],
-    [
-      "inventory-app",
-      1
-    ],
-    [
-      "inventory-system",
-      1
-    ],
-    [
-      "ios",
-      1
-    ],
-    [
-      "ios-open-source",
+      "ipa",
       1
     ],
     [
@@ -1776,31 +1152,39 @@
       1
     ],
     [
-      "jetbrains-clion",
+      "jellyfin",
       1
     ],
     [
-      "jetbrains-clion-install-setup-2026",
+      "karpathy",
       1
     ],
     [
-      "kontakt",
+      "laravel",
       1
     ],
     [
-      "kontakt-full-library",
+      "libghostty",
       1
     ],
     [
-      "kontakt-full-library-pc",
+      "line-art",
       1
     ],
     [
-      "macos",
+      "llama-cpp",
       1
     ],
     [
-      "merge-partitions",
+      "local-ai",
+      1
+    ],
+    [
+      "media-server",
+      1
+    ],
+    [
+      "meeting-notes",
       1
     ],
     [
@@ -1808,159 +1192,51 @@
       1
     ],
     [
-      "metatrader5-no-gui",
+      "mihomo",
       1
     ],
     [
-      "mixing-and-mastering",
+      "multi-agent",
       1
     ],
     [
-      "monitor-profiles",
+      "mygo-ui",
       1
     ],
     [
-      "monitor-setup",
+      "openai",
       1
     ],
     [
-      "mt5-api",
+      "pc-port",
       1
     ],
     [
-      "mt5-bot",
+      "plain-language",
       1
     ],
     [
-      "mt5-ea",
+      "plex",
       1
     ],
     [
-      "mt5-headless",
+      "privacy",
       1
     ],
     [
-      "mt5-no-gui",
+      "proxy-client",
       1
     ],
     [
-      "mt5-python",
+      "react",
       1
     ],
     [
-      "mt5-run-background",
+      "recompilation",
       1
     ],
     [
-      "mt5-stealth",
-      1
-    ],
-    [
-      "mt5-stealth-mode",
-      1
-    ],
-    [
-      "ninjatrader",
-      1
-    ],
-    [
-      "ninjatrader-8",
-      1
-    ],
-    [
-      "ninjatrader-addon",
-      1
-    ],
-    [
-      "ninjatrader-indicators",
-      1
-    ],
-    [
-      "nx-cad",
-      1
-    ],
-    [
-      "nxopen",
-      1
-    ],
-    [
-      "offsets-dump",
-      1
-    ],
-    [
-      "opus-2026",
-      1
-    ],
-    [
-      "opus-crack",
-      1
-    ],
-    [
-      "opus-cracked",
-      1
-    ],
-    [
-      "opus-free",
-      1
-    ],
-    [
-      "orchestral",
-      1
-    ],
-    [
-      "os-migration",
-      1
-    ],
-    [
-      "partition-assistant",
-      1
-    ],
-    [
-      "partition-manager",
-      1
-    ],
-    [
-      "partition-recovery",
-      1
-    ],
-    [
-      "partition-tool",
-      1
-    ],
-    [
-      "pc-diagnostics-windows-platform",
-      1
-    ],
-    [
-      "pdf-password",
-      1
-    ],
-    [
-      "praise-worship",
-      1
-    ],
-    [
-      "pro-acrobat",
-      1
-    ],
-    [
-      "pro-photo",
-      1
-    ],
-    [
-      "pymt5",
-      1
-    ],
-    [
-      "pymt5-application",
-      1
-    ],
-    [
-      "real-time-inventory",
-      1
-    ],
-    [
-      "resize-partition",
+      "rust",
       1
     ],
     [
@@ -1968,115 +1244,31 @@
       1
     ],
     [
-      "siemens-2026",
+      "server-management",
       1
     ],
     [
-      "siemens-cad",
+      "serveros",
       1
     ],
     [
-      "siemens-nx",
+      "simplified-technical-english",
       1
     ],
     [
-      "siemens-nx-2026",
+      "slack-alternative",
       1
     ],
     [
-      "siemens-nx-download",
+      "speech-to-text",
       1
     ],
     [
-      "siemens-nx-free",
+      "ssh",
       1
     ],
     [
-      "siemens-nx-pro-install-windows-2026",
-      1
-    ],
-    [
-      "snipe-run",
-      1
-    ],
-    [
-      "split-partition",
-      1
-    ],
-    [
-      "spss",
-      1
-    ],
-    [
-      "spss-2026",
-      1
-    ],
-    [
-      "spss-sav",
-      1
-    ],
-    [
-      "spss-statistics-2026",
-      1
-    ],
-    [
-      "spss-statistics-download",
-      1
-    ],
-    [
-      "static-recompilation",
-      1
-    ],
-    [
-      "steinberg-cubase",
-      1
-    ],
-    [
-      "stock-inventory",
-      1
-    ],
-    [
-      "studio-recording",
-      1
-    ],
-    [
-      "substance",
-      1
-    ],
-    [
-      "substance-3d",
-      1
-    ],
-    [
-      "substance-3d-painter",
-      1
-    ],
-    [
-      "substance-abuse",
-      1
-    ],
-    [
-      "substance-designer",
-      1
-    ],
-    [
-      "substance-designer-allegorithmic",
-      1
-    ],
-    [
-      "substance-painter",
-      1
-    ],
-    [
-      "substance-use",
-      1
-    ],
-    [
-      "substance3d",
-      1
-    ],
-    [
-      "substancedesigner",
+      "ssh-client",
       1
     ],
     [
@@ -2084,47 +1276,47 @@
       1
     ],
     [
-      "taskbar-tools",
+      "tauri",
       1
     ],
     [
-      "trade-copier",
+      "team-chat",
       1
     ],
     [
-      "virtual-instrument",
+      "terminal",
       1
     ],
     [
-      "vst-plugins",
+      "transcription",
       1
     ],
     [
-      "vst3-plugins",
+      "visualization",
       1
     ],
     [
-      "whale-tracker",
+      "vps",
       1
     ],
     [
-      "windows-cpu-gpu-status-check",
+      "vulkan",
       1
     ],
     [
-      "windows-performance-benchmarking",
+      "whisper",
       1
     ],
     [
-      "worship",
+      "whisper-cpp",
       1
     ],
     [
-      "worship-lyrics",
+      "workflow",
       1
     ],
     [
-      "xauusd",
+      "writing",
       1
     ]
   ]

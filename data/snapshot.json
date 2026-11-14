@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-13T16:50:46.722242+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-06, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-14T15:24:33.788564+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-07, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-06&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-07&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -26,35 +26,28 @@
     {
       "name": "TypeScript",
       "kind": "language",
-      "count_in_snapshot": 8,
+      "count_in_snapshot": 11,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "Python",
       "kind": "language",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "macos",
+      "name": "self-hosted",
       "kind": "topic",
       "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "Go",
-      "kind": "language",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "ai-agents",
+      "name": "typescript",
       "kind": "topic",
-      "count_in_snapshot": 3,
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -66,35 +59,7 @@
       "devto_mentions": 0
     },
     {
-      "name": "mcp",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 1
-    },
-    {
-      "name": "self-hosted",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "windows",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "C",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 18,
-      "devto_mentions": 15
-    },
-    {
-      "name": "C++",
+      "name": "Go",
       "kind": "language",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -115,14 +80,7 @@
       "devto_mentions": 0
     },
     {
-      "name": "agent-skills",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "apple-silicon",
+      "name": "ai-agents",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -143,30 +101,72 @@
       "devto_mentions": 0
     },
     {
-      "name": "collaboration",
+      "name": "llm",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "human-in-the-loop",
+      "name": "macos",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "ios",
+      "name": "mcp",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
+      "name": "open-source",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 4,
+      "devto_mentions": 1
+    },
+    {
+      "name": "svg-animation",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "linux",
+      "name": "windows",
       "kind": "topic",
       "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "3d-scanning",
+      "kind": "topic",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "C",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 18,
+      "devto_mentions": 17
+    },
+    {
+      "name": "C#",
+      "kind": "language",
+      "count_in_snapshot": 1,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "C++",
+      "kind": "language",
+      "count_in_snapshot": 1,
       "hn_mentions": 0,
       "devto_mentions": 0
     }
@@ -179,28 +179,13 @@
       "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
       "language": "Swift",
       "topics": [],
-      "stars": 7225,
-      "forks": 2591,
+      "stars": 7515,
+      "forks": 2630,
       "created_at": "2026-11-09T05:15:48Z",
-      "pushed_at": "2026-11-13T16:43:38Z",
-      "updated_at": "2026-11-13T16:43:46Z",
-      "stars_per_day": 1806.2,
-      "age_days": 4
-    },
-    {
-      "full_name": "tangerineturtle1/NX2navi",
-      "name": "NX2navi",
-      "html_url": "https://github.com/tangerineturtle1/NX2navi",
-      "description": null,
-      "language": "C",
-      "topics": [],
-      "stars": 3779,
-      "forks": 275,
-      "created_at": "2026-11-07T10:01:23Z",
-      "pushed_at": "2026-11-13T16:49:35Z",
-      "updated_at": "2026-11-13T16:47:12Z",
-      "stars_per_day": 629.8,
-      "age_days": 6
+      "pushed_at": "2026-11-14T09:27:55Z",
+      "updated_at": "2026-11-14T15:18:45Z",
+      "stars_per_day": 1503.0,
+      "age_days": 5
     },
     {
       "full_name": "jhaizhou-ops/S2Arm",
@@ -220,13 +205,13 @@
         "static-recompilation",
         "switch"
       ],
-      "stars": 2852,
-      "forks": 521,
+      "stars": 2944,
+      "forks": 536,
       "created_at": "2026-11-08T05:49:46Z",
-      "pushed_at": "2026-11-13T16:44:44Z",
-      "updated_at": "2026-11-13T16:38:16Z",
-      "stars_per_day": 570.4,
-      "age_days": 5
+      "pushed_at": "2026-11-14T14:52:58Z",
+      "updated_at": "2026-11-14T15:16:17Z",
+      "stars_per_day": 490.7,
+      "age_days": 6
     },
     {
       "full_name": "Kianuni/Erosion-CN",
@@ -235,28 +220,13 @@
       "description": "iOS / iPadOS \u7cfb\u7edf\u914d\u7f6e\u4e0e MobileGestalt \u7814\u7a76\u5de5\u5177\u7bb1\uff08\u7b80\u4f53\u4e2d\u6587\u9632\u767d\u82f9\u679c\u5b89\u5168\u52a0\u56fa\u7248\uff09",
       "language": "Swift",
       "topics": [],
-      "stars": 1886,
-      "forks": 403,
+      "stars": 2028,
+      "forks": 420,
       "created_at": "2026-11-10T02:37:31Z",
-      "pushed_at": "2026-11-13T15:38:08Z",
-      "updated_at": "2026-11-13T16:19:25Z",
-      "stars_per_day": 628.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "HybridRobotics/supermimic",
-      "name": "supermimic",
-      "html_url": "https://github.com/HybridRobotics/supermimic",
-      "description": "Humanoid whole-body motion tracking with one differentiable world model.",
-      "language": "Python",
-      "topics": [],
-      "stars": 1417,
-      "forks": 91,
-      "created_at": "2026-11-10T10:46:56Z",
-      "pushed_at": "2026-11-11T08:06:27Z",
-      "updated_at": "2026-11-13T16:21:22Z",
-      "stars_per_day": 472.3,
-      "age_days": 3
+      "pushed_at": "2026-11-14T06:38:10Z",
+      "updated_at": "2026-11-14T15:16:06Z",
+      "stars_per_day": 507.0,
+      "age_days": 4
     },
     {
       "full_name": "apex-compute/ANR",
@@ -265,13 +235,79 @@
       "description": "Apex Neural Rendering (ANR) by Apex Compute",
       "language": "C++",
       "topics": [],
-      "stars": 1326,
-      "forks": 20,
+      "stars": 1708,
+      "forks": 29,
       "created_at": "2026-11-11T04:27:17Z",
-      "pushed_at": "2026-11-12T18:20:33Z",
-      "updated_at": "2026-11-13T16:49:46Z",
-      "stars_per_day": 663.0,
+      "pushed_at": "2026-11-14T09:54:33Z",
+      "updated_at": "2026-11-14T15:23:34Z",
+      "stars_per_day": 569.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "deepseek-ai/chat-demo",
+      "name": "chat-demo",
+      "html_url": "https://github.com/deepseek-ai/chat-demo",
+      "description": "Chat Demo",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 1570,
+      "forks": 262,
+      "created_at": "2026-11-12T08:08:19Z",
+      "pushed_at": "2026-11-13T14:33:08Z",
+      "updated_at": "2026-11-14T15:22:33Z",
+      "stars_per_day": 785.0,
       "age_days": 2
+    },
+    {
+      "full_name": "HybridRobotics/supermimic",
+      "name": "supermimic",
+      "html_url": "https://github.com/HybridRobotics/supermimic",
+      "description": "Humanoid whole-body motion tracking with one differentiable world model.",
+      "language": "Python",
+      "topics": [],
+      "stars": 1485,
+      "forks": 100,
+      "created_at": "2026-11-10T10:46:56Z",
+      "pushed_at": "2026-11-11T08:06:27Z",
+      "updated_at": "2026-11-14T15:18:13Z",
+      "stars_per_day": 371.2,
+      "age_days": 4
+    },
+    {
+      "full_name": "FrigadeHQ/yogurt",
+      "name": "yogurt",
+      "html_url": "https://github.com/FrigadeHQ/yogurt",
+      "description": "Private AI meeting notes that stay on your computer. A free, open-source alternative to Granola for Mac, Windows and Linux.",
+      "language": "TypeScript",
+      "topics": [
+        "ai-meeting-assistant",
+        "ai-notetaker",
+        "electron",
+        "granola-alternative",
+        "linux",
+        "llama-cpp",
+        "local-ai",
+        "local-first",
+        "macos",
+        "mcp",
+        "meeting-minutes",
+        "meeting-notes",
+        "offline-first",
+        "open-source",
+        "privacy",
+        "speech-to-text",
+        "transcription",
+        "whisper",
+        "whisper-cpp",
+        "windows"
+      ],
+      "stars": 1391,
+      "forks": 70,
+      "created_at": "2026-11-10T20:01:01Z",
+      "pushed_at": "2026-11-14T11:04:50Z",
+      "updated_at": "2026-11-14T15:24:01Z",
+      "stars_per_day": 463.7,
+      "age_days": 3
     },
     {
       "full_name": "agentes-chat/agentes-chat",
@@ -301,59 +337,13 @@
         "slack-alternative",
         "team-chat"
       ],
-      "stars": 1302,
-      "forks": 216,
+      "stars": 1375,
+      "forks": 241,
       "created_at": "2026-11-09T00:50:28Z",
-      "pushed_at": "2026-11-13T16:33:08Z",
-      "updated_at": "2026-11-13T16:25:33Z",
-      "stars_per_day": 325.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "FrigadeHQ/yogurt",
-      "name": "yogurt",
-      "html_url": "https://github.com/FrigadeHQ/yogurt",
-      "description": "Private AI meeting notes. Free and open source.",
-      "language": "TypeScript",
-      "topics": [
-        "ai-meeting-assistant",
-        "electron",
-        "linux",
-        "llama-cpp",
-        "local-ai",
-        "macos",
-        "mcp",
-        "meeting-notes",
-        "open-source",
-        "privacy",
-        "speech-to-text",
-        "transcription",
-        "whisper",
-        "whisper-cpp",
-        "windows"
-      ],
-      "stars": 1198,
-      "forks": 47,
-      "created_at": "2026-11-10T20:01:01Z",
-      "pushed_at": "2026-11-13T16:42:23Z",
-      "updated_at": "2026-11-13T16:46:03Z",
-      "stars_per_day": 599.0,
-      "age_days": 2
-    },
-    {
-      "full_name": "Th0rgal/satmux",
-      "name": "satmux",
-      "html_url": "https://github.com/Th0rgal/satmux",
-      "description": "Accelerate high-latency GEO inflight Wi-Fi via warm BBR TCP multiplexing + 1-RTT Ground-TLS + zlib (zero dependencies)",
-      "language": "Python",
-      "topics": [],
-      "stars": 1071,
-      "forks": 51,
-      "created_at": "2026-11-07T16:09:41Z",
-      "pushed_at": "2026-11-07T16:26:20Z",
-      "updated_at": "2026-11-13T16:05:53Z",
-      "stars_per_day": 178.5,
-      "age_days": 6
+      "pushed_at": "2026-11-14T15:18:53Z",
+      "updated_at": "2026-11-14T15:04:49Z",
+      "stars_per_day": 275.0,
+      "age_days": 5
     },
     {
       "full_name": "HolyArrs/HolyArrs",
@@ -369,49 +359,49 @@
         "plex",
         "self-hosted"
       ],
-      "stars": 1071,
-      "forks": 57,
+      "stars": 1152,
+      "forks": 59,
       "created_at": "2026-11-09T23:53:25Z",
-      "pushed_at": "2026-11-12T18:04:47Z",
-      "updated_at": "2026-11-13T16:40:04Z",
-      "stars_per_day": 357.0,
-      "age_days": 3
+      "pushed_at": "2026-11-14T05:56:59Z",
+      "updated_at": "2026-11-14T15:17:13Z",
+      "stars_per_day": 288.0,
+      "age_days": 4
     },
     {
-      "full_name": "Goblinmine/homelab-diagram",
-      "name": "homelab-diagram",
-      "html_url": "https://github.com/Goblinmine/homelab-diagram",
-      "description": "Renders an r/homelab-style network diagram from a YAML inventory (Python \u2192 SVG/PNG). Written with Claude.",
-      "language": "Python",
-      "topics": [],
-      "stars": 971,
-      "forks": 81,
-      "created_at": "2026-11-07T12:45:46Z",
-      "pushed_at": "2026-11-07T12:51:26Z",
-      "updated_at": "2026-11-13T16:07:43Z",
-      "stars_per_day": 161.8,
-      "age_days": 6
-    },
-    {
-      "full_name": "dabingfy-dot/solo-to-team-skills",
-      "name": "solo-to-team-skills",
-      "html_url": "https://github.com/dabingfy-dot/solo-to-team-skills",
-      "description": "Skills for human-led AI teams: delegate tasks, verify evidence, explain steps clearly, and learn from real cases. \u4e00\u4e2a\u4eba\u7edf\u7b79 AI \u56e2\u961f\uff1a\u6d3e\u6d3b\u3001\u6838\u8bc1\u3001\u6e05\u695a\u8bf4\u660e\u3001\u7ecf\u9a8c\u590d\u7528\u3002",
-      "language": null,
+      "full_name": "DevedevT/FFmpeg-GUI-Editor-Windows",
+      "name": "FFmpeg-GUI-Editor-Windows",
+      "html_url": "https://github.com/DevedevT/FFmpeg-GUI-Editor-Windows",
+      "description": "Lightweight portable FFmpeg GUI & lossless video trimmer for Windows (ready-to-use .exe). Supports English, Russian, Chinese, German, French & Italian.",
+      "language": "Visual Basic .NET",
       "topics": [
-        "agent-skills",
-        "ai-agents",
-        "collaboration",
-        "human-in-the-loop",
-        "workflow"
+        "converter",
+        "ffmpeg",
+        "ffmpeg-command",
+        "ffmpeg-gui",
+        "ffmpeg-libraries",
+        "ffmpeg-script",
+        "gui",
+        "gui-application",
+        "image-compression",
+        "media-converter",
+        "media-converter-windows",
+        "video-editing",
+        "video-editor",
+        "video-processing",
+        "windows",
+        "windows-10",
+        "windows-11",
+        "windows-app",
+        "windows-package",
+        "windows-tools"
       ],
-      "stars": 839,
-      "forks": 89,
-      "created_at": "2026-11-07T01:36:28Z",
-      "pushed_at": "2026-11-07T01:36:36Z",
-      "updated_at": "2026-11-13T15:44:59Z",
-      "stars_per_day": 139.8,
-      "age_days": 6
+      "stars": 1044,
+      "forks": 0,
+      "created_at": "2026-11-12T20:49:07Z",
+      "pushed_at": "2026-11-13T09:24:36Z",
+      "updated_at": "2026-11-14T13:49:25Z",
+      "stars_per_day": 1044.0,
+      "age_days": 1
     },
     {
       "full_name": "kolbicz/WQFiles",
@@ -420,37 +410,27 @@
       "description": "File browser, app data manager and cache cleaner for iOS 26 and 27 (worse_query, no jailbreak)",
       "language": "Objective-C",
       "topics": [],
-      "stars": 793,
-      "forks": 57,
+      "stars": 842,
+      "forks": 61,
       "created_at": "2026-11-09T13:43:40Z",
-      "pushed_at": "2026-11-13T15:09:36Z",
-      "updated_at": "2026-11-13T16:41:53Z",
-      "stars_per_day": 198.2,
-      "age_days": 4
+      "pushed_at": "2026-11-14T14:17:47Z",
+      "updated_at": "2026-11-14T15:18:20Z",
+      "stars_per_day": 168.4,
+      "age_days": 5
     },
     {
-      "full_name": "serveroshq/panel",
-      "name": "panel",
-      "html_url": "https://github.com/serveroshq/panel",
-      "description": "The open source ServerOS panel: one place to run the Linux servers you already own.",
-      "language": "PHP",
-      "topics": [
-        "agpl",
-        "control-panel",
-        "devops",
-        "laravel",
-        "open-source",
-        "self-hosted",
-        "server-management",
-        "serveros",
-        "vps"
-      ],
-      "stars": 721,
-      "forks": 58,
-      "created_at": "2026-11-09T00:47:33Z",
-      "pushed_at": "2026-11-13T11:25:33Z",
-      "updated_at": "2026-11-13T16:49:43Z",
-      "stars_per_day": 180.2,
+      "full_name": "adriadam10/mkw-recomp",
+      "name": "mkw-recomp",
+      "html_url": "https://github.com/adriadam10/mkw-recomp",
+      "description": "Static recompilation of Mario Kart World (Nintendo Switch 2) to a native PC program",
+      "language": "C",
+      "topics": [],
+      "stars": 809,
+      "forks": 42,
+      "created_at": "2026-11-09T15:40:06Z",
+      "pushed_at": "2026-11-14T08:57:44Z",
+      "updated_at": "2026-11-14T15:19:34Z",
+      "stars_per_day": 202.2,
       "age_days": 4
     },
     {
@@ -470,64 +450,38 @@
         "typescript",
         "visualization"
       ],
-      "stars": 698,
-      "forks": 82,
+      "stars": 789,
+      "forks": 88,
       "created_at": "2026-11-09T19:13:52Z",
-      "pushed_at": "2026-11-13T14:41:33Z",
-      "updated_at": "2026-11-13T16:39:12Z",
-      "stars_per_day": 232.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "Goldoire/fefw-recomp",
-      "name": "fefw-recomp",
-      "html_url": "https://github.com/Goldoire/fefw-recomp",
-      "description": "Native Windows PC port of Fire Emblem: Fortune's Weave by static recompilation. Bring your own dump; no game files included.",
-      "language": "C++",
-      "topics": [
-        "pc-port",
-        "recompilation",
-        "static-recompilation",
-        "vulkan",
-        "windows"
-      ],
-      "stars": 695,
-      "forks": 55,
-      "created_at": "2026-11-07T21:58:07Z",
-      "pushed_at": "2026-11-13T01:36:30Z",
-      "updated_at": "2026-11-13T16:45:01Z",
-      "stars_per_day": 139.0,
-      "age_days": 5
-    },
-    {
-      "full_name": "adriadam10/mkw-recomp",
-      "name": "mkw-recomp",
-      "html_url": "https://github.com/adriadam10/mkw-recomp",
-      "description": "Static recompilation of Mario Kart World (Nintendo Switch 2) to a native PC program",
-      "language": "C",
-      "topics": [],
-      "stars": 654,
-      "forks": 32,
-      "created_at": "2026-11-09T15:40:06Z",
-      "pushed_at": "2026-11-13T14:53:08Z",
-      "updated_at": "2026-11-13T16:43:53Z",
-      "stars_per_day": 163.5,
+      "pushed_at": "2026-11-13T21:15:05Z",
+      "updated_at": "2026-11-14T15:17:18Z",
+      "stars_per_day": 197.2,
       "age_days": 4
     },
     {
-      "full_name": "lxe/phoneuse",
-      "name": "phoneuse",
-      "html_url": "https://github.com/lxe/phoneuse",
-      "description": "See and operate an unmodified iPhone from a Linux PC: AirPlay mirror in, Bluetooth HID mouse/keyboard out, plus a CLI and skill for agents.",
-      "language": "Python",
-      "topics": [],
-      "stars": 647,
-      "forks": 61,
-      "created_at": "2026-11-07T01:28:30Z",
-      "pushed_at": "2026-11-13T06:24:18Z",
-      "updated_at": "2026-11-13T14:25:18Z",
-      "stars_per_day": 107.8,
-      "age_days": 6
+      "full_name": "serveroshq/panel",
+      "name": "panel",
+      "html_url": "https://github.com/serveroshq/panel",
+      "description": "The open source ServerOS panel: one place to run the Linux servers you already own.",
+      "language": "PHP",
+      "topics": [
+        "agpl",
+        "control-panel",
+        "devops",
+        "laravel",
+        "open-source",
+        "self-hosted",
+        "server-management",
+        "serveros",
+        "vps"
+      ],
+      "stars": 779,
+      "forks": 62,
+      "created_at": "2026-11-09T00:47:33Z",
+      "pushed_at": "2026-11-14T14:46:19Z",
+      "updated_at": "2026-11-14T14:57:35Z",
+      "stars_per_day": 155.8,
+      "age_days": 5
     },
     {
       "full_name": "JDhruv14/line-art-animation",
@@ -541,13 +495,13 @@
         "svg-animation",
         "typescript"
       ],
-      "stars": 643,
-      "forks": 103,
+      "stars": 714,
+      "forks": 116,
       "created_at": "2026-11-10T09:25:25Z",
       "pushed_at": "2026-11-10T09:25:38Z",
-      "updated_at": "2026-11-13T16:40:58Z",
-      "stars_per_day": 214.3,
-      "age_days": 3
+      "updated_at": "2026-11-14T15:11:55Z",
+      "stars_per_day": 178.5,
+      "age_days": 4
     },
     {
       "full_name": "forcequitOS/worse_query",
@@ -556,67 +510,65 @@
       "description": "A sandbox escape for iOS 26 and 27, again",
       "language": "Objective-C",
       "topics": [],
-      "stars": 607,
-      "forks": 148,
+      "stars": 628,
+      "forks": 154,
       "created_at": "2026-11-08T17:00:03Z",
       "pushed_at": "2026-11-08T20:05:55Z",
-      "updated_at": "2026-11-13T16:37:57Z",
-      "stars_per_day": 151.8,
-      "age_days": 4
-    },
-    {
-      "full_name": "LNPANDY/HGhub-MacOS-iOS-Version",
-      "name": "HGhub-MacOS-iOS-Version",
-      "html_url": "https://github.com/LNPANDY/HGhub-MacOS-iOS-Version",
-      "description": "HGhub \u8de8\u5e73\u53f0\u5ba2\u6237\u7aef (macOS & iOS \u589e\u5f3a\u7248) \u00b7 \u652f\u6301 Apple Silicon / Intel \u53cc\u67b6\u6784 DMG \u4e0e iOS \u514d\u7b7e IPA \u00b7 \u6c89\u6d78\u5f0f\u5237\u5267 / \u624b\u52bf\u7f29\u653e / \u539f\u751f\u6a2a\u5c4f\u5168\u5c4f / \u591a\u7ebf\u8def\u955c\u50cf\u6d4b\u901f",
-      "language": null,
-      "topics": [
-        "apple-silicon",
-        "dmg",
-        "ios",
-        "ipa",
-        "macos",
-        "react",
-        "rust",
-        "tauri"
-      ],
-      "stars": 511,
-      "forks": 315,
-      "created_at": "2026-11-07T20:39:55Z",
-      "pushed_at": "2026-11-13T14:35:43Z",
-      "updated_at": "2026-11-13T16:46:36Z",
-      "stars_per_day": 102.2,
+      "updated_at": "2026-11-14T15:00:22Z",
+      "stars_per_day": 125.6,
       "age_days": 5
     },
     {
-      "full_name": "luobinger/PerkRadar",
-      "name": "PerkRadar",
-      "html_url": "https://github.com/luobinger/PerkRadar",
-      "description": "PerkRadar \u2014 A self-hosted deals aggregator that fetches freebies, limited-time offers, and discounts from multiple sources every two hours, with source status tracking, expiration handling, and personal bookmarks.",
+      "full_name": "AIRzZ90/study-materials-fork",
+      "name": "study-materials-fork",
+      "html_url": "https://github.com/AIRzZ90/study-materials-fork",
+      "description": "A cross-platform Tauri 2 interface and interaction practice project",
       "language": "TypeScript",
       "topics": [],
-      "stars": 491,
-      "forks": 97,
-      "created_at": "2026-11-08T08:22:48Z",
-      "pushed_at": "2026-11-13T12:27:57Z",
-      "updated_at": "2026-11-13T12:27:41Z",
-      "stars_per_day": 98.2,
-      "age_days": 5
+      "stars": 613,
+      "forks": 757,
+      "created_at": "2026-11-12T10:52:32Z",
+      "pushed_at": "2026-11-12T11:06:34Z",
+      "updated_at": "2026-11-14T15:19:18Z",
+      "stars_per_day": 306.5,
+      "age_days": 2
     },
     {
-      "full_name": "Robbyant/lingbot-touch",
-      "name": "lingbot-touch",
-      "html_url": "https://github.com/Robbyant/lingbot-touch",
-      "description": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
-      "language": "Python",
+      "full_name": "opencoredev/islandcn",
+      "name": "islandcn",
+      "html_url": "https://github.com/opencoredev/islandcn",
+      "description": "The open-source Dynamic Island for React, installed with shadcn.",
+      "language": "TypeScript",
+      "topics": [
+        "dynamic-island",
+        "nextjs",
+        "react",
+        "shadcn",
+        "typescript",
+        "ui-components"
+      ],
+      "stars": 605,
+      "forks": 55,
+      "created_at": "2026-11-13T11:50:50Z",
+      "pushed_at": "2026-11-13T15:14:36Z",
+      "updated_at": "2026-11-14T15:14:49Z",
+      "stars_per_day": 605.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "makepad/relax",
+      "name": "relax",
+      "html_url": "https://github.com/makepad/relax",
+      "description": "Relax Rust JIT",
+      "language": "Rust",
       "topics": [],
-      "stars": 483,
-      "forks": 5,
-      "created_at": "2026-11-09T09:02:29Z",
-      "pushed_at": "2026-11-11T02:28:03Z",
-      "updated_at": "2026-11-13T16:17:36Z",
-      "stars_per_day": 120.8,
-      "age_days": 4
+      "stars": 527,
+      "forks": 27,
+      "created_at": "2026-11-11T19:12:58Z",
+      "pushed_at": "2026-11-14T15:02:22Z",
+      "updated_at": "2026-11-14T14:32:21Z",
+      "stars_per_day": 263.5,
+      "age_days": 2
     },
     {
       "full_name": "Dodaios/ste80-humanizer",
@@ -640,105 +592,125 @@
         "simplified-technical-english",
         "writing"
       ],
-      "stars": 482,
-      "forks": 29,
+      "stars": 523,
+      "forks": 34,
       "created_at": "2026-11-09T17:18:59Z",
-      "pushed_at": "2026-11-10T08:52:47Z",
-      "updated_at": "2026-11-13T16:44:45Z",
-      "stars_per_day": 160.7,
-      "age_days": 3
+      "pushed_at": "2026-11-14T14:20:14Z",
+      "updated_at": "2026-11-14T15:18:41Z",
+      "stars_per_day": 130.8,
+      "age_days": 4
     },
     {
-      "full_name": "AIRzZ90/study-materials-fork",
-      "name": "study-materials-fork",
-      "html_url": "https://github.com/AIRzZ90/study-materials-fork",
-      "description": "A cross-platform Tauri 2 interface and interaction practice project",
-      "language": "TypeScript",
+      "full_name": "Robbyant/lingbot-touch",
+      "name": "lingbot-touch",
+      "html_url": "https://github.com/Robbyant/lingbot-touch",
+      "description": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
+      "language": "Python",
       "topics": [],
-      "stars": 482,
-      "forks": 705,
-      "created_at": "2026-11-12T10:52:32Z",
-      "pushed_at": "2026-11-12T11:06:34Z",
-      "updated_at": "2026-11-13T16:25:21Z",
-      "stars_per_day": 482.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "21stware/bowel",
-      "name": "bowel",
-      "html_url": "https://github.com/21stware/bowel",
-      "description": "Bowel is a mihomo client for macOS, Windows, Linux and Android.",
-      "language": "Go",
-      "topics": [
-        "android",
-        "clash",
-        "clash-meta",
-        "linux",
-        "macos",
-        "mcp",
-        "mihomo",
-        "proxy-client",
-        "windows"
-      ],
-      "stars": 476,
-      "forks": 24,
-      "created_at": "2026-11-07T17:45:52Z",
-      "pushed_at": "2026-11-13T16:47:24Z",
-      "updated_at": "2026-11-13T14:23:12Z",
-      "stars_per_day": 95.2,
+      "stars": 521,
+      "forks": 5,
+      "created_at": "2026-11-09T09:02:29Z",
+      "pushed_at": "2026-11-11T02:28:03Z",
+      "updated_at": "2026-11-14T14:19:51Z",
+      "stars_per_day": 104.2,
       "age_days": 5
     },
     {
-      "full_name": "TooonyChen/finallyshell",
-      "name": "finallyshell",
-      "html_url": "https://github.com/TooonyChen/finallyshell",
-      "description": "\u7c7bfinalshell\u7684ssh\u5ba2\u6237\u7aef // An source-available finalshell copy, with go runtime and mygo UI",
-      "language": "Go",
+      "full_name": "rivet-dev/open-orange",
+      "name": "open-orange",
+      "html_url": "https://github.com/rivet-dev/open-orange",
+      "description": "Run Cloudflare Workers and Durable Objects unchanged on AWS, GCP, Azure or your own servers.",
+      "language": "TypeScript",
       "topics": [
-        "finalshell",
-        "libghostty",
-        "mygo-ui",
-        "ssh",
-        "ssh-client",
-        "terminal"
+        "cloudflare",
+        "cloudflare-workers",
+        "durable-objects",
+        "nodejs",
+        "rivet",
+        "self-hosted",
+        "serverless",
+        "sqlite",
+        "typescript",
+        "wrangler"
       ],
-      "stars": 468,
-      "forks": 46,
-      "created_at": "2026-11-07T00:34:42Z",
-      "pushed_at": "2026-11-11T05:07:00Z",
-      "updated_at": "2026-11-13T16:08:58Z",
-      "stars_per_day": 78.0,
+      "stars": 513,
+      "forks": 19,
+      "created_at": "2026-11-12T00:44:12Z",
+      "pushed_at": "2026-11-14T15:22:42Z",
+      "updated_at": "2026-11-14T15:20:03Z",
+      "stars_per_day": 256.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "luobinger/PerkRadar",
+      "name": "PerkRadar",
+      "html_url": "https://github.com/luobinger/PerkRadar",
+      "description": "PerkRadar \u2014 A self-hosted deals aggregator that fetches freebies, limited-time offers, and discounts from multiple sources every two hours, with source status tracking, expiration handling, and personal bookmarks.",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 495,
+      "forks": 101,
+      "created_at": "2026-11-08T08:22:48Z",
+      "pushed_at": "2026-11-14T14:48:29Z",
+      "updated_at": "2026-11-14T14:48:16Z",
+      "stars_per_day": 82.5,
       "age_days": 6
     },
     {
-      "full_name": "deepseek-ai/chat-demo",
-      "name": "chat-demo",
-      "html_url": "https://github.com/deepseek-ai/chat-demo",
-      "description": "Chat Demo",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 438,
-      "forks": 85,
-      "created_at": "2026-11-12T08:08:19Z",
-      "pushed_at": "2026-11-13T14:33:08Z",
-      "updated_at": "2026-11-13T16:49:13Z",
-      "stars_per_day": 438.0,
+      "full_name": "faizfahmi77/ScanDot",
+      "name": "ScanDot",
+      "html_url": "https://github.com/faizfahmi77/ScanDot",
+      "description": "Experimental Android 3D scanning and point-cloud viewer",
+      "language": "Kotlin",
+      "topics": [
+        "3d-scanning",
+        "android",
+        "photogrammetry",
+        "point-cloud"
+      ],
+      "stars": 470,
+      "forks": 4,
+      "created_at": "2026-11-13T04:07:57Z",
+      "pushed_at": "2026-11-13T04:27:21Z",
+      "updated_at": "2026-11-14T15:23:43Z",
+      "stars_per_day": 470.0,
       "age_days": 1
     },
     {
-      "full_name": "makepad/relax",
-      "name": "relax",
-      "html_url": "https://github.com/makepad/relax",
-      "description": "Relax Rust JIT",
-      "language": "Rust",
-      "topics": [],
-      "stars": 437,
-      "forks": 26,
-      "created_at": "2026-11-11T19:12:58Z",
-      "pushed_at": "2026-11-13T14:56:57Z",
-      "updated_at": "2026-11-13T16:47:52Z",
-      "stars_per_day": 437.0,
-      "age_days": 1
+      "full_name": "linknimiball1974/ai-texture-forge",
+      "name": "ai-texture-forge",
+      "html_url": "https://github.com/linknimiball1974/ai-texture-forge",
+      "description": "An AI-powered texture forge for Blender \u2014 turn text prompts into seamless PBR materials, concept art and scene-wide projections with local or cloud diffusion models, straight inside the 3D viewport on Windows. \u00b7 dream textures \u00b7 dream textures blender \u00b7 dream textures addon \u00b7 dream textures ai \u00b7 dream textures seamless \u00b7 dream textures pbr",
+      "language": null,
+      "topics": [
+        "dream-textures",
+        "dream-textures-addon",
+        "dream-textures-ai",
+        "dream-textures-blender",
+        "dream-textures-diffusion",
+        "dream-textures-generation",
+        "dream-textures-gpu",
+        "dream-textures-history",
+        "dream-textures-inpainting",
+        "dream-textures-local",
+        "dream-textures-material",
+        "dream-textures-outpainting",
+        "dream-textures-pbr",
+        "dream-textures-projection",
+        "dream-textures-prompt",
+        "dream-textures-python",
+        "dream-textures-render",
+        "dream-textures-seamless",
+        "dream-textures-upscaling",
+        "dream-textures-windows"
+      ],
+      "stars": 469,
+      "forks": 20,
+      "created_at": "2026-11-11T19:09:18Z",
+      "pushed_at": "2026-11-12T20:07:30Z",
+      "updated_at": "2026-11-14T15:22:20Z",
+      "stars_per_day": 234.5,
+      "age_days": 2
     },
     {
       "full_name": "paulirish/chrome-capture",
@@ -747,13 +719,78 @@
       "description": "60-120fps / 2160p tab video/audio capture from Chrome",
       "language": "TypeScript",
       "topics": [],
-      "stars": 429,
+      "stars": 448,
       "forks": 7,
       "created_at": "2026-11-08T20:07:38Z",
       "pushed_at": "2026-11-11T01:40:29Z",
-      "updated_at": "2026-11-13T16:26:30Z",
-      "stars_per_day": 107.2,
+      "updated_at": "2026-11-14T14:20:24Z",
+      "stars_per_day": 89.6,
+      "age_days": 5
+    },
+    {
+      "full_name": "failsafe-security/artex",
+      "name": "artex",
+      "html_url": "https://github.com/failsafe-security/artex",
+      "description": "Source-built, locally bound FailSafe distribution of ARTEX (v0.3.15)",
+      "language": "Go",
+      "topics": [],
+      "stars": 445,
+      "forks": 134,
+      "created_at": "2026-11-10T12:33:18Z",
+      "pushed_at": "2026-11-11T02:54:02Z",
+      "updated_at": "2026-11-14T15:22:30Z",
+      "stars_per_day": 111.2,
       "age_days": 4
+    },
+    {
+      "full_name": "TomyJan/SnowLuma",
+      "name": "SnowLuma",
+      "html_url": "https://github.com/TomyJan/SnowLuma",
+      "description": "Next Remote Protocol Framework.",
+      "language": "TypeScript",
+      "topics": [
+        "bot",
+        "napcat",
+        "napcatqq",
+        "snowluma"
+      ],
+      "stars": 437,
+      "forks": 934,
+      "created_at": "2026-11-09T13:53:03Z",
+      "pushed_at": "2026-11-09T14:17:03Z",
+      "updated_at": "2026-11-14T15:13:40Z",
+      "stars_per_day": 87.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "yetone/rewind-for-x",
+      "name": "rewind-for-x",
+      "html_url": "https://github.com/yetone/rewind-for-x",
+      "description": "Chrome extension: look back at posts that scrolled past on your X home timeline",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 415,
+      "forks": 14,
+      "created_at": "2026-11-09T09:28:22Z",
+      "pushed_at": "2026-11-10T09:12:24Z",
+      "updated_at": "2026-11-14T13:56:25Z",
+      "stars_per_day": 83.0,
+      "age_days": 5
+    },
+    {
+      "full_name": "duwqijlk/muse-protocol",
+      "name": "muse-protocol",
+      "html_url": "https://github.com/duwqijlk/muse-protocol",
+      "description": "muse.ai \u6ce8\u518c\u4e0e\u9080\u8bf7\u7801\u5151\u6362\u534f\u8bae\u7814\u7a76\uff08\u7eaf HTTP Python \u5b9e\u73b0\uff09",
+      "language": "Python",
+      "topics": [],
+      "stars": 409,
+      "forks": 216,
+      "created_at": "2026-11-14T01:24:58Z",
+      "pushed_at": "2026-11-14T03:36:45Z",
+      "updated_at": "2026-11-14T15:23:52Z",
+      "stars_per_day": 409.0,
+      "age_days": 1
     }
   ],
   "hn_items": [
@@ -832,93 +869,85 @@
     {
       "title": "Long Live Rails",
       "url": "https://dev.to/ben/long-live-rails-3p21",
-      "reactions": 118,
-      "comments": 17,
+      "reactions": 122,
+      "comments": 19,
       "published_at": "2026-11-12T15:30:50Z"
     },
     {
       "title": "Our Looping Factory Cut DEV Page Load Time by 75% and Counting",
       "url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf",
-      "reactions": 134,
-      "comments": 35,
+      "reactions": 142,
+      "comments": 39,
       "published_at": "2026-11-09T16:12:25Z"
     },
     {
       "title": "How do you truly stand out in Tech?",
       "url": "https://dev.to/francistrdev/how-do-you-truly-stand-out-in-tech-478a",
-      "reactions": 186,
-      "comments": 107,
+      "reactions": 202,
+      "comments": 111,
       "published_at": "2026-11-09T15:11:22Z"
-    },
-    {
-      "title": "How did you end up in tech, and are you staying?",
-      "url": "https://dev.to/maame-codes/how-did-you-end-up-in-tech-and-are-you-staying-4l9b",
-      "reactions": 147,
-      "comments": 60,
-      "published_at": "2026-11-09T23:02:37Z"
     },
     {
       "title": "MCP Is Dead Simple. And That's Exactly the Problem",
       "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
-      "reactions": 126,
-      "comments": 92,
+      "reactions": 153,
+      "comments": 127,
       "published_at": "2026-11-12T08:14:36Z"
+    },
+    {
+      "title": "How did you end up in tech, and are you staying?",
+      "url": "https://dev.to/maame-codes/how-did-you-end-up-in-tech-and-are-you-staying-4l9b",
+      "reactions": 159,
+      "comments": 63,
+      "published_at": "2026-11-09T23:02:37Z"
     },
     {
       "title": "Necoz Has a New Home on DEV! \ud83d\udc08\ud83c\udf89",
       "url": "https://dev.to/necoz/necoz-has-a-new-home-on-dev-3454",
-      "reactions": 171,
+      "reactions": 179,
       "comments": 119,
       "published_at": "2026-11-08T11:50:29Z"
     },
     {
       "title": "The C Trilogy: How Dennis Ritchie, Bjarne Stroustrup, and Anders Hejlsberg Built the Modern World \ud83c\udfdb\ufe0f",
       "url": "https://dev.to/devengers/the-c-trilogy-how-dennis-ritchie-bjarne-stroustrup-and-anders-hejlsberg-built-the-modern-world-1onp",
-      "reactions": 135,
-      "comments": 45,
+      "reactions": 154,
+      "comments": 47,
       "published_at": "2026-11-09T15:30:54Z"
+    },
+    {
+      "title": "Dev Opportunity Radar #25: $120K+ Atlassian Hackathon, MLH Fellowship, and INSEAD AI Founder Sprint",
+      "url": "https://dev.to/devengers/dev-opportunity-radar-25-120k-atlassian-hackathon-mlh-fellowship-and-insead-ai-founder-sprint-m96",
+      "reactions": 78,
+      "comments": 4,
+      "published_at": "2026-11-13T18:28:11Z"
+    },
+    {
+      "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
+      "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
+      "reactions": 83,
+      "comments": 36,
+      "published_at": "2026-11-13T15:56:26Z"
     },
     {
       "title": "A 10 years old developer who has become a DEV.to Trusted Member! \ud83d\ude31",
       "url": "https://dev.to/necoz/a-10-years-old-developer-who-has-become-a-devto-trusted-member-49c8",
-      "reactions": 93,
+      "reactions": 95,
       "comments": 48,
       "published_at": "2026-11-12T11:18:53Z"
-    },
-    {
-      "title": "How much does it cost to run a text game with LLMs",
-      "url": "https://dev.to/hiper2d/how-much-does-it-cost-to-run-a-text-game-with-llms-57o7",
-      "reactions": 84,
-      "comments": 88,
-      "published_at": "2026-11-08T18:46:19Z"
-    },
-    {
-      "title": "We Keep Hearing About AI Productivity. The QA Group Chat Told a Different Story.",
-      "url": "https://dev.to/xulingfeng/we-keep-hearing-about-ai-productivity-the-qa-group-chat-told-a-different-story-2nma",
-      "reactions": 108,
-      "comments": 110,
-      "published_at": "2026-11-11T08:35:15Z"
     }
   ],
   "languages": [
     [
       "TypeScript",
-      8
+      11
     ],
     [
       "Python",
-      6
+      4
     ],
     [
       "Go",
-      3
-    ],
-    [
-      "C",
-      2
-    ],
-    [
-      "C++",
       2
     ],
     [
@@ -930,7 +959,23 @@
       2
     ],
     [
+      "C",
+      1
+    ],
+    [
       "C#",
+      1
+    ],
+    [
+      "C++",
+      1
+    ],
+    [
+      "JavaScript",
+      1
+    ],
+    [
+      "Kotlin",
       1
     ],
     [
@@ -940,39 +985,27 @@
     [
       "Rust",
       1
+    ],
+    [
+      "Visual Basic .NET",
+      1
     ]
   ],
   "topics": [
     [
-      "macos",
+      "self-hosted",
       4
     ],
     [
-      "ai-agents",
-      3
+      "typescript",
+      4
     ],
     [
       "claude-code",
       3
     ],
     [
-      "mcp",
-      3
-    ],
-    [
-      "self-hosted",
-      3
-    ],
-    [
-      "windows",
-      3
-    ],
-    [
-      "agent-skills",
-      2
-    ],
-    [
-      "apple-silicon",
+      "ai-agents",
       2
     ],
     [
@@ -984,23 +1017,15 @@
       2
     ],
     [
-      "collaboration",
-      2
-    ],
-    [
-      "human-in-the-loop",
-      2
-    ],
-    [
-      "ios",
-      2
-    ],
-    [
-      "linux",
-      2
-    ],
-    [
       "llm",
+      2
+    ],
+    [
+      "macos",
+      2
+    ],
+    [
+      "mcp",
       2
     ],
     [
@@ -1008,19 +1033,23 @@
       2
     ],
     [
-      "static-recompilation",
-      2
-    ],
-    [
       "svg-animation",
       2
     ],
     [
-      "typescript",
+      "windows",
       2
     ],
     [
+      "3d-scanning",
+      1
+    ],
+    [
       "agent-observability",
+      1
+    ],
+    [
+      "agent-skills",
       1
     ],
     [
@@ -1036,11 +1065,19 @@
       1
     ],
     [
+      "ai-notetaker",
+      1
+    ],
+    [
       "ai-writing",
       1
     ],
     [
       "android",
+      1
+    ],
+    [
+      "apple-silicon",
       1
     ],
     [
@@ -1052,19 +1089,15 @@
       1
     ],
     [
+      "bot",
+      1
+    ],
+    [
       "browser-automation",
       1
     ],
     [
       "chat",
-      1
-    ],
-    [
-      "clash",
-      1
-    ],
-    [
-      "clash-meta",
       1
     ],
     [
@@ -1080,11 +1113,27 @@
       1
     ],
     [
+      "cloudflare",
+      1
+    ],
+    [
+      "cloudflare-workers",
+      1
+    ],
+    [
+      "collaboration",
+      1
+    ],
+    [
       "computer-use",
       1
     ],
     [
       "control-panel",
+      1
+    ],
+    [
+      "converter",
       1
     ],
     [
@@ -1100,10 +1149,6 @@
       1
     ],
     [
-      "dmg",
-      1
-    ],
-    [
       "docker",
       1
     ],
@@ -1112,11 +1157,115 @@
       1
     ],
     [
+      "dream-textures",
+      1
+    ],
+    [
+      "dream-textures-addon",
+      1
+    ],
+    [
+      "dream-textures-ai",
+      1
+    ],
+    [
+      "dream-textures-blender",
+      1
+    ],
+    [
+      "dream-textures-diffusion",
+      1
+    ],
+    [
+      "dream-textures-generation",
+      1
+    ],
+    [
+      "dream-textures-gpu",
+      1
+    ],
+    [
+      "dream-textures-history",
+      1
+    ],
+    [
+      "dream-textures-inpainting",
+      1
+    ],
+    [
+      "dream-textures-local",
+      1
+    ],
+    [
+      "dream-textures-material",
+      1
+    ],
+    [
+      "dream-textures-outpainting",
+      1
+    ],
+    [
+      "dream-textures-pbr",
+      1
+    ],
+    [
+      "dream-textures-projection",
+      1
+    ],
+    [
+      "dream-textures-prompt",
+      1
+    ],
+    [
+      "dream-textures-python",
+      1
+    ],
+    [
+      "dream-textures-render",
+      1
+    ],
+    [
+      "dream-textures-seamless",
+      1
+    ],
+    [
+      "dream-textures-upscaling",
+      1
+    ],
+    [
+      "dream-textures-windows",
+      1
+    ],
+    [
+      "durable-objects",
+      1
+    ],
+    [
+      "dynamic-island",
+      1
+    ],
+    [
       "electron",
       1
     ],
     [
-      "finalshell",
+      "ffmpeg",
+      1
+    ],
+    [
+      "ffmpeg-command",
+      1
+    ],
+    [
+      "ffmpeg-gui",
+      1
+    ],
+    [
+      "ffmpeg-libraries",
+      1
+    ],
+    [
+      "ffmpeg-script",
       1
     ],
     [
@@ -1128,11 +1277,27 @@
       1
     ],
     [
+      "granola-alternative",
+      1
+    ],
+    [
       "grok",
       1
     ],
     [
+      "gui",
+      1
+    ],
+    [
+      "gui-application",
+      1
+    ],
+    [
       "homelab",
+      1
+    ],
+    [
+      "human-in-the-loop",
       1
     ],
     [
@@ -1144,7 +1309,11 @@
       1
     ],
     [
-      "ipa",
+      "image-compression",
+      1
+    ],
+    [
+      "ios",
       1
     ],
     [
@@ -1164,11 +1333,11 @@
       1
     ],
     [
-      "libghostty",
+      "line-art",
       1
     ],
     [
-      "line-art",
+      "linux",
       1
     ],
     [
@@ -1180,7 +1349,23 @@
       1
     ],
     [
+      "local-first",
+      1
+    ],
+    [
+      "media-converter",
+      1
+    ],
+    [
+      "media-converter-windows",
+      1
+    ],
+    [
       "media-server",
+      1
+    ],
+    [
+      "meeting-minutes",
       1
     ],
     [
@@ -1192,15 +1377,27 @@
       1
     ],
     [
-      "mihomo",
-      1
-    ],
-    [
       "multi-agent",
       1
     ],
     [
-      "mygo-ui",
+      "napcat",
+      1
+    ],
+    [
+      "napcatqq",
+      1
+    ],
+    [
+      "nextjs",
+      1
+    ],
+    [
+      "nodejs",
+      1
+    ],
+    [
+      "offline-first",
       1
     ],
     [
@@ -1208,7 +1405,7 @@
       1
     ],
     [
-      "pc-port",
+      "photogrammetry",
       1
     ],
     [
@@ -1220,11 +1417,11 @@
       1
     ],
     [
-      "privacy",
+      "point-cloud",
       1
     ],
     [
-      "proxy-client",
+      "privacy",
       1
     ],
     [
@@ -1232,11 +1429,7 @@
       1
     ],
     [
-      "recompilation",
-      1
-    ],
-    [
-      "rust",
+      "rivet",
       1
     ],
     [
@@ -1248,7 +1441,15 @@
       1
     ],
     [
+      "serverless",
+      1
+    ],
+    [
       "serveros",
+      1
+    ],
+    [
+      "shadcn",
       1
     ],
     [
@@ -1260,15 +1461,19 @@
       1
     ],
     [
+      "snowluma",
+      1
+    ],
+    [
       "speech-to-text",
       1
     ],
     [
-      "ssh",
+      "sqlite",
       1
     ],
     [
-      "ssh-client",
+      "static-recompilation",
       1
     ],
     [
@@ -1276,19 +1481,27 @@
       1
     ],
     [
-      "tauri",
-      1
-    ],
-    [
       "team-chat",
       1
     ],
     [
-      "terminal",
+      "transcription",
       1
     ],
     [
-      "transcription",
+      "ui-components",
+      1
+    ],
+    [
+      "video-editing",
+      1
+    ],
+    [
+      "video-editor",
+      1
+    ],
+    [
+      "video-processing",
       1
     ],
     [
@@ -1300,10 +1513,6 @@
       1
     ],
     [
-      "vulkan",
-      1
-    ],
-    [
       "whisper",
       1
     ],
@@ -1312,7 +1521,27 @@
       1
     ],
     [
-      "workflow",
+      "windows-10",
+      1
+    ],
+    [
+      "windows-11",
+      1
+    ],
+    [
+      "windows-app",
+      1
+    ],
+    [
+      "windows-package",
+      1
+    ],
+    [
+      "windows-tools",
+      1
+    ],
+    [
+      "wrangler",
       1
     ],
     [

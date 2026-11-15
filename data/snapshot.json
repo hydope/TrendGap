@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-14T15:24:33.788564+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-07, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-15T15:57:47.975178+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-08, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-07&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-08&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -26,147 +26,147 @@
     {
       "name": "TypeScript",
       "kind": "language",
-      "count_in_snapshot": 11,
+      "count_in_snapshot": 7,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "Python",
-      "kind": "language",
-      "count_in_snapshot": 4,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "self-hosted",
+      "name": "xtreamcode",
       "kind": "topic",
-      "count_in_snapshot": 4,
+      "count_in_snapshot": 7,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "openai",
+      "kind": "topic",
+      "count_in_snapshot": 6,
+      "hn_mentions": 1,
+      "devto_mentions": 0
+    },
+    {
+      "name": "streaming",
+      "kind": "topic",
+      "count_in_snapshot": 6,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "ai",
+      "kind": "topic",
+      "count_in_snapshot": 5,
+      "hn_mentions": 3,
+      "devto_mentions": 3
+    },
+    {
+      "name": "plex",
+      "kind": "topic",
+      "count_in_snapshot": 5,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "typescript",
       "kind": "topic",
+      "count_in_snapshot": 5,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "vue",
+      "kind": "topic",
+      "count_in_snapshot": 5,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Rust",
+      "kind": "language",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
+      "name": "agent-skills",
+      "kind": "topic",
       "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "claude-code",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Go",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Objective-C",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Swift",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 1,
-      "devto_mentions": 0
-    },
-    {
       "name": "ai-agents",
       "kind": "topic",
-      "count_in_snapshot": 2,
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "claude",
+      "name": "dash",
       "kind": "topic",
-      "count_in_snapshot": 2,
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "codex",
+      "name": "ip-tv",
       "kind": "topic",
-      "count_in_snapshot": 2,
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "iptv",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "iptv-channels",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "iptv-m3u8",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "iptv-player",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "iptv-player-application",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "iptvtools",
+      "kind": "topic",
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "llm",
       "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "macos",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "mcp",
-      "kind": "topic",
-      "count_in_snapshot": 2,
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 1
     },
     {
-      "name": "open-source",
+      "name": "m3u",
       "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 4,
-      "devto_mentions": 1
-    },
-    {
-      "name": "svg-animation",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "windows",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "3d-scanning",
-      "kind": "topic",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "C",
-      "kind": "language",
-      "count_in_snapshot": 1,
-      "hn_mentions": 18,
-      "devto_mentions": 17
-    },
-    {
-      "name": "C#",
-      "kind": "language",
-      "count_in_snapshot": 1,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "C++",
-      "kind": "language",
-      "count_in_snapshot": 1,
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     }
@@ -179,69 +179,13 @@
       "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
       "language": "Swift",
       "topics": [],
-      "stars": 7515,
-      "forks": 2630,
+      "stars": 7710,
+      "forks": 2657,
       "created_at": "2026-11-09T05:15:48Z",
       "pushed_at": "2026-11-14T09:27:55Z",
-      "updated_at": "2026-11-14T15:18:45Z",
-      "stars_per_day": 1503.0,
-      "age_days": 5
-    },
-    {
-      "full_name": "jhaizhou-ops/S2Arm",
-      "name": "S2Arm",
-      "html_url": "https://github.com/jhaizhou-ops/S2Arm",
-      "description": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. \u628a\u4f60\u81ea\u5df1\u7684 Switch \u6e38\u620f\u539f\u751f\u5e26\u5230 iPhone / iPad / Mac\u3002",
-      "language": "C#",
-      "topics": [
-        "apple-silicon",
-        "arm64",
-        "game-porting",
-        "ios",
-        "ipados",
-        "macos",
-        "metal",
-        "s2arm",
-        "static-recompilation",
-        "switch"
-      ],
-      "stars": 2944,
-      "forks": 536,
-      "created_at": "2026-11-08T05:49:46Z",
-      "pushed_at": "2026-11-14T14:52:58Z",
-      "updated_at": "2026-11-14T15:16:17Z",
-      "stars_per_day": 490.7,
+      "updated_at": "2026-11-15T15:50:01Z",
+      "stars_per_day": 1285.0,
       "age_days": 6
-    },
-    {
-      "full_name": "Kianuni/Erosion-CN",
-      "name": "Erosion-CN",
-      "html_url": "https://github.com/Kianuni/Erosion-CN",
-      "description": "iOS / iPadOS \u7cfb\u7edf\u914d\u7f6e\u4e0e MobileGestalt \u7814\u7a76\u5de5\u5177\u7bb1\uff08\u7b80\u4f53\u4e2d\u6587\u9632\u767d\u82f9\u679c\u5b89\u5168\u52a0\u56fa\u7248\uff09",
-      "language": "Swift",
-      "topics": [],
-      "stars": 2028,
-      "forks": 420,
-      "created_at": "2026-11-10T02:37:31Z",
-      "pushed_at": "2026-11-14T06:38:10Z",
-      "updated_at": "2026-11-14T15:16:06Z",
-      "stars_per_day": 507.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "apex-compute/ANR",
-      "name": "ANR",
-      "html_url": "https://github.com/apex-compute/ANR",
-      "description": "Apex Neural Rendering (ANR) by Apex Compute",
-      "language": "C++",
-      "topics": [],
-      "stars": 1708,
-      "forks": 29,
-      "created_at": "2026-11-11T04:27:17Z",
-      "pushed_at": "2026-11-14T09:54:33Z",
-      "updated_at": "2026-11-14T15:23:34Z",
-      "stars_per_day": 569.3,
-      "age_days": 3
     },
     {
       "full_name": "deepseek-ai/chat-demo",
@@ -250,27 +194,42 @@
       "description": "Chat Demo",
       "language": "TypeScript",
       "topics": [],
-      "stars": 1570,
-      "forks": 262,
+      "stars": 2518,
+      "forks": 481,
       "created_at": "2026-11-12T08:08:19Z",
       "pushed_at": "2026-11-13T14:33:08Z",
-      "updated_at": "2026-11-14T15:22:33Z",
-      "stars_per_day": 785.0,
-      "age_days": 2
+      "updated_at": "2026-11-15T15:57:46Z",
+      "stars_per_day": 839.3,
+      "age_days": 3
     },
     {
-      "full_name": "HybridRobotics/supermimic",
-      "name": "supermimic",
-      "html_url": "https://github.com/HybridRobotics/supermimic",
-      "description": "Humanoid whole-body motion tracking with one differentiable world model.",
-      "language": "Python",
+      "full_name": "Kianuni/Erosion-CN",
+      "name": "Erosion-CN",
+      "html_url": "https://github.com/Kianuni/Erosion-CN",
+      "description": "iOS / iPadOS \u7cfb\u7edf\u914d\u7f6e\u4e0e MobileGestalt \u7814\u7a76\u5de5\u5177\u7bb1\uff08\u7b80\u4f53\u4e2d\u6587\u9632\u767d\u82f9\u679c\u5b89\u5168\u52a0\u56fa\u7248\uff09",
+      "language": "Swift",
       "topics": [],
-      "stars": 1485,
-      "forks": 100,
-      "created_at": "2026-11-10T10:46:56Z",
-      "pushed_at": "2026-11-11T08:06:27Z",
-      "updated_at": "2026-11-14T15:18:13Z",
-      "stars_per_day": 371.2,
+      "stars": 2116,
+      "forks": 429,
+      "created_at": "2026-11-10T02:37:31Z",
+      "pushed_at": "2026-11-15T13:24:40Z",
+      "updated_at": "2026-11-15T15:41:17Z",
+      "stars_per_day": 423.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "apex-compute/ANR",
+      "name": "ANR",
+      "html_url": "https://github.com/apex-compute/ANR",
+      "description": "Apex Neural Rendering (ANR) by Apex Compute",
+      "language": "C++",
+      "topics": [],
+      "stars": 1985,
+      "forks": 30,
+      "created_at": "2026-11-11T04:27:17Z",
+      "pushed_at": "2026-11-15T09:11:50Z",
+      "updated_at": "2026-11-15T15:56:31Z",
+      "stars_per_day": 496.2,
       "age_days": 4
     },
     {
@@ -301,70 +260,12 @@
         "whisper-cpp",
         "windows"
       ],
-      "stars": 1391,
-      "forks": 70,
+      "stars": 1589,
+      "forks": 90,
       "created_at": "2026-11-10T20:01:01Z",
-      "pushed_at": "2026-11-14T11:04:50Z",
-      "updated_at": "2026-11-14T15:24:01Z",
-      "stars_per_day": 463.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "agentes-chat/agentes-chat",
-      "name": "agentes-chat",
-      "html_url": "https://github.com/agentes-chat/agentes-chat",
-      "description": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
-      "language": "TypeScript",
-      "topics": [
-        "agentic-ai",
-        "ai-agents",
-        "browser-automation",
-        "chat",
-        "claude",
-        "claude-code",
-        "codex",
-        "collaboration",
-        "computer-use",
-        "docker-compose",
-        "gemini",
-        "grok",
-        "human-in-the-loop",
-        "llm",
-        "mcp",
-        "multi-agent",
-        "openai",
-        "self-hosted",
-        "slack-alternative",
-        "team-chat"
-      ],
-      "stars": 1375,
-      "forks": 241,
-      "created_at": "2026-11-09T00:50:28Z",
-      "pushed_at": "2026-11-14T15:18:53Z",
-      "updated_at": "2026-11-14T15:04:49Z",
-      "stars_per_day": 275.0,
-      "age_days": 5
-    },
-    {
-      "full_name": "HolyArrs/HolyArrs",
-      "name": "HolyArrs",
-      "html_url": "https://github.com/HolyArrs/HolyArrs",
-      "description": "One self-hosted app for your shows, movies and music.",
-      "language": "Go",
-      "topics": [
-        "docker",
-        "homelab",
-        "jellyfin",
-        "media-server",
-        "plex",
-        "self-hosted"
-      ],
-      "stars": 1152,
-      "forks": 59,
-      "created_at": "2026-11-09T23:53:25Z",
-      "pushed_at": "2026-11-14T05:56:59Z",
-      "updated_at": "2026-11-14T15:17:13Z",
-      "stars_per_day": 288.0,
+      "pushed_at": "2026-11-15T10:51:00Z",
+      "updated_at": "2026-11-15T15:49:23Z",
+      "stars_per_day": 397.2,
       "age_days": 4
     },
     {
@@ -395,27 +296,85 @@
         "windows-package",
         "windows-tools"
       ],
-      "stars": 1044,
-      "forks": 0,
+      "stars": 1540,
+      "forks": 1,
       "created_at": "2026-11-12T20:49:07Z",
       "pushed_at": "2026-11-13T09:24:36Z",
-      "updated_at": "2026-11-14T13:49:25Z",
-      "stars_per_day": 1044.0,
-      "age_days": 1
+      "updated_at": "2026-11-15T15:43:25Z",
+      "stars_per_day": 770.0,
+      "age_days": 2
     },
     {
-      "full_name": "kolbicz/WQFiles",
-      "name": "WQFiles",
-      "html_url": "https://github.com/kolbicz/WQFiles",
-      "description": "File browser, app data manager and cache cleaner for iOS 26 and 27 (worse_query, no jailbreak)",
-      "language": "Objective-C",
+      "full_name": "HybridRobotics/supermimic",
+      "name": "supermimic",
+      "html_url": "https://github.com/HybridRobotics/supermimic",
+      "description": "Humanoid whole-body motion tracking with one differentiable world model.",
+      "language": "Python",
       "topics": [],
-      "stars": 842,
-      "forks": 61,
-      "created_at": "2026-11-09T13:43:40Z",
-      "pushed_at": "2026-11-14T14:17:47Z",
-      "updated_at": "2026-11-14T15:18:20Z",
-      "stars_per_day": 168.4,
+      "stars": 1536,
+      "forks": 106,
+      "created_at": "2026-11-10T10:46:56Z",
+      "pushed_at": "2026-11-11T08:06:27Z",
+      "updated_at": "2026-11-15T15:48:11Z",
+      "stars_per_day": 307.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "agentes-chat/agentes-chat",
+      "name": "agentes-chat",
+      "html_url": "https://github.com/agentes-chat/agentes-chat",
+      "description": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
+      "language": "TypeScript",
+      "topics": [
+        "agentic-ai",
+        "ai-agents",
+        "browser-automation",
+        "chat",
+        "claude",
+        "claude-code",
+        "codex",
+        "collaboration",
+        "computer-use",
+        "docker-compose",
+        "gemini",
+        "grok",
+        "human-in-the-loop",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "openai",
+        "self-hosted",
+        "slack-alternative",
+        "team-chat"
+      ],
+      "stars": 1475,
+      "forks": 263,
+      "created_at": "2026-11-09T00:50:28Z",
+      "pushed_at": "2026-11-15T15:55:01Z",
+      "updated_at": "2026-11-15T15:38:39Z",
+      "stars_per_day": 245.8,
+      "age_days": 6
+    },
+    {
+      "full_name": "HolyArrs/HolyArrs",
+      "name": "HolyArrs",
+      "html_url": "https://github.com/HolyArrs/HolyArrs",
+      "description": "One self-hosted app for your shows, movies and music.",
+      "language": "Go",
+      "topics": [
+        "docker",
+        "homelab",
+        "jellyfin",
+        "media-server",
+        "plex",
+        "self-hosted"
+      ],
+      "stars": 1229,
+      "forks": 63,
+      "created_at": "2026-11-09T23:53:25Z",
+      "pushed_at": "2026-11-15T09:28:04Z",
+      "updated_at": "2026-11-15T15:35:44Z",
+      "stars_per_day": 245.8,
       "age_days": 5
     },
     {
@@ -425,13 +384,58 @@
       "description": "Static recompilation of Mario Kart World (Nintendo Switch 2) to a native PC program",
       "language": "C",
       "topics": [],
-      "stars": 809,
-      "forks": 42,
+      "stars": 1110,
+      "forks": 63,
       "created_at": "2026-11-09T15:40:06Z",
-      "pushed_at": "2026-11-14T08:57:44Z",
-      "updated_at": "2026-11-14T15:19:34Z",
-      "stars_per_day": 202.2,
+      "pushed_at": "2026-11-15T15:53:12Z",
+      "updated_at": "2026-11-15T15:53:25Z",
+      "stars_per_day": 185.0,
+      "age_days": 6
+    },
+    {
+      "full_name": "Eynnzerr/TelemetryCleaner",
+      "name": "TelemetryCleaner",
+      "html_url": "https://github.com/Eynnzerr/TelemetryCleaner",
+      "description": "\u57fa\u4e8e Shizuku \u514d Root \u6e05\u9664\u56fd\u4ea7\u5b89\u5353 SystemHelper\u3001RegService \u7b49\u7cfb\u7edf\u9884\u88c5\u9690\u79c1\u6570\u636e\u6536\u96c6\u6a21\u5757",
+      "language": "Kotlin",
+      "topics": [],
+      "stars": 910,
+      "forks": 80,
+      "created_at": "2026-11-11T06:25:10Z",
+      "pushed_at": "2026-11-15T04:47:14Z",
+      "updated_at": "2026-11-15T15:53:53Z",
+      "stars_per_day": 227.5,
       "age_days": 4
+    },
+    {
+      "full_name": "kolbicz/WQFiles",
+      "name": "WQFiles",
+      "html_url": "https://github.com/kolbicz/WQFiles",
+      "description": "File browser, app data manager and cache cleaner for iOS 26 and 27 (worse_query, no jailbreak)",
+      "language": "Objective-C",
+      "topics": [],
+      "stars": 904,
+      "forks": 71,
+      "created_at": "2026-11-09T13:43:40Z",
+      "pushed_at": "2026-11-15T14:08:50Z",
+      "updated_at": "2026-11-15T15:53:19Z",
+      "stars_per_day": 150.7,
+      "age_days": 6
+    },
+    {
+      "full_name": "duwqijlk/muse-protocol",
+      "name": "muse-protocol",
+      "html_url": "https://github.com/duwqijlk/muse-protocol",
+      "description": "muse.ai \u6ce8\u518c\u4e0e\u9080\u8bf7\u7801\u5151\u6362\u534f\u8bae\u7814\u7a76\uff08\u7eaf HTTP Python \u5b9e\u73b0\uff09",
+      "language": "Python",
+      "topics": [],
+      "stars": 879,
+      "forks": 413,
+      "created_at": "2026-11-14T01:24:58Z",
+      "pushed_at": "2026-11-15T02:55:33Z",
+      "updated_at": "2026-11-15T15:55:18Z",
+      "stars_per_day": 879.0,
+      "age_days": 1
     },
     {
       "full_name": "alexeyw/lot-map",
@@ -450,13 +454,13 @@
         "typescript",
         "visualization"
       ],
-      "stars": 789,
-      "forks": 88,
+      "stars": 859,
+      "forks": 90,
       "created_at": "2026-11-09T19:13:52Z",
-      "pushed_at": "2026-11-13T21:15:05Z",
-      "updated_at": "2026-11-14T15:17:18Z",
-      "stars_per_day": 197.2,
-      "age_days": 4
+      "pushed_at": "2026-11-15T13:15:11Z",
+      "updated_at": "2026-11-15T15:02:37Z",
+      "stars_per_day": 171.8,
+      "age_days": 5
     },
     {
       "full_name": "serveroshq/panel",
@@ -475,13 +479,28 @@
         "serveros",
         "vps"
       ],
-      "stars": 779,
-      "forks": 62,
+      "stars": 832,
+      "forks": 66,
       "created_at": "2026-11-09T00:47:33Z",
-      "pushed_at": "2026-11-14T14:46:19Z",
-      "updated_at": "2026-11-14T14:57:35Z",
-      "stars_per_day": 155.8,
-      "age_days": 5
+      "pushed_at": "2026-11-15T15:32:44Z",
+      "updated_at": "2026-11-15T14:36:52Z",
+      "stars_per_day": 138.7,
+      "age_days": 6
+    },
+    {
+      "full_name": "Noniv/abyssal-garden",
+      "name": "abyssal-garden",
+      "html_url": "https://github.com/Noniv/abyssal-garden",
+      "description": "A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a sunken ship and manta rays. Everything is generated by code with WebGPU (no images, models or sound files), all in a single 97 KB HTML file.",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 821,
+      "forks": 129,
+      "created_at": "2026-11-12T13:57:34Z",
+      "pushed_at": "2026-11-14T17:41:33Z",
+      "updated_at": "2026-11-15T15:57:46Z",
+      "stars_per_day": 273.7,
+      "age_days": 3
     },
     {
       "full_name": "JDhruv14/line-art-animation",
@@ -495,43 +514,28 @@
         "svg-animation",
         "typescript"
       ],
-      "stars": 714,
-      "forks": 116,
+      "stars": 812,
+      "forks": 125,
       "created_at": "2026-11-10T09:25:25Z",
       "pushed_at": "2026-11-10T09:25:38Z",
-      "updated_at": "2026-11-14T15:11:55Z",
-      "stars_per_day": 178.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "forcequitOS/worse_query",
-      "name": "worse_query",
-      "html_url": "https://github.com/forcequitOS/worse_query",
-      "description": "A sandbox escape for iOS 26 and 27, again",
-      "language": "Objective-C",
-      "topics": [],
-      "stars": 628,
-      "forks": 154,
-      "created_at": "2026-11-08T17:00:03Z",
-      "pushed_at": "2026-11-08T20:05:55Z",
-      "updated_at": "2026-11-14T15:00:22Z",
-      "stars_per_day": 125.6,
+      "updated_at": "2026-11-15T15:48:53Z",
+      "stars_per_day": 162.4,
       "age_days": 5
     },
     {
-      "full_name": "AIRzZ90/study-materials-fork",
-      "name": "study-materials-fork",
-      "html_url": "https://github.com/AIRzZ90/study-materials-fork",
-      "description": "A cross-platform Tauri 2 interface and interaction practice project",
+      "full_name": "ZiChuanLan/freebie-radar",
+      "name": "freebie-radar",
+      "html_url": "https://github.com/ZiChuanLan/freebie-radar",
+      "description": "\u767d\u5ad6\u8d44\u6e90\u805a\u5408\u96f7\u8fbe\uff1a57 \u4e2a\u6e90\u5b9a\u65f6\u91c7\u96c6 + AI \u4e8c\u5ba1\u8fc7\u6ee4\u5047\u798f\u5229 + \u83b7\u53d6\u65b9\u5f0f\u5206\u7ea7\u9694\u79bb\u62bd\u5956/\u8bd5\u7528/\u63a8\u5e7f + Telegram \u5373\u65f6\u63a8\u9001",
       "language": "TypeScript",
       "topics": [],
-      "stars": 613,
-      "forks": 757,
-      "created_at": "2026-11-12T10:52:32Z",
-      "pushed_at": "2026-11-12T11:06:34Z",
-      "updated_at": "2026-11-14T15:19:18Z",
-      "stars_per_day": 306.5,
-      "age_days": 2
+      "stars": 718,
+      "forks": 119,
+      "created_at": "2026-11-12T09:08:11Z",
+      "pushed_at": "2026-11-15T14:59:24Z",
+      "updated_at": "2026-11-15T15:55:44Z",
+      "stars_per_day": 239.3,
+      "age_days": 3
     },
     {
       "full_name": "opencoredev/islandcn",
@@ -547,28 +551,156 @@
         "typescript",
         "ui-components"
       ],
-      "stars": 605,
-      "forks": 55,
+      "stars": 715,
+      "forks": 57,
       "created_at": "2026-11-13T11:50:50Z",
       "pushed_at": "2026-11-13T15:14:36Z",
-      "updated_at": "2026-11-14T15:14:49Z",
-      "stars_per_day": 605.0,
+      "updated_at": "2026-11-15T14:22:22Z",
+      "stars_per_day": 357.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "Topkiflare74/ai--manus2.0",
+      "name": "ai--manus2.0",
+      "html_url": "https://github.com/Topkiflare74/ai--manus2.0",
+      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+      "language": null,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-sdk",
+        "anthropic",
+        "chatbot",
+        "function-calling",
+        "gemeni",
+        "generative-ai",
+        "llm",
+        "multimodal",
+        "openai",
+        "react",
+        "solidjs",
+        "streaming",
+        "svelte",
+        "tanstack",
+        "tool-calling",
+        "typescript",
+        "typescript-sdk",
+        "vue"
+      ],
+      "stars": 678,
+      "forks": 5,
+      "created_at": "2026-11-14T19:15:24Z",
+      "pushed_at": "2026-11-15T10:32:40Z",
+      "updated_at": "2026-11-15T02:16:23Z",
+      "stars_per_day": 678.0,
       "age_days": 1
     },
     {
-      "full_name": "makepad/relax",
-      "name": "relax",
-      "html_url": "https://github.com/makepad/relax",
-      "description": "Relax Rust JIT",
-      "language": "Rust",
+      "full_name": "failsafe-security/artex",
+      "name": "artex",
+      "html_url": "https://github.com/failsafe-security/artex",
+      "description": "Source-built, locally bound FailSafe distribution of ARTEX (v0.3.15)",
+      "language": "Go",
       "topics": [],
-      "stars": 527,
-      "forks": 27,
-      "created_at": "2026-11-11T19:12:58Z",
-      "pushed_at": "2026-11-14T15:02:22Z",
-      "updated_at": "2026-11-14T14:32:21Z",
-      "stars_per_day": 263.5,
-      "age_days": 2
+      "stars": 677,
+      "forks": 203,
+      "created_at": "2026-11-10T12:33:18Z",
+      "pushed_at": "2026-11-11T02:54:02Z",
+      "updated_at": "2026-11-15T15:53:12Z",
+      "stars_per_day": 135.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "WarriorRemember/IPTV_Player_2.0",
+      "name": "IPTV_Player_2.0",
+      "html_url": "https://github.com/WarriorRemember/IPTV_Player_2.0",
+      "description": "\ud83c\udfac A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [
+        "dash",
+        "ip-tv",
+        "iptv",
+        "iptv-channels",
+        "iptv-m3u8",
+        "iptv-player",
+        "iptv-player-application",
+        "iptvtools",
+        "m3u",
+        "mag",
+        "mpegts",
+        "plex",
+        "streaming",
+        "tv",
+        "xtream",
+        "xtreamcode"
+      ],
+      "stars": 674,
+      "forks": 12,
+      "created_at": "2026-11-14T19:25:25Z",
+      "pushed_at": "2026-11-15T10:36:10Z",
+      "updated_at": "2026-11-15T15:38:46Z",
+      "stars_per_day": 674.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "trackboatwrightplan/GitHub-Copilot-app",
+      "name": "GitHub-Copilot-app",
+      "html_url": "https://github.com/trackboatwrightplan/GitHub-Copilot-app",
+      "description": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "language": null,
+      "topics": [
+        "adminlte",
+        "agent-skills",
+        "ai",
+        "awesome",
+        "chatgpt",
+        "copilot",
+        "github-copilot",
+        "hacktoberfest",
+        "microsoft-copilot",
+        "openai",
+        "prompts",
+        "vue",
+        "xcode",
+        "xtreamcode"
+      ],
+      "stars": 672,
+      "forks": 12,
+      "created_at": "2026-11-14T19:16:41Z",
+      "pushed_at": "2026-11-15T10:32:41Z",
+      "updated_at": "2026-11-14T23:32:13Z",
+      "stars_per_day": 672.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "TrapAccountant/GitHub-Copilot-app",
+      "name": "GitHub-Copilot-app",
+      "html_url": "https://github.com/TrapAccountant/GitHub-Copilot-app",
+      "description": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "language": null,
+      "topics": [
+        "adminlte",
+        "agent-skills",
+        "ai",
+        "awesome",
+        "chatgpt",
+        "copilot",
+        "github-copilot",
+        "hacktoberfest",
+        "microsoft-copilot",
+        "openai",
+        "prompts",
+        "vue",
+        "xcode",
+        "xtreamcode"
+      ],
+      "stars": 670,
+      "forks": 12,
+      "created_at": "2026-11-14T19:16:47Z",
+      "pushed_at": "2026-11-15T10:36:10Z",
+      "updated_at": "2026-11-14T23:32:14Z",
+      "stars_per_day": 670.0,
+      "age_days": 1
     },
     {
       "full_name": "Dodaios/ste80-humanizer",
@@ -592,204 +724,174 @@
         "simplified-technical-english",
         "writing"
       ],
-      "stars": 523,
-      "forks": 34,
+      "stars": 669,
+      "forks": 46,
       "created_at": "2026-11-09T17:18:59Z",
       "pushed_at": "2026-11-14T14:20:14Z",
-      "updated_at": "2026-11-14T15:18:41Z",
-      "stars_per_day": 130.8,
-      "age_days": 4
-    },
-    {
-      "full_name": "Robbyant/lingbot-touch",
-      "name": "lingbot-touch",
-      "html_url": "https://github.com/Robbyant/lingbot-touch",
-      "description": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
-      "language": "Python",
-      "topics": [],
-      "stars": 521,
-      "forks": 5,
-      "created_at": "2026-11-09T09:02:29Z",
-      "pushed_at": "2026-11-11T02:28:03Z",
-      "updated_at": "2026-11-14T14:19:51Z",
-      "stars_per_day": 104.2,
+      "updated_at": "2026-11-15T15:42:04Z",
+      "stars_per_day": 133.8,
       "age_days": 5
     },
     {
-      "full_name": "rivet-dev/open-orange",
-      "name": "open-orange",
-      "html_url": "https://github.com/rivet-dev/open-orange",
-      "description": "Run Cloudflare Workers and Durable Objects unchanged on AWS, GCP, Azure or your own servers.",
-      "language": "TypeScript",
+      "full_name": "TurquoiseDetective/IPTV_Player_2.0",
+      "name": "IPTV_Player_2.0",
+      "html_url": "https://github.com/TurquoiseDetective/IPTV_Player_2.0",
+      "description": "\ud83c\udfac A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
       "topics": [
-        "cloudflare",
-        "cloudflare-workers",
-        "durable-objects",
-        "nodejs",
-        "rivet",
-        "self-hosted",
-        "serverless",
-        "sqlite",
-        "typescript",
-        "wrangler"
+        "dash",
+        "ip-tv",
+        "iptv",
+        "iptv-channels",
+        "iptv-m3u8",
+        "iptv-player",
+        "iptv-player-application",
+        "iptvtools",
+        "m3u",
+        "mag",
+        "mpegts",
+        "plex",
+        "streaming",
+        "tv",
+        "xtream",
+        "xtreamcode"
       ],
-      "stars": 513,
-      "forks": 19,
-      "created_at": "2026-11-12T00:44:12Z",
-      "pushed_at": "2026-11-14T15:22:42Z",
-      "updated_at": "2026-11-14T15:20:03Z",
-      "stars_per_day": 256.5,
-      "age_days": 2
-    },
-    {
-      "full_name": "luobinger/PerkRadar",
-      "name": "PerkRadar",
-      "html_url": "https://github.com/luobinger/PerkRadar",
-      "description": "PerkRadar \u2014 A self-hosted deals aggregator that fetches freebies, limited-time offers, and discounts from multiple sources every two hours, with source status tracking, expiration handling, and personal bookmarks.",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 495,
-      "forks": 101,
-      "created_at": "2026-11-08T08:22:48Z",
-      "pushed_at": "2026-11-14T14:48:29Z",
-      "updated_at": "2026-11-14T14:48:16Z",
-      "stars_per_day": 82.5,
-      "age_days": 6
-    },
-    {
-      "full_name": "faizfahmi77/ScanDot",
-      "name": "ScanDot",
-      "html_url": "https://github.com/faizfahmi77/ScanDot",
-      "description": "Experimental Android 3D scanning and point-cloud viewer",
-      "language": "Kotlin",
-      "topics": [
-        "3d-scanning",
-        "android",
-        "photogrammetry",
-        "point-cloud"
-      ],
-      "stars": 470,
-      "forks": 4,
-      "created_at": "2026-11-13T04:07:57Z",
-      "pushed_at": "2026-11-13T04:27:21Z",
-      "updated_at": "2026-11-14T15:23:43Z",
-      "stars_per_day": 470.0,
+      "stars": 669,
+      "forks": 12,
+      "created_at": "2026-11-14T19:25:17Z",
+      "pushed_at": "2026-11-15T10:36:46Z",
+      "updated_at": "2026-11-14T23:32:17Z",
+      "stars_per_day": 669.0,
       "age_days": 1
     },
     {
-      "full_name": "linknimiball1974/ai-texture-forge",
-      "name": "ai-texture-forge",
-      "html_url": "https://github.com/linknimiball1974/ai-texture-forge",
-      "description": "An AI-powered texture forge for Blender \u2014 turn text prompts into seamless PBR materials, concept art and scene-wide projections with local or cloud diffusion models, straight inside the 3D viewport on Windows. \u00b7 dream textures \u00b7 dream textures blender \u00b7 dream textures addon \u00b7 dream textures ai \u00b7 dream textures seamless \u00b7 dream textures pbr",
+      "full_name": "tornadonovicewhirl40/IPTV_Player_2.0",
+      "name": "IPTV_Player_2.0",
+      "html_url": "https://github.com/tornadonovicewhirl40/IPTV_Player_2.0",
+      "description": "\ud83c\udfac A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [
+        "dash",
+        "ip-tv",
+        "iptv",
+        "iptv-channels",
+        "iptv-m3u8",
+        "iptv-player",
+        "iptv-player-application",
+        "iptvtools",
+        "m3u",
+        "mag",
+        "mpegts",
+        "plex",
+        "streaming",
+        "tv",
+        "xtream",
+        "xtreamcode"
+      ],
+      "stars": 669,
+      "forks": 12,
+      "created_at": "2026-11-14T19:15:43Z",
+      "pushed_at": "2026-11-15T10:32:09Z",
+      "updated_at": "2026-11-14T23:32:12Z",
+      "stars_per_day": 669.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "WattBeetleLearn/IPTV_Player_2.0",
+      "name": "IPTV_Player_2.0",
+      "html_url": "https://github.com/WattBeetleLearn/IPTV_Player_2.0",
+      "description": "\ud83c\udfac A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [
+        "dash",
+        "ip-tv",
+        "iptv",
+        "iptv-channels",
+        "iptv-m3u8",
+        "iptv-player",
+        "iptv-player-application",
+        "iptvtools",
+        "m3u",
+        "mag",
+        "mpegts",
+        "plex",
+        "streaming",
+        "tv",
+        "xtream",
+        "xtreamcode"
+      ],
+      "stars": 667,
+      "forks": 12,
+      "created_at": "2026-11-14T19:25:28Z",
+      "pushed_at": "2026-11-15T10:36:42Z",
+      "updated_at": "2026-11-14T23:32:20Z",
+      "stars_per_day": 667.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "topapothecarycanal/ai--manus2.0",
+      "name": "ai--manus2.0",
+      "html_url": "https://github.com/topapothecarycanal/ai--manus2.0",
+      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
       "language": null,
       "topics": [
-        "dream-textures",
-        "dream-textures-addon",
-        "dream-textures-ai",
-        "dream-textures-blender",
-        "dream-textures-diffusion",
-        "dream-textures-generation",
-        "dream-textures-gpu",
-        "dream-textures-history",
-        "dream-textures-inpainting",
-        "dream-textures-local",
-        "dream-textures-material",
-        "dream-textures-outpainting",
-        "dream-textures-pbr",
-        "dream-textures-projection",
-        "dream-textures-prompt",
-        "dream-textures-python",
-        "dream-textures-render",
-        "dream-textures-seamless",
-        "dream-textures-upscaling",
-        "dream-textures-windows"
+        "ai",
+        "ai-agents",
+        "ai-sdk",
+        "anthropic",
+        "chatbot",
+        "function-calling",
+        "gemeni",
+        "generative-ai",
+        "llm",
+        "multimodal",
+        "openai",
+        "react",
+        "solidjs",
+        "streaming",
+        "svelte",
+        "tanstack",
+        "tool-calling",
+        "typescript",
+        "typescript-sdk",
+        "vue"
       ],
-      "stars": 469,
-      "forks": 20,
-      "created_at": "2026-11-11T19:09:18Z",
-      "pushed_at": "2026-11-12T20:07:30Z",
-      "updated_at": "2026-11-14T15:22:20Z",
-      "stars_per_day": 234.5,
-      "age_days": 2
+      "stars": 666,
+      "forks": 12,
+      "created_at": "2026-11-14T19:15:24Z",
+      "pushed_at": "2026-11-15T10:36:40Z",
+      "updated_at": "2026-11-14T23:32:11Z",
+      "stars_per_day": 666.0,
+      "age_days": 1
     },
     {
-      "full_name": "paulirish/chrome-capture",
-      "name": "chrome-capture",
-      "html_url": "https://github.com/paulirish/chrome-capture",
-      "description": "60-120fps / 2160p tab video/audio capture from Chrome",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 448,
-      "forks": 7,
-      "created_at": "2026-11-08T20:07:38Z",
-      "pushed_at": "2026-11-11T01:40:29Z",
-      "updated_at": "2026-11-14T14:20:24Z",
-      "stars_per_day": 89.6,
-      "age_days": 5
-    },
-    {
-      "full_name": "failsafe-security/artex",
-      "name": "artex",
-      "html_url": "https://github.com/failsafe-security/artex",
-      "description": "Source-built, locally bound FailSafe distribution of ARTEX (v0.3.15)",
-      "language": "Go",
-      "topics": [],
-      "stars": 445,
-      "forks": 134,
-      "created_at": "2026-11-10T12:33:18Z",
-      "pushed_at": "2026-11-11T02:54:02Z",
-      "updated_at": "2026-11-14T15:22:30Z",
-      "stars_per_day": 111.2,
-      "age_days": 4
-    },
-    {
-      "full_name": "TomyJan/SnowLuma",
-      "name": "SnowLuma",
-      "html_url": "https://github.com/TomyJan/SnowLuma",
-      "description": "Next Remote Protocol Framework.",
-      "language": "TypeScript",
+      "full_name": "toppatronweave/GitHub-Copilot-app",
+      "name": "GitHub-Copilot-app",
+      "html_url": "https://github.com/toppatronweave/GitHub-Copilot-app",
+      "description": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "language": null,
       "topics": [
-        "bot",
-        "napcat",
-        "napcatqq",
-        "snowluma"
+        "adminlte",
+        "agent-skills",
+        "ai",
+        "awesome",
+        "chatgpt",
+        "copilot",
+        "github-copilot",
+        "hacktoberfest",
+        "microsoft-copilot",
+        "openai",
+        "prompts",
+        "vue",
+        "xcode",
+        "xtreamcode"
       ],
-      "stars": 437,
-      "forks": 934,
-      "created_at": "2026-11-09T13:53:03Z",
-      "pushed_at": "2026-11-09T14:17:03Z",
-      "updated_at": "2026-11-14T15:13:40Z",
-      "stars_per_day": 87.4,
-      "age_days": 5
-    },
-    {
-      "full_name": "yetone/rewind-for-x",
-      "name": "rewind-for-x",
-      "html_url": "https://github.com/yetone/rewind-for-x",
-      "description": "Chrome extension: look back at posts that scrolled past on your X home timeline",
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 415,
-      "forks": 14,
-      "created_at": "2026-11-09T09:28:22Z",
-      "pushed_at": "2026-11-10T09:12:24Z",
-      "updated_at": "2026-11-14T13:56:25Z",
-      "stars_per_day": 83.0,
-      "age_days": 5
-    },
-    {
-      "full_name": "duwqijlk/muse-protocol",
-      "name": "muse-protocol",
-      "html_url": "https://github.com/duwqijlk/muse-protocol",
-      "description": "muse.ai \u6ce8\u518c\u4e0e\u9080\u8bf7\u7801\u5151\u6362\u534f\u8bae\u7814\u7a76\uff08\u7eaf HTTP Python \u5b9e\u73b0\uff09",
-      "language": "Python",
-      "topics": [],
-      "stars": 409,
-      "forks": 216,
-      "created_at": "2026-11-14T01:24:58Z",
-      "pushed_at": "2026-11-14T03:36:45Z",
-      "updated_at": "2026-11-14T15:23:52Z",
-      "stars_per_day": 409.0,
+      "stars": 666,
+      "forks": 309,
+      "created_at": "2026-11-14T19:25:20Z",
+      "pushed_at": "2026-11-15T10:32:43Z",
+      "updated_at": "2026-11-15T10:27:37Z",
+      "stars_per_day": 666.0,
       "age_days": 1
     }
   ],
@@ -869,89 +971,89 @@
     {
       "title": "Long Live Rails",
       "url": "https://dev.to/ben/long-live-rails-3p21",
-      "reactions": 122,
-      "comments": 19,
+      "reactions": 128,
+      "comments": 22,
       "published_at": "2026-11-12T15:30:50Z"
     },
     {
       "title": "Our Looping Factory Cut DEV Page Load Time by 75% and Counting",
       "url": "https://dev.to/dailycontext/our-looping-factory-cut-dev-page-load-time-by-75-and-counting-1hnf",
-      "reactions": 142,
+      "reactions": 143,
       "comments": 39,
       "published_at": "2026-11-09T16:12:25Z"
+    },
+    {
+      "title": "MCP Is Dead Simple. And That's Exactly the Problem",
+      "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
+      "reactions": 166,
+      "comments": 147,
+      "published_at": "2026-11-12T08:14:36Z"
     },
     {
       "title": "How do you truly stand out in Tech?",
       "url": "https://dev.to/francistrdev/how-do-you-truly-stand-out-in-tech-478a",
       "reactions": 202,
-      "comments": 111,
+      "comments": 112,
       "published_at": "2026-11-09T15:11:22Z"
-    },
-    {
-      "title": "MCP Is Dead Simple. And That's Exactly the Problem",
-      "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
-      "reactions": 153,
-      "comments": 127,
-      "published_at": "2026-11-12T08:14:36Z"
     },
     {
       "title": "How did you end up in tech, and are you staying?",
       "url": "https://dev.to/maame-codes/how-did-you-end-up-in-tech-and-are-you-staying-4l9b",
-      "reactions": 159,
-      "comments": 63,
+      "reactions": 161,
+      "comments": 65,
       "published_at": "2026-11-09T23:02:37Z"
-    },
-    {
-      "title": "Necoz Has a New Home on DEV! \ud83d\udc08\ud83c\udf89",
-      "url": "https://dev.to/necoz/necoz-has-a-new-home-on-dev-3454",
-      "reactions": 179,
-      "comments": 119,
-      "published_at": "2026-11-08T11:50:29Z"
     },
     {
       "title": "The C Trilogy: How Dennis Ritchie, Bjarne Stroustrup, and Anders Hejlsberg Built the Modern World \ud83c\udfdb\ufe0f",
       "url": "https://dev.to/devengers/the-c-trilogy-how-dennis-ritchie-bjarne-stroustrup-and-anders-hejlsberg-built-the-modern-world-1onp",
-      "reactions": 154,
+      "reactions": 155,
       "comments": 47,
       "published_at": "2026-11-09T15:30:54Z"
     },
     {
       "title": "Dev Opportunity Radar #25: $120K+ Atlassian Hackathon, MLH Fellowship, and INSEAD AI Founder Sprint",
       "url": "https://dev.to/devengers/dev-opportunity-radar-25-120k-atlassian-hackathon-mlh-fellowship-and-insead-ai-founder-sprint-m96",
-      "reactions": 78,
-      "comments": 4,
+      "reactions": 94,
+      "comments": 6,
       "published_at": "2026-11-13T18:28:11Z"
     },
     {
       "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
       "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
-      "reactions": 83,
-      "comments": 36,
+      "reactions": 93,
+      "comments": 39,
       "published_at": "2026-11-13T15:56:26Z"
     },
     {
       "title": "A 10 years old developer who has become a DEV.to Trusted Member! \ud83d\ude31",
       "url": "https://dev.to/necoz/a-10-years-old-developer-who-has-become-a-devto-trusted-member-49c8",
-      "reactions": 95,
+      "reactions": 96,
       "comments": 48,
       "published_at": "2026-11-12T11:18:53Z"
+    },
+    {
+      "title": "How much does it cost to run a text game with LLMs",
+      "url": "https://dev.to/hiper2d/how-much-does-it-cost-to-run-a-text-game-with-llms-57o7",
+      "reactions": 87,
+      "comments": 92,
+      "published_at": "2026-11-08T18:46:19Z"
     }
   ],
   "languages": [
     [
       "TypeScript",
-      11
+      7
     ],
     [
-      "Python",
+      "Rust",
       4
     ],
     [
-      "Go",
-      2
+      "Python",
+      3
     ],
     [
-      "Objective-C",
+      "Go",
       2
     ],
     [
@@ -960,10 +1062,6 @@
     ],
     [
       "C",
-      1
-    ],
-    [
-      "C#",
       1
     ],
     [
@@ -979,11 +1077,11 @@
       1
     ],
     [
-      "PHP",
+      "Objective-C",
       1
     ],
     [
-      "Rust",
+      "PHP",
       1
     ],
     [
@@ -993,19 +1091,155 @@
   ],
   "topics": [
     [
-      "self-hosted",
-      4
+      "xtreamcode",
+      7
+    ],
+    [
+      "openai",
+      6
+    ],
+    [
+      "streaming",
+      6
+    ],
+    [
+      "ai",
+      5
+    ],
+    [
+      "plex",
+      5
     ],
     [
       "typescript",
+      5
+    ],
+    [
+      "vue",
+      5
+    ],
+    [
+      "agent-skills",
       4
+    ],
+    [
+      "ai-agents",
+      4
+    ],
+    [
+      "dash",
+      4
+    ],
+    [
+      "ip-tv",
+      4
+    ],
+    [
+      "iptv",
+      4
+    ],
+    [
+      "iptv-channels",
+      4
+    ],
+    [
+      "iptv-m3u8",
+      4
+    ],
+    [
+      "iptv-player",
+      4
+    ],
+    [
+      "iptv-player-application",
+      4
+    ],
+    [
+      "iptvtools",
+      4
+    ],
+    [
+      "llm",
+      4
+    ],
+    [
+      "m3u",
+      4
+    ],
+    [
+      "mag",
+      4
+    ],
+    [
+      "mpegts",
+      4
+    ],
+    [
+      "tv",
+      4
+    ],
+    [
+      "xtream",
+      4
+    ],
+    [
+      "adminlte",
+      3
+    ],
+    [
+      "awesome",
+      3
+    ],
+    [
+      "chatgpt",
+      3
     ],
     [
       "claude-code",
       3
     ],
     [
-      "ai-agents",
+      "copilot",
+      3
+    ],
+    [
+      "github-copilot",
+      3
+    ],
+    [
+      "hacktoberfest",
+      3
+    ],
+    [
+      "microsoft-copilot",
+      3
+    ],
+    [
+      "prompts",
+      3
+    ],
+    [
+      "react",
+      3
+    ],
+    [
+      "self-hosted",
+      3
+    ],
+    [
+      "xcode",
+      3
+    ],
+    [
+      "ai-sdk",
+      2
+    ],
+    [
+      "anthropic",
+      2
+    ],
+    [
+      "chatbot",
       2
     ],
     [
@@ -1017,11 +1251,15 @@
       2
     ],
     [
-      "llm",
+      "function-calling",
       2
     ],
     [
-      "macos",
+      "gemeni",
+      2
+    ],
+    [
+      "generative-ai",
       2
     ],
     [
@@ -1029,7 +1267,19 @@
       2
     ],
     [
+      "multimodal",
+      2
+    ],
+    [
       "open-source",
+      2
+    ],
+    [
+      "solidjs",
+      2
+    ],
+    [
+      "svelte",
       2
     ],
     [
@@ -1037,19 +1287,23 @@
       2
     ],
     [
+      "tanstack",
+      2
+    ],
+    [
+      "tool-calling",
+      2
+    ],
+    [
+      "typescript-sdk",
+      2
+    ],
+    [
       "windows",
       2
     ],
     [
-      "3d-scanning",
-      1
-    ],
-    [
       "agent-observability",
-      1
-    ],
-    [
-      "agent-skills",
       1
     ],
     [
@@ -1073,23 +1327,7 @@
       1
     ],
     [
-      "android",
-      1
-    ],
-    [
-      "apple-silicon",
-      1
-    ],
-    [
-      "arm64",
-      1
-    ],
-    [
       "asd-ste100",
-      1
-    ],
-    [
-      "bot",
       1
     ],
     [
@@ -1110,14 +1348,6 @@
     ],
     [
       "claude-skills",
-      1
-    ],
-    [
-      "cloudflare",
-      1
-    ],
-    [
-      "cloudflare-workers",
       1
     ],
     [
@@ -1157,90 +1387,6 @@
       1
     ],
     [
-      "dream-textures",
-      1
-    ],
-    [
-      "dream-textures-addon",
-      1
-    ],
-    [
-      "dream-textures-ai",
-      1
-    ],
-    [
-      "dream-textures-blender",
-      1
-    ],
-    [
-      "dream-textures-diffusion",
-      1
-    ],
-    [
-      "dream-textures-generation",
-      1
-    ],
-    [
-      "dream-textures-gpu",
-      1
-    ],
-    [
-      "dream-textures-history",
-      1
-    ],
-    [
-      "dream-textures-inpainting",
-      1
-    ],
-    [
-      "dream-textures-local",
-      1
-    ],
-    [
-      "dream-textures-material",
-      1
-    ],
-    [
-      "dream-textures-outpainting",
-      1
-    ],
-    [
-      "dream-textures-pbr",
-      1
-    ],
-    [
-      "dream-textures-projection",
-      1
-    ],
-    [
-      "dream-textures-prompt",
-      1
-    ],
-    [
-      "dream-textures-python",
-      1
-    ],
-    [
-      "dream-textures-render",
-      1
-    ],
-    [
-      "dream-textures-seamless",
-      1
-    ],
-    [
-      "dream-textures-upscaling",
-      1
-    ],
-    [
-      "dream-textures-windows",
-      1
-    ],
-    [
-      "durable-objects",
-      1
-    ],
-    [
       "dynamic-island",
       1
     ],
@@ -1266,10 +1412,6 @@
     ],
     [
       "ffmpeg-script",
-      1
-    ],
-    [
-      "game-porting",
       1
     ],
     [
@@ -1313,14 +1455,6 @@
       1
     ],
     [
-      "ios",
-      1
-    ],
-    [
-      "ipados",
-      1
-    ],
-    [
       "jellyfin",
       1
     ],
@@ -1353,6 +1487,10 @@
       1
     ],
     [
+      "macos",
+      1
+    ],
+    [
       "media-converter",
       1
     ],
@@ -1373,19 +1511,7 @@
       1
     ],
     [
-      "metal",
-      1
-    ],
-    [
       "multi-agent",
-      1
-    ],
-    [
-      "napcat",
-      1
-    ],
-    [
-      "napcatqq",
       1
     ],
     [
@@ -1393,19 +1519,7 @@
       1
     ],
     [
-      "nodejs",
-      1
-    ],
-    [
       "offline-first",
-      1
-    ],
-    [
-      "openai",
-      1
-    ],
-    [
-      "photogrammetry",
       1
     ],
     [
@@ -1413,35 +1527,11 @@
       1
     ],
     [
-      "plex",
-      1
-    ],
-    [
-      "point-cloud",
-      1
-    ],
-    [
       "privacy",
       1
     ],
     [
-      "react",
-      1
-    ],
-    [
-      "rivet",
-      1
-    ],
-    [
-      "s2arm",
-      1
-    ],
-    [
       "server-management",
-      1
-    ],
-    [
-      "serverless",
       1
     ],
     [
@@ -1461,23 +1551,7 @@
       1
     ],
     [
-      "snowluma",
-      1
-    ],
-    [
       "speech-to-text",
-      1
-    ],
-    [
-      "sqlite",
-      1
-    ],
-    [
-      "static-recompilation",
-      1
-    ],
-    [
-      "switch",
       1
     ],
     [
@@ -1538,10 +1612,6 @@
     ],
     [
       "windows-tools",
-      1
-    ],
-    [
-      "wrangler",
       1
     ],
     [

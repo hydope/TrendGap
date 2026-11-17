@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-16T19:01:44.845694+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-09, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-17T17:58:54.859240+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-10, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-09&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-10&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -24,149 +24,149 @@
   "unavailable_sources": [],
   "rising": [
     {
+      "name": "Python",
+      "kind": "language",
+      "count_in_snapshot": 10,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
       "name": "TypeScript",
       "kind": "language",
-      "count_in_snapshot": 8,
+      "count_in_snapshot": 5,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "mcp",
       "kind": "topic",
-      "count_in_snapshot": 8,
+      "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 1
     },
     {
-      "name": "blender",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "blender-addon",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "blender-ai",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "blender-automation",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "blender-mcp",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "blender-plugin",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "blender-scripting",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "bpy",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "mcp-server",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "model-context-protocol",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
       "name": "3d-automation",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "3d-modeling",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Rust",
+      "kind": "language",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
+      "name": "blender",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "blender-addon",
+      "kind": "topic",
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "blender-agents",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "blender-ai",
+      "kind": "topic",
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "blender-assistant",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "blender-automation",
+      "kind": "topic",
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "blender-chatgpt",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "blender-copilot",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "blender-extension",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "blender-llm",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "blender-mcp",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "blender-plugin",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "blender-scripting",
+      "kind": "topic",
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "blender3d",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "bpy",
+      "kind": "topic",
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     }
@@ -179,13 +179,13 @@
       "description": "Chat Demo",
       "language": "TypeScript",
       "topics": [],
-      "stars": 3998,
-      "forks": 841,
+      "stars": 4497,
+      "forks": 977,
       "created_at": "2026-11-12T08:08:19Z",
       "pushed_at": "2026-11-13T14:33:08Z",
-      "updated_at": "2026-11-16T19:00:58Z",
-      "stars_per_day": 999.5,
-      "age_days": 4
+      "updated_at": "2026-11-17T17:48:53Z",
+      "stars_per_day": 899.4,
+      "age_days": 5
     },
     {
       "full_name": "apex-compute/ANR",
@@ -194,115 +194,28 @@
       "description": "Apex Neural Rendering (ANR) by Apex Compute",
       "language": "C++",
       "topics": [],
-      "stars": 2431,
-      "forks": 53,
+      "stars": 2567,
+      "forks": 55,
       "created_at": "2026-11-11T04:27:17Z",
-      "pushed_at": "2026-11-15T09:11:50Z",
-      "updated_at": "2026-11-16T18:57:00Z",
-      "stars_per_day": 486.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "Kianuni/Erosion-CN",
-      "name": "Erosion-CN",
-      "html_url": "https://github.com/Kianuni/Erosion-CN",
-      "description": "iOS / iPadOS \u7cfb\u7edf\u914d\u7f6e\u4e0e MobileGestalt \u7814\u7a76\u5de5\u5177\u7bb1\uff08\u4e2d\u82f1\u53cc\u8bed \u00b7 \u9632\u767d\u82f9\u679c\u5b89\u5168\u52a0\u56fa\u7248\uff09 | Bootloop-safe iOS / iPadOS System Configuration & MobileGestalt Toolbox (Bilingual EN/ZH)",
-      "language": "Swift",
-      "topics": [],
-      "stars": 2193,
-      "forks": 436,
-      "created_at": "2026-11-10T02:37:31Z",
-      "pushed_at": "2026-11-16T08:20:18Z",
-      "updated_at": "2026-11-16T18:29:21Z",
-      "stars_per_day": 365.5,
+      "pushed_at": "2026-11-17T00:20:54Z",
+      "updated_at": "2026-11-17T17:51:54Z",
+      "stars_per_day": 427.8,
       "age_days": 6
     },
     {
-      "full_name": "hitkeeen/blender-ai-mcp-addon",
-      "name": "blender-ai-mcp-addon",
-      "html_url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
-      "description": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration.",
-      "language": null,
-      "topics": [
-        "ai-agents",
-        "ai-assistant",
-        "blender",
-        "blender-addon",
-        "blender-ai",
-        "blender-automation",
-        "blender-mcp",
-        "blender-plugin",
-        "blender-scripting",
-        "bpy",
-        "chatgpt",
-        "claude",
-        "gemini",
-        "llm",
-        "mcp",
-        "mcp-for-blender",
-        "mcp-server",
-        "model-context-protocol",
-        "ollama",
-        "opencode"
-      ],
-      "stars": 2120,
-      "forks": 53,
-      "created_at": "2026-11-12T14:32:15Z",
-      "pushed_at": "2026-11-12T14:33:16Z",
-      "updated_at": "2026-11-16T18:56:42Z",
-      "stars_per_day": 530.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "FrigadeHQ/yogurt",
-      "name": "yogurt",
-      "html_url": "https://github.com/FrigadeHQ/yogurt",
-      "description": "Private AI meeting notes that stay on your computer. A free, open-source alternative to Granola for Mac, Windows and Linux.",
-      "language": "TypeScript",
-      "topics": [
-        "ai-meeting-assistant",
-        "ai-notetaker",
-        "electron",
-        "granola-alternative",
-        "linux",
-        "llama-cpp",
-        "local-ai",
-        "local-first",
-        "macos",
-        "mcp",
-        "meeting-minutes",
-        "meeting-notes",
-        "offline-first",
-        "open-source",
-        "privacy",
-        "speech-to-text",
-        "transcription",
-        "whisper",
-        "whisper-cpp",
-        "windows"
-      ],
-      "stars": 1823,
-      "forks": 110,
-      "created_at": "2026-11-10T20:01:01Z",
-      "pushed_at": "2026-11-16T18:41:19Z",
-      "updated_at": "2026-11-16T18:55:15Z",
-      "stars_per_day": 364.6,
-      "age_days": 5
-    },
-    {
-      "full_name": "HybridRobotics/supermimic",
-      "name": "supermimic",
-      "html_url": "https://github.com/HybridRobotics/supermimic",
-      "description": "Humanoid whole-body motion tracking with one differentiable world model.",
-      "language": "Python",
+      "full_name": "krisgfx9/Wireless-Device-Battery-Monitor",
+      "name": "Wireless-Device-Battery-Monitor",
+      "html_url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
+      "description": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 taskbar. Lightweight tray app, no vendor software needed. Supports Logitech, Razer, SteelSeries, Corsair, HyperX, Glorious, PS4/PS5 DualSense, Xbox and Bluetooth devices.",
+      "language": "C++",
       "topics": [],
-      "stars": 1652,
-      "forks": 116,
-      "created_at": "2026-11-10T10:46:56Z",
-      "pushed_at": "2026-11-16T11:42:06Z",
-      "updated_at": "2026-11-16T18:45:03Z",
-      "stars_per_day": 275.3,
-      "age_days": 6
+      "stars": 2088,
+      "forks": 174,
+      "created_at": "2026-11-16T19:28:29Z",
+      "pushed_at": "2026-11-17T17:42:54Z",
+      "updated_at": "2026-11-17T17:58:26Z",
+      "stars_per_day": 2088.0,
+      "age_days": 1
     },
     {
       "full_name": "Noniv/abyssal-garden",
@@ -311,13 +224,13 @@
       "description": "A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a sunken ship and manta rays. Everything is generated by code with WebGPU (no images, models or sound files), all in a single 97 KB HTML file.",
       "language": "JavaScript",
       "topics": [],
-      "stars": 1596,
-      "forks": 244,
+      "stars": 2086,
+      "forks": 309,
       "created_at": "2026-11-12T13:57:34Z",
       "pushed_at": "2026-11-14T17:41:33Z",
-      "updated_at": "2026-11-16T19:00:46Z",
-      "stars_per_day": 399.0,
-      "age_days": 4
+      "updated_at": "2026-11-17T17:55:32Z",
+      "stars_per_day": 417.2,
+      "age_days": 5
     },
     {
       "full_name": "duwqijlk/muse-protocol",
@@ -326,13 +239,13 @@
       "description": "muse.ai \u6ce8\u518c\u4e0e\u9080\u8bf7\u7801\u5151\u6362\u534f\u8bae\u7814\u7a76\uff08\u7eaf HTTP Python \u5b9e\u73b0\uff09",
       "language": "Python",
       "topics": [],
-      "stars": 1417,
-      "forks": 558,
+      "stars": 1570,
+      "forks": 620,
       "created_at": "2026-11-14T01:24:58Z",
       "pushed_at": "2026-11-15T02:55:33Z",
-      "updated_at": "2026-11-16T18:54:03Z",
-      "stars_per_day": 708.5,
-      "age_days": 2
+      "updated_at": "2026-11-17T17:41:16Z",
+      "stars_per_day": 523.3,
+      "age_days": 3
     },
     {
       "full_name": "Eynnzerr/TelemetryCleaner",
@@ -341,13 +254,28 @@
       "description": "\u57fa\u4e8e Shizuku \u514d Root \u6e05\u9664\u56fd\u4ea7\u5b89\u5353 SystemHelper\u3001RegService \u7b49\u7cfb\u7edf\u9884\u88c5\u9690\u79c1\u6570\u636e\u6536\u96c6\u6a21\u5757",
       "language": "Kotlin",
       "topics": [],
-      "stars": 1288,
-      "forks": 110,
+      "stars": 1459,
+      "forks": 122,
       "created_at": "2026-11-11T06:25:10Z",
-      "pushed_at": "2026-11-16T05:54:50Z",
-      "updated_at": "2026-11-16T18:56:09Z",
-      "stars_per_day": 257.6,
-      "age_days": 5
+      "pushed_at": "2026-11-17T08:45:38Z",
+      "updated_at": "2026-11-17T17:57:55Z",
+      "stars_per_day": 243.2,
+      "age_days": 6
+    },
+    {
+      "full_name": "Immortal-Protocols/lastbook",
+      "name": "lastbook",
+      "html_url": "https://github.com/Immortal-Protocols/lastbook",
+      "description": "Offline knowledge AI, maps and videos for survival and rebuilding",
+      "language": "Python",
+      "topics": [],
+      "stars": 1434,
+      "forks": 180,
+      "created_at": "2026-11-12T23:49:03Z",
+      "pushed_at": "2026-11-17T10:09:09Z",
+      "updated_at": "2026-11-17T17:58:36Z",
+      "stars_per_day": 358.5,
+      "age_days": 4
     },
     {
       "full_name": "ZiChuanLan/freebie-radar",
@@ -356,48 +284,80 @@
       "description": "\u767d\u5ad6\u4e0e\u8d44\u8baf\u8d44\u6e90\u805a\u5408\u96f7\u8fbe\uff1a100+\u4e2a\u6e90\u5b9a\u65f6\u91c7\u96c6 + AI \u4e8c\u5ba1\u8fc7\u6ee4\u5047\u798f\u5229 + \u83b7\u53d6\u65b9\u5f0f\u5206\u7ea7\u9694\u79bb\u62bd\u5956/\u8bd5\u7528/\u63a8\u5e7f + Telegram \u5373\u65f6\u63a8\u9001",
       "language": "TypeScript",
       "topics": [],
-      "stars": 1107,
-      "forks": 190,
+      "stars": 1409,
+      "forks": 239,
       "created_at": "2026-11-12T09:08:11Z",
-      "pushed_at": "2026-11-16T17:48:08Z",
-      "updated_at": "2026-11-16T19:00:13Z",
-      "stars_per_day": 276.8,
-      "age_days": 4
+      "pushed_at": "2026-11-17T17:25:24Z",
+      "updated_at": "2026-11-17T17:41:39Z",
+      "stars_per_day": 281.8,
+      "age_days": 5
     },
     {
-      "full_name": "JDhruv14/line-art-animation",
-      "name": "line-art-animation",
-      "html_url": "https://github.com/JDhruv14/line-art-animation",
-      "description": "A Claude skill and TypeScript library for animated line-art SVG components: ink figures that walk and react, scenes with a day/night cycle.",
-      "language": "TypeScript",
-      "topics": [
-        "claude-skill",
-        "line-art",
-        "svg-animation",
-        "typescript"
-      ],
-      "stars": 912,
-      "forks": 141,
-      "created_at": "2026-11-10T09:25:25Z",
-      "pushed_at": "2026-11-10T09:25:38Z",
-      "updated_at": "2026-11-16T18:58:55Z",
-      "stars_per_day": 152.0,
-      "age_days": 6
-    },
-    {
-      "full_name": "failsafe-security/artex",
-      "name": "artex",
-      "html_url": "https://github.com/failsafe-security/artex",
-      "description": "Source-built, locally bound FailSafe distribution of ARTEX (v0.3.15)",
-      "language": "Go",
+      "full_name": "gylive/google-ultra",
+      "name": "google-ultra",
+      "html_url": "https://github.com/gylive/google-ultra",
+      "description": null,
+      "language": "Python",
       "topics": [],
-      "stars": 772,
-      "forks": 236,
-      "created_at": "2026-11-10T12:33:18Z",
-      "pushed_at": "2026-11-16T10:37:11Z",
-      "updated_at": "2026-11-16T18:53:48Z",
-      "stars_per_day": 128.7,
-      "age_days": 6
+      "stars": 1153,
+      "forks": 587,
+      "created_at": "2026-11-17T10:21:54Z",
+      "pushed_at": "2026-11-17T17:11:33Z",
+      "updated_at": "2026-11-17T17:58:35Z",
+      "stars_per_day": 1153.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "CzzzzzzJ/mdldm-maitian",
+      "name": "mdldm-maitian",
+      "html_url": "https://github.com/CzzzzzzJ/mdldm-maitian",
+      "description": "\u9ea6\u7530\uff1a\u81ea\u5a92\u4f53\u591a\u5e73\u53f0\u53d1\u5e03\u4e2d\u63a7\u4e0e\u6570\u636e\u76d1\u63a7\uff08B\u7ad9/\u6296\u97f3/\u5c0f\u7ea2\u4e66/\u89c6\u9891\u53f7/YouTube/X\uff09\uff0c\u98de\u4e66\u5361\u7247\u901a\u77e5 + \u6570\u636e\u5927\u5c4f",
+      "language": "JavaScript",
+      "topics": [
+        "automation",
+        "chrome-extension",
+        "creator-tools",
+        "dashboard",
+        "feishu",
+        "social-media"
+      ],
+      "stars": 944,
+      "forks": 323,
+      "created_at": "2026-11-14T03:59:22Z",
+      "pushed_at": "2026-11-17T17:11:10Z",
+      "updated_at": "2026-11-17T17:57:32Z",
+      "stars_per_day": 314.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "haziqahmedqasmi/PeakCut",
+      "name": "PeakCut",
+      "html_url": "https://github.com/haziqahmedqasmi/PeakCut",
+      "description": "AI clipping for long videos and live streams. Self-hosted, bring your own AI key.",
+      "language": "Python",
+      "topics": [],
+      "stars": 815,
+      "forks": 278,
+      "created_at": "2026-11-14T07:38:20Z",
+      "pushed_at": "2026-11-17T13:20:20Z",
+      "updated_at": "2026-11-17T17:52:05Z",
+      "stars_per_day": 271.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "joshpuckett/allo",
+      "name": "allo",
+      "html_url": "https://github.com/joshpuckett/allo",
+      "description": "Allo is your friendly neighborhood typeface, free and open source",
+      "language": "Python",
+      "topics": [],
+      "stars": 801,
+      "forks": 20,
+      "created_at": "2026-11-15T17:33:42Z",
+      "pushed_at": "2026-11-17T15:34:59Z",
+      "updated_at": "2026-11-17T17:55:09Z",
+      "stars_per_day": 400.5,
+      "age_days": 2
     },
     {
       "full_name": "opencoredev/islandcn",
@@ -413,13 +373,13 @@
         "typescript",
         "ui-components"
       ],
-      "stars": 771,
-      "forks": 63,
+      "stars": 793,
+      "forks": 65,
       "created_at": "2026-11-13T11:50:50Z",
       "pushed_at": "2026-11-13T15:14:36Z",
-      "updated_at": "2026-11-16T17:43:51Z",
-      "stars_per_day": 257.0,
-      "age_days": 3
+      "updated_at": "2026-11-17T17:57:07Z",
+      "stars_per_day": 198.2,
+      "age_days": 4
     },
     {
       "full_name": "AIRzZ90/study-materials-fork",
@@ -428,13 +388,71 @@
       "description": "A cross-platform Tauri 2 interface and interaction practice project",
       "language": "TypeScript",
       "topics": [],
-      "stars": 736,
-      "forks": 1177,
+      "stars": 746,
+      "forks": 1231,
       "created_at": "2026-11-12T10:52:32Z",
       "pushed_at": "2026-11-12T11:06:34Z",
-      "updated_at": "2026-11-16T18:32:07Z",
-      "stars_per_day": 184.0,
-      "age_days": 4
+      "updated_at": "2026-11-17T16:12:03Z",
+      "stars_per_day": 149.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "sybil-solutions/inference-optimisation-skill",
+      "name": "inference-optimisation-skill",
+      "html_url": "https://github.com/sybil-solutions/inference-optimisation-skill",
+      "description": "Agent skill for hill-climbing local LLM serving speed (decode, speculative decoding, prefill, KV, startup, TTFT) on any hardware and quantization",
+      "language": "Python",
+      "topics": [
+        "agent-skill",
+        "benchmarking",
+        "claude-code",
+        "inference",
+        "llm",
+        "speculative-decoding"
+      ],
+      "stars": 739,
+      "forks": 67,
+      "created_at": "2026-11-16T18:40:04Z",
+      "pushed_at": "2026-11-16T18:40:08Z",
+      "updated_at": "2026-11-17T17:55:26Z",
+      "stars_per_day": 739.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "erkamyaman/rust-anything",
+      "name": "rust-anything",
+      "html_url": "https://github.com/erkamyaman/rust-anything",
+      "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+      "language": "Rust",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "cli",
+        "code-migration",
+        "codex",
+        "ffi",
+        "golang",
+        "java",
+        "javascript",
+        "mcp",
+        "migration",
+        "napi",
+        "performance",
+        "porting",
+        "pyo3",
+        "python",
+        "rewrite",
+        "ruby",
+        "rust",
+        "typescript"
+      ],
+      "stars": 710,
+      "forks": 43,
+      "created_at": "2026-11-16T12:10:36Z",
+      "pushed_at": "2026-11-17T13:54:03Z",
+      "updated_at": "2026-11-17T17:58:48Z",
+      "stars_per_day": 710.0,
+      "age_days": 1
     },
     {
       "full_name": "linknimiball1974/ai-texture-forge",
@@ -464,13 +482,47 @@
         "dream-textures-upscaling",
         "dream-textures-windows"
       ],
-      "stars": 683,
+      "stars": 685,
       "forks": 31,
       "created_at": "2026-11-11T19:09:18Z",
       "pushed_at": "2026-11-15T13:26:27Z",
-      "updated_at": "2026-11-16T18:30:26Z",
-      "stars_per_day": 170.8,
-      "age_days": 4
+      "updated_at": "2026-11-16T22:46:38Z",
+      "stars_per_day": 137.0,
+      "age_days": 5
+    },
+    {
+      "full_name": "n4ze3m/tiny-voca",
+      "name": "tiny-voca",
+      "html_url": "https://github.com/n4ze3m/tiny-voca",
+      "description": "A 4.5M-parameter two-voice English text-to-speech model, trained from scratch",
+      "language": "Python",
+      "topics": [
+        "onnx",
+        "text-to-speech",
+        "tts"
+      ],
+      "stars": 675,
+      "forks": 83,
+      "created_at": "2026-11-14T16:02:56Z",
+      "pushed_at": "2026-11-17T15:34:25Z",
+      "updated_at": "2026-11-17T17:32:13Z",
+      "stars_per_day": 225.0,
+      "age_days": 3
+    },
+    {
+      "full_name": "yetanotherbrowser/yab",
+      "name": "yab",
+      "html_url": "https://github.com/yetanotherbrowser/yab",
+      "description": "Yab, yet another browser: a fast native macOS browser with an iPhone and Android companion",
+      "language": "Swift",
+      "topics": [],
+      "stars": 663,
+      "forks": 58,
+      "created_at": "2026-11-14T23:56:32Z",
+      "pushed_at": "2026-11-16T21:57:01Z",
+      "updated_at": "2026-11-17T17:30:45Z",
+      "stars_per_day": 331.5,
+      "age_days": 2
     },
     {
       "full_name": "rivet-dev/open-orange",
@@ -490,47 +542,43 @@
         "typescript",
         "wrangler"
       ],
-      "stars": 620,
-      "forks": 22,
+      "stars": 651,
+      "forks": 25,
       "created_at": "2026-11-12T00:44:12Z",
-      "pushed_at": "2026-11-16T18:57:10Z",
-      "updated_at": "2026-11-16T18:20:16Z",
-      "stars_per_day": 155.0,
+      "pushed_at": "2026-11-17T17:16:14Z",
+      "updated_at": "2026-11-17T15:27:24Z",
+      "stars_per_day": 130.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "mit-han-lab/pear",
+      "name": "pear",
+      "html_url": "https://github.com/mit-han-lab/pear",
+      "description": "Training Reasoning Models in Simulation to Natively Use Real Robots",
+      "language": "Python",
+      "topics": [],
+      "stars": 603,
+      "forks": 38,
+      "created_at": "2026-11-13T17:43:06Z",
+      "pushed_at": "2026-11-16T07:54:56Z",
+      "updated_at": "2026-11-17T17:49:20Z",
+      "stars_per_day": 150.8,
       "age_days": 4
     },
     {
-      "full_name": "haziqahmedqasmi/PeakCut",
-      "name": "PeakCut",
-      "html_url": "https://github.com/haziqahmedqasmi/PeakCut",
-      "description": "AI clipping for long videos and live streams. Self-hosted, bring your own AI key.",
+      "full_name": "huggingface/pybot",
+      "name": "pybot",
+      "html_url": "https://github.com/huggingface/pybot",
+      "description": "PyBot: a chatbot written in pure Python by a swarm of agents. No weights, no training, just rules.",
       "language": "Python",
       "topics": [],
-      "stars": 584,
-      "forks": 211,
-      "created_at": "2026-11-14T07:38:20Z",
-      "pushed_at": "2026-11-15T15:40:49Z",
-      "updated_at": "2026-11-16T18:49:37Z",
-      "stars_per_day": 292.0,
-      "age_days": 2
-    },
-    {
-      "full_name": "n4ze3m/tiny-voca",
-      "name": "tiny-voca",
-      "html_url": "https://github.com/n4ze3m/tiny-voca",
-      "description": "A 4.5M-parameter two-voice English text-to-speech model, trained from scratch",
-      "language": "Python",
-      "topics": [
-        "onnx",
-        "text-to-speech",
-        "tts"
-      ],
-      "stars": 577,
-      "forks": 70,
-      "created_at": "2026-11-14T16:02:56Z",
-      "pushed_at": "2026-11-16T15:21:10Z",
-      "updated_at": "2026-11-16T18:51:15Z",
-      "stars_per_day": 288.5,
-      "age_days": 2
+      "stars": 597,
+      "forks": 53,
+      "created_at": "2026-11-12T11:35:13Z",
+      "pushed_at": "2026-11-16T11:07:29Z",
+      "updated_at": "2026-11-17T17:57:15Z",
+      "stars_per_day": 119.4,
+      "age_days": 5
     },
     {
       "full_name": "makepad/relax",
@@ -539,48 +587,13 @@
       "description": "Relax Rust JIT",
       "language": "Rust",
       "topics": [],
-      "stars": 576,
-      "forks": 31,
+      "stars": 590,
+      "forks": 33,
       "created_at": "2026-11-11T19:12:58Z",
-      "pushed_at": "2026-11-16T18:46:38Z",
-      "updated_at": "2026-11-16T16:51:54Z",
-      "stars_per_day": 144.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "yetanotherbrowser/yab",
-      "name": "yab",
-      "html_url": "https://github.com/yetanotherbrowser/yab",
-      "description": "Yab, yet another browser: a fast native macOS browser with an iPhone and Android companion",
-      "language": "Swift",
-      "topics": [],
-      "stars": 573,
-      "forks": 48,
-      "created_at": "2026-11-14T23:56:32Z",
-      "pushed_at": "2026-11-15T18:11:25Z",
-      "updated_at": "2026-11-16T18:57:13Z",
-      "stars_per_day": 573.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "faizfahmi77/ScanDot",
-      "name": "ScanDot",
-      "html_url": "https://github.com/faizfahmi77/ScanDot",
-      "description": "Experimental Android 3D scanning and point-cloud viewer",
-      "language": "Kotlin",
-      "topics": [
-        "3d-scanning",
-        "android",
-        "photogrammetry",
-        "point-cloud"
-      ],
-      "stars": 540,
-      "forks": 5,
-      "created_at": "2026-11-13T04:07:57Z",
-      "pushed_at": "2026-11-13T04:27:21Z",
-      "updated_at": "2026-11-16T18:36:31Z",
-      "stars_per_day": 180.0,
-      "age_days": 3
+      "pushed_at": "2026-11-17T17:52:09Z",
+      "updated_at": "2026-11-17T16:44:59Z",
+      "stars_per_day": 118.0,
+      "age_days": 5
     },
     {
       "full_name": "BigPizzaV3/ClaudeMom",
@@ -594,12 +607,62 @@
         "claude-desktop",
         "tauri"
       ],
-      "stars": 522,
-      "forks": 104,
+      "stars": 588,
+      "forks": 122,
       "created_at": "2026-11-12T07:06:59Z",
-      "pushed_at": "2026-11-16T18:29:34Z",
-      "updated_at": "2026-11-16T18:37:15Z",
-      "stars_per_day": 130.5,
+      "pushed_at": "2026-11-17T13:34:20Z",
+      "updated_at": "2026-11-17T16:25:00Z",
+      "stars_per_day": 117.6,
+      "age_days": 5
+    },
+    {
+      "full_name": "chuanqisun/spaceship",
+      "name": "spaceship",
+      "html_url": "https://github.com/chuanqisun/spaceship",
+      "description": "Steer your ideas in realtime",
+      "language": "HTML",
+      "topics": [],
+      "stars": 586,
+      "forks": 63,
+      "created_at": "2026-11-16T14:43:45Z",
+      "pushed_at": "2026-11-16T19:53:46Z",
+      "updated_at": "2026-11-17T17:56:01Z",
+      "stars_per_day": 586.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "higurashi-ai/Haru",
+      "name": "Haru",
+      "html_url": "https://github.com/higurashi-ai/Haru",
+      "description": "Haru: a low-latency, multilingual, full-duplex spoken dialogue model",
+      "language": "Python",
+      "topics": [],
+      "stars": 565,
+      "forks": 44,
+      "created_at": "2026-11-12T11:15:42Z",
+      "pushed_at": "2026-11-13T06:21:17Z",
+      "updated_at": "2026-11-17T17:42:30Z",
+      "stars_per_day": 113.0,
+      "age_days": 5
+    },
+    {
+      "full_name": "faizfahmi77/ScanDot",
+      "name": "ScanDot",
+      "html_url": "https://github.com/faizfahmi77/ScanDot",
+      "description": "Experimental Android 3D scanning and point-cloud viewer",
+      "language": "Kotlin",
+      "topics": [
+        "3d-scanning",
+        "android",
+        "photogrammetry",
+        "point-cloud"
+      ],
+      "stars": 543,
+      "forks": 5,
+      "created_at": "2026-11-13T04:07:57Z",
+      "pushed_at": "2026-11-13T04:27:21Z",
+      "updated_at": "2026-11-17T16:06:19Z",
+      "stars_per_day": 135.8,
       "age_days": 4
     },
     {
@@ -630,13 +693,13 @@
         "mcp-server",
         "model-context-protocol"
       ],
-      "stars": 515,
+      "stars": 516,
       "forks": 14,
       "created_at": "2026-11-12T19:30:32Z",
       "pushed_at": "2026-11-15T13:27:56Z",
-      "updated_at": "2026-11-16T18:16:16Z",
-      "stars_per_day": 171.7,
-      "age_days": 3
+      "updated_at": "2026-11-16T21:06:07Z",
+      "stars_per_day": 129.0,
+      "age_days": 4
     },
     {
       "full_name": "racdeufindurch198812/Blender-AI-MCP-Studio",
@@ -666,13 +729,13 @@
         "mcp-server",
         "model-context-protocol"
       ],
-      "stars": 513,
+      "stars": 515,
       "forks": 13,
       "created_at": "2026-11-12T19:28:20Z",
       "pushed_at": "2026-11-15T13:27:24Z",
-      "updated_at": "2026-11-16T18:16:18Z",
-      "stars_per_day": 171.0,
-      "age_days": 3
+      "updated_at": "2026-11-17T08:52:40Z",
+      "stars_per_day": 128.8,
+      "age_days": 4
     },
     {
       "full_name": "tiobeharxi1987/blender-ai-copilot-flow",
@@ -702,164 +765,13 @@
         "mcp-server",
         "model-context-protocol"
       ],
-      "stars": 513,
+      "stars": 514,
       "forks": 12,
       "created_at": "2026-11-12T19:38:53Z",
-      "pushed_at": "2026-11-16T19:00:29Z",
-      "updated_at": "2026-11-16T18:16:21Z",
-      "stars_per_day": 171.0,
-      "age_days": 3
-    },
-    {
-      "full_name": "zovulrira1974/blender-ai-copilot-assets",
-      "name": "blender-ai-copilot-assets",
-      "html_url": "https://github.com/zovulrira1974/blender-ai-copilot-assets",
-      "description": "An asset-savvy AI copilot for Blender\u2014search Poly Haven, Sketchfab and Poly Pizza mid-conversation, check what fits, import after your confirmation, with 27 scene tools and a built-in MCP server alongside. \u00b7 blender-ai-copilot-assets \u00b7 blender \u00b7 blender 3d \u00b7 blender addon \u00b7 blender plugin \u00b7 blender extension \u00b7 blender scripting \u00b7 blender automation",
-      "language": null,
-      "topics": [
-        "3d-automation",
-        "3d-modeling",
-        "blender",
-        "blender-addon",
-        "blender-agents",
-        "blender-ai",
-        "blender-assistant",
-        "blender-automation",
-        "blender-chatgpt",
-        "blender-copilot",
-        "blender-extension",
-        "blender-llm",
-        "blender-mcp",
-        "blender-plugin",
-        "blender-scripting",
-        "blender3d",
-        "bpy",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol"
-      ],
-      "stars": 509,
-      "forks": 15,
-      "created_at": "2026-11-12T19:39:54Z",
-      "pushed_at": "2026-11-16T18:52:31Z",
-      "updated_at": "2026-11-16T18:16:24Z",
-      "stars_per_day": 169.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "Doug-218/blender-ai-copilot-forge",
-      "name": "blender-ai-copilot-forge",
-      "html_url": "https://github.com/Doug-218/blender-ai-copilot-forge",
-      "description": "A scene-forging AI copilot for Blender\u2014describe the layout and watch primitives, cameras, lights, materials and parenting assemble in ordered steps, with approvals, named undo and a built-in MCP server. \u00b7 blender-ai-copilot-forge \u00b7 blender \u00b7 blender 3d \u00b7 blender addon \u00b7 blender plugin \u00b7 blender extension \u00b7 blender scripting \u00b7 blender automation",
-      "language": null,
-      "topics": [
-        "3d-automation",
-        "3d-modeling",
-        "blender",
-        "blender-addon",
-        "blender-agents",
-        "blender-ai",
-        "blender-assistant",
-        "blender-automation",
-        "blender-chatgpt",
-        "blender-copilot",
-        "blender-extension",
-        "blender-llm",
-        "blender-mcp",
-        "blender-plugin",
-        "blender-scripting",
-        "blender3d",
-        "bpy",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol"
-      ],
-      "stars": 509,
-      "forks": 13,
-      "created_at": "2026-11-12T19:35:10Z",
-      "pushed_at": "2026-11-15T13:29:36Z",
-      "updated_at": "2026-11-16T18:16:25Z",
-      "stars_per_day": 169.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "berkantay/gpucanvas",
-      "name": "gpucanvas",
-      "html_url": "https://github.com/berkantay/gpucanvas",
-      "description": "Put thousands of live DOM nodes on an infinite canvas: the GPU draws them, an editor selects, moves and resizes them, shaders and transitions run on them, and an AI agent can read them and point at them.",
-      "language": "TypeScript",
-      "topics": [
-        "ai-agents",
-        "canvas",
-        "design-tools",
-        "editor",
-        "html-in-canvas",
-        "infinite-canvas",
-        "react",
-        "shaders",
-        "transitions",
-        "typescript",
-        "webgpu",
-        "wgsl"
-      ],
-      "stars": 508,
-      "forks": 31,
-      "created_at": "2026-11-12T23:19:42Z",
-      "pushed_at": "2026-11-15T21:14:18Z",
-      "updated_at": "2026-11-16T18:00:52Z",
-      "stars_per_day": 169.3,
-      "age_days": 3
-    },
-    {
-      "full_name": "higurashi-ai/Haru",
-      "name": "Haru",
-      "html_url": "https://github.com/higurashi-ai/Haru",
-      "description": "Haru: a low-latency, multilingual, full-duplex spoken dialogue model",
-      "language": "Python",
-      "topics": [],
-      "stars": 508,
-      "forks": 37,
-      "created_at": "2026-11-12T11:15:42Z",
-      "pushed_at": "2026-11-13T06:21:17Z",
-      "updated_at": "2026-11-16T18:56:44Z",
-      "stars_per_day": 127.0,
+      "pushed_at": "2026-11-17T17:51:01Z",
+      "updated_at": "2026-11-16T21:07:42Z",
+      "stars_per_day": 128.5,
       "age_days": 4
-    },
-    {
-      "full_name": "precygtrucqui1981/blender-ai-copilot-lab",
-      "name": "blender-ai-copilot-lab",
-      "html_url": "https://github.com/precygtrucqui1981/blender-ai-copilot-lab",
-      "description": "An AI lab for Blender where manager\u2013worker\u2013reviewer agent teams run multi-step scene briefs as supervised experiments\u2014a live task board, review findings, one correction attempt per blocked task, named undo, and a built-in MCP server. \u00b7 blender-ai-copilot-lab \u00b7 blender \u00b7 blender 3d \u00b7 blender addon \u00b7 blender plugin \u00b7 blender extension",
-      "language": null,
-      "topics": [
-        "3d-automation",
-        "3d-modeling",
-        "blender",
-        "blender-addon",
-        "blender-agents",
-        "blender-ai",
-        "blender-assistant",
-        "blender-automation",
-        "blender-chatgpt",
-        "blender-copilot",
-        "blender-extension",
-        "blender-llm",
-        "blender-mcp",
-        "blender-plugin",
-        "blender-scripting",
-        "blender3d",
-        "bpy",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol"
-      ],
-      "stars": 507,
-      "forks": 13,
-      "created_at": "2026-11-12T19:33:16Z",
-      "pushed_at": "2026-11-15T13:29:23Z",
-      "updated_at": "2026-11-16T18:16:28Z",
-      "stars_per_day": 169.0,
-      "age_days": 3
     }
   ],
   "hn_items": [
@@ -938,37 +850,44 @@
     {
       "title": "Long Live Rails",
       "url": "https://dev.to/ben/long-live-rails-3p21",
-      "reactions": 136,
+      "reactions": 140,
       "comments": 24,
       "published_at": "2026-11-12T15:30:50Z"
     },
     {
       "title": "MCP Is Dead Simple. And That's Exactly the Problem",
       "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
-      "reactions": 192,
-      "comments": 173,
+      "reactions": 206,
+      "comments": 194,
       "published_at": "2026-11-12T08:14:36Z"
-    },
-    {
-      "title": "How did you end up in tech, and are you staying?",
-      "url": "https://dev.to/maame-codes/how-did-you-end-up-in-tech-and-are-you-staying-4l9b",
-      "reactions": 161,
-      "comments": 66,
-      "published_at": "2026-11-09T23:02:37Z"
     },
     {
       "title": "Dev Opportunity Radar #25: $120K+ Atlassian Hackathon, MLH Fellowship, and INSEAD AI Founder Sprint",
       "url": "https://dev.to/devengers/dev-opportunity-radar-25-120k-atlassian-hackathon-mlh-fellowship-and-insead-ai-founder-sprint-m96",
-      "reactions": 103,
-      "comments": 9,
+      "reactions": 111,
+      "comments": 14,
       "published_at": "2026-11-13T18:28:11Z"
+    },
+    {
+      "title": "What does DEV stand for?",
+      "url": "https://dev.to/devengers/what-does-dev-stand-for-2kg9",
+      "reactions": 117,
+      "comments": 94,
+      "published_at": "2026-11-16T14:55:10Z"
     },
     {
       "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
       "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
-      "reactions": 102,
+      "reactions": 111,
       "comments": 46,
       "published_at": "2026-11-13T15:56:26Z"
+    },
+    {
+      "title": "Ghost Rovers: I Called 12 Machines NASA Left Behind. One Picked Up.",
+      "url": "https://dev.to/earlgreyhot1701d/ghost-rovers-i-called-12-machines-nasa-left-behind-one-picked-up-2575",
+      "reactions": 62,
+      "comments": 21,
+      "published_at": "2026-11-15T04:00:28Z"
     },
     {
       "title": "A 10 years old developer who has become a DEV.to Trusted Member! \ud83d\ude31",
@@ -978,179 +897,160 @@
       "published_at": "2026-11-12T11:18:53Z"
     },
     {
-      "title": "Ghost Rovers: I Called 12 Machines NASA Left Behind. One Picked Up.",
-      "url": "https://dev.to/earlgreyhot1701d/ghost-rovers-i-called-12-machines-nasa-left-behind-one-picked-up-2575",
-      "reactions": 56,
-      "comments": 16,
-      "published_at": "2026-11-15T04:00:28Z"
-    },
-    {
       "title": "One Year on DEV.to, 109 Articles Later",
       "url": "https://dev.to/dannwaneri/one-year-on-devto-109-articles-later-p31",
-      "reactions": 74,
-      "comments": 46,
+      "reactions": 76,
+      "comments": 47,
       "published_at": "2026-11-11T13:00:00Z"
+    },
+    {
+      "title": "AI is getting better. Here is my plan to stay ahead.",
+      "url": "https://dev.to/javz/ai-is-getting-better-here-is-my-plan-to-stay-ahead-2822",
+      "reactions": 50,
+      "comments": 33,
+      "published_at": "2026-11-12T15:35:00Z"
     },
     {
       "title": "We Keep Hearing About AI Productivity. The QA Group Chat Told a Different Story.",
       "url": "https://dev.to/xulingfeng/we-keep-hearing-about-ai-productivity-the-qa-group-chat-told-a-different-story-2nma",
-      "reactions": 112,
-      "comments": 110,
+      "reactions": 114,
+      "comments": 115,
       "published_at": "2026-11-11T08:35:15Z"
-    },
-    {
-      "title": "Ask More of Your UI",
-      "url": "https://dev.to/dailycontext/ask-more-of-your-ui-2nf7",
-      "reactions": 60,
-      "comments": 8,
-      "published_at": "2026-11-11T01:39:15Z"
     }
   ],
   "languages": [
     [
-      "TypeScript",
-      8
+      "Python",
+      10
     ],
     [
-      "Python",
+      "TypeScript",
       5
+    ],
+    [
+      "Rust",
+      3
+    ],
+    [
+      "C++",
+      2
+    ],
+    [
+      "JavaScript",
+      2
     ],
     [
       "Kotlin",
       2
     ],
     [
-      "Rust",
-      2
+      "HTML",
+      1
     ],
     [
       "Swift",
-      2
-    ],
-    [
-      "C++",
-      1
-    ],
-    [
-      "Go",
-      1
-    ],
-    [
-      "JavaScript",
       1
     ]
   ],
   "topics": [
     [
       "mcp",
-      8
-    ],
-    [
-      "blender",
-      7
-    ],
-    [
-      "blender-addon",
-      7
-    ],
-    [
-      "blender-ai",
-      7
-    ],
-    [
-      "blender-automation",
-      7
-    ],
-    [
-      "blender-mcp",
-      7
-    ],
-    [
-      "blender-plugin",
-      7
-    ],
-    [
-      "blender-scripting",
-      7
-    ],
-    [
-      "bpy",
-      7
-    ],
-    [
-      "mcp-server",
-      7
-    ],
-    [
-      "model-context-protocol",
-      7
-    ],
-    [
-      "3d-automation",
-      6
-    ],
-    [
-      "3d-modeling",
-      6
-    ],
-    [
-      "blender-agents",
-      6
-    ],
-    [
-      "blender-assistant",
-      6
-    ],
-    [
-      "blender-chatgpt",
-      6
-    ],
-    [
-      "blender-copilot",
-      6
-    ],
-    [
-      "blender-extension",
-      6
-    ],
-    [
-      "blender-llm",
-      6
-    ],
-    [
-      "blender3d",
-      6
-    ],
-    [
-      "typescript",
       4
     ],
     [
-      "ai-agents",
-      2
+      "3d-automation",
+      3
     ],
     [
-      "claude",
-      2
+      "3d-modeling",
+      3
     ],
     [
-      "react",
-      2
+      "blender",
+      3
+    ],
+    [
+      "blender-addon",
+      3
+    ],
+    [
+      "blender-agents",
+      3
+    ],
+    [
+      "blender-ai",
+      3
+    ],
+    [
+      "blender-assistant",
+      3
+    ],
+    [
+      "blender-automation",
+      3
+    ],
+    [
+      "blender-chatgpt",
+      3
+    ],
+    [
+      "blender-copilot",
+      3
+    ],
+    [
+      "blender-extension",
+      3
+    ],
+    [
+      "blender-llm",
+      3
+    ],
+    [
+      "blender-mcp",
+      3
+    ],
+    [
+      "blender-plugin",
+      3
+    ],
+    [
+      "blender-scripting",
+      3
+    ],
+    [
+      "blender3d",
+      3
+    ],
+    [
+      "bpy",
+      3
+    ],
+    [
+      "claude-code",
+      3
+    ],
+    [
+      "mcp-server",
+      3
+    ],
+    [
+      "model-context-protocol",
+      3
+    ],
+    [
+      "typescript",
+      3
     ],
     [
       "3d-scanning",
       1
     ],
     [
-      "ai-assistant",
+      "agent-skill",
       1
     ],
     [
-      "ai-meeting-assistant",
-      1
-    ],
-    [
-      "ai-notetaker",
+      "agent-skills",
       1
     ],
     [
@@ -1158,15 +1058,19 @@
       1
     ],
     [
-      "canvas",
+      "automation",
       1
     ],
     [
-      "chatgpt",
+      "benchmarking",
       1
     ],
     [
-      "claude-code",
+      "chrome-extension",
+      1
+    ],
+    [
+      "claude",
       1
     ],
     [
@@ -1174,7 +1078,7 @@
       1
     ],
     [
-      "claude-skill",
+      "cli",
       1
     ],
     [
@@ -1186,7 +1090,19 @@
       1
     ],
     [
-      "design-tools",
+      "code-migration",
+      1
+    ],
+    [
+      "codex",
+      1
+    ],
+    [
+      "creator-tools",
+      1
+    ],
+    [
+      "dashboard",
       1
     ],
     [
@@ -1278,39 +1194,27 @@
       1
     ],
     [
-      "editor",
+      "feishu",
       1
     ],
     [
-      "electron",
+      "ffi",
       1
     ],
     [
-      "gemini",
+      "golang",
       1
     ],
     [
-      "granola-alternative",
+      "inference",
       1
     ],
     [
-      "html-in-canvas",
+      "java",
       1
     ],
     [
-      "infinite-canvas",
-      1
-    ],
-    [
-      "line-art",
-      1
-    ],
-    [
-      "linux",
-      1
-    ],
-    [
-      "llama-cpp",
+      "javascript",
       1
     ],
     [
@@ -1318,27 +1222,11 @@
       1
     ],
     [
-      "local-ai",
+      "migration",
       1
     ],
     [
-      "local-first",
-      1
-    ],
-    [
-      "macos",
-      1
-    ],
-    [
-      "mcp-for-blender",
-      1
-    ],
-    [
-      "meeting-minutes",
-      1
-    ],
-    [
-      "meeting-notes",
+      "napi",
       1
     ],
     [
@@ -1350,23 +1238,11 @@
       1
     ],
     [
-      "offline-first",
-      1
-    ],
-    [
-      "ollama",
-      1
-    ],
-    [
       "onnx",
       1
     ],
     [
-      "open-source",
-      1
-    ],
-    [
-      "opencode",
+      "performance",
       1
     ],
     [
@@ -1378,11 +1254,35 @@
       1
     ],
     [
-      "privacy",
+      "porting",
+      1
+    ],
+    [
+      "pyo3",
+      1
+    ],
+    [
+      "python",
+      1
+    ],
+    [
+      "react",
+      1
+    ],
+    [
+      "rewrite",
       1
     ],
     [
       "rivet",
+      1
+    ],
+    [
+      "ruby",
+      1
+    ],
+    [
+      "rust",
       1
     ],
     [
@@ -1398,19 +1298,15 @@
       1
     ],
     [
-      "shaders",
+      "social-media",
       1
     ],
     [
-      "speech-to-text",
+      "speculative-decoding",
       1
     ],
     [
       "sqlite",
-      1
-    ],
-    [
-      "svg-animation",
       1
     ],
     [
@@ -1422,39 +1318,11 @@
       1
     ],
     [
-      "transcription",
-      1
-    ],
-    [
-      "transitions",
-      1
-    ],
-    [
       "tts",
       1
     ],
     [
       "ui-components",
-      1
-    ],
-    [
-      "webgpu",
-      1
-    ],
-    [
-      "wgsl",
-      1
-    ],
-    [
-      "whisper",
-      1
-    ],
-    [
-      "whisper-cpp",
-      1
-    ],
-    [
-      "windows",
       1
     ],
     [

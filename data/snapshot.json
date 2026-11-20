@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-19T17:50:01.357038+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-12, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-20T17:24:47.881189+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-13, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-12&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-13&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -24,135 +24,135 @@
   "unavailable_sources": [],
   "rising": [
     {
-      "name": "Python",
-      "kind": "language",
-      "count_in_snapshot": 11,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "typescript",
-      "kind": "topic",
-      "count_in_snapshot": 8,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "cli",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
       "name": "llm",
       "kind": "topic",
-      "count_in_snapshot": 7,
+      "count_in_snapshot": 12,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "nextjs",
-      "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "ai",
-      "kind": "topic",
-      "count_in_snapshot": 6,
-      "hn_mentions": 3,
-      "devto_mentions": 4
-    },
-    {
-      "name": "ai-search",
-      "kind": "topic",
-      "count_in_snapshot": 6,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "aichecker",
-      "kind": "topic",
-      "count_in_snapshot": 6,
+      "name": "Python",
+      "kind": "language",
+      "count_in_snapshot": 10,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "chatgpt",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 10,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "config-checker",
+      "name": "cli",
       "kind": "topic",
-      "count_in_snapshot": 6,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "gemeni",
-      "kind": "topic",
-      "count_in_snapshot": 6,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "gemeni-checker",
-      "kind": "topic",
-      "count_in_snapshot": 6,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "generative-ai",
-      "kind": "topic",
-      "count_in_snapshot": 6,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "lim-seo",
-      "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 10,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "mcp-server",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 10,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "typescript",
+      "kind": "topic",
+      "count_in_snapshot": 10,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "ai",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 3,
+      "devto_mentions": 3
+    },
+    {
+      "name": "ai-search",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "aichecker",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "config-checker",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "gemeni",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "gemeni-checker",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "generative-ai",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "lim-seo",
+      "kind": "topic",
+      "count_in_snapshot": 9,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "nextjs",
+      "kind": "topic",
+      "count_in_snapshot": 9,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "open-code",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 9,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "seo-checker",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 9,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "seo-tool",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 9,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "Makefile",
       "kind": "language",
-      "count_in_snapshot": 5,
+      "count_in_snapshot": 6,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -164,7 +164,7 @@
       "devto_mentions": 0
     },
     {
-      "name": "JavaScript",
+      "name": "Go",
       "kind": "language",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
@@ -200,13 +200,13 @@
         "rust",
         "typescript"
       ],
-      "stars": 4818,
-      "forks": 398,
+      "stars": 6342,
+      "forks": 499,
       "created_at": "2026-11-16T12:10:36Z",
-      "pushed_at": "2026-11-19T15:03:23Z",
-      "updated_at": "2026-11-19T17:49:30Z",
-      "stars_per_day": 1606.0,
-      "age_days": 3
+      "pushed_at": "2026-11-20T15:55:00Z",
+      "updated_at": "2026-11-20T17:23:53Z",
+      "stars_per_day": 1585.5,
+      "age_days": 4
     },
     {
       "full_name": "krisgfx9/Wireless-Device-Battery-Monitor",
@@ -215,13 +215,13 @@
       "description": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 taskbar. Lightweight tray app, no vendor software needed. Supports Logitech, Razer, SteelSeries, Corsair, HyperX, Glorious, PS4/PS5 DualSense, Xbox and Bluetooth devices.",
       "language": "C++",
       "topics": [],
-      "stars": 4520,
-      "forks": 383,
+      "stars": 5142,
+      "forks": 431,
       "created_at": "2026-11-16T19:28:29Z",
-      "pushed_at": "2026-11-19T06:15:50Z",
-      "updated_at": "2026-11-19T17:49:11Z",
-      "stars_per_day": 2260.0,
-      "age_days": 2
+      "pushed_at": "2026-11-20T13:36:43Z",
+      "updated_at": "2026-11-20T17:21:21Z",
+      "stars_per_day": 1714.0,
+      "age_days": 3
     },
     {
       "full_name": "gylive/google-ultra",
@@ -230,13 +230,13 @@
       "description": null,
       "language": "Python",
       "topics": [],
-      "stars": 2430,
-      "forks": 34,
+      "stars": 2520,
+      "forks": 57,
       "created_at": "2026-11-17T10:21:54Z",
       "pushed_at": "2026-11-19T14:11:25Z",
-      "updated_at": "2026-11-19T17:35:16Z",
-      "stars_per_day": 1215.0,
-      "age_days": 2
+      "updated_at": "2026-11-20T16:36:49Z",
+      "stars_per_day": 840.0,
+      "age_days": 3
     },
     {
       "full_name": "Hut-hzf/ung220z-tool",
@@ -245,27 +245,12 @@
       "description": "ung220z-tool \u662f\u4e00\u4e2a\u9488\u5bf9 UNG220Z\uff08\u4e5d\u8054/Unionman \u4e2d\u56fd\u79fb\u52a8\u5149\u732b\uff09\u7684\u4e00\u952e\u51ed\u636e\u63d0\u53d6\u5de5\u5177\uff0c\u4ec5\u9650\u5728\u4f60\u81ea\u5df1\u7684\u8bbe\u5907\u4e0a\u7528\u4e8e\u627e\u56de\u5fd8\u8bb0\u7684\u7ba1\u7406\u5bc6\u7801\u3001\u8fc1\u79fb\u5bbd\u5e26\u914d\u7f6e\u6216\u5b89\u5168\u81ea\u67e5\u3002",
       "language": "Python",
       "topics": [],
-      "stars": 1708,
-      "forks": 402,
+      "stars": 1975,
+      "forks": 453,
       "created_at": "2026-11-15T11:16:46Z",
       "pushed_at": "2026-11-15T11:17:27Z",
-      "updated_at": "2026-11-19T17:22:14Z",
-      "stars_per_day": 427.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "duwqijlk/muse-protocol",
-      "name": "muse-protocol",
-      "html_url": "https://github.com/duwqijlk/muse-protocol",
-      "description": "muse.ai \u6ce8\u518c\u4e0e\u9080\u8bf7\u7801\u5151\u6362\u534f\u8bae\u7814\u7a76\uff08\u7eaf HTTP Python \u5b9e\u73b0\uff09",
-      "language": "Python",
-      "topics": [],
-      "stars": 1652,
-      "forks": 653,
-      "created_at": "2026-11-14T01:24:58Z",
-      "pushed_at": "2026-11-15T02:55:33Z",
-      "updated_at": "2026-11-19T17:40:50Z",
-      "stars_per_day": 330.4,
+      "updated_at": "2026-11-20T17:24:44Z",
+      "stars_per_day": 395.0,
       "age_days": 5
     },
     {
@@ -282,13 +267,28 @@
         "feishu",
         "social-media"
       ],
-      "stars": 1587,
-      "forks": 473,
+      "stars": 1705,
+      "forks": 498,
       "created_at": "2026-11-14T03:59:22Z",
-      "pushed_at": "2026-11-18T02:49:13Z",
-      "updated_at": "2026-11-19T17:29:40Z",
-      "stars_per_day": 317.4,
-      "age_days": 5
+      "pushed_at": "2026-11-20T13:09:41Z",
+      "updated_at": "2026-11-20T16:44:09Z",
+      "stars_per_day": 284.2,
+      "age_days": 6
+    },
+    {
+      "full_name": "duwqijlk/muse-protocol",
+      "name": "muse-protocol",
+      "html_url": "https://github.com/duwqijlk/muse-protocol",
+      "description": "muse.ai \u6ce8\u518c\u4e0e\u9080\u8bf7\u7801\u5151\u6362\u534f\u8bae\u7814\u7a76\uff08\u7eaf HTTP Python \u5b9e\u73b0\uff09",
+      "language": "Python",
+      "topics": [],
+      "stars": 1689,
+      "forks": 660,
+      "created_at": "2026-11-14T01:24:58Z",
+      "pushed_at": "2026-11-15T02:55:33Z",
+      "updated_at": "2026-11-20T16:52:54Z",
+      "stars_per_day": 281.5,
+      "age_days": 6
     },
     {
       "full_name": "haziqahmedqasmi/PeakCut",
@@ -297,13 +297,13 @@
       "description": "AI clipping for long videos and live streams. Self-hosted, bring your own AI key.",
       "language": "Python",
       "topics": [],
-      "stars": 1284,
-      "forks": 446,
+      "stars": 1516,
+      "forks": 492,
       "created_at": "2026-11-14T07:38:20Z",
-      "pushed_at": "2026-11-17T13:20:20Z",
-      "updated_at": "2026-11-19T17:48:08Z",
-      "stars_per_day": 256.8,
-      "age_days": 5
+      "pushed_at": "2026-11-20T13:52:57Z",
+      "updated_at": "2026-11-20T17:24:22Z",
+      "stars_per_day": 252.7,
+      "age_days": 6
     },
     {
       "full_name": "sybil-solutions/inference-optimisation-skill",
@@ -319,13 +319,13 @@
         "llm",
         "speculative-decoding"
       ],
-      "stars": 1229,
-      "forks": 111,
+      "stars": 1310,
+      "forks": 117,
       "created_at": "2026-11-16T18:40:04Z",
       "pushed_at": "2026-11-16T18:40:08Z",
-      "updated_at": "2026-11-19T17:49:24Z",
-      "stars_per_day": 614.5,
-      "age_days": 2
+      "updated_at": "2026-11-20T17:12:14Z",
+      "stars_per_day": 436.7,
+      "age_days": 3
     },
     {
       "full_name": "joshpuckett/allo",
@@ -334,83 +334,101 @@
       "description": "Allo is your friendly neighborhood typeface, free and open source",
       "language": "Python",
       "topics": [],
-      "stars": 1128,
-      "forks": 31,
+      "stars": 1234,
+      "forks": 34,
       "created_at": "2026-11-15T17:33:42Z",
       "pushed_at": "2026-11-18T07:19:43Z",
-      "updated_at": "2026-11-19T17:15:03Z",
-      "stars_per_day": 282.0,
+      "updated_at": "2026-11-20T17:14:41Z",
+      "stars_per_day": 308.5,
       "age_days": 4
     },
     {
-      "full_name": "zephyr4123/snug",
-      "name": "snug",
-      "html_url": "https://github.com/zephyr4123/snug",
-      "description": "\u8ba9\u8fdc\u7a0b Mac \u5728\u4efb\u610f\u8bbe\u5907\u4e0a\u83b7\u5f97\u539f\u751f\u7ea7\u4f53\u9a8c\u3002\u4e13\u4e3a UU\u8fdc\u7a0b \u6253\u9020\u7684\u663e\u793a\u4e0e\u89e6\u63a7\u589e\u5f3a\uff1a\u624b\u673a\u3001\u5e73\u677f\u3001\u7535\u8111\u5404\u6709\u4e13\u5c5e\u5c4f\u5e55\uff0c\u753b\u9762\u94fa\u6ee1\u3001\u5b57\u53f7\u968f\u5c4f\uff0c\u539f\u751f\u89e6\u5c4f\u624b\u52bf\uff0cApp \u8d44\u6e90\u5e93\u3002Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
-      "language": "Swift",
+      "full_name": "bookwjitchieni1986/blender-ai-mcp-addon",
+      "name": "blender-ai-mcp-addon",
+      "html_url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+      "description": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration.",
+      "language": null,
       "topics": [
-        "android",
-        "gestures",
-        "ipad",
-        "iphone",
-        "macos",
-        "macos-app",
-        "menubar-app",
-        "multi-monitor",
-        "productivity",
-        "remote-control",
-        "remote-desktop",
-        "swift",
-        "swiftui",
-        "tablet",
-        "uu-remote",
-        "virtual-display",
-        "window-management"
+        "ai-agents",
+        "ai-assistant",
+        "blender",
+        "blender-addon",
+        "blender-ai",
+        "blender-automation",
+        "blender-mcp",
+        "blender-plugin",
+        "blender-scripting",
+        "bpy",
+        "chatgpt",
+        "claude",
+        "gemini",
+        "llm",
+        "mcp",
+        "mcp-for-blender",
+        "mcp-server",
+        "model-context-protocol",
+        "ollama",
+        "opencode"
       ],
-      "stars": 1089,
-      "forks": 85,
-      "created_at": "2026-11-13T03:26:21Z",
-      "pushed_at": "2026-11-19T15:54:45Z",
-      "updated_at": "2026-11-19T16:13:19Z",
-      "stars_per_day": 181.5,
-      "age_days": 6
+      "stars": 1219,
+      "forks": 1,
+      "created_at": "2026-11-19T14:43:10Z",
+      "pushed_at": "2026-11-19T14:44:11Z",
+      "updated_at": "2026-11-20T17:23:22Z",
+      "stars_per_day": 1219.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "iamajmeena/neonclipping",
+      "name": "neonclipping",
+      "html_url": "https://github.com/iamajmeena/neonclipping",
+      "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
+      "language": "Python",
+      "topics": [
+        "clipping",
+        "ffmpeg",
+        "shorts",
+        "video",
+        "whisper",
+        "yt-dlp"
+      ],
+      "stars": 1117,
+      "forks": 50,
+      "created_at": "2026-11-19T10:00:43Z",
+      "pushed_at": "2026-11-20T04:09:54Z",
+      "updated_at": "2026-11-20T17:24:16Z",
+      "stars_per_day": 1117.0,
+      "age_days": 1
     },
     {
       "full_name": "chuanqisun/spaceship",
       "name": "spaceship",
       "html_url": "https://github.com/chuanqisun/spaceship",
-      "description": "Steer your ideas in realtime",
+      "description": "Steer ideas like a space pilot!",
       "language": "HTML",
       "topics": [],
-      "stars": 927,
-      "forks": 95,
+      "stars": 978,
+      "forks": 102,
       "created_at": "2026-11-16T14:43:45Z",
-      "pushed_at": "2026-11-16T19:53:46Z",
-      "updated_at": "2026-11-19T17:14:16Z",
-      "stars_per_day": 309.0,
-      "age_days": 3
+      "pushed_at": "2026-11-20T15:52:59Z",
+      "updated_at": "2026-11-20T17:17:23Z",
+      "stars_per_day": 244.5,
+      "age_days": 4
     },
     {
-      "full_name": "opencoredev/islandcn",
-      "name": "islandcn",
-      "html_url": "https://github.com/opencoredev/islandcn",
-      "description": "The open-source Dynamic Island for React, installed with shadcn.",
-      "language": "TypeScript",
-      "topics": [
-        "dynamic-island",
-        "nextjs",
-        "react",
-        "shadcn",
-        "typescript",
-        "ui-components"
-      ],
-      "stars": 817,
-      "forks": 64,
-      "created_at": "2026-11-13T11:50:50Z",
-      "pushed_at": "2026-11-19T14:21:30Z",
-      "updated_at": "2026-11-19T16:38:51Z",
-      "stars_per_day": 136.2,
-      "age_days": 6
+      "full_name": "siliconjungle/shapeshift-labs-ink-studio",
+      "name": "shapeshift-labs-ink-studio",
+      "html_url": "https://github.com/siliconjungle/shapeshift-labs-ink-studio",
+      "description": "Sculpting, animation and simulation toolkit for pixel-art Gaussian splats",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 825,
+      "forks": 67,
+      "created_at": "2026-11-16T07:44:00Z",
+      "pushed_at": "2026-11-20T17:18:38Z",
+      "updated_at": "2026-11-20T17:22:57Z",
+      "stars_per_day": 206.2,
+      "age_days": 4
     },
     {
       "full_name": "n4ze3m/tiny-voca",
@@ -423,13 +441,13 @@
         "text-to-speech",
         "tts"
       ],
-      "stars": 768,
-      "forks": 97,
+      "stars": 787,
+      "forks": 99,
       "created_at": "2026-11-14T16:02:56Z",
-      "pushed_at": "2026-11-19T14:14:07Z",
-      "updated_at": "2026-11-19T17:40:13Z",
-      "stars_per_day": 153.6,
-      "age_days": 5
+      "pushed_at": "2026-11-20T07:08:36Z",
+      "updated_at": "2026-11-20T17:20:45Z",
+      "stars_per_day": 131.2,
+      "age_days": 6
     },
     {
       "full_name": "yetanotherbrowser/yab",
@@ -438,28 +456,13 @@
       "description": "Yab, yet another browser: a fast native macOS browser with an iPhone and Android companion",
       "language": "Swift",
       "topics": [],
-      "stars": 734,
-      "forks": 73,
+      "stars": 755,
+      "forks": 80,
       "created_at": "2026-11-14T23:56:32Z",
-      "pushed_at": "2026-11-19T07:36:59Z",
-      "updated_at": "2026-11-19T15:29:46Z",
-      "stars_per_day": 183.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "mit-han-lab/pear",
-      "name": "pear",
-      "html_url": "https://github.com/mit-han-lab/pear",
-      "description": "Training Reasoning Models in Simulation to Natively Use Real Robots",
-      "language": "Python",
-      "topics": [],
-      "stars": 718,
-      "forks": 48,
-      "created_at": "2026-11-13T17:43:06Z",
-      "pushed_at": "2026-11-19T06:11:14Z",
-      "updated_at": "2026-11-19T15:20:09Z",
-      "stars_per_day": 119.7,
-      "age_days": 6
+      "pushed_at": "2026-11-20T12:04:12Z",
+      "updated_at": "2026-11-20T17:02:21Z",
+      "stars_per_day": 151.0,
+      "age_days": 5
     },
     {
       "full_name": "boringmarketer/boring-marketing-skills",
@@ -477,113 +480,70 @@
         "marketing",
         "seo"
       ],
-      "stars": 705,
-      "forks": 261,
+      "stars": 735,
+      "forks": 272,
       "created_at": "2026-11-16T15:09:46Z",
       "pushed_at": "2026-11-17T22:53:58Z",
-      "updated_at": "2026-11-19T17:18:24Z",
-      "stars_per_day": 235.0,
-      "age_days": 3
+      "updated_at": "2026-11-20T15:52:20Z",
+      "stars_per_day": 183.8,
+      "age_days": 4
     },
     {
-      "full_name": "siliconjungle/shapeshift-labs-ink-studio",
-      "name": "shapeshift-labs-ink-studio",
-      "html_url": "https://github.com/siliconjungle/shapeshift-labs-ink-studio",
-      "description": "Sculpting, animation and simulation toolkit for pixel-art Gaussian splats",
-      "language": "JavaScript",
+      "full_name": "Lemxy/WinRust",
+      "name": "WinRust",
+      "html_url": "https://github.com/Lemxy/WinRust",
+      "description": "Windows shell replacement in Rust: taskbar, file manager, NTFS search, task manager, disk cleaner. One installer exe.",
+      "language": "Rust",
       "topics": [],
-      "stars": 680,
-      "forks": 55,
-      "created_at": "2026-11-16T07:44:00Z",
-      "pushed_at": "2026-11-19T17:30:16Z",
-      "updated_at": "2026-11-19T17:46:19Z",
-      "stars_per_day": 226.7,
+      "stars": 671,
+      "forks": 36,
+      "created_at": "2026-11-17T14:27:06Z",
+      "pushed_at": "2026-11-20T16:49:11Z",
+      "updated_at": "2026-11-20T17:15:22Z",
+      "stars_per_day": 223.7,
       "age_days": 3
     },
     {
-      "full_name": "Bodila51/gtavi-claudecode",
-      "name": "gtavi-claudecode",
-      "html_url": "https://github.com/Bodila51/gtavi-claudecode",
-      "description": "Claude Code plugin that turns GTA 6 streams into paid vertical clips: live campaigns, trending videos, best moments, 9:16 cuts with hooks, captions and credits.",
+      "full_name": "0xkaka/homeport",
+      "name": "homeport",
+      "html_url": "https://github.com/0xkaka/homeport",
+      "description": null,
+      "language": "HTML",
+      "topics": [],
+      "stars": 564,
+      "forks": 98,
+      "created_at": "2026-11-17T05:39:46Z",
+      "pushed_at": "2026-11-19T09:05:16Z",
+      "updated_at": "2026-11-20T17:18:24Z",
+      "stars_per_day": 188.0,
+      "age_days": 3
+    },
+    {
+      "full_name": "mankidev/antialgorithm",
+      "name": "antialgorithm",
+      "html_url": "https://github.com/mankidev/antialgorithm",
+      "description": "Agent skill that steers the model away from its first, most average pick in creative work: names, ideas, logo, posters, UI.",
       "language": "Python",
       "topics": [
         "agent-skills",
         "claude-code",
-        "clipping",
-        "gta6",
-        "tiktok",
-        "youtube-shorts"
+        "claude-code-plugin",
+        "claude-skills",
+        "codex",
+        "creative-writing",
+        "creativity",
+        "design",
+        "llm",
+        "naming",
+        "svg",
+        "ui-design"
       ],
-      "stars": 582,
-      "forks": 120,
-      "created_at": "2026-11-18T17:54:29Z",
-      "pushed_at": "2026-11-19T09:30:06Z",
-      "updated_at": "2026-11-19T17:48:34Z",
-      "stars_per_day": 582.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "quer3q/kraken-mount",
-      "name": "kraken-mount",
-      "html_url": "https://github.com/quer3q/kraken-mount",
-      "description": "Minimalist PS5 game mounter supporting PKG, folder dumps, zstd and lz4",
-      "language": "Rust",
-      "topics": [
-        "homebrew",
-        "ps5"
-      ],
-      "stars": 544,
-      "forks": 45,
-      "created_at": "2026-11-13T07:25:37Z",
-      "pushed_at": "2026-11-18T16:13:46Z",
-      "updated_at": "2026-11-19T17:28:58Z",
-      "stars_per_day": 90.7,
-      "age_days": 6
-    },
-    {
-      "full_name": "ybblab/Jiumi",
-      "name": "Jiumi",
-      "html_url": "https://github.com/ybblab/Jiumi",
-      "description": "\u63ea\u54aa Jiumi\uff1a\u5f00\u6e90\u5b89\u5353\u5e94\u7528\u884c\u4e3a\u76d1\u6d4b\u4e0e\u7ba1\u7406\uff0c\u67e5\u770b\u6743\u9650\u8bbf\u95ee\u548c\u7f51\u7edc\u6d3b\u52a8\u3002Android app activity & privacy monitor. No root required.",
-      "language": "Kotlin",
-      "topics": [
-        "android",
-        "android-app",
-        "app-management",
-        "app-monitoring",
-        "appops",
-        "kotlin",
-        "network-monitoring",
-        "privacy",
-        "shizuku",
-        "wireless-debugging"
-      ],
-      "stars": 543,
-      "forks": 24,
-      "created_at": "2026-11-13T16:20:27Z",
-      "pushed_at": "2026-11-19T04:36:51Z",
-      "updated_at": "2026-11-19T17:34:59Z",
-      "stars_per_day": 90.5,
-      "age_days": 6
-    },
-    {
-      "full_name": "faizwashere/ScanDot",
-      "name": "ScanDot",
-      "html_url": "https://github.com/faizwashere/ScanDot",
-      "description": "Experimental Android 3D scanning and point-cloud viewer",
-      "language": "Kotlin",
-      "topics": [
-        "3d-scanning",
-        "android",
-        "photogrammetry",
-        "point-cloud"
-      ],
-      "stars": 516,
-      "forks": 5,
-      "created_at": "2026-11-13T04:07:57Z",
-      "pushed_at": "2026-11-13T04:27:21Z",
-      "updated_at": "2026-11-19T16:46:23Z",
-      "stars_per_day": 86.0,
+      "stars": 554,
+      "forks": 33,
+      "created_at": "2026-11-14T09:48:23Z",
+      "pushed_at": "2026-11-20T17:08:35Z",
+      "updated_at": "2026-11-20T17:05:54Z",
+      "stars_per_day": 92.3,
       "age_days": 6
     },
     {
@@ -593,28 +553,28 @@
       "description": "Skill to draw stick figure animated visuals",
       "language": "JavaScript",
       "topics": [],
-      "stars": 489,
-      "forks": 52,
+      "stars": 529,
+      "forks": 58,
       "created_at": "2026-11-15T00:17:40Z",
       "pushed_at": "2026-11-16T10:36:25Z",
-      "updated_at": "2026-11-19T17:34:33Z",
-      "stars_per_day": 122.2,
-      "age_days": 4
+      "updated_at": "2026-11-20T16:19:48Z",
+      "stars_per_day": 105.8,
+      "age_days": 5
     },
     {
-      "full_name": "pixl27/ProjectReLink",
-      "name": "ProjectReLink",
-      "html_url": "https://github.com/pixl27/ProjectReLink",
-      "description": "Project ReLink - Zelda OOT Remake Recomp. An unofficial native PC recompilation of Ocarina of Time (the Switch 2 remake), built on your PC from your own copy.",
-      "language": "C++",
+      "full_name": "MSNightmare/FastUnlock",
+      "name": "FastUnlock",
+      "html_url": "https://github.com/MSNightmare/FastUnlock",
+      "description": "FastUnlock : Windows Narrator LockScreen Bypass 0day Vulnerability",
+      "language": null,
       "topics": [],
-      "stars": 480,
-      "forks": 25,
-      "created_at": "2026-11-13T13:05:32Z",
-      "pushed_at": "2026-11-19T15:47:52Z",
-      "updated_at": "2026-11-19T17:16:47Z",
-      "stars_per_day": 80.0,
-      "age_days": 6
+      "stars": 529,
+      "forks": 83,
+      "created_at": "2026-11-19T12:37:51Z",
+      "pushed_at": "2026-11-19T13:54:47Z",
+      "updated_at": "2026-11-20T17:22:31Z",
+      "stars_per_day": 529.0,
+      "age_days": 1
     },
     {
       "full_name": "YellowLaborerMarket/Gemini-Config-Checker-",
@@ -646,21 +606,6 @@
       "created_at": "2026-11-15T16:48:18Z",
       "pushed_at": "2026-11-15T16:49:31Z",
       "updated_at": "2026-11-19T09:37:41Z",
-      "stars_per_day": 118.5,
-      "age_days": 4
-    },
-    {
-      "full_name": "mankidev/antialgorithm",
-      "name": "antialgorithm",
-      "html_url": "https://github.com/mankidev/antialgorithm",
-      "description": "Claude Code skill that steers the model away from its first, most average pick in creative work: names, ideas, posters, UI.",
-      "language": "Python",
-      "topics": [],
-      "stars": 474,
-      "forks": 30,
-      "created_at": "2026-11-14T09:48:23Z",
-      "pushed_at": "2026-11-18T19:23:55Z",
-      "updated_at": "2026-11-19T17:24:21Z",
       "stars_per_day": 94.8,
       "age_days": 5
     },
@@ -694,8 +639,8 @@
       "created_at": "2026-11-15T16:47:11Z",
       "pushed_at": "2026-11-15T16:48:06Z",
       "updated_at": "2026-11-19T09:39:50Z",
-      "stars_per_day": 118.2,
-      "age_days": 4
+      "stars_per_day": 94.6,
+      "age_days": 5
     },
     {
       "full_name": "WindGatorRise37/Gemini-Config-Checker-",
@@ -727,8 +672,8 @@
       "created_at": "2026-11-15T16:47:17Z",
       "pushed_at": "2026-11-15T16:48:17Z",
       "updated_at": "2026-11-19T09:39:42Z",
-      "stars_per_day": 118.0,
-      "age_days": 4
+      "stars_per_day": 94.4,
+      "age_days": 5
     },
     {
       "full_name": "WyrmClimberManacle/Gemini-Config-Checker-",
@@ -760,8 +705,8 @@
       "created_at": "2026-11-15T16:48:18Z",
       "pushed_at": "2026-11-15T16:49:29Z",
       "updated_at": "2026-11-19T09:39:34Z",
-      "stars_per_day": 118.0,
-      "age_days": 4
+      "stars_per_day": 94.4,
+      "age_days": 5
     },
     {
       "full_name": "TurtleReside/Gemini-Config-Checker-",
@@ -793,8 +738,8 @@
       "created_at": "2026-11-15T16:46:04Z",
       "pushed_at": "2026-11-15T16:47:00Z",
       "updated_at": "2026-11-19T09:37:47Z",
-      "stars_per_day": 118.0,
-      "age_days": 4
+      "stars_per_day": 94.4,
+      "age_days": 5
     },
     {
       "full_name": "weldbladesmithwharf/Gemini-Config-Checker-",
@@ -826,8 +771,107 @@
       "created_at": "2026-11-15T16:47:11Z",
       "pushed_at": "2026-11-15T16:48:07Z",
       "updated_at": "2026-11-19T09:39:49Z",
-      "stars_per_day": 118.0,
-      "age_days": 4
+      "stars_per_day": 94.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "WindowStaffGate11/Gemini-Config-Checker-",
+      "name": "Gemini-Config-Checker-",
+      "html_url": "https://github.com/WindowStaffGate11/Gemini-Config-Checker-",
+      "description": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+      "language": "Makefile",
+      "topics": [
+        "ai",
+        "ai-search",
+        "aichecker",
+        "chatgpt",
+        "cli",
+        "config-checker",
+        "gemeni",
+        "gemeni-checker",
+        "generative-ai",
+        "lim-seo",
+        "llm",
+        "mcp-server",
+        "nextjs",
+        "open-code",
+        "seo-checker",
+        "seo-tool",
+        "typescript"
+      ],
+      "stars": 472,
+      "forks": 0,
+      "created_at": "2026-11-15T16:47:18Z",
+      "pushed_at": "2026-11-15T16:48:20Z",
+      "updated_at": "2026-11-19T09:39:41Z",
+      "stars_per_day": 94.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "WerewolfEmuHub/Gemini-Config-Checker-",
+      "name": "Gemini-Config-Checker-",
+      "html_url": "https://github.com/WerewolfEmuHub/Gemini-Config-Checker-",
+      "description": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+      "language": "Go",
+      "topics": [
+        "ai",
+        "ai-search",
+        "aichecker",
+        "chatgpt",
+        "cli",
+        "config-checker",
+        "gemeni",
+        "gemeni-checker",
+        "generative-ai",
+        "lim-seo",
+        "llm",
+        "mcp-server",
+        "nextjs",
+        "open-code",
+        "seo-checker",
+        "seo-tool",
+        "typescript"
+      ],
+      "stars": 472,
+      "forks": 0,
+      "created_at": "2026-11-15T16:47:11Z",
+      "pushed_at": "2026-11-15T16:48:11Z",
+      "updated_at": "2026-11-19T09:39:44Z",
+      "stars_per_day": 94.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "Violetnyudress/Gemini-Config-Checker-",
+      "name": "Gemini-Config-Checker-",
+      "html_url": "https://github.com/Violetnyudress/Gemini-Config-Checker-",
+      "description": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+      "language": "Go",
+      "topics": [
+        "ai",
+        "ai-search",
+        "aichecker",
+        "chatgpt",
+        "cli",
+        "config-checker",
+        "gemeni",
+        "gemeni-checker",
+        "generative-ai",
+        "lim-seo",
+        "llm",
+        "mcp-server",
+        "nextjs",
+        "open-code",
+        "seo-checker",
+        "seo-tool",
+        "typescript"
+      ],
+      "stars": 472,
+      "forks": 0,
+      "created_at": "2026-11-15T16:46:04Z",
+      "pushed_at": "2026-11-15T16:47:00Z",
+      "updated_at": "2026-11-19T09:37:47Z",
+      "stars_per_day": 94.4,
+      "age_days": 5
     }
   ],
   "hn_items": [
@@ -906,93 +950,93 @@
     {
       "title": "Is Coding with AI Actually Faster and Cheaper?",
       "url": "https://dev.to/sylwia-lask/is-coding-with-ai-actually-faster-and-cheaper-2810",
-      "reactions": 156,
-      "comments": 125,
+      "reactions": 189,
+      "comments": 165,
       "published_at": "2026-11-18T08:32:45Z"
     },
     {
       "title": "The CodeNewbie Podcast is Back for Season 28!",
       "url": "https://dev.to/codenewbie/the-codenewbie-podcast-is-back-for-season-28-2484",
-      "reactions": 68,
+      "reactions": 76,
       "comments": 10,
       "published_at": "2026-11-18T18:32:36Z"
     },
     {
       "title": "What does DEV stand for?",
       "url": "https://dev.to/devengers/what-does-dev-stand-for-2kg9",
-      "reactions": 170,
-      "comments": 162,
+      "reactions": 194,
+      "comments": 172,
       "published_at": "2026-11-16T14:55:10Z"
     },
     {
       "title": "Dev Opportunity Radar #25: $120K+ Atlassian Hackathon, MLH Fellowship, and INSEAD AI Founder Sprint",
       "url": "https://dev.to/devengers/dev-opportunity-radar-25-120k-atlassian-hackathon-mlh-fellowship-and-insead-ai-founder-sprint-m96",
-      "reactions": 114,
-      "comments": 17,
+      "reactions": 116,
+      "comments": 18,
       "published_at": "2026-11-13T18:28:11Z"
     },
     {
       "title": "25 Editions of Dev Opportunity Radar: From My Radar to Our Radar \ud83d\udc99 + AMA",
       "url": "https://dev.to/hemapriya_kanagala/25-editions-of-dev-opportunity-radar-from-my-radar-to-our-radar-ama-5f5",
-      "reactions": 129,
-      "comments": 39,
+      "reactions": 138,
+      "comments": 49,
       "published_at": "2026-11-18T15:52:31Z"
-    },
-    {
-      "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
-      "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
-      "reactions": 117,
-      "comments": 53,
-      "published_at": "2026-11-13T15:56:26Z"
     },
     {
       "title": "Ghost Rovers: I Called 12 Machines NASA Left Behind. One Picked Up.",
       "url": "https://dev.to/earlgreyhot1701d/ghost-rovers-i-called-12-machines-nasa-left-behind-one-picked-up-2575",
-      "reactions": 81,
-      "comments": 40,
+      "reactions": 84,
+      "comments": 43,
       "published_at": "2026-11-15T04:00:28Z"
+    },
+    {
+      "title": "Tell us your story, and we might read it on the CodeNewbie Podcast \ud83c\udf99\ufe0f",
+      "url": "https://dev.to/codenewbie/tell-us-your-story-and-we-might-read-it-on-the-codenewbie-podcast-2840",
+      "reactions": 16,
+      "comments": 1,
+      "published_at": "2026-11-20T16:28:49Z"
     },
     {
       "title": "DEVengers Weekly #1: The MCP Reality Check, Career Moats, and 25 Weeks on the Radar \ud83d\ude80",
       "url": "https://dev.to/devengers/devengers-weekly-1-the-mcp-reality-check-career-moats-and-25-weeks-on-the-radar-23ec",
-      "reactions": 71,
-      "comments": 26,
+      "reactions": 78,
+      "comments": 28,
       "published_at": "2026-11-17T14:18:20Z"
     },
     {
       "title": "AI Avatar v28 (Security Support, Voxel Avatar)\ud83d\udee1\ufe0f",
       "url": "https://dev.to/webdeveloperhyper/ai-avatar-v28-security-support-voxel-avatar-2i5i",
-      "reactions": 71,
-      "comments": 23,
+      "reactions": 81,
+      "comments": 28,
       "published_at": "2026-11-16T04:34:39Z"
     },
     {
-      "title": "One Year on DEV: The People Made the Platform",
-      "url": "https://dev.to/hanzla/one-year-on-dev-the-people-made-the-platform-hab",
-      "reactions": 119,
-      "comments": 31,
-      "published_at": "2026-11-18T07:54:09Z"
+      "title": "I can't believe the podcast I learned to code with is back!",
+      "url": "https://dev.to/codenewbie/i-cant-believe-the-podcast-i-learned-to-code-with-is-back-2gi5",
+      "reactions": 24,
+      "comments": 0,
+      "published_at": "2026-11-20T08:55:01Z"
     }
   ],
   "languages": [
     [
       "Python",
-      11
+      10
     ],
     [
       "Makefile",
-      5
+      6
+    ],
+    [
+      "Go",
+      3
     ],
     [
       "JavaScript",
       3
     ],
     [
-      "C++",
-      2
-    ],
-    [
-      "Kotlin",
+      "HTML",
       2
     ],
     [
@@ -1000,90 +1044,82 @@
       2
     ],
     [
+      "C++",
+      1
+    ],
+    [
       "Swift",
-      2
-    ],
-    [
-      "Go",
-      1
-    ],
-    [
-      "HTML",
-      1
-    ],
-    [
-      "TypeScript",
       1
     ]
   ],
   "topics": [
     [
-      "typescript",
-      8
-    ],
-    [
-      "cli",
-      7
-    ],
-    [
       "llm",
-      7
-    ],
-    [
-      "nextjs",
-      7
-    ],
-    [
-      "ai",
-      6
-    ],
-    [
-      "ai-search",
-      6
-    ],
-    [
-      "aichecker",
-      6
+      12
     ],
     [
       "chatgpt",
-      6
+      10
     ],
     [
-      "config-checker",
-      6
-    ],
-    [
-      "gemeni",
-      6
-    ],
-    [
-      "gemeni-checker",
-      6
-    ],
-    [
-      "generative-ai",
-      6
-    ],
-    [
-      "lim-seo",
-      6
+      "cli",
+      10
     ],
     [
       "mcp-server",
-      6
+      10
+    ],
+    [
+      "typescript",
+      10
+    ],
+    [
+      "ai",
+      9
+    ],
+    [
+      "ai-search",
+      9
+    ],
+    [
+      "aichecker",
+      9
+    ],
+    [
+      "config-checker",
+      9
+    ],
+    [
+      "gemeni",
+      9
+    ],
+    [
+      "gemeni-checker",
+      9
+    ],
+    [
+      "generative-ai",
+      9
+    ],
+    [
+      "lim-seo",
+      9
+    ],
+    [
+      "nextjs",
+      9
     ],
     [
       "open-code",
-      6
+      9
     ],
     [
       "seo-checker",
-      6
+      9
     ],
     [
       "seo-tool",
-      6
+      9
     ],
     [
       "claude-code",
@@ -1094,39 +1130,23 @@
       3
     ],
     [
-      "android",
+      "codex",
       3
     ],
     [
-      "codex",
+      "ai-agents",
       2
     ],
     [
-      "3d-scanning",
-      1
+      "mcp",
+      2
     ],
     [
       "agent-skill",
       1
     ],
     [
-      "ai-agents",
-      1
-    ],
-    [
-      "android-app",
-      1
-    ],
-    [
-      "app-management",
-      1
-    ],
-    [
-      "app-monitoring",
-      1
-    ],
-    [
-      "appops",
+      "ai-assistant",
       1
     ],
     [
@@ -1138,7 +1158,51 @@
       1
     ],
     [
+      "blender",
+      1
+    ],
+    [
+      "blender-addon",
+      1
+    ],
+    [
+      "blender-ai",
+      1
+    ],
+    [
+      "blender-automation",
+      1
+    ],
+    [
+      "blender-mcp",
+      1
+    ],
+    [
+      "blender-plugin",
+      1
+    ],
+    [
+      "blender-scripting",
+      1
+    ],
+    [
+      "bpy",
+      1
+    ],
+    [
       "chrome-extension",
+      1
+    ],
+    [
+      "claude",
+      1
+    ],
+    [
+      "claude-code-plugin",
+      1
+    ],
+    [
+      "claude-skills",
       1
     ],
     [
@@ -1154,6 +1218,14 @@
       1
     ],
     [
+      "creative-writing",
+      1
+    ],
+    [
+      "creativity",
+      1
+    ],
+    [
       "creator-tools",
       1
     ],
@@ -1162,7 +1234,7 @@
       1
     ],
     [
-      "dynamic-island",
+      "design",
       1
     ],
     [
@@ -1174,7 +1246,11 @@
       1
     ],
     [
-      "gestures",
+      "ffmpeg",
+      1
+    ],
+    [
+      "gemini",
       1
     ],
     [
@@ -1182,23 +1258,7 @@
       1
     ],
     [
-      "gta6",
-      1
-    ],
-    [
-      "homebrew",
-      1
-    ],
-    [
       "inference",
-      1
-    ],
-    [
-      "ipad",
-      1
-    ],
-    [
-      "iphone",
       1
     ],
     [
@@ -1210,19 +1270,7 @@
       1
     ],
     [
-      "kotlin",
-      1
-    ],
-    [
       "local-seo",
-      1
-    ],
-    [
-      "macos",
-      1
-    ],
-    [
-      "macos-app",
       1
     ],
     [
@@ -1230,11 +1278,7 @@
       1
     ],
     [
-      "mcp",
-      1
-    ],
-    [
-      "menubar-app",
+      "mcp-for-blender",
       1
     ],
     [
@@ -1242,7 +1286,11 @@
       1
     ],
     [
-      "multi-monitor",
+      "model-context-protocol",
+      1
+    ],
+    [
+      "naming",
       1
     ],
     [
@@ -1250,7 +1298,7 @@
       1
     ],
     [
-      "network-monitoring",
+      "ollama",
       1
     ],
     [
@@ -1258,31 +1306,15 @@
       1
     ],
     [
+      "opencode",
+      1
+    ],
+    [
       "performance",
       1
     ],
     [
-      "photogrammetry",
-      1
-    ],
-    [
-      "point-cloud",
-      1
-    ],
-    [
       "porting",
-      1
-    ],
-    [
-      "privacy",
-      1
-    ],
-    [
-      "productivity",
-      1
-    ],
-    [
-      "ps5",
       1
     ],
     [
@@ -1291,18 +1323,6 @@
     ],
     [
       "python",
-      1
-    ],
-    [
-      "react",
-      1
-    ],
-    [
-      "remote-control",
-      1
-    ],
-    [
-      "remote-desktop",
       1
     ],
     [
@@ -1322,11 +1342,7 @@
       1
     ],
     [
-      "shadcn",
-      1
-    ],
-    [
-      "shizuku",
+      "shorts",
       1
     ],
     [
@@ -1338,15 +1354,7 @@
       1
     ],
     [
-      "swift",
-      1
-    ],
-    [
-      "swiftui",
-      1
-    ],
-    [
-      "tablet",
+      "svg",
       1
     ],
     [
@@ -1354,35 +1362,23 @@
       1
     ],
     [
-      "tiktok",
-      1
-    ],
-    [
       "tts",
       1
     ],
     [
-      "ui-components",
+      "ui-design",
       1
     ],
     [
-      "uu-remote",
+      "video",
       1
     ],
     [
-      "virtual-display",
+      "whisper",
       1
     ],
     [
-      "window-management",
-      1
-    ],
-    [
-      "wireless-debugging",
-      1
-    ],
-    [
-      "youtube-shorts",
+      "yt-dlp",
       1
     ]
   ]

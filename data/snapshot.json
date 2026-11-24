@@ -1,7 +1,13 @@
 {
-  "generated_at": "2026-11-23T20:42:12.223821+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-16, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-24T19:47:58.151347+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-17, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
+    {
+      "name": "GitHub Search API",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-17&sort=stars&order=desc&per_page=30",
+      "status": "ok",
+      "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
+    },
     {
       "name": "Hacker News Algolia API",
       "url": "https://hn.algolia.com/api/v1/search?query=open%20source&tags=story&hitsPerPage=10",
@@ -15,14 +21,827 @@
       "note": "10 top articles from the last 7 days; mention counts are title matches in this sample only."
     }
   ],
-  "unavailable_sources": [
+  "unavailable_sources": [],
+  "rising": [
     {
-      "name": "GitHub Search API",
-      "reason": "HTTP Error 504: Gateway Time-out"
+      "name": "Python",
+      "kind": "language",
+      "count_in_snapshot": 8,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Rust",
+      "kind": "language",
+      "count_in_snapshot": 8,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
+      "name": "mcp",
+      "kind": "topic",
+      "count_in_snapshot": 6,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "rust",
+      "kind": "topic",
+      "count_in_snapshot": 5,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
+      "name": "ai-agents",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "claude-code",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "JavaScript",
+      "kind": "language",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "TypeScript",
+      "kind": "language",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 1
+    },
+    {
+      "name": "codex",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "windows",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "HTML",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Lean",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "agent-skills",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "ai-agent",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "android",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "claude-code-plugin",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "coding-agent",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "cursor",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "d3d12",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "desktop-app",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "developer-tools",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
     }
   ],
-  "rising": [],
-  "repos": [],
+  "repos": [
+    {
+      "full_name": "Marvisak/VIctory",
+      "name": "VIctory",
+      "html_url": "https://github.com/Marvisak/VIctory",
+      "description": "An attempt at running GTA VI on PC",
+      "language": "Rust",
+      "topics": [],
+      "stars": 10701,
+      "forks": 1542,
+      "created_at": "2026-11-23T21:47:25Z",
+      "pushed_at": "2026-11-24T09:55:08Z",
+      "updated_at": "2026-11-24T19:47:18Z",
+      "stars_per_day": 10701.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "xcl-dev/xcl",
+      "name": "xcl",
+      "html_url": "https://github.com/xcl-dev/xcl",
+      "description": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the console system libraries and recompiles RDNA2 shaders to DXIL",
+      "language": "Rust",
+      "topics": [
+        "d3d12",
+        "gdk",
+        "rdna2",
+        "xbox"
+      ],
+      "stars": 7578,
+      "forks": 972,
+      "created_at": "2026-11-20T20:03:21Z",
+      "pushed_at": "2026-11-24T19:43:54Z",
+      "updated_at": "2026-11-24T19:47:57Z",
+      "stars_per_day": 2526.0,
+      "age_days": 3
+    },
+    {
+      "full_name": "EL4CTEO/fast-anything",
+      "name": "fast-anything",
+      "html_url": "https://github.com/EL4CTEO/fast-anything",
+      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+      "language": "Rust",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "codex",
+        "developer-tools",
+        "ffi",
+        "mcp",
+        "mcp-server",
+        "napi-rs",
+        "nodejs",
+        "optimization",
+        "performance",
+        "profiler",
+        "pyo3",
+        "python",
+        "rewrite-it-in-rust",
+        "ruby",
+        "rust",
+        "typescript"
+      ],
+      "stars": 3556,
+      "forks": 252,
+      "created_at": "2026-11-21T14:40:27Z",
+      "pushed_at": "2026-11-24T15:28:28Z",
+      "updated_at": "2026-11-24T19:40:41Z",
+      "stars_per_day": 1185.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "AFK-surf/xnulinux",
+      "name": "xnulinux",
+      "html_url": "https://github.com/AFK-surf/xnulinux",
+      "description": "XNU as a loadable kernel module inside Linux (macOS personality for arm64 Linux)",
+      "language": "Objective-C++",
+      "topics": [],
+      "stars": 3210,
+      "forks": 138,
+      "created_at": "2026-11-20T10:18:31Z",
+      "pushed_at": "2026-11-24T19:34:29Z",
+      "updated_at": "2026-11-24T19:47:47Z",
+      "stars_per_day": 802.5,
+      "age_days": 4
+    },
+    {
+      "full_name": "4lwayz/portwatch-vi",
+      "name": "portwatch-vi",
+      "html_url": "https://github.com/4lwayz/portwatch-vi",
+      "description": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated daily.",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 2488,
+      "forks": 59,
+      "created_at": "2026-11-21T23:16:41Z",
+      "pushed_at": "2026-11-24T19:31:05Z",
+      "updated_at": "2026-11-24T19:47:48Z",
+      "stars_per_day": 1244.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "iamajmeena/neonclipping",
+      "name": "neonclipping",
+      "html_url": "https://github.com/iamajmeena/neonclipping",
+      "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
+      "language": "Python",
+      "topics": [
+        "ai-video-clipper",
+        "clipping",
+        "faster-whisper",
+        "ffmpeg",
+        "gameplay-clipper",
+        "local-llm",
+        "ollama",
+        "open-source-video-editor",
+        "opusclip-alternative",
+        "shorts",
+        "twitch-clips",
+        "vertical-video",
+        "video",
+        "whisper",
+        "youtube-shorts-generator",
+        "yt-dlp"
+      ],
+      "stars": 2461,
+      "forks": 155,
+      "created_at": "2026-11-19T10:00:43Z",
+      "pushed_at": "2026-11-24T13:27:46Z",
+      "updated_at": "2026-11-24T19:43:15Z",
+      "stars_per_day": 492.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "R0Y00/Xbox2Windows",
+      "name": "Xbox2Windows",
+      "html_url": "https://github.com/R0Y00/Xbox2Windows",
+      "description": "Static recompilation research for Xbox Series X|S software on x64 Windows, with source-built CPU and GPU tests. Full-game startup is unverified.",
+      "language": "Python",
+      "topics": [
+        "d3d12",
+        "directx-raytracing",
+        "scarlett",
+        "static-recompilation",
+        "windows",
+        "xbox",
+        "xbox-series-x"
+      ],
+      "stars": 1881,
+      "forks": 213,
+      "created_at": "2026-11-20T17:43:52Z",
+      "pushed_at": "2026-11-24T19:47:34Z",
+      "updated_at": "2026-11-24T19:47:28Z",
+      "stars_per_day": 470.2,
+      "age_days": 4
+    },
+    {
+      "full_name": "omonkeyz/xbox-emulator",
+      "name": "xbox-emulator",
+      "html_url": "https://github.com/omonkeyz/xbox-emulator",
+      "description": "Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)",
+      "language": "Rust",
+      "topics": [],
+      "stars": 1797,
+      "forks": 119,
+      "created_at": "2026-11-21T08:08:39Z",
+      "pushed_at": "2026-11-23T11:58:17Z",
+      "updated_at": "2026-11-24T19:43:25Z",
+      "stars_per_day": 599.0,
+      "age_days": 3
+    },
+    {
+      "full_name": "os6/nospeaker",
+      "name": "nospeaker",
+      "html_url": "https://github.com/os6/nospeaker",
+      "description": "make your macbook's trackpad talk using its haptic motor",
+      "language": "Swift",
+      "topics": [
+        "haptics",
+        "macos",
+        "swift",
+        "trackpad"
+      ],
+      "stars": 1718,
+      "forks": 85,
+      "created_at": "2026-11-22T12:05:54Z",
+      "pushed_at": "2026-11-24T02:43:05Z",
+      "updated_at": "2026-11-24T19:43:17Z",
+      "stars_per_day": 859.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "ubiquitarianism/leonida",
+      "name": "leonida",
+      "html_url": "https://github.com/ubiquitarianism/leonida",
+      "description": "A continuation of Leonida, the Xbox > PC port interface of GTA VI",
+      "language": "Python",
+      "topics": [],
+      "stars": 1693,
+      "forks": 372,
+      "created_at": "2026-11-23T23:54:39Z",
+      "pushed_at": "2026-11-24T18:38:54Z",
+      "updated_at": "2026-11-24T19:47:37Z",
+      "stars_per_day": 1693.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "INK-Q/agy-fast",
+      "name": "agy-fast",
+      "html_url": "https://github.com/INK-Q/agy-fast",
+      "description": "Non-invasive MCP accelerator plugin for Google Antigravity (CLI/Desktop/IDE): cuts LLM turns (-34%), token quota (-31%), and upload traffic (-40%) without affecting native UI or diffs.",
+      "language": "TypeScript",
+      "topics": [
+        "ai-agent",
+        "ai-coding",
+        "antigravity",
+        "antigravity-cli",
+        "antigravity-ide",
+        "antigravity-plugins",
+        "coding-agent",
+        "context-optimization",
+        "developer-productivity",
+        "developer-tools",
+        "gemini",
+        "google-antigravity",
+        "latency-optimization",
+        "mcp",
+        "mcp-plugin",
+        "mcp-server",
+        "model-context-protocol",
+        "performance",
+        "plugin",
+        "token-optimization"
+      ],
+      "stars": 1136,
+      "forks": 65,
+      "created_at": "2026-11-19T04:58:46Z",
+      "pushed_at": "2026-11-24T14:28:12Z",
+      "updated_at": "2026-11-24T19:46:38Z",
+      "stars_per_day": 227.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "leanprover-community/riemann-hypothesis",
+      "name": "riemann-hypothesis",
+      "html_url": "https://github.com/leanprover-community/riemann-hypothesis",
+      "description": "Lean formalization of the Riemann Hypothesis (Alp\u00f6ge, 2026-11-20)",
+      "language": "Lean",
+      "topics": [],
+      "stars": 1013,
+      "forks": 378,
+      "created_at": "2026-11-20T14:47:49Z",
+      "pushed_at": "2026-11-24T19:26:06Z",
+      "updated_at": "2026-11-24T19:41:30Z",
+      "stars_per_day": 253.2,
+      "age_days": 4
+    },
+    {
+      "full_name": "Avaneesh-Inamdar/Stream-Tube-Desktop",
+      "name": "Stream-Tube-Desktop",
+      "html_url": "https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop",
+      "description": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
+      "language": "Rust",
+      "topics": [
+        "dearrow",
+        "desktop-app",
+        "gpui",
+        "mpv",
+        "rust",
+        "sponsorblock",
+        "windows",
+        "youtube",
+        "youtube-client"
+      ],
+      "stars": 770,
+      "forks": 60,
+      "created_at": "2026-11-22T18:50:17Z",
+      "pushed_at": "2026-11-24T12:39:40Z",
+      "updated_at": "2026-11-24T19:47:14Z",
+      "stars_per_day": 385.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "danielwh2/sprite-stacking",
+      "name": "sprite-stacking",
+      "html_url": "https://github.com/danielwh2/sprite-stacking",
+      "description": "Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.",
+      "language": "HTML",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "cursor",
+        "fake-3d",
+        "gamedev",
+        "pixel-art",
+        "sprite-stacking",
+        "voxel"
+      ],
+      "stars": 766,
+      "forks": 57,
+      "created_at": "2026-11-20T14:32:43Z",
+      "pushed_at": "2026-11-24T13:12:08Z",
+      "updated_at": "2026-11-24T19:23:47Z",
+      "stars_per_day": 191.5,
+      "age_days": 4
+    },
+    {
+      "full_name": "nataphong-lab/Open-Source-Face-Recognition-Ultimate",
+      "name": "Open-Source-Face-Recognition-Ultimate",
+      "html_url": "https://github.com/nataphong-lab/Open-Source-Face-Recognition-Ultimate",
+      "description": "Face Recognition, Face Liveness Detection, Face Anti-Spoofing, Face Detection, Face Landmarks, Face Compare, Face Matching, Face Pose, Face Expression, Face Attributes, Face Templates Extraction, Face Landmarks",
+      "language": "Python",
+      "topics": [],
+      "stars": 722,
+      "forks": 600,
+      "created_at": "2026-11-19T10:40:46Z",
+      "pushed_at": "2026-11-24T10:43:48Z",
+      "updated_at": "2026-11-24T14:36:13Z",
+      "stars_per_day": 144.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "MSNightmare/FastUnlock",
+      "name": "FastUnlock",
+      "html_url": "https://github.com/MSNightmare/FastUnlock",
+      "description": "FastUnlock : Windows Narrator LockScreen Bypass 0day Vulnerability",
+      "language": null,
+      "topics": [],
+      "stars": 721,
+      "forks": 123,
+      "created_at": "2026-11-19T12:37:51Z",
+      "pushed_at": "2026-11-21T05:18:41Z",
+      "updated_at": "2026-11-24T19:20:27Z",
+      "stars_per_day": 144.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "ItsNotRexed/Hookshot",
+      "name": "Hookshot",
+      "html_url": "https://github.com/ItsNotRexed/Hookshot",
+      "description": "Hookshot Is A Native PC Recompilation Of The Switch 2 Ocarina Of Time Remake",
+      "language": "C++",
+      "topics": [],
+      "stars": 697,
+      "forks": 36,
+      "created_at": "2026-11-20T20:06:20Z",
+      "pushed_at": "2026-11-22T19:13:49Z",
+      "updated_at": "2026-11-24T19:01:47Z",
+      "stars_per_day": 232.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
+      "name": "awesome-gta6-reverse-engineering",
+      "html_url": "https://github.com/Ahmet-Dedeler/awesome-gta6-reverse-engineering",
+      "description": "Curated list of open-source GTA VI (GTA 6) reverse engineering tools, RAGE 9 / RPF9 archive explorers, TTPF texture & ADAT/AWC audio decoders, format docs, and Xbox Series / PS5 translation layers.",
+      "language": "HTML",
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "game-preservation",
+        "grand-theft-auto-vi",
+        "gta-6",
+        "gta-vi",
+        "gta6",
+        "gtavi",
+        "modding",
+        "rage9",
+        "rdna2",
+        "recompilation",
+        "reverse-engineering",
+        "rpf9",
+        "rust",
+        "scarlett",
+        "ttpf",
+        "xbox-series"
+      ],
+      "stars": 679,
+      "forks": 34,
+      "created_at": "2026-11-21T17:08:48Z",
+      "pushed_at": "2026-11-24T19:00:55Z",
+      "updated_at": "2026-11-24T19:47:53Z",
+      "stars_per_day": 226.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "sybil-solutions/skill-distill",
+      "name": "skill-distill",
+      "html_url": "https://github.com/sybil-solutions/skill-distill",
+      "description": "Distill a good Claude Code / Codex session into a skill an open-weight model can follow to reproduce the task",
+      "language": "Python",
+      "topics": [],
+      "stars": 668,
+      "forks": 52,
+      "created_at": "2026-11-21T01:43:00Z",
+      "pushed_at": "2026-11-21T03:48:01Z",
+      "updated_at": "2026-11-24T19:38:16Z",
+      "stars_per_day": 222.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "deterministic-machines/deslop-please",
+      "name": "deslop-please",
+      "html_url": "https://github.com/deterministic-machines/deslop-please",
+      "description": "Bring (back) sanity to your code",
+      "language": "Rust",
+      "topics": [],
+      "stars": 636,
+      "forks": 29,
+      "created_at": "2026-11-22T05:36:03Z",
+      "pushed_at": "2026-11-24T06:40:42Z",
+      "updated_at": "2026-11-24T19:45:45Z",
+      "stars_per_day": 318.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "ThreatDefence/agentic-attack-detections",
+      "name": "agentic-attack-detections",
+      "html_url": "https://github.com/ThreatDefence/agentic-attack-detections",
+      "description": "Detection rules and IOCs for AI agent attack frameworks: ARTEX, Cairn, PentAGI, HexStrike, CyberStrikeAI, Strix, Hermes Agent, Agent Zero, RedAmon, Xalgorix, Pentest Swarm AI. KQL hunts for Microsoft Sentinel and Defender XDR, Sigma, Suricata, Zeek, YARA, Splunk, Elastic, STIX 2.1.",
+      "language": "Python",
+      "topics": [
+        "agentic-ai",
+        "ai-security",
+        "blue-team",
+        "defender-xdr",
+        "detection-engineering",
+        "ioc",
+        "kql",
+        "llm-security",
+        "microsoft-sentinel",
+        "sigma",
+        "sigma-rules",
+        "stix",
+        "suricata",
+        "suricata-rules",
+        "threat-detection",
+        "threat-hunting",
+        "threat-intelligence",
+        "yara",
+        "yara-rules",
+        "zeek"
+      ],
+      "stars": 616,
+      "forks": 130,
+      "created_at": "2026-11-20T00:06:24Z",
+      "pushed_at": "2026-11-24T11:40:23Z",
+      "updated_at": "2026-11-24T19:11:55Z",
+      "stars_per_day": 154.0,
+      "age_days": 4
+    },
+    {
+      "full_name": "erkamyaman/safe-anything",
+      "name": "safe-anything",
+      "html_url": "https://github.com/erkamyaman/safe-anything",
+      "description": "Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent setups.",
+      "language": "Rust",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "cli",
+        "codex",
+        "cursor",
+        "devsecops",
+        "mcp",
+        "osv",
+        "owasp",
+        "rust",
+        "sast",
+        "secret-scanning",
+        "secrets",
+        "security",
+        "security-scanner",
+        "sql-injection",
+        "vulnerability",
+        "vulnerability-scanner",
+        "xss"
+      ],
+      "stars": 609,
+      "forks": 53,
+      "created_at": "2026-11-22T16:44:10Z",
+      "pushed_at": "2026-11-24T18:41:56Z",
+      "updated_at": "2026-11-24T19:20:26Z",
+      "stars_per_day": 304.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "qianyiai/kurocat",
+      "name": "kurocat",
+      "html_url": "https://github.com/qianyiai/kurocat",
+      "description": "KuroCat \u2014 Free open-source desktop typing cat pet & OBS overlay (Bongo Cat alternative, Tauri v2 + Rust + MCP)\uff5c\u8f7b\u91cf\u7ea7\u900f\u660e\u7f6e\u9876\u684c\u9762\u6253\u5b57\u5c0f\u9ed1\u732b\u4f34\u4fa3\uff086\u6b3e\u732b\u54aa+\u9cb8\u9c7c\u5a18\u5927\u80a5\u9c7c / \u8f93\u5bc6\u7801\u9632\u5077\u7aa5 / OBS\u900f\u660e\u6e90 / AI\u634f\u732b / Win\u00b7Mac\u00b7Linux\u00b7Android\uff09",
+      "language": "TypeScript",
+      "topics": [
+        "android",
+        "bongo-cat",
+        "bongocat",
+        "cross-platform",
+        "desktop-pet",
+        "keyboard-visualizer",
+        "kurocat",
+        "linux",
+        "macos",
+        "mcp",
+        "obs-studio",
+        "open-source",
+        "rust",
+        "tauri",
+        "typing-cat",
+        "windows"
+      ],
+      "stars": 598,
+      "forks": 95,
+      "created_at": "2026-11-21T15:49:31Z",
+      "pushed_at": "2026-11-24T17:16:53Z",
+      "updated_at": "2026-11-24T19:38:40Z",
+      "stars_per_day": 199.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "xikhar/papercraft",
+      "name": "papercraft",
+      "html_url": "https://github.com/xikhar/papercraft",
+      "description": "Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 592,
+      "forks": 58,
+      "created_at": "2026-11-21T00:29:56Z",
+      "pushed_at": "2026-11-21T17:37:19Z",
+      "updated_at": "2026-11-24T19:35:46Z",
+      "stars_per_day": 197.3,
+      "age_days": 3
+    },
+    {
+      "full_name": "CocoSgt/riemann-hypothesis-lean",
+      "name": "riemann-hypothesis-lean",
+      "html_url": "https://github.com/CocoSgt/riemann-hypothesis-lean",
+      "description": "Mirror of Levent Alp\u00f6ge's Lean proof of the Riemann Hypothesis (with Claude). All credit to Levent Alp\u00f6ge. Source: alpo.ge",
+      "language": "Lean",
+      "topics": [],
+      "stars": 558,
+      "forks": 89,
+      "created_at": "2026-11-20T14:59:14Z",
+      "pushed_at": "2026-11-20T15:13:36Z",
+      "updated_at": "2026-11-24T17:30:16Z",
+      "stars_per_day": 139.5,
+      "age_days": 4
+    },
+    {
+      "full_name": "w01fb0ss/PiBot",
+      "name": "PiBot",
+      "html_url": "https://github.com/w01fb0ss/PiBot",
+      "description": "Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and approvals. macOS, Windows, Linux + Android. Built on pi.",
+      "language": "TypeScript",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-agents",
+        "ai-assistant",
+        "android",
+        "automation",
+        "chatgpt",
+        "coding-agent",
+        "computer-use",
+        "desktop-app",
+        "electron",
+        "llm",
+        "local-first",
+        "mcp",
+        "multi-agent",
+        "ollama",
+        "openai",
+        "privacy",
+        "self-hosted",
+        "typescript"
+      ],
+      "stars": 554,
+      "forks": 82,
+      "created_at": "2026-11-21T06:54:24Z",
+      "pushed_at": "2026-11-24T12:27:30Z",
+      "updated_at": "2026-11-24T19:31:29Z",
+      "stars_per_day": 184.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "sous-labs/songe",
+      "name": "songe",
+      "html_url": "https://github.com/sous-labs/songe",
+      "description": "A training engine for your local model, using your idle compute",
+      "language": "Python",
+      "topics": [
+        "coding-agents",
+        "distillation",
+        "fine-tuning",
+        "llm",
+        "local-llm",
+        "lora",
+        "mlx"
+      ],
+      "stars": 536,
+      "forks": 56,
+      "created_at": "2026-11-20T11:01:20Z",
+      "pushed_at": "2026-11-24T19:44:11Z",
+      "updated_at": "2026-11-24T19:43:30Z",
+      "stars_per_day": 134.0,
+      "age_days": 4
+    },
+    {
+      "full_name": "Developing-Gamer/agent-sim",
+      "name": "agent-sim",
+      "html_url": "https://github.com/Developing-Gamer/agent-sim",
+      "description": "iOS simulators for AI agents, on Linux. The agent layer for x86Sim.",
+      "language": "Rust",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "ios",
+        "ios-simulator",
+        "linux",
+        "mcp",
+        "mobile-testing",
+        "testing"
+      ],
+      "stars": 517,
+      "forks": 54,
+      "created_at": "2026-11-21T20:26:12Z",
+      "pushed_at": "2026-11-24T19:21:54Z",
+      "updated_at": "2026-11-24T19:37:35Z",
+      "stars_per_day": 258.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "hoangsvit/google-ai",
+      "name": "google-ai",
+      "html_url": "https://github.com/hoangsvit/google-ai",
+      "description": "A terminal toolkit for Windows and macOS to inspect Google AI Pro offers through Android, ADB, Frida and Google Play. The shared Textual dashboard uses a PowerShell/Python launcher on Windows and a native Python adapter on macOS.",
+      "language": "Python",
+      "topics": [
+        "gemini",
+        "gemini-ai",
+        "gemini-api",
+        "google",
+        "google-ai"
+      ],
+      "stars": 493,
+      "forks": 105,
+      "created_at": "2026-11-18T15:17:53Z",
+      "pushed_at": "2026-11-24T17:27:58Z",
+      "updated_at": "2026-11-24T19:33:32Z",
+      "stars_per_day": 82.2,
+      "age_days": 6
+    },
+    {
+      "full_name": "duwqijlk/google-trial-tool",
+      "name": "google-trial-tool",
+      "html_url": "https://github.com/duwqijlk/google-trial-tool",
+      "description": null,
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 462,
+      "forks": 172,
+      "created_at": "2026-11-19T11:06:16Z",
+      "pushed_at": "2026-11-19T11:54:58Z",
+      "updated_at": "2026-11-24T16:55:33Z",
+      "stars_per_day": 92.4,
+      "age_days": 5
+    }
+  ],
   "hn_items": [
     {
       "title": "Replit used legal threats to kill my open-source project",
@@ -100,63 +919,63 @@
       "title": "Is Coding with AI Actually Faster and Cheaper?",
       "url": "https://dev.to/sylwia-lask/is-coding-with-ai-actually-faster-and-cheaper-2810",
       "reactions": 254,
-      "comments": 246,
+      "comments": 251,
       "published_at": "2026-11-18T08:32:45Z"
     },
     {
       "title": "The CodeNewbie Podcast is Back for Season 28!",
       "url": "https://dev.to/codenewbie/the-codenewbie-podcast-is-back-for-season-28-2484",
-      "reactions": 90,
+      "reactions": 91,
       "comments": 13,
       "published_at": "2026-11-18T18:32:36Z"
     },
     {
       "title": "Tell us your story, and we might read it on the CodeNewbie Podcast \ud83c\udf99\ufe0f",
       "url": "https://dev.to/codenewbie/tell-us-your-story-and-we-might-read-it-on-the-codenewbie-podcast-2840",
-      "reactions": 43,
-      "comments": 7,
+      "reactions": 52,
+      "comments": 14,
       "published_at": "2026-11-20T16:28:49Z"
     },
     {
       "title": "25 Editions of Dev Opportunity Radar: From My Radar to Our Radar \ud83d\udc99 + AMA",
       "url": "https://dev.to/hemapriya_kanagala/25-editions-of-dev-opportunity-radar-from-my-radar-to-our-radar-ama-5f5",
-      "reactions": 158,
+      "reactions": 163,
       "comments": 51,
       "published_at": "2026-11-18T15:52:31Z"
     },
     {
-      "title": "DEVengers Weekly #1: The MCP Reality Check, Career Moats, and 25 Weeks on the Radar \ud83d\ude80",
-      "url": "https://dev.to/devengers/devengers-weekly-1-the-mcp-reality-check-career-moats-and-25-weeks-on-the-radar-23ec",
-      "reactions": 99,
-      "comments": 28,
-      "published_at": "2026-11-17T14:18:20Z"
+      "title": "What are you Grateful for this Thanksgiving?",
+      "url": "https://dev.to/francistrdev/what-are-you-grateful-for-this-thanksgiving-4570",
+      "reactions": 133,
+      "comments": 60,
+      "published_at": "2026-11-23T14:42:00Z"
+    },
+    {
+      "title": "The Third Cup: Change Never Sleeps",
+      "url": "https://dev.to/thethirdcup/the-third-cup-change-never-sleeps-2ldf",
+      "reactions": 111,
+      "comments": 54,
+      "published_at": "2026-11-23T07:09:21Z"
     },
     {
       "title": "Why I Rewrote type-tune from TypeScript to Rust \ud83e\udd80",
       "url": "https://dev.to/necoz/why-i-rewrote-type-tune-from-typescript-to-rust-1egg",
-      "reactions": 140,
+      "reactions": 141,
       "comments": 41,
       "published_at": "2026-11-18T17:27:52Z"
     },
     {
       "title": "I can't believe the podcast I learned to code with is back!",
       "url": "https://dev.to/codenewbie/i-cant-believe-the-podcast-i-learned-to-code-with-is-back-2gi5",
-      "reactions": 32,
-      "comments": 4,
+      "reactions": 41,
+      "comments": 9,
       "published_at": "2026-11-20T08:55:01Z"
-    },
-    {
-      "title": "AI agents open 17 million pull requests a month. I built a gate that rejects the ones that lie.",
-      "url": "https://dev.to/aws-builders/ai-agents-open-17-million-pull-requests-a-month-i-built-a-gate-that-rejects-the-ones-that-lie-46n7",
-      "reactions": 87,
-      "comments": 69,
-      "published_at": "2026-11-17T15:45:44Z"
     },
     {
       "title": "One Year on DEV: The People Made the Platform",
       "url": "https://dev.to/hanzla/one-year-on-dev-the-people-made-the-platform-hab",
       "reactions": 128,
-      "comments": 31,
+      "comments": 33,
       "published_at": "2026-11-18T07:54:09Z"
     },
     {
@@ -167,6 +986,696 @@
       "published_at": "2026-11-19T03:35:10Z"
     }
   ],
-  "languages": [],
-  "topics": []
+  "languages": [
+    [
+      "Python",
+      8
+    ],
+    [
+      "Rust",
+      8
+    ],
+    [
+      "JavaScript",
+      3
+    ],
+    [
+      "TypeScript",
+      3
+    ],
+    [
+      "HTML",
+      2
+    ],
+    [
+      "Lean",
+      2
+    ],
+    [
+      "C++",
+      1
+    ],
+    [
+      "Objective-C++",
+      1
+    ],
+    [
+      "Swift",
+      1
+    ]
+  ],
+  "topics": [
+    [
+      "mcp",
+      6
+    ],
+    [
+      "rust",
+      5
+    ],
+    [
+      "ai-agents",
+      4
+    ],
+    [
+      "claude-code",
+      4
+    ],
+    [
+      "codex",
+      3
+    ],
+    [
+      "windows",
+      3
+    ],
+    [
+      "agent-skills",
+      2
+    ],
+    [
+      "ai-agent",
+      2
+    ],
+    [
+      "android",
+      2
+    ],
+    [
+      "claude-code-plugin",
+      2
+    ],
+    [
+      "coding-agent",
+      2
+    ],
+    [
+      "cursor",
+      2
+    ],
+    [
+      "d3d12",
+      2
+    ],
+    [
+      "desktop-app",
+      2
+    ],
+    [
+      "developer-tools",
+      2
+    ],
+    [
+      "gemini",
+      2
+    ],
+    [
+      "linux",
+      2
+    ],
+    [
+      "llm",
+      2
+    ],
+    [
+      "local-llm",
+      2
+    ],
+    [
+      "macos",
+      2
+    ],
+    [
+      "mcp-server",
+      2
+    ],
+    [
+      "ollama",
+      2
+    ],
+    [
+      "performance",
+      2
+    ],
+    [
+      "rdna2",
+      2
+    ],
+    [
+      "scarlett",
+      2
+    ],
+    [
+      "typescript",
+      2
+    ],
+    [
+      "xbox",
+      2
+    ],
+    [
+      "agent",
+      1
+    ],
+    [
+      "agentic-ai",
+      1
+    ],
+    [
+      "ai-assistant",
+      1
+    ],
+    [
+      "ai-coding",
+      1
+    ],
+    [
+      "ai-security",
+      1
+    ],
+    [
+      "ai-video-clipper",
+      1
+    ],
+    [
+      "antigravity",
+      1
+    ],
+    [
+      "antigravity-cli",
+      1
+    ],
+    [
+      "antigravity-ide",
+      1
+    ],
+    [
+      "antigravity-plugins",
+      1
+    ],
+    [
+      "automation",
+      1
+    ],
+    [
+      "awesome",
+      1
+    ],
+    [
+      "awesome-list",
+      1
+    ],
+    [
+      "blue-team",
+      1
+    ],
+    [
+      "bongo-cat",
+      1
+    ],
+    [
+      "bongocat",
+      1
+    ],
+    [
+      "chatgpt",
+      1
+    ],
+    [
+      "cli",
+      1
+    ],
+    [
+      "clipping",
+      1
+    ],
+    [
+      "coding-agents",
+      1
+    ],
+    [
+      "computer-use",
+      1
+    ],
+    [
+      "context-optimization",
+      1
+    ],
+    [
+      "cross-platform",
+      1
+    ],
+    [
+      "dearrow",
+      1
+    ],
+    [
+      "defender-xdr",
+      1
+    ],
+    [
+      "desktop-pet",
+      1
+    ],
+    [
+      "detection-engineering",
+      1
+    ],
+    [
+      "developer-productivity",
+      1
+    ],
+    [
+      "devsecops",
+      1
+    ],
+    [
+      "directx-raytracing",
+      1
+    ],
+    [
+      "distillation",
+      1
+    ],
+    [
+      "electron",
+      1
+    ],
+    [
+      "fake-3d",
+      1
+    ],
+    [
+      "faster-whisper",
+      1
+    ],
+    [
+      "ffi",
+      1
+    ],
+    [
+      "ffmpeg",
+      1
+    ],
+    [
+      "fine-tuning",
+      1
+    ],
+    [
+      "game-preservation",
+      1
+    ],
+    [
+      "gamedev",
+      1
+    ],
+    [
+      "gameplay-clipper",
+      1
+    ],
+    [
+      "gdk",
+      1
+    ],
+    [
+      "gemini-ai",
+      1
+    ],
+    [
+      "gemini-api",
+      1
+    ],
+    [
+      "google",
+      1
+    ],
+    [
+      "google-ai",
+      1
+    ],
+    [
+      "google-antigravity",
+      1
+    ],
+    [
+      "gpui",
+      1
+    ],
+    [
+      "grand-theft-auto-vi",
+      1
+    ],
+    [
+      "gta-6",
+      1
+    ],
+    [
+      "gta-vi",
+      1
+    ],
+    [
+      "gta6",
+      1
+    ],
+    [
+      "gtavi",
+      1
+    ],
+    [
+      "haptics",
+      1
+    ],
+    [
+      "ioc",
+      1
+    ],
+    [
+      "ios",
+      1
+    ],
+    [
+      "ios-simulator",
+      1
+    ],
+    [
+      "keyboard-visualizer",
+      1
+    ],
+    [
+      "kql",
+      1
+    ],
+    [
+      "kurocat",
+      1
+    ],
+    [
+      "latency-optimization",
+      1
+    ],
+    [
+      "llm-security",
+      1
+    ],
+    [
+      "local-first",
+      1
+    ],
+    [
+      "lora",
+      1
+    ],
+    [
+      "mcp-plugin",
+      1
+    ],
+    [
+      "microsoft-sentinel",
+      1
+    ],
+    [
+      "mlx",
+      1
+    ],
+    [
+      "mobile-testing",
+      1
+    ],
+    [
+      "modding",
+      1
+    ],
+    [
+      "model-context-protocol",
+      1
+    ],
+    [
+      "mpv",
+      1
+    ],
+    [
+      "multi-agent",
+      1
+    ],
+    [
+      "napi-rs",
+      1
+    ],
+    [
+      "nodejs",
+      1
+    ],
+    [
+      "obs-studio",
+      1
+    ],
+    [
+      "open-source",
+      1
+    ],
+    [
+      "open-source-video-editor",
+      1
+    ],
+    [
+      "openai",
+      1
+    ],
+    [
+      "optimization",
+      1
+    ],
+    [
+      "opusclip-alternative",
+      1
+    ],
+    [
+      "osv",
+      1
+    ],
+    [
+      "owasp",
+      1
+    ],
+    [
+      "pixel-art",
+      1
+    ],
+    [
+      "plugin",
+      1
+    ],
+    [
+      "privacy",
+      1
+    ],
+    [
+      "profiler",
+      1
+    ],
+    [
+      "pyo3",
+      1
+    ],
+    [
+      "python",
+      1
+    ],
+    [
+      "rage9",
+      1
+    ],
+    [
+      "recompilation",
+      1
+    ],
+    [
+      "reverse-engineering",
+      1
+    ],
+    [
+      "rewrite-it-in-rust",
+      1
+    ],
+    [
+      "rpf9",
+      1
+    ],
+    [
+      "ruby",
+      1
+    ],
+    [
+      "sast",
+      1
+    ],
+    [
+      "secret-scanning",
+      1
+    ],
+    [
+      "secrets",
+      1
+    ],
+    [
+      "security",
+      1
+    ],
+    [
+      "security-scanner",
+      1
+    ],
+    [
+      "self-hosted",
+      1
+    ],
+    [
+      "shorts",
+      1
+    ],
+    [
+      "sigma",
+      1
+    ],
+    [
+      "sigma-rules",
+      1
+    ],
+    [
+      "sponsorblock",
+      1
+    ],
+    [
+      "sprite-stacking",
+      1
+    ],
+    [
+      "sql-injection",
+      1
+    ],
+    [
+      "static-recompilation",
+      1
+    ],
+    [
+      "stix",
+      1
+    ],
+    [
+      "suricata",
+      1
+    ],
+    [
+      "suricata-rules",
+      1
+    ],
+    [
+      "swift",
+      1
+    ],
+    [
+      "tauri",
+      1
+    ],
+    [
+      "testing",
+      1
+    ],
+    [
+      "threat-detection",
+      1
+    ],
+    [
+      "threat-hunting",
+      1
+    ],
+    [
+      "threat-intelligence",
+      1
+    ],
+    [
+      "token-optimization",
+      1
+    ],
+    [
+      "trackpad",
+      1
+    ],
+    [
+      "ttpf",
+      1
+    ],
+    [
+      "twitch-clips",
+      1
+    ],
+    [
+      "typing-cat",
+      1
+    ],
+    [
+      "vertical-video",
+      1
+    ],
+    [
+      "video",
+      1
+    ],
+    [
+      "voxel",
+      1
+    ],
+    [
+      "vulnerability",
+      1
+    ],
+    [
+      "vulnerability-scanner",
+      1
+    ],
+    [
+      "whisper",
+      1
+    ],
+    [
+      "xbox-series",
+      1
+    ],
+    [
+      "xbox-series-x",
+      1
+    ],
+    [
+      "xss",
+      1
+    ],
+    [
+      "yara",
+      1
+    ],
+    [
+      "yara-rules",
+      1
+    ],
+    [
+      "youtube",
+      1
+    ],
+    [
+      "youtube-client",
+      1
+    ],
+    [
+      "youtube-shorts-generator",
+      1
+    ],
+    [
+      "yt-dlp",
+      1
+    ],
+    [
+      "zeek",
+      1
+    ]
+  ]
 }

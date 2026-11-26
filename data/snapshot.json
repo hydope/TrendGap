@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-25T18:53:35.633889+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-18, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-26T18:43:12.892008+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-19, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-18&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-19&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -26,54 +26,68 @@
     {
       "name": "Rust",
       "kind": "language",
-      "count_in_snapshot": 10,
+      "count_in_snapshot": 12,
       "hn_mentions": 0,
       "devto_mentions": 1
     },
     {
       "name": "windows",
       "kind": "topic",
-      "count_in_snapshot": 9,
+      "count_in_snapshot": 8,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "open-source",
       "kind": "topic",
-      "count_in_snapshot": 7,
-      "hn_mentions": 4,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Python",
-      "kind": "language",
       "count_in_snapshot": 6,
-      "hn_mentions": 0,
+      "hn_mentions": 4,
       "devto_mentions": 0
     },
     {
       "name": "rust",
       "kind": "topic",
-      "count_in_snapshot": 5,
+      "count_in_snapshot": 6,
       "hn_mentions": 0,
       "devto_mentions": 1
     },
     {
-      "name": "desktop",
+      "name": "Python",
+      "kind": "language",
+      "count_in_snapshot": 5,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "claude-code",
       "kind": "topic",
       "count_in_snapshot": 4,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "desktop-app",
+      "name": "codex",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "JavaScript",
+      "kind": "language",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "desktop",
       "kind": "topic",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "gaming",
+      "name": "desktop-app",
       "kind": "topic",
       "count_in_snapshot": 3,
       "hn_mentions": 0,
@@ -87,20 +101,6 @@
       "devto_mentions": 0
     },
     {
-      "name": "productivity",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "C#",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
       "name": "HTML",
       "kind": "language",
       "count_in_snapshot": 2,
@@ -108,14 +108,7 @@
       "devto_mentions": 0
     },
     {
-      "name": "JavaScript",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "TypeScript",
+      "name": "Lean",
       "kind": "language",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -129,6 +122,13 @@
       "devto_mentions": 0
     },
     {
+      "name": "ai-agents",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
       "name": "audio-converter",
       "kind": "topic",
       "count_in_snapshot": 2,
@@ -136,14 +136,7 @@
       "devto_mentions": 0
     },
     {
-      "name": "claude-code",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "codex",
+      "name": "claude-code-plugin",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -157,14 +150,21 @@
       "devto_mentions": 0
     },
     {
-      "name": "cross-platform",
+      "name": "cursor",
       "kind": "topic",
       "count_in_snapshot": 2,
-      "hn_mentions": 1,
+      "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "d3d12",
+      "kind": "topic",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "desktop-application",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -179,13 +179,13 @@
       "description": "An attempt at running GTA VI on PC",
       "language": "Rust",
       "topics": [],
-      "stars": 12406,
-      "forks": 1961,
+      "stars": 13178,
+      "forks": 2198,
       "created_at": "2026-11-23T21:47:25Z",
-      "pushed_at": "2026-11-25T16:51:05Z",
-      "updated_at": "2026-11-25T18:52:37Z",
-      "stars_per_day": 12406.0,
-      "age_days": 1
+      "pushed_at": "2026-11-25T23:27:48Z",
+      "updated_at": "2026-11-26T18:38:59Z",
+      "stars_per_day": 6589.0,
+      "age_days": 2
     },
     {
       "full_name": "xcl-dev/xcl",
@@ -199,13 +199,43 @@
         "rdna2",
         "xbox"
       ],
-      "stars": 8242,
-      "forks": 1119,
+      "stars": 8554,
+      "forks": 1189,
       "created_at": "2026-11-20T20:03:21Z",
-      "pushed_at": "2026-11-25T18:47:04Z",
-      "updated_at": "2026-11-25T18:50:37Z",
-      "stars_per_day": 2060.5,
+      "pushed_at": "2026-11-26T18:26:53Z",
+      "updated_at": "2026-11-26T18:39:50Z",
+      "stars_per_day": 1710.8,
+      "age_days": 5
+    },
+    {
+      "full_name": "4lwayz/portwatch-vi",
+      "name": "portwatch-vi",
+      "html_url": "https://github.com/4lwayz/portwatch-vi",
+      "description": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated daily.",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 5379,
+      "forks": 159,
+      "created_at": "2026-11-21T23:16:41Z",
+      "pushed_at": "2026-11-26T18:18:47Z",
+      "updated_at": "2026-11-26T18:43:01Z",
+      "stars_per_day": 1344.8,
       "age_days": 4
+    },
+    {
+      "full_name": "AFK-surf/xnulinux",
+      "name": "xnulinux",
+      "html_url": "https://github.com/AFK-surf/xnulinux",
+      "description": "XNU as a loadable kernel module inside Linux (macOS personality for arm64 Linux)",
+      "language": "C",
+      "topics": [],
+      "stars": 4200,
+      "forks": 208,
+      "created_at": "2026-11-20T10:18:31Z",
+      "pushed_at": "2026-11-26T17:00:56Z",
+      "updated_at": "2026-11-26T18:43:05Z",
+      "stars_per_day": 700.0,
+      "age_days": 6
     },
     {
       "full_name": "EL4CTEO/fast-anything",
@@ -235,43 +265,13 @@
         "rust",
         "typescript"
       ],
-      "stars": 3900,
-      "forks": 279,
+      "stars": 4195,
+      "forks": 304,
       "created_at": "2026-11-21T14:40:27Z",
       "pushed_at": "2026-11-25T16:23:36Z",
-      "updated_at": "2026-11-25T18:47:26Z",
-      "stars_per_day": 975.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "AFK-surf/xnulinux",
-      "name": "xnulinux",
-      "html_url": "https://github.com/AFK-surf/xnulinux",
-      "description": "XNU as a loadable kernel module inside Linux (macOS personality for arm64 Linux)",
-      "language": "C",
-      "topics": [],
-      "stars": 3855,
-      "forks": 183,
-      "created_at": "2026-11-20T10:18:31Z",
-      "pushed_at": "2026-11-25T18:53:21Z",
-      "updated_at": "2026-11-25T18:49:06Z",
-      "stars_per_day": 771.0,
+      "updated_at": "2026-11-26T18:39:51Z",
+      "stars_per_day": 839.0,
       "age_days": 5
-    },
-    {
-      "full_name": "4lwayz/portwatch-vi",
-      "name": "portwatch-vi",
-      "html_url": "https://github.com/4lwayz/portwatch-vi",
-      "description": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated daily.",
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 3718,
-      "forks": 110,
-      "created_at": "2026-11-21T23:16:41Z",
-      "pushed_at": "2026-11-25T18:52:53Z",
-      "updated_at": "2026-11-25T18:53:07Z",
-      "stars_per_day": 1239.3,
-      "age_days": 3
     },
     {
       "full_name": "fxceless/victory-fork",
@@ -280,45 +280,13 @@
       "description": "Work-in-progress fork of VIctory: getting an Xbox Series title to render and run on a Windows PC. No game files.",
       "language": "Rust",
       "topics": [],
-      "stars": 2917,
-      "forks": 809,
+      "stars": 3251,
+      "forks": 967,
       "created_at": "2026-11-24T18:02:37Z",
-      "pushed_at": "2026-11-25T17:28:55Z",
-      "updated_at": "2026-11-25T18:49:43Z",
-      "stars_per_day": 2917.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "iamajmeena/neonclipping",
-      "name": "neonclipping",
-      "html_url": "https://github.com/iamajmeena/neonclipping",
-      "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
-      "language": "Python",
-      "topics": [
-        "ai-video-clipper",
-        "clipping",
-        "faster-whisper",
-        "ffmpeg",
-        "gameplay-clipper",
-        "local-llm",
-        "ollama",
-        "open-source-video-editor",
-        "opusclip-alternative",
-        "shorts",
-        "twitch-clips",
-        "vertical-video",
-        "video",
-        "whisper",
-        "youtube-shorts-generator",
-        "yt-dlp"
-      ],
-      "stars": 2609,
-      "forks": 163,
-      "created_at": "2026-11-19T10:00:43Z",
-      "pushed_at": "2026-11-24T13:27:46Z",
-      "updated_at": "2026-11-25T18:46:19Z",
-      "stars_per_day": 434.8,
-      "age_days": 6
+      "pushed_at": "2026-11-26T18:08:14Z",
+      "updated_at": "2026-11-26T18:34:26Z",
+      "stars_per_day": 1625.5,
+      "age_days": 2
     },
     {
       "full_name": "ubiquitarianism/leonida",
@@ -327,13 +295,13 @@
       "description": "A continuation of Leonida, the Xbox > PC port interface for GTA VI",
       "language": "Python",
       "topics": [],
-      "stars": 2262,
-      "forks": 509,
+      "stars": 2492,
+      "forks": 567,
       "created_at": "2026-11-23T23:54:39Z",
-      "pushed_at": "2026-11-25T18:42:53Z",
-      "updated_at": "2026-11-25T18:53:23Z",
-      "stars_per_day": 2262.0,
-      "age_days": 1
+      "pushed_at": "2026-11-26T18:30:07Z",
+      "updated_at": "2026-11-26T18:41:00Z",
+      "stars_per_day": 1246.0,
+      "age_days": 2
     },
     {
       "full_name": "R0Y00/Xbox2Windows",
@@ -350,13 +318,13 @@
         "xbox",
         "xbox-series-x"
       ],
-      "stars": 1949,
-      "forks": 227,
+      "stars": 1961,
+      "forks": 233,
       "created_at": "2026-11-20T17:43:52Z",
-      "pushed_at": "2026-11-25T18:53:31Z",
-      "updated_at": "2026-11-25T18:41:39Z",
-      "stars_per_day": 389.8,
-      "age_days": 5
+      "pushed_at": "2026-11-26T18:35:43Z",
+      "updated_at": "2026-11-26T18:31:58Z",
+      "stars_per_day": 326.8,
+      "age_days": 6
     },
     {
       "full_name": "os6/nospeaker",
@@ -370,27 +338,12 @@
         "swift",
         "trackpad"
       ],
-      "stars": 1865,
-      "forks": 98,
+      "stars": 1945,
+      "forks": 102,
       "created_at": "2026-11-22T12:05:54Z",
       "pushed_at": "2026-11-24T02:43:05Z",
-      "updated_at": "2026-11-25T18:33:38Z",
-      "stars_per_day": 621.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "omonkeyz/xbox-emulator",
-      "name": "xbox-emulator",
-      "html_url": "https://github.com/omonkeyz/xbox-emulator",
-      "description": "Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)",
-      "language": "Rust",
-      "topics": [],
-      "stars": 1843,
-      "forks": 121,
-      "created_at": "2026-11-21T08:08:39Z",
-      "pushed_at": "2026-11-25T13:47:56Z",
-      "updated_at": "2026-11-25T18:41:40Z",
-      "stars_per_day": 460.8,
+      "updated_at": "2026-11-26T18:31:41Z",
+      "stars_per_day": 486.2,
       "age_days": 4
     },
     {
@@ -400,49 +353,134 @@
       "description": null,
       "language": "Rust",
       "topics": [],
-      "stars": 1566,
-      "forks": 279,
+      "stars": 1944,
+      "forks": 397,
       "created_at": "2026-11-25T09:41:37Z",
-      "pushed_at": "2026-11-25T18:07:27Z",
-      "updated_at": "2026-11-25T18:49:40Z",
-      "stars_per_day": 1566.0,
+      "pushed_at": "2026-11-26T17:52:43Z",
+      "updated_at": "2026-11-26T18:43:03Z",
+      "stars_per_day": 1944.0,
       "age_days": 1
     },
     {
-      "full_name": "INK-Q/agy-fast",
-      "name": "agy-fast",
-      "html_url": "https://github.com/INK-Q/agy-fast",
-      "description": "Non-invasive MCP accelerator plugin for Google Antigravity (CLI/Desktop/IDE): cuts LLM turns (-34%), token quota (-31%), and upload traffic (-40%) without affecting native UI or diffs.",
+      "full_name": "omonkeyz/xbox-emulator",
+      "name": "xbox-emulator",
+      "html_url": "https://github.com/omonkeyz/xbox-emulator",
+      "description": "Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)",
+      "language": "Rust",
+      "topics": [],
+      "stars": 1851,
+      "forks": 125,
+      "created_at": "2026-11-21T08:08:39Z",
+      "pushed_at": "2026-11-25T13:47:56Z",
+      "updated_at": "2026-11-26T18:27:35Z",
+      "stars_per_day": 370.2,
+      "age_days": 5
+    },
+    {
+      "full_name": "avatarmanz/VIctory-7900XTX",
+      "name": "VIctory-7900XTX",
+      "html_url": "https://github.com/avatarmanz/VIctory-7900XTX",
+      "description": "Goal: an Xbox Series title (your own dump) on PC as the Series X version at 4K with ray tracing, picture matching the Xbox first (textures, lighting), then 30+ fps. Porting, not emulating. RX 7900 XTX first. No game files.",
+      "language": "Rust",
+      "topics": [],
+      "stars": 1801,
+      "forks": 580,
+      "created_at": "2026-11-25T22:18:14Z",
+      "pushed_at": "2026-11-26T17:26:45Z",
+      "updated_at": "2026-11-26T18:43:00Z",
+      "stars_per_day": 1801.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "crhywun/g1-acq",
+      "name": "g1-acq",
+      "html_url": "https://github.com/crhywun/g1-acq",
+      "description": null,
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 1612,
+      "forks": 375,
+      "created_at": "2026-11-22T10:53:17Z",
+      "pushed_at": "2026-11-26T14:29:58Z",
+      "updated_at": "2026-11-26T18:30:51Z",
+      "stars_per_day": 403.0,
+      "age_days": 4
+    },
+    {
+      "full_name": "Avaneesh-Inamdar/Stream-Tube-Desktop",
+      "name": "Stream-Tube-Desktop",
+      "html_url": "https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop",
+      "description": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
+      "language": "Rust",
+      "topics": [
+        "dearrow",
+        "desktop-app",
+        "gpui",
+        "mpv",
+        "rust",
+        "sponsorblock",
+        "windows",
+        "youtube",
+        "youtube-client"
+      ],
+      "stars": 1437,
+      "forks": 125,
+      "created_at": "2026-11-22T18:50:17Z",
+      "pushed_at": "2026-11-26T11:03:33Z",
+      "updated_at": "2026-11-26T18:41:09Z",
+      "stars_per_day": 479.0,
+      "age_days": 3
+    },
+    {
+      "full_name": "leanprover-community/riemann-hypothesis",
+      "name": "riemann-hypothesis",
+      "html_url": "https://github.com/leanprover-community/riemann-hypothesis",
+      "description": "Lean formalization of the Riemann Hypothesis (Alp\u00f6ge, 2026-11-20) being cleaned up by members of the Lean community.",
+      "language": "Lean",
+      "topics": [],
+      "stars": 1424,
+      "forks": 528,
+      "created_at": "2026-11-20T14:47:49Z",
+      "pushed_at": "2026-11-26T15:32:03Z",
+      "updated_at": "2026-11-26T18:40:53Z",
+      "stars_per_day": 237.3,
+      "age_days": 6
+    },
+    {
+      "full_name": "qianyiai/KuroCat",
+      "name": "KuroCat",
+      "html_url": "https://github.com/qianyiai/KuroCat",
+      "description": "KuroCat \u2014 Free open-source 3D/2D desktop typing cat & AI coding companion (Bongo Cat alternative \u00b7 Tauri v2 + Rust + MCP \u00b7 Claude/Codex/DeepSeek/OBS \u00b7 Win/Mac/Linux/Android)\uff5c\u5f00\u6e903D\u684c\u9762\u6253\u5b57\u5c0f\u9ed1\u732b\u4e0eAI\u4f34\u4fa3",
       "language": "TypeScript",
       "topics": [
-        "ai-agent",
-        "ai-coding",
-        "antigravity",
-        "antigravity-cli",
-        "antigravity-ide",
-        "antigravity-plugins",
-        "coding-agent",
-        "context-optimization",
-        "developer-productivity",
-        "developer-tools",
-        "gemini",
-        "google-antigravity",
-        "latency-optimization",
+        "3d",
+        "ai-companion",
+        "android",
+        "bongo-cat",
+        "bongocat",
+        "claude-code",
+        "codex",
+        "cross-platform",
+        "desktop-pet",
+        "keyboard-visualizer",
+        "kurocat",
+        "linux",
+        "macos",
         "mcp",
-        "mcp-plugin",
-        "mcp-server",
-        "model-context-protocol",
-        "performance",
-        "plugin",
-        "token-optimization"
+        "obs-studio",
+        "open-source",
+        "rust",
+        "tauri",
+        "typing-cat",
+        "windows"
       ],
-      "stars": 1489,
-      "forks": 85,
-      "created_at": "2026-11-19T04:58:46Z",
-      "pushed_at": "2026-11-25T14:01:33Z",
-      "updated_at": "2026-11-25T18:52:02Z",
-      "stars_per_day": 248.2,
-      "age_days": 6
+      "stars": 1325,
+      "forks": 188,
+      "created_at": "2026-11-21T15:49:31Z",
+      "pushed_at": "2026-11-26T18:29:35Z",
+      "updated_at": "2026-11-26T18:38:53Z",
+      "stars_per_day": 265.0,
+      "age_days": 5
     },
     {
       "full_name": "Indigo-0167/universal-game-mod-manager",
@@ -476,7 +514,33 @@
       "forks": 0,
       "created_at": "2026-11-23T21:30:10Z",
       "pushed_at": "2026-11-23T21:30:46Z",
-      "updated_at": "2026-11-25T17:52:12Z",
+      "updated_at": "2026-11-26T15:44:28Z",
+      "stars_per_day": 650.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "alesha-pro/llm.asm",
+      "name": "llm.asm",
+      "html_url": "https://github.com/alesha-pro/llm.asm",
+      "description": "Qwen3-0.6B inference (12 KB), bare-metal bootable OS (22 KB), and from-scratch Mini-GPT trainer with live Braille TUI (32 KB) in 100% pure x86-64 NASM assembly. Zero C, zero libc, zero dependencies.",
+      "language": "Assembly",
+      "topics": [
+        "assembly",
+        "avx2",
+        "bare-metal",
+        "llm",
+        "machine-learning",
+        "nasm",
+        "osdev",
+        "qwen",
+        "transformer",
+        "x86-64"
+      ],
+      "stars": 1301,
+      "forks": 188,
+      "created_at": "2026-11-25T07:28:51Z",
+      "pushed_at": "2026-11-25T15:42:44Z",
+      "updated_at": "2026-11-26T18:42:43Z",
       "stars_per_day": 1301.0,
       "age_days": 1
     },
@@ -504,101 +568,28 @@
         "windows-application",
         "winui"
       ],
-      "stars": 1265,
-      "forks": 0,
+      "stars": 1263,
+      "forks": 1,
       "created_at": "2026-11-23T21:40:15Z",
       "pushed_at": "2026-11-23T21:40:42Z",
-      "updated_at": "2026-11-25T11:09:47Z",
-      "stars_per_day": 1265.0,
-      "age_days": 1
+      "updated_at": "2026-11-26T13:34:00Z",
+      "stars_per_day": 631.5,
+      "age_days": 2
     },
     {
-      "full_name": "leanprover-community/riemann-hypothesis",
-      "name": "riemann-hypothesis",
-      "html_url": "https://github.com/leanprover-community/riemann-hypothesis",
-      "description": "Lean formalization of the Riemann Hypothesis (Alp\u00f6ge, 2026-11-20) being cleaned up by members of the Lean community.",
-      "language": "Lean",
-      "topics": [],
-      "stars": 1186,
-      "forks": 480,
-      "created_at": "2026-11-20T14:47:49Z",
-      "pushed_at": "2026-11-25T18:23:14Z",
-      "updated_at": "2026-11-25T18:47:26Z",
-      "stars_per_day": 237.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "crhywun/g1-acq",
-      "name": "g1-acq",
-      "html_url": "https://github.com/crhywun/g1-acq",
-      "description": null,
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 1169,
-      "forks": 292,
-      "created_at": "2026-11-22T10:53:17Z",
-      "pushed_at": "2026-11-25T15:21:01Z",
-      "updated_at": "2026-11-25T18:53:31Z",
-      "stars_per_day": 389.7,
-      "age_days": 3
-    },
-    {
-      "full_name": "Avaneesh-Inamdar/Stream-Tube-Desktop",
-      "name": "Stream-Tube-Desktop",
-      "html_url": "https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop",
-      "description": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
+      "full_name": "deterministic-machines/deslop-please",
+      "name": "deslop-please",
+      "html_url": "https://github.com/deterministic-machines/deslop-please",
+      "description": "Bring (back) sanity to your code",
       "language": "Rust",
-      "topics": [
-        "dearrow",
-        "desktop-app",
-        "gpui",
-        "mpv",
-        "rust",
-        "sponsorblock",
-        "windows",
-        "youtube",
-        "youtube-client"
-      ],
-      "stars": 1164,
-      "forks": 87,
-      "created_at": "2026-11-22T18:50:17Z",
-      "pushed_at": "2026-11-25T16:53:58Z",
-      "updated_at": "2026-11-25T18:42:02Z",
-      "stars_per_day": 388.0,
-      "age_days": 3
-    },
-    {
-      "full_name": "solv4626/steam-achievement-manager-windows",
-      "name": "steam-achievement-manager-windows",
-      "html_url": "https://github.com/solv4626/steam-achievement-manager-windows",
-      "description": "Free open-source Steam Achievement Manager for Windows to manage game achievements and edit Steam game statistics.",
-      "language": "Rust",
-      "topics": [
-        "achievement-management",
-        "achievements",
-        "desktop",
-        "desktop-application",
-        "game-stats",
-        "game-utility",
-        "games",
-        "gaming",
-        "gaming-tools",
-        "gtk",
-        "gui",
-        "linux",
-        "open-source",
-        "productivity",
-        "steam",
-        "steam-achievement-manager",
-        "windows"
-      ],
-      "stars": 1064,
-      "forks": 0,
-      "created_at": "2026-11-23T21:31:33Z",
-      "pushed_at": "2026-11-23T21:32:09Z",
-      "updated_at": "2026-11-25T17:53:34Z",
-      "stars_per_day": 1064.0,
-      "age_days": 1
+      "topics": [],
+      "stars": 1148,
+      "forks": 58,
+      "created_at": "2026-11-22T05:36:03Z",
+      "pushed_at": "2026-11-25T23:08:48Z",
+      "updated_at": "2026-11-26T18:31:48Z",
+      "stars_per_day": 287.0,
+      "age_days": 4
     },
     {
       "full_name": "zero5122/offline-file-converter-windows",
@@ -628,28 +619,71 @@
         "video-converter",
         "windows"
       ],
-      "stars": 1062,
-      "forks": 1,
+      "stars": 1069,
+      "forks": 2,
       "created_at": "2026-11-23T21:38:47Z",
       "pushed_at": "2026-11-23T21:39:16Z",
-      "updated_at": "2026-11-25T14:17:32Z",
-      "stars_per_day": 1062.0,
-      "age_days": 1
+      "updated_at": "2026-11-26T17:10:06Z",
+      "stars_per_day": 534.5,
+      "age_days": 2
     },
     {
-      "full_name": "deterministic-machines/deslop-please",
-      "name": "deslop-please",
-      "html_url": "https://github.com/deterministic-machines/deslop-please",
-      "description": "Bring (back) sanity to your code",
+      "full_name": "solv4626/steam-achievement-manager-windows",
+      "name": "steam-achievement-manager-windows",
+      "html_url": "https://github.com/solv4626/steam-achievement-manager-windows",
+      "description": "Free open-source Steam Achievement Manager for Windows to manage game achievements and edit Steam game statistics.",
       "language": "Rust",
-      "topics": [],
-      "stars": 1038,
-      "forks": 47,
-      "created_at": "2026-11-22T05:36:03Z",
-      "pushed_at": "2026-11-25T18:44:26Z",
-      "updated_at": "2026-11-25T18:45:17Z",
-      "stars_per_day": 346.0,
-      "age_days": 3
+      "topics": [
+        "achievement-management",
+        "achievements",
+        "desktop",
+        "desktop-application",
+        "game-stats",
+        "game-utility",
+        "games",
+        "gaming",
+        "gaming-tools",
+        "gtk",
+        "gui",
+        "linux",
+        "open-source",
+        "productivity",
+        "steam",
+        "steam-achievement-manager",
+        "windows"
+      ],
+      "stars": 1058,
+      "forks": 0,
+      "created_at": "2026-11-23T21:31:33Z",
+      "pushed_at": "2026-11-23T21:32:09Z",
+      "updated_at": "2026-11-25T20:08:18Z",
+      "stars_per_day": 529.0,
+      "age_days": 2
+    },
+    {
+      "full_name": "danielwh2/sprite-stacking",
+      "name": "sprite-stacking",
+      "html_url": "https://github.com/danielwh2/sprite-stacking",
+      "description": "Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.",
+      "language": "HTML",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "cursor",
+        "fake-3d",
+        "gamedev",
+        "pixel-art",
+        "sprite-stacking",
+        "voxel"
+      ],
+      "stars": 1025,
+      "forks": 86,
+      "created_at": "2026-11-20T14:32:43Z",
+      "pushed_at": "2026-11-24T13:12:08Z",
+      "updated_at": "2026-11-26T18:39:12Z",
+      "stars_per_day": 170.8,
+      "age_days": 6
     },
     {
       "full_name": "kai415-debug/ffmpeg-video-audio-converter",
@@ -679,101 +713,13 @@
         "video-encoding",
         "windows"
       ],
-      "stars": 1025,
+      "stars": 1020,
       "forks": 0,
       "created_at": "2026-11-23T21:32:56Z",
       "pushed_at": "2026-11-23T21:33:23Z",
-      "updated_at": "2026-11-25T17:01:44Z",
-      "stars_per_day": 1025.0,
-      "age_days": 1
-    },
-    {
-      "full_name": "qianyiai/kurocat",
-      "name": "kurocat",
-      "html_url": "https://github.com/qianyiai/kurocat",
-      "description": "KuroCat \u2014 Free open-source desktop typing cat pet & OBS overlay (Bongo Cat alternative, Tauri v2 + Rust + MCP)\uff5c\u8f7b\u91cf\u7ea7\u900f\u660e\u7f6e\u9876\u684c\u9762\u6253\u5b57\u5c0f\u9ed1\u732b\u4f34\u4fa3\uff086\u6b3e\u732b\u54aa+\u9cb8\u9c7c\u5a18\u5927\u80a5\u9c7c / \u8f93\u5bc6\u7801\u9632\u5077\u7aa5 / OBS\u900f\u660e\u6e90 / AI\u634f\u732b / Win\u00b7Mac\u00b7Linux\u00b7Android\uff09",
-      "language": "TypeScript",
-      "topics": [
-        "android",
-        "bongo-cat",
-        "bongocat",
-        "cross-platform",
-        "desktop-pet",
-        "keyboard-visualizer",
-        "kurocat",
-        "linux",
-        "macos",
-        "mcp",
-        "obs-studio",
-        "open-source",
-        "rust",
-        "tauri",
-        "typing-cat",
-        "windows"
-      ],
-      "stars": 944,
-      "forks": 146,
-      "created_at": "2026-11-21T15:49:31Z",
-      "pushed_at": "2026-11-25T17:42:56Z",
-      "updated_at": "2026-11-25T18:47:45Z",
-      "stars_per_day": 236.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "danielwh2/sprite-stacking",
-      "name": "sprite-stacking",
-      "html_url": "https://github.com/danielwh2/sprite-stacking",
-      "description": "Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.",
-      "language": "HTML",
-      "topics": [
-        "agent-skills",
-        "claude-code",
-        "codex",
-        "cursor",
-        "fake-3d",
-        "gamedev",
-        "pixel-art",
-        "sprite-stacking",
-        "voxel"
-      ],
-      "stars": 890,
-      "forks": 73,
-      "created_at": "2026-11-20T14:32:43Z",
-      "pushed_at": "2026-11-24T13:12:08Z",
-      "updated_at": "2026-11-25T18:52:10Z",
-      "stars_per_day": 178.0,
-      "age_days": 5
-    },
-    {
-      "full_name": "rowanbyte3329/stardew-valley-mod-manager",
-      "name": "stardew-valley-mod-manager",
-      "html_url": "https://github.com/rowanbyte3329/stardew-valley-mod-manager",
-      "description": "Free open-source Stardew Valley mod manager for Windows with SMAPI support, mod updates, and custom mod profiles.",
-      "language": "C#",
-      "topics": [
-        "avaloniaui",
-        "cross-platform",
-        "csharp",
-        "desktop",
-        "dotnet",
-        "game-modding",
-        "game-mods",
-        "gaming",
-        "mod-management",
-        "modmanager",
-        "open-source",
-        "productivity",
-        "stardew-valley",
-        "stardew-valley-mods",
-        "windows"
-      ],
-      "stars": 871,
-      "forks": 0,
-      "created_at": "2026-11-23T21:21:35Z",
-      "pushed_at": "2026-11-23T21:22:01Z",
-      "updated_at": "2026-11-25T05:24:43Z",
-      "stars_per_day": 871.0,
-      "age_days": 1
+      "updated_at": "2026-11-25T20:06:37Z",
+      "stars_per_day": 510.0,
+      "age_days": 2
     },
     {
       "full_name": "sous-labs/songe",
@@ -790,13 +736,13 @@
         "lora",
         "mlx"
       ],
-      "stars": 838,
-      "forks": 71,
+      "stars": 901,
+      "forks": 74,
       "created_at": "2026-11-20T11:01:20Z",
-      "pushed_at": "2026-11-25T18:38:35Z",
-      "updated_at": "2026-11-25T18:42:15Z",
-      "stars_per_day": 167.6,
-      "age_days": 5
+      "pushed_at": "2026-11-26T13:38:54Z",
+      "updated_at": "2026-11-26T18:24:53Z",
+      "stars_per_day": 150.2,
+      "age_days": 6
     },
     {
       "full_name": "sybil-solutions/skill-distill",
@@ -805,13 +751,43 @@
       "description": "Distill a good Claude Code / Codex session into a skill an open-weight model can follow to reproduce the task",
       "language": "Python",
       "topics": [],
-      "stars": 800,
-      "forks": 65,
+      "stars": 887,
+      "forks": 76,
       "created_at": "2026-11-21T01:43:00Z",
       "pushed_at": "2026-11-21T03:48:01Z",
-      "updated_at": "2026-11-25T17:39:53Z",
-      "stars_per_day": 200.0,
-      "age_days": 4
+      "updated_at": "2026-11-26T18:39:05Z",
+      "stars_per_day": 177.4,
+      "age_days": 5
+    },
+    {
+      "full_name": "lsernau/grh-lean",
+      "name": "grh-lean",
+      "html_url": "https://github.com/lsernau/grh-lean",
+      "description": "A short Lean 4 proof of the Generalized Riemann Hypothesis",
+      "language": "Lean",
+      "topics": [],
+      "stars": 828,
+      "forks": 87,
+      "created_at": "2026-11-25T20:42:55Z",
+      "pushed_at": "2026-11-25T20:45:04Z",
+      "updated_at": "2026-11-26T18:42:51Z",
+      "stars_per_day": 828.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "xikhar/papercraft",
+      "name": "papercraft",
+      "html_url": "https://github.com/xikhar/papercraft",
+      "description": "Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 799,
+      "forks": 84,
+      "created_at": "2026-11-21T00:29:56Z",
+      "pushed_at": "2026-11-21T17:37:19Z",
+      "updated_at": "2026-11-26T18:31:56Z",
+      "stars_per_day": 159.8,
+      "age_days": 5
     },
     {
       "full_name": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
@@ -839,28 +815,49 @@
         "ttpf",
         "xbox-series"
       ],
-      "stars": 735,
-      "forks": 40,
+      "stars": 784,
+      "forks": 44,
       "created_at": "2026-11-21T17:08:48Z",
-      "pushed_at": "2026-11-25T15:06:36Z",
-      "updated_at": "2026-11-25T18:25:53Z",
-      "stars_per_day": 183.8,
-      "age_days": 4
+      "pushed_at": "2026-11-26T00:58:17Z",
+      "updated_at": "2026-11-26T18:40:37Z",
+      "stars_per_day": 156.8,
+      "age_days": 5
     },
     {
-      "full_name": "MSNightmare/FastUnlock",
-      "name": "FastUnlock",
-      "html_url": "https://github.com/MSNightmare/FastUnlock",
-      "description": "FastUnlock : Windows Narrator LockScreen Bypass 0day Vulnerability",
-      "language": null,
-      "topics": [],
-      "stars": 734,
-      "forks": 125,
-      "created_at": "2026-11-19T12:37:51Z",
-      "pushed_at": "2026-11-21T05:18:41Z",
-      "updated_at": "2026-11-25T15:36:18Z",
-      "stars_per_day": 122.3,
-      "age_days": 6
+      "full_name": "erkamyaman/safe-anything",
+      "name": "safe-anything",
+      "html_url": "https://github.com/erkamyaman/safe-anything",
+      "description": "Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent setups.",
+      "language": "Rust",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "cli",
+        "codex",
+        "cursor",
+        "devsecops",
+        "mcp",
+        "osv",
+        "owasp",
+        "rust",
+        "sast",
+        "secret-scanning",
+        "secrets",
+        "security",
+        "security-scanner",
+        "sql-injection",
+        "vulnerability",
+        "vulnerability-scanner",
+        "xss"
+      ],
+      "stars": 778,
+      "forks": 81,
+      "created_at": "2026-11-22T16:44:10Z",
+      "pushed_at": "2026-11-26T15:25:21Z",
+      "updated_at": "2026-11-26T18:25:04Z",
+      "stars_per_day": 194.5,
+      "age_days": 4
     }
   ],
   "hn_items": [
@@ -937,103 +934,107 @@
   ],
   "devto_items": [
     {
-      "title": "The CodeNewbie Podcast is Back for Season 28!",
-      "url": "https://dev.to/codenewbie/the-codenewbie-podcast-is-back-for-season-28-2484",
-      "reactions": 91,
-      "comments": 16,
-      "published_at": "2026-11-18T18:32:36Z"
-    },
-    {
       "title": "Tell us your story, and we might read it on the CodeNewbie Podcast \ud83c\udf99\ufe0f",
       "url": "https://dev.to/codenewbie/tell-us-your-story-and-we-might-read-it-on-the-codenewbie-podcast-2840",
-      "reactions": 56,
-      "comments": 36,
+      "reactions": 58,
+      "comments": 42,
       "published_at": "2026-11-20T16:28:49Z"
+    },
+    {
+      "title": "The mental toll of working in tech",
+      "url": "https://dev.to/klaudiagrz/the-mental-toll-of-working-in-tech-2m6k",
+      "reactions": 76,
+      "comments": 23,
+      "published_at": "2026-11-25T14:05:36Z"
     },
     {
       "title": "What are you Grateful for this Thanksgiving?",
       "url": "https://dev.to/francistrdev/what-are-you-grateful-for-this-thanksgiving-4570",
-      "reactions": 146,
-      "comments": 74,
+      "reactions": 174,
+      "comments": 86,
       "published_at": "2026-11-23T14:42:00Z"
-    },
-    {
-      "title": "Cozy Bytes \ud83c\udf7a | Rust::Who Owns the Cat? \ud83d\udc08\ud83e\udd80",
-      "url": "https://dev.to/_yourbrainbuffer_/cozy-bytes-rustwho-owns-the-cat-13ch",
-      "reactions": 108,
-      "comments": 38,
-      "published_at": "2026-11-20T16:21:37Z"
     },
     {
       "title": "The Price You Pay for Passion",
       "url": "https://dev.to/thethirdcup/the-price-you-pay-for-passion-3h5l",
-      "reactions": 84,
-      "comments": 44,
+      "reactions": 124,
+      "comments": 75,
       "published_at": "2026-11-25T08:29:06Z"
+    },
+    {
+      "title": "Cozy Bytes \ud83c\udf7a | Rust::Who Owns the Cat? \ud83d\udc08\ud83e\udd80",
+      "url": "https://dev.to/_yourbrainbuffer_/cozy-bytes-rustwho-owns-the-cat-13ch",
+      "reactions": 109,
+      "comments": 38,
+      "published_at": "2026-11-20T16:21:37Z"
     },
     {
       "title": "The Third Cup: Change Never Sleeps",
       "url": "https://dev.to/thethirdcup/the-third-cup-change-never-sleeps-2ldf",
-      "reactions": 114,
-      "comments": 56,
+      "reactions": 117,
+      "comments": 58,
       "published_at": "2026-11-23T07:09:21Z"
     },
     {
       "title": "I can't believe the podcast I learned to code with is back!",
       "url": "https://dev.to/codenewbie/i-cant-believe-the-podcast-i-learned-to-code-with-is-back-2gi5",
-      "reactions": 42,
+      "reactions": 43,
       "comments": 9,
       "published_at": "2026-11-20T08:55:01Z"
     },
     {
-      "title": "Stratagems #36: They Finished Their Coffee. The AI Still Has No Answer.",
-      "url": "https://dev.to/xulingfeng/stratagems-36-they-finished-their-coffee-the-ai-still-has-no-answer-4igh",
-      "reactions": 119,
-      "comments": 57,
-      "published_at": "2026-11-19T03:35:10Z"
+      "title": "Dead Keys: I Brought Back the Typing Games. Kiro Did the Heavy Lifting.",
+      "url": "https://dev.to/earlgreyhot1701d/dead-keys-i-brought-back-the-typing-games-kiro-did-the-heavy-lifting-5gc2",
+      "reactions": 104,
+      "comments": 66,
+      "published_at": "2026-11-21T18:23:38Z"
     },
     {
       "title": "The Chairs Are Back. The Coffee Is On. \u2615",
       "url": "https://dev.to/thethirdcup/the-chairs-are-back-the-coffee-is-on-243p",
-      "reactions": 122,
-      "comments": 62,
+      "reactions": 123,
+      "comments": 64,
       "published_at": "2026-11-21T11:24:29Z"
     },
     {
       "title": "Necoz Is Building a New House!! \ud83d\udef8 All Cats, Follow Me!! \ud83d\udc08\ud83d\ude80",
       "url": "https://dev.to/necoz/necoz-is-building-a-new-house-all-cats-follow-me-530n",
-      "reactions": 110,
-      "comments": 52,
+      "reactions": 112,
+      "comments": 54,
       "published_at": "2026-11-22T13:27:10Z"
     }
   ],
   "languages": [
     [
       "Rust",
-      10
+      12
     ],
     [
       "Python",
-      6
+      5
     ],
     [
-      "C#",
-      2
+      "JavaScript",
+      3
     ],
     [
       "HTML",
       2
     ],
     [
-      "JavaScript",
+      "Lean",
       2
     ],
     [
-      "TypeScript",
-      2
+      "Assembly",
+      1
     ],
     [
       "C",
+      1
+    ],
+    [
+      "C#",
       1
     ],
     [
@@ -1041,37 +1042,41 @@
       1
     ],
     [
-      "Lean",
+      "Swift",
       1
     ],
     [
-      "Swift",
+      "TypeScript",
       1
     ]
   ],
   "topics": [
     [
       "windows",
-      9
+      8
     ],
     [
       "open-source",
-      7
+      6
     ],
     [
       "rust",
-      5
+      6
     ],
     [
-      "desktop",
+      "claude-code",
       4
     ],
     [
-      "desktop-app",
+      "codex",
+      4
+    ],
+    [
+      "desktop",
       3
     ],
     [
-      "gaming",
+      "desktop-app",
       3
     ],
     [
@@ -1079,11 +1084,11 @@
       3
     ],
     [
-      "productivity",
-      3
+      "agent-skills",
+      2
     ],
     [
-      "agent-skills",
+      "ai-agents",
       2
     ],
     [
@@ -1091,11 +1096,7 @@
       2
     ],
     [
-      "claude-code",
-      2
-    ],
-    [
-      "codex",
+      "claude-code-plugin",
       2
     ],
     [
@@ -1103,7 +1104,7 @@
       2
     ],
     [
-      "cross-platform",
+      "cursor",
       2
     ],
     [
@@ -1115,19 +1116,7 @@
       2
     ],
     [
-      "developer-tools",
-      2
-    ],
-    [
-      "dotnet",
-      2
-    ],
-    [
-      "ffmpeg",
-      2
-    ],
-    [
-      "game-mods",
+      "gaming",
       2
     ],
     [
@@ -1139,7 +1128,7 @@
       2
     ],
     [
-      "local-llm",
+      "llm",
       2
     ],
     [
@@ -1147,15 +1136,11 @@
       2
     ],
     [
-      "mcp-server",
-      2
-    ],
-    [
       "modding",
       2
     ],
     [
-      "performance",
+      "productivity",
       2
     ],
     [
@@ -1179,16 +1164,16 @@
       2
     ],
     [
-      "video",
-      2
-    ],
-    [
       "video-converter",
       2
     ],
     [
       "xbox",
       2
+    ],
+    [
+      "3d",
+      1
     ],
     [
       "achievement-management",
@@ -1199,19 +1184,7 @@
       1
     ],
     [
-      "ai-agent",
-      1
-    ],
-    [
-      "ai-agents",
-      1
-    ],
-    [
-      "ai-coding",
-      1
-    ],
-    [
-      "ai-video-clipper",
+      "ai-companion",
       1
     ],
     [
@@ -1219,19 +1192,7 @@
       1
     ],
     [
-      "antigravity",
-      1
-    ],
-    [
-      "antigravity-cli",
-      1
-    ],
-    [
-      "antigravity-ide",
-      1
-    ],
-    [
-      "antigravity-plugins",
+      "assembly",
       1
     ],
     [
@@ -1243,7 +1204,7 @@
       1
     ],
     [
-      "avaloniaui",
+      "avx2",
       1
     ],
     [
@@ -1252,6 +1213,10 @@
     ],
     [
       "awesome-list",
+      1
+    ],
+    [
+      "bare-metal",
       1
     ],
     [
@@ -1267,7 +1232,7 @@
       1
     ],
     [
-      "claude-code-plugin",
+      "cli",
       1
     ],
     [
@@ -1283,19 +1248,7 @@
       1
     ],
     [
-      "clipping",
-      1
-    ],
-    [
-      "coding-agent",
-      1
-    ],
-    [
       "coding-agents",
-      1
-    ],
-    [
-      "context-optimization",
       1
     ],
     [
@@ -1315,11 +1268,7 @@
       1
     ],
     [
-      "csharp",
-      1
-    ],
-    [
-      "cursor",
+      "cross-platform",
       1
     ],
     [
@@ -1331,7 +1280,11 @@
       1
     ],
     [
-      "developer-productivity",
+      "developer-tools",
+      1
+    ],
+    [
+      "devsecops",
       1
     ],
     [
@@ -1347,6 +1300,10 @@
       1
     ],
     [
+      "dotnet",
+      1
+    ],
+    [
       "epic-games",
       1
     ],
@@ -1355,11 +1312,11 @@
       1
     ],
     [
-      "faster-whisper",
+      "ffi",
       1
     ],
     [
-      "ffi",
+      "ffmpeg",
       1
     ],
     [
@@ -1395,7 +1352,7 @@
       1
     ],
     [
-      "game-modding",
+      "game-mods",
       1
     ],
     [
@@ -1419,10 +1376,6 @@
       1
     ],
     [
-      "gameplay-clipper",
-      1
-    ],
-    [
       "games",
       1
     ],
@@ -1435,15 +1388,7 @@
       1
     ],
     [
-      "gemini",
-      1
-    ],
-    [
       "gog",
-      1
-    ],
-    [
-      "google-antigravity",
       1
     ],
     [
@@ -1495,11 +1440,7 @@
       1
     ],
     [
-      "latency-optimization",
-      1
-    ],
-    [
-      "llm",
+      "local-llm",
       1
     ],
     [
@@ -1507,7 +1448,11 @@
       1
     ],
     [
-      "mcp-plugin",
+      "machine-learning",
+      1
+    ],
+    [
+      "mcp-server",
       1
     ],
     [
@@ -1523,19 +1468,7 @@
       1
     ],
     [
-      "mod-management",
-      1
-    ],
-    [
       "mod-manager",
-      1
-    ],
-    [
-      "model-context-protocol",
-      1
-    ],
-    [
-      "modmanager",
       1
     ],
     [
@@ -1551,6 +1484,10 @@
       1
     ],
     [
+      "nasm",
+      1
+    ],
+    [
       "nodejs",
       1
     ],
@@ -1563,19 +1500,19 @@
       1
     ],
     [
-      "ollama",
-      1
-    ],
-    [
-      "open-source-video-editor",
-      1
-    ],
-    [
       "optimization",
       1
     ],
     [
-      "opusclip-alternative",
+      "osdev",
+      1
+    ],
+    [
+      "osv",
+      1
+    ],
+    [
+      "owasp",
       1
     ],
     [
@@ -1591,11 +1528,11 @@
       1
     ],
     [
-      "pixel-art",
+      "performance",
       1
     ],
     [
-      "plugin",
+      "pixel-art",
       1
     ],
     [
@@ -1623,6 +1560,10 @@
       1
     ],
     [
+      "qwen",
+      1
+    ],
+    [
       "rage9",
       1
     ],
@@ -1647,7 +1588,23 @@
       1
     ],
     [
-      "shorts",
+      "sast",
+      1
+    ],
+    [
+      "secret-scanning",
+      1
+    ],
+    [
+      "secrets",
+      1
+    ],
+    [
+      "security",
+      1
+    ],
+    [
+      "security-scanner",
       1
     ],
     [
@@ -1659,11 +1616,7 @@
       1
     ],
     [
-      "stardew-valley",
-      1
-    ],
-    [
-      "stardew-valley-mods",
+      "sql-injection",
       1
     ],
     [
@@ -1679,10 +1632,6 @@
       1
     ],
     [
-      "token-optimization",
-      1
-    ],
-    [
       "trackpad",
       1
     ],
@@ -1691,11 +1640,11 @@
       1
     ],
     [
-      "ttpf",
+      "transformer",
       1
     ],
     [
-      "twitch-clips",
+      "ttpf",
       1
     ],
     [
@@ -1719,7 +1668,7 @@
       1
     ],
     [
-      "vertical-video",
+      "video",
       1
     ],
     [
@@ -1731,7 +1680,11 @@
       1
     ],
     [
-      "whisper",
+      "vulnerability",
+      1
+    ],
+    [
+      "vulnerability-scanner",
       1
     ],
     [
@@ -1755,6 +1708,10 @@
       1
     ],
     [
+      "x86-64",
+      1
+    ],
+    [
       "xbox-series",
       1
     ],
@@ -1763,19 +1720,15 @@
       1
     ],
     [
+      "xss",
+      1
+    ],
+    [
       "youtube",
       1
     ],
     [
       "youtube-client",
-      1
-    ],
-    [
-      "youtube-shorts-generator",
-      1
-    ],
-    [
-      "yt-dlp",
       1
     ]
   ]

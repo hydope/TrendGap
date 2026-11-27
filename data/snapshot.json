@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-26T18:43:12.892008+00:00",
-  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-19, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
+  "generated_at": "2026-11-27T18:33:56.876157+00:00",
+  "sample_note": "Snapshot sample only: first 30 results of a GitHub Search API query for repos created after 2026-11-20, sorted by stars descending. It is NOT all of GitHub and NOT an official trending feed \u2014 GitHub has no official trending API.",
   "sources": [
     {
       "name": "GitHub Search API",
-      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-19&sort=stars&order=desc&per_page=30",
+      "url": "https://api.github.com/search/repositories?q=created:%3E2026-11-20&sort=stars&order=desc&per_page=30",
       "status": "ok",
       "note": "Unauthenticated, no key. Search API returns max 1,000 results per query; this snapshot uses the first 30."
     },
@@ -26,35 +26,35 @@
     {
       "name": "Rust",
       "kind": "language",
-      "count_in_snapshot": 12,
+      "count_in_snapshot": 13,
       "hn_mentions": 0,
-      "devto_mentions": 1
+      "devto_mentions": 0
     },
     {
       "name": "windows",
       "kind": "topic",
-      "count_in_snapshot": 8,
+      "count_in_snapshot": 11,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "rust",
+      "kind": "topic",
+      "count_in_snapshot": 9,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "open-source",
       "kind": "topic",
-      "count_in_snapshot": 6,
+      "count_in_snapshot": 7,
       "hn_mentions": 4,
       "devto_mentions": 0
     },
     {
-      "name": "rust",
+      "name": "desktop",
       "kind": "topic",
       "count_in_snapshot": 6,
-      "hn_mentions": 0,
-      "devto_mentions": 1
-    },
-    {
-      "name": "Python",
-      "kind": "language",
-      "count_in_snapshot": 5,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
@@ -73,6 +73,20 @@
       "devto_mentions": 0
     },
     {
+      "name": "mcp",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "steam",
+      "kind": "topic",
+      "count_in_snapshot": 4,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
       "name": "JavaScript",
       "kind": "language",
       "count_in_snapshot": 3,
@@ -80,91 +94,77 @@
       "devto_mentions": 0
     },
     {
-      "name": "desktop",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "desktop-app",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "mcp",
-      "kind": "topic",
-      "count_in_snapshot": 3,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "HTML",
+      "name": "TypeScript",
       "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "Lean",
-      "kind": "language",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "agent-skills",
-      "kind": "topic",
-      "count_in_snapshot": 2,
+      "count_in_snapshot": 3,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
       "name": "ai-agents",
       "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "compatibility-layer",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "gaming",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "linux",
+      "kind": "topic",
+      "count_in_snapshot": 3,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "C#",
+      "kind": "language",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "audio-converter",
+      "name": "C++",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Python",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 0,
+      "devto_mentions": 0
+    },
+    {
+      "name": "Swift",
+      "kind": "language",
+      "count_in_snapshot": 2,
+      "hn_mentions": 1,
+      "devto_mentions": 0
+    },
+    {
+      "name": "achievement-management",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
       "devto_mentions": 0
     },
     {
-      "name": "claude-code-plugin",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "conversion",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "cursor",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "d3d12",
-      "kind": "topic",
-      "count_in_snapshot": 2,
-      "hn_mentions": 0,
-      "devto_mentions": 0
-    },
-    {
-      "name": "desktop-application",
+      "name": "agent-skills",
       "kind": "topic",
       "count_in_snapshot": 2,
       "hn_mentions": 0,
@@ -179,33 +179,13 @@
       "description": "An attempt at running GTA VI on PC",
       "language": "Rust",
       "topics": [],
-      "stars": 13178,
-      "forks": 2198,
+      "stars": 13717,
+      "forks": 2344,
       "created_at": "2026-11-23T21:47:25Z",
       "pushed_at": "2026-11-25T23:27:48Z",
-      "updated_at": "2026-11-26T18:38:59Z",
-      "stars_per_day": 6589.0,
-      "age_days": 2
-    },
-    {
-      "full_name": "xcl-dev/xcl",
-      "name": "xcl",
-      "html_url": "https://github.com/xcl-dev/xcl",
-      "description": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the console system libraries and recompiles RDNA2 shaders to DXIL",
-      "language": "Rust",
-      "topics": [
-        "d3d12",
-        "gdk",
-        "rdna2",
-        "xbox"
-      ],
-      "stars": 8554,
-      "forks": 1189,
-      "created_at": "2026-11-20T20:03:21Z",
-      "pushed_at": "2026-11-26T18:26:53Z",
-      "updated_at": "2026-11-26T18:39:50Z",
-      "stars_per_day": 1710.8,
-      "age_days": 5
+      "updated_at": "2026-11-27T18:33:31Z",
+      "stars_per_day": 4572.3,
+      "age_days": 3
     },
     {
       "full_name": "4lwayz/portwatch-vi",
@@ -214,28 +194,13 @@
       "description": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated daily.",
       "language": "JavaScript",
       "topics": [],
-      "stars": 5379,
-      "forks": 159,
+      "stars": 6525,
+      "forks": 184,
       "created_at": "2026-11-21T23:16:41Z",
-      "pushed_at": "2026-11-26T18:18:47Z",
-      "updated_at": "2026-11-26T18:43:01Z",
-      "stars_per_day": 1344.8,
-      "age_days": 4
-    },
-    {
-      "full_name": "AFK-surf/xnulinux",
-      "name": "xnulinux",
-      "html_url": "https://github.com/AFK-surf/xnulinux",
-      "description": "XNU as a loadable kernel module inside Linux (macOS personality for arm64 Linux)",
-      "language": "C",
-      "topics": [],
-      "stars": 4200,
-      "forks": 208,
-      "created_at": "2026-11-20T10:18:31Z",
-      "pushed_at": "2026-11-26T17:00:56Z",
-      "updated_at": "2026-11-26T18:43:05Z",
-      "stars_per_day": 700.0,
-      "age_days": 6
+      "pushed_at": "2026-11-27T18:33:43Z",
+      "updated_at": "2026-11-27T18:32:21Z",
+      "stars_per_day": 1305.0,
+      "age_days": 5
     },
     {
       "full_name": "EL4CTEO/fast-anything",
@@ -265,13 +230,13 @@
         "rust",
         "typescript"
       ],
-      "stars": 4195,
-      "forks": 304,
+      "stars": 4426,
+      "forks": 316,
       "created_at": "2026-11-21T14:40:27Z",
-      "pushed_at": "2026-11-25T16:23:36Z",
-      "updated_at": "2026-11-26T18:39:51Z",
-      "stars_per_day": 839.0,
-      "age_days": 5
+      "pushed_at": "2026-11-27T16:19:57Z",
+      "updated_at": "2026-11-27T18:32:15Z",
+      "stars_per_day": 737.7,
+      "age_days": 6
     },
     {
       "full_name": "fxceless/victory-fork",
@@ -280,13 +245,13 @@
       "description": "Work-in-progress fork of VIctory: getting an Xbox Series title to render and run on a Windows PC. No game files.",
       "language": "Rust",
       "topics": [],
-      "stars": 3251,
-      "forks": 967,
+      "stars": 3339,
+      "forks": 1015,
       "created_at": "2026-11-24T18:02:37Z",
-      "pushed_at": "2026-11-26T18:08:14Z",
-      "updated_at": "2026-11-26T18:34:26Z",
-      "stars_per_day": 1625.5,
-      "age_days": 2
+      "pushed_at": "2026-11-27T17:52:16Z",
+      "updated_at": "2026-11-27T18:18:01Z",
+      "stars_per_day": 1113.0,
+      "age_days": 3
     },
     {
       "full_name": "ubiquitarianism/leonida",
@@ -295,36 +260,75 @@
       "description": "A continuation of Leonida, the Xbox > PC port interface for GTA VI",
       "language": "Python",
       "topics": [],
-      "stars": 2492,
-      "forks": 567,
+      "stars": 2612,
+      "forks": 589,
       "created_at": "2026-11-23T23:54:39Z",
-      "pushed_at": "2026-11-26T18:30:07Z",
-      "updated_at": "2026-11-26T18:41:00Z",
-      "stars_per_day": 1246.0,
+      "pushed_at": "2026-11-27T17:56:46Z",
+      "updated_at": "2026-11-27T18:00:39Z",
+      "stars_per_day": 870.7,
+      "age_days": 3
+    },
+    {
+      "full_name": "nexu-io/opengame",
+      "name": "opengame",
+      "html_url": "https://github.com/nexu-io/opengame",
+      "description": "The Super Game Agent \u2014 the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Code, Codex, DeepSeek, etc.) into a full-stack AI game studio. Build and publish 3D & mini-games to WeChat, Douyin, TikTok, Telegram, itch.io, and more.",
+      "language": "TypeScript",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "ai-game-generator",
+        "claude-code",
+        "codex",
+        "deepseek",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "game-development",
+        "game-engine",
+        "indie-game",
+        "local-first",
+        "mcp",
+        "mini-games",
+        "threejs",
+        "unity",
+        "unreal-engine",
+        "vibe-coding",
+        "wechat-minigame"
+      ],
+      "stars": 2072,
+      "forks": 341,
+      "created_at": "2026-11-25T10:35:45Z",
+      "pushed_at": "2026-11-27T16:47:33Z",
+      "updated_at": "2026-11-27T18:32:58Z",
+      "stars_per_day": 1036.0,
       "age_days": 2
     },
     {
-      "full_name": "R0Y00/Xbox2Windows",
-      "name": "Xbox2Windows",
-      "html_url": "https://github.com/R0Y00/Xbox2Windows",
-      "description": "Static recompilation research for Xbox Series X|S software on x64 Windows, with source-built CPU and GPU tests. Full-game startup is unverified.",
-      "language": "Python",
+      "full_name": "alesha-pro/llm.asm",
+      "name": "llm.asm",
+      "html_url": "https://github.com/alesha-pro/llm.asm",
+      "description": "Qwen3-0.6B inference (12 KB), bare-metal bootable OS (22 KB), and from-scratch Mini-GPT trainer with live Braille TUI (32 KB) in 100% pure x86-64 NASM assembly. Zero C, zero libc, zero dependencies.",
+      "language": "Assembly",
       "topics": [
-        "d3d12",
-        "directx-raytracing",
-        "scarlett",
-        "static-recompilation",
-        "windows",
-        "xbox",
-        "xbox-series-x"
+        "assembly",
+        "avx2",
+        "bare-metal",
+        "llm",
+        "machine-learning",
+        "nasm",
+        "osdev",
+        "qwen",
+        "transformer",
+        "x86-64"
       ],
-      "stars": 1961,
-      "forks": 233,
-      "created_at": "2026-11-20T17:43:52Z",
-      "pushed_at": "2026-11-26T18:35:43Z",
-      "updated_at": "2026-11-26T18:31:58Z",
-      "stars_per_day": 326.8,
-      "age_days": 6
+      "stars": 2005,
+      "forks": 312,
+      "created_at": "2026-11-25T07:28:51Z",
+      "pushed_at": "2026-11-25T15:42:44Z",
+      "updated_at": "2026-11-27T18:31:45Z",
+      "stars_per_day": 1002.5,
+      "age_days": 2
     },
     {
       "full_name": "os6/nospeaker",
@@ -338,28 +342,13 @@
         "swift",
         "trackpad"
       ],
-      "stars": 1945,
-      "forks": 102,
+      "stars": 1985,
+      "forks": 107,
       "created_at": "2026-11-22T12:05:54Z",
       "pushed_at": "2026-11-24T02:43:05Z",
-      "updated_at": "2026-11-26T18:31:41Z",
-      "stars_per_day": 486.2,
-      "age_days": 4
-    },
-    {
-      "full_name": "Belobug/VIctory-Belobug-AMD",
-      "name": "VIctory-Belobug-AMD",
-      "html_url": "https://github.com/Belobug/VIctory-Belobug-AMD",
-      "description": null,
-      "language": "Rust",
-      "topics": [],
-      "stars": 1944,
-      "forks": 397,
-      "created_at": "2026-11-25T09:41:37Z",
-      "pushed_at": "2026-11-26T17:52:43Z",
-      "updated_at": "2026-11-26T18:43:03Z",
-      "stars_per_day": 1944.0,
-      "age_days": 1
+      "updated_at": "2026-11-27T17:13:24Z",
+      "stars_per_day": 397.0,
+      "age_days": 5
     },
     {
       "full_name": "omonkeyz/xbox-emulator",
@@ -369,27 +358,12 @@
       "language": "Rust",
       "topics": [],
       "stars": 1851,
-      "forks": 125,
+      "forks": 124,
       "created_at": "2026-11-21T08:08:39Z",
       "pushed_at": "2026-11-25T13:47:56Z",
-      "updated_at": "2026-11-26T18:27:35Z",
-      "stars_per_day": 370.2,
-      "age_days": 5
-    },
-    {
-      "full_name": "avatarmanz/VIctory-7900XTX",
-      "name": "VIctory-7900XTX",
-      "html_url": "https://github.com/avatarmanz/VIctory-7900XTX",
-      "description": "Goal: an Xbox Series title (your own dump) on PC as the Series X version at 4K with ray tracing, picture matching the Xbox first (textures, lighting), then 30+ fps. Porting, not emulating. RX 7900 XTX first. No game files.",
-      "language": "Rust",
-      "topics": [],
-      "stars": 1801,
-      "forks": 580,
-      "created_at": "2026-11-25T22:18:14Z",
-      "pushed_at": "2026-11-26T17:26:45Z",
-      "updated_at": "2026-11-26T18:43:00Z",
-      "stars_per_day": 1801.0,
-      "age_days": 1
+      "updated_at": "2026-11-27T18:31:51Z",
+      "stars_per_day": 308.5,
+      "age_days": 6
     },
     {
       "full_name": "crhywun/g1-acq",
@@ -398,53 +372,13 @@
       "description": null,
       "language": "JavaScript",
       "topics": [],
-      "stars": 1612,
-      "forks": 375,
+      "stars": 1772,
+      "forks": 401,
       "created_at": "2026-11-22T10:53:17Z",
-      "pushed_at": "2026-11-26T14:29:58Z",
-      "updated_at": "2026-11-26T18:30:51Z",
-      "stars_per_day": 403.0,
-      "age_days": 4
-    },
-    {
-      "full_name": "Avaneesh-Inamdar/Stream-Tube-Desktop",
-      "name": "Stream-Tube-Desktop",
-      "html_url": "https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop",
-      "description": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
-      "language": "Rust",
-      "topics": [
-        "dearrow",
-        "desktop-app",
-        "gpui",
-        "mpv",
-        "rust",
-        "sponsorblock",
-        "windows",
-        "youtube",
-        "youtube-client"
-      ],
-      "stars": 1437,
-      "forks": 125,
-      "created_at": "2026-11-22T18:50:17Z",
-      "pushed_at": "2026-11-26T11:03:33Z",
-      "updated_at": "2026-11-26T18:41:09Z",
-      "stars_per_day": 479.0,
-      "age_days": 3
-    },
-    {
-      "full_name": "leanprover-community/riemann-hypothesis",
-      "name": "riemann-hypothesis",
-      "html_url": "https://github.com/leanprover-community/riemann-hypothesis",
-      "description": "Lean formalization of the Riemann Hypothesis (Alp\u00f6ge, 2026-11-20) being cleaned up by members of the Lean community.",
-      "language": "Lean",
-      "topics": [],
-      "stars": 1424,
-      "forks": 528,
-      "created_at": "2026-11-20T14:47:49Z",
-      "pushed_at": "2026-11-26T15:32:03Z",
-      "updated_at": "2026-11-26T18:40:53Z",
-      "stars_per_day": 237.3,
-      "age_days": 6
+      "pushed_at": "2026-11-26T23:51:35Z",
+      "updated_at": "2026-11-27T18:27:09Z",
+      "stars_per_day": 354.4,
+      "age_days": 5
     },
     {
       "full_name": "qianyiai/KuroCat",
@@ -474,13 +408,110 @@
         "typing-cat",
         "windows"
       ],
-      "stars": 1325,
-      "forks": 188,
+      "stars": 1751,
+      "forks": 247,
       "created_at": "2026-11-21T15:49:31Z",
-      "pushed_at": "2026-11-26T18:29:35Z",
-      "updated_at": "2026-11-26T18:38:53Z",
-      "stars_per_day": 265.0,
-      "age_days": 5
+      "pushed_at": "2026-11-27T06:32:21Z",
+      "updated_at": "2026-11-27T18:21:49Z",
+      "stars_per_day": 291.8,
+      "age_days": 6
+    },
+    {
+      "full_name": "Avaneesh-Inamdar/Stream-Tube-Desktop",
+      "name": "Stream-Tube-Desktop",
+      "html_url": "https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop",
+      "description": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
+      "language": "Rust",
+      "topics": [
+        "dearrow",
+        "desktop-app",
+        "gpui",
+        "mpv",
+        "rust",
+        "sponsorblock",
+        "windows",
+        "youtube",
+        "youtube-client"
+      ],
+      "stars": 1630,
+      "forks": 143,
+      "created_at": "2026-11-22T18:50:17Z",
+      "pushed_at": "2026-11-27T17:30:44Z",
+      "updated_at": "2026-11-27T18:18:58Z",
+      "stars_per_day": 407.5,
+      "age_days": 4
+    },
+    {
+      "full_name": "trustno1-coder/VIctory-NVIDIA",
+      "name": "VIctory-NVIDIA",
+      "html_url": "https://github.com/trustno1-coder/VIctory-NVIDIA",
+      "description": "VIctory (Xbox Series compatibility layer) tuned for NVIDIA RTX cards: Series X at 2560x1440 with DLSS, about 26-30 fps on an RTX 5070, DLSS frame generation 2x-6x, an F1 settings menu and F3 stats panel, open water without dark blocks. Built on many repos combined into one. No game files or NVIDIA files included.",
+      "language": "Rust",
+      "topics": [
+        "compatibility-layer",
+        "directx-12",
+        "dlss",
+        "frame-generation",
+        "nvidia",
+        "rust"
+      ],
+      "stars": 1607,
+      "forks": 543,
+      "created_at": "2026-11-25T23:35:29Z",
+      "pushed_at": "2026-11-27T18:13:01Z",
+      "updated_at": "2026-11-27T18:33:50Z",
+      "stars_per_day": 1607.0,
+      "age_days": 1
+    },
+    {
+      "full_name": "Reukix/Reloc",
+      "name": "Reloc",
+      "html_url": "https://github.com/Reukix/Reloc",
+      "description": "iOS accessory-level location simulator over local loopback (iAP2 / MFi-v3 / NMEA)",
+      "language": "Swift",
+      "topics": [],
+      "stars": 1465,
+      "forks": 302,
+      "created_at": "2026-11-25T17:29:48Z",
+      "pushed_at": "2026-11-27T11:21:20Z",
+      "updated_at": "2026-11-27T18:31:48Z",
+      "stars_per_day": 732.5,
+      "age_days": 2
+    },
+    {
+      "full_name": "Pixel679-cmyk/windows-titlebar-blur-customizer",
+      "name": "windows-titlebar-blur-customizer",
+      "html_url": "https://github.com/Pixel679-cmyk/windows-titlebar-blur-customizer",
+      "description": "Customize Windows 10 and 11 title bar effects with Aero, Acrylic, Mica and advanced DWM blur effects.",
+      "language": "C++",
+      "topics": [
+        "acrylic",
+        "aero",
+        "aeroglass",
+        "blur",
+        "cplusplus",
+        "cpp",
+        "desktop",
+        "desktop-customization",
+        "dwm",
+        "glassmorphism",
+        "mica",
+        "personalization",
+        "transparency",
+        "win10",
+        "win11",
+        "windows",
+        "windows-10",
+        "windows-11",
+        "windows-customization"
+      ],
+      "stars": 1334,
+      "forks": 0,
+      "created_at": "2026-11-26T21:26:56Z",
+      "pushed_at": "2026-11-26T21:27:28Z",
+      "updated_at": "2026-11-27T18:33:49Z",
+      "stars_per_day": 1334.0,
+      "age_days": 1
     },
     {
       "full_name": "Indigo-0167/universal-game-mod-manager",
@@ -510,39 +541,13 @@
         "unreal",
         "windows"
       ],
-      "stars": 1301,
-      "forks": 0,
+      "stars": 1333,
+      "forks": 1,
       "created_at": "2026-11-23T21:30:10Z",
       "pushed_at": "2026-11-23T21:30:46Z",
-      "updated_at": "2026-11-26T15:44:28Z",
-      "stars_per_day": 650.5,
-      "age_days": 2
-    },
-    {
-      "full_name": "alesha-pro/llm.asm",
-      "name": "llm.asm",
-      "html_url": "https://github.com/alesha-pro/llm.asm",
-      "description": "Qwen3-0.6B inference (12 KB), bare-metal bootable OS (22 KB), and from-scratch Mini-GPT trainer with live Braille TUI (32 KB) in 100% pure x86-64 NASM assembly. Zero C, zero libc, zero dependencies.",
-      "language": "Assembly",
-      "topics": [
-        "assembly",
-        "avx2",
-        "bare-metal",
-        "llm",
-        "machine-learning",
-        "nasm",
-        "osdev",
-        "qwen",
-        "transformer",
-        "x86-64"
-      ],
-      "stars": 1301,
-      "forks": 188,
-      "created_at": "2026-11-25T07:28:51Z",
-      "pushed_at": "2026-11-25T15:42:44Z",
-      "updated_at": "2026-11-26T18:42:43Z",
-      "stars_per_day": 1301.0,
-      "age_days": 1
+      "updated_at": "2026-11-27T18:33:32Z",
+      "stars_per_day": 444.3,
+      "age_days": 3
     },
     {
       "full_name": "Umbra9179/clipboard-history-manager-windows",
@@ -568,13 +573,13 @@
         "windows-application",
         "winui"
       ],
-      "stars": 1263,
+      "stars": 1270,
       "forks": 1,
       "created_at": "2026-11-23T21:40:15Z",
       "pushed_at": "2026-11-23T21:40:42Z",
-      "updated_at": "2026-11-26T13:34:00Z",
-      "stars_per_day": 631.5,
-      "age_days": 2
+      "updated_at": "2026-11-27T18:33:11Z",
+      "stars_per_day": 423.3,
+      "age_days": 3
     },
     {
       "full_name": "deterministic-machines/deslop-please",
@@ -583,49 +588,46 @@
       "description": "Bring (back) sanity to your code",
       "language": "Rust",
       "topics": [],
-      "stars": 1148,
-      "forks": 58,
+      "stars": 1246,
+      "forks": 63,
       "created_at": "2026-11-22T05:36:03Z",
-      "pushed_at": "2026-11-25T23:08:48Z",
-      "updated_at": "2026-11-26T18:31:48Z",
-      "stars_per_day": 287.0,
-      "age_days": 4
+      "pushed_at": "2026-11-27T18:02:34Z",
+      "updated_at": "2026-11-27T18:33:21Z",
+      "stars_per_day": 249.2,
+      "age_days": 5
     },
     {
-      "full_name": "zero5122/offline-file-converter-windows",
-      "name": "offline-file-converter-windows",
-      "html_url": "https://github.com/zero5122/offline-file-converter-windows",
-      "description": "Free offline file converter for Windows \u2013 convert PDF, documents, images, audio and video privately.",
-      "language": "Python",
+      "full_name": "ZigZagBoi1/ScarlettPort",
+      "name": "ScarlettPort",
+      "html_url": "https://github.com/ZigZagBoi1/ScarlettPort",
+      "description": "Native PC port layer for an Xbox Series X|S title: the game's x64 code runs on your CPU and its RDNA2 GPU code is recompiled for your graphics card. Bring your own files.",
+      "language": "Rust",
       "topics": [
-        "audio-converter",
-        "batch-conversion",
-        "conversion",
-        "convert",
-        "converter",
-        "desktop-app",
-        "document-conversion",
-        "file-conversion",
-        "file-converter",
-        "file-converter-pro",
-        "image-converter",
-        "offline",
-        "open-source",
-        "pdf",
-        "pdf-converter",
-        "pyside6",
-        "python",
-        "qt",
-        "video-converter",
-        "windows"
+        "amd",
+        "compatibility-layer",
+        "d3d12",
+        "directx12",
+        "dxil",
+        "game-port",
+        "native-port",
+        "nvidia",
+        "pc-port",
+        "rust",
+        "shader-recompiler",
+        "shader-translation",
+        "victory",
+        "windows",
+        "xbox",
+        "xbox-series-s",
+        "xbox-series-x"
       ],
-      "stars": 1069,
-      "forks": 2,
-      "created_at": "2026-11-23T21:38:47Z",
-      "pushed_at": "2026-11-23T21:39:16Z",
-      "updated_at": "2026-11-26T17:10:06Z",
-      "stars_per_day": 534.5,
-      "age_days": 2
+      "stars": 1161,
+      "forks": 158,
+      "created_at": "2026-11-24T09:36:26Z",
+      "pushed_at": "2026-11-27T18:33:49Z",
+      "updated_at": "2026-11-27T18:30:48Z",
+      "stars_per_day": 387.0,
+      "age_days": 3
     },
     {
       "full_name": "solv4626/steam-achievement-manager-windows",
@@ -652,38 +654,13 @@
         "steam-achievement-manager",
         "windows"
       ],
-      "stars": 1058,
-      "forks": 0,
+      "stars": 1098,
+      "forks": 1,
       "created_at": "2026-11-23T21:31:33Z",
       "pushed_at": "2026-11-23T21:32:09Z",
-      "updated_at": "2026-11-25T20:08:18Z",
-      "stars_per_day": 529.0,
-      "age_days": 2
-    },
-    {
-      "full_name": "danielwh2/sprite-stacking",
-      "name": "sprite-stacking",
-      "html_url": "https://github.com/danielwh2/sprite-stacking",
-      "description": "Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.",
-      "language": "HTML",
-      "topics": [
-        "agent-skills",
-        "claude-code",
-        "codex",
-        "cursor",
-        "fake-3d",
-        "gamedev",
-        "pixel-art",
-        "sprite-stacking",
-        "voxel"
-      ],
-      "stars": 1025,
-      "forks": 86,
-      "created_at": "2026-11-20T14:32:43Z",
-      "pushed_at": "2026-11-24T13:12:08Z",
-      "updated_at": "2026-11-26T18:39:12Z",
-      "stars_per_day": 170.8,
-      "age_days": 6
+      "updated_at": "2026-11-27T18:33:24Z",
+      "stars_per_day": 366.0,
+      "age_days": 3
     },
     {
       "full_name": "kai415-debug/ffmpeg-video-audio-converter",
@@ -713,51 +690,13 @@
         "video-encoding",
         "windows"
       ],
-      "stars": 1020,
+      "stars": 1067,
       "forks": 0,
       "created_at": "2026-11-23T21:32:56Z",
       "pushed_at": "2026-11-23T21:33:23Z",
-      "updated_at": "2026-11-25T20:06:37Z",
-      "stars_per_day": 510.0,
-      "age_days": 2
-    },
-    {
-      "full_name": "sous-labs/songe",
-      "name": "songe",
-      "html_url": "https://github.com/sous-labs/songe",
-      "description": "A training engine for your local model, using your idle compute",
-      "language": "Python",
-      "topics": [
-        "coding-agents",
-        "distillation",
-        "fine-tuning",
-        "llm",
-        "local-llm",
-        "lora",
-        "mlx"
-      ],
-      "stars": 901,
-      "forks": 74,
-      "created_at": "2026-11-20T11:01:20Z",
-      "pushed_at": "2026-11-26T13:38:54Z",
-      "updated_at": "2026-11-26T18:24:53Z",
-      "stars_per_day": 150.2,
-      "age_days": 6
-    },
-    {
-      "full_name": "sybil-solutions/skill-distill",
-      "name": "skill-distill",
-      "html_url": "https://github.com/sybil-solutions/skill-distill",
-      "description": "Distill a good Claude Code / Codex session into a skill an open-weight model can follow to reproduce the task",
-      "language": "Python",
-      "topics": [],
-      "stars": 887,
-      "forks": 76,
-      "created_at": "2026-11-21T01:43:00Z",
-      "pushed_at": "2026-11-21T03:48:01Z",
-      "updated_at": "2026-11-26T18:39:05Z",
-      "stars_per_day": 177.4,
-      "age_days": 5
+      "updated_at": "2026-11-27T18:29:56Z",
+      "stars_per_day": 355.7,
+      "age_days": 3
     },
     {
       "full_name": "lsernau/grh-lean",
@@ -766,13 +705,28 @@
       "description": "A short Lean 4 proof of the Generalized Riemann Hypothesis",
       "language": "Lean",
       "topics": [],
-      "stars": 828,
-      "forks": 87,
+      "stars": 1019,
+      "forks": 112,
       "created_at": "2026-11-25T20:42:55Z",
       "pushed_at": "2026-11-25T20:45:04Z",
-      "updated_at": "2026-11-26T18:42:51Z",
-      "stars_per_day": 828.0,
+      "updated_at": "2026-11-27T18:22:54Z",
+      "stars_per_day": 1019.0,
       "age_days": 1
+    },
+    {
+      "full_name": "sybil-solutions/skill-distill",
+      "name": "skill-distill",
+      "html_url": "https://github.com/sybil-solutions/skill-distill",
+      "description": "Distill a good Claude Code / Codex session into a skill an open-weight model can follow to reproduce the task",
+      "language": "Python",
+      "topics": [],
+      "stars": 989,
+      "forks": 84,
+      "created_at": "2026-11-21T01:43:00Z",
+      "pushed_at": "2026-11-21T03:48:01Z",
+      "updated_at": "2026-11-27T18:32:08Z",
+      "stars_per_day": 164.8,
+      "age_days": 6
     },
     {
       "full_name": "xikhar/papercraft",
@@ -781,13 +735,56 @@
       "description": "Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style",
       "language": "JavaScript",
       "topics": [],
-      "stars": 799,
-      "forks": 84,
+      "stars": 925,
+      "forks": 100,
       "created_at": "2026-11-21T00:29:56Z",
       "pushed_at": "2026-11-21T17:37:19Z",
-      "updated_at": "2026-11-26T18:31:56Z",
-      "stars_per_day": 159.8,
-      "age_days": 5
+      "updated_at": "2026-11-27T18:22:25Z",
+      "stars_per_day": 154.2,
+      "age_days": 6
+    },
+    {
+      "full_name": "zortos293/XSEmu",
+      "name": "XSEmu",
+      "html_url": "https://github.com/zortos293/XSEmu",
+      "description": "Experimental Xbox Series X|S (GDK) title runner for Windows, built on the XCL translation layer: D3D12.X to D3D12, RDNA2 shaders to DXIL.",
+      "language": "Rust",
+      "topics": [
+        "compatibility-layer",
+        "d3d12",
+        "dxil",
+        "emulator",
+        "gdk",
+        "hlsl",
+        "rdna2",
+        "rust",
+        "shader-recompiler",
+        "windows",
+        "xbox",
+        "xbox-series"
+      ],
+      "stars": 880,
+      "forks": 61,
+      "created_at": "2026-11-23T12:57:17Z",
+      "pushed_at": "2026-11-27T15:36:06Z",
+      "updated_at": "2026-11-27T18:28:35Z",
+      "stars_per_day": 220.0,
+      "age_days": 4
+    },
+    {
+      "full_name": "DoubleGhosty/cool_fox",
+      "name": "cool_fox",
+      "html_url": "https://github.com/DoubleGhosty/cool_fox",
+      "description": "cool_fox: Leading CGBJ runtime continuation for GTA VI PC - Pareto residency, Wine/Vulkan fixes, FPS unlock, Port 5 CBV",
+      "language": "Rust",
+      "topics": [],
+      "stars": 839,
+      "forks": 462,
+      "created_at": "2026-11-26T08:48:31Z",
+      "pushed_at": "2026-11-27T11:03:32Z",
+      "updated_at": "2026-11-27T18:14:37Z",
+      "stars_per_day": 839.0,
+      "age_days": 1
     },
     {
       "full_name": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
@@ -815,13 +812,13 @@
         "ttpf",
         "xbox-series"
       ],
-      "stars": 784,
-      "forks": 44,
+      "stars": 827,
+      "forks": 50,
       "created_at": "2026-11-21T17:08:48Z",
-      "pushed_at": "2026-11-26T00:58:17Z",
-      "updated_at": "2026-11-26T18:40:37Z",
-      "stars_per_day": 156.8,
-      "age_days": 5
+      "pushed_at": "2026-11-26T22:26:05Z",
+      "updated_at": "2026-11-27T18:31:14Z",
+      "stars_per_day": 137.8,
+      "age_days": 6
     },
     {
       "full_name": "erkamyaman/safe-anything",
@@ -851,13 +848,83 @@
         "vulnerability-scanner",
         "xss"
       ],
-      "stars": 778,
-      "forks": 81,
+      "stars": 820,
+      "forks": 90,
       "created_at": "2026-11-22T16:44:10Z",
-      "pushed_at": "2026-11-26T15:25:21Z",
-      "updated_at": "2026-11-26T18:25:04Z",
-      "stars_per_day": 194.5,
-      "age_days": 4
+      "pushed_at": "2026-11-27T18:29:53Z",
+      "updated_at": "2026-11-27T17:59:49Z",
+      "stars_per_day": 164.0,
+      "age_days": 5
+    },
+    {
+      "full_name": "olive527/steam-library-manager-windows",
+      "name": "steam-library-manager-windows",
+      "html_url": "https://github.com/olive527/steam-library-manager-windows",
+      "description": "Free Windows game library manager and backup tool for Steam, Origin and Ubisoft Connect with multi-library support.",
+      "language": "C#",
+      "topics": [
+        "backup",
+        "backup-tool",
+        "csharp",
+        "desktop",
+        "dotnet",
+        "game-backup",
+        "game-library",
+        "game-manager",
+        "gaming",
+        "open-source",
+        "origin",
+        "origin-games",
+        "steam",
+        "steam-games",
+        "uplay",
+        "uplay-games",
+        "windows",
+        "wpf"
+      ],
+      "stars": 792,
+      "forks": 0,
+      "created_at": "2026-11-23T21:18:03Z",
+      "pushed_at": "2026-11-23T21:18:52Z",
+      "updated_at": "2026-11-27T18:33:17Z",
+      "stars_per_day": 264.0,
+      "age_days": 3
+    },
+    {
+      "full_name": "Basil0879/steam-game-idler",
+      "name": "steam-game-idler",
+      "html_url": "https://github.com/Basil0879/steam-game-idler",
+      "description": "Free Steam idler for trading card farming, achievement management, playtime boosting and multi-account automation on Windows.",
+      "language": "TypeScript",
+      "topics": [
+        "achievement-management",
+        "archisteamfarm",
+        "asf",
+        "automation",
+        "desktop",
+        "idle-master",
+        "idlemaster",
+        "linux",
+        "open-source",
+        "steam",
+        "steam-api",
+        "steam-bot",
+        "steam-farm",
+        "steam-game-idler",
+        "steam-games",
+        "steam-idler",
+        "steam-inventory",
+        "steamkit2",
+        "steamworks",
+        "windows"
+      ],
+      "stars": 759,
+      "forks": 0,
+      "created_at": "2026-11-23T21:19:48Z",
+      "pushed_at": "2026-11-23T21:20:45Z",
+      "updated_at": "2026-11-27T18:33:29Z",
+      "stars_per_day": 253.0,
+      "age_days": 3
     }
   ],
   "hn_items": [
@@ -934,60 +1001,53 @@
   ],
   "devto_items": [
     {
-      "title": "Tell us your story, and we might read it on the CodeNewbie Podcast \ud83c\udf99\ufe0f",
-      "url": "https://dev.to/codenewbie/tell-us-your-story-and-we-might-read-it-on-the-codenewbie-podcast-2840",
-      "reactions": 58,
-      "comments": 42,
-      "published_at": "2026-11-20T16:28:49Z"
-    },
-    {
       "title": "The mental toll of working in tech",
       "url": "https://dev.to/klaudiagrz/the-mental-toll-of-working-in-tech-2m6k",
-      "reactions": 76,
-      "comments": 23,
+      "reactions": 100,
+      "comments": 32,
       "published_at": "2026-11-25T14:05:36Z"
-    },
-    {
-      "title": "What are you Grateful for this Thanksgiving?",
-      "url": "https://dev.to/francistrdev/what-are-you-grateful-for-this-thanksgiving-4570",
-      "reactions": 174,
-      "comments": 86,
-      "published_at": "2026-11-23T14:42:00Z"
     },
     {
       "title": "The Price You Pay for Passion",
       "url": "https://dev.to/thethirdcup/the-price-you-pay-for-passion-3h5l",
-      "reactions": 124,
-      "comments": 75,
+      "reactions": 150,
+      "comments": 98,
       "published_at": "2026-11-25T08:29:06Z"
     },
     {
-      "title": "Cozy Bytes \ud83c\udf7a | Rust::Who Owns the Cat? \ud83d\udc08\ud83e\udd80",
-      "url": "https://dev.to/_yourbrainbuffer_/cozy-bytes-rustwho-owns-the-cat-13ch",
-      "reactions": 109,
-      "comments": 38,
-      "published_at": "2026-11-20T16:21:37Z"
+      "title": "What are you Grateful for this Thanksgiving?",
+      "url": "https://dev.to/francistrdev/what-are-you-grateful-for-this-thanksgiving-4570",
+      "reactions": 186,
+      "comments": 92,
+      "published_at": "2026-11-23T14:42:00Z"
     },
     {
       "title": "The Third Cup: Change Never Sleeps",
       "url": "https://dev.to/thethirdcup/the-third-cup-change-never-sleeps-2ldf",
-      "reactions": 117,
+      "reactions": 123,
       "comments": 58,
       "published_at": "2026-11-23T07:09:21Z"
     },
     {
-      "title": "I can't believe the podcast I learned to code with is back!",
-      "url": "https://dev.to/codenewbie/i-cant-believe-the-podcast-i-learned-to-code-with-is-back-2gi5",
-      "reactions": 43,
-      "comments": 9,
-      "published_at": "2026-11-20T08:55:01Z"
-    },
-    {
       "title": "Dead Keys: I Brought Back the Typing Games. Kiro Did the Heavy Lifting.",
       "url": "https://dev.to/earlgreyhot1701d/dead-keys-i-brought-back-the-typing-games-kiro-did-the-heavy-lifting-5gc2",
-      "reactions": 104,
-      "comments": 66,
+      "reactions": 105,
+      "comments": 67,
       "published_at": "2026-11-21T18:23:38Z"
+    },
+    {
+      "title": "I Built My First Multi-Agent System on AWS, and It Was Easier Than I Expected",
+      "url": "https://dev.to/hemapriya_kanagala/i-built-my-first-multi-agent-system-on-aws-and-it-was-easier-than-i-expected-58c2",
+      "reactions": 107,
+      "comments": 52,
+      "published_at": "2026-11-25T15:26:38Z"
+    },
+    {
+      "title": "What was your win this week!?",
+      "url": "https://dev.to/devteam/what-was-your-win-this-week-h3d",
+      "reactions": 52,
+      "comments": 26,
+      "published_at": "2026-11-27T14:00:00Z"
     },
     {
       "title": "The Chairs Are Back. The Coffee Is On. \u2615",
@@ -999,30 +1059,45 @@
     {
       "title": "Necoz Is Building a New House!! \ud83d\udef8 All Cats, Follow Me!! \ud83d\udc08\ud83d\ude80",
       "url": "https://dev.to/necoz/necoz-is-building-a-new-house-all-cats-follow-me-530n",
-      "reactions": 112,
+      "reactions": 117,
       "comments": 54,
       "published_at": "2026-11-22T13:27:10Z"
+    },
+    {
+      "title": "I Know It's You, But I Can't Prove It",
+      "url": "https://dev.to/codingwithjiro/i-know-its-you-but-i-cant-prove-it-39i2",
+      "reactions": 31,
+      "comments": 17,
+      "published_at": "2026-11-25T12:24:08Z"
     }
   ],
   "languages": [
     [
       "Rust",
-      12
-    ],
-    [
-      "Python",
-      5
+      13
     ],
     [
       "JavaScript",
       3
     ],
     [
-      "HTML",
+      "TypeScript",
+      3
+    ],
+    [
+      "C#",
       2
     ],
     [
-      "Lean",
+      "C++",
+      2
+    ],
+    [
+      "Python",
+      2
+    ],
+    [
+      "Swift",
       2
     ],
     [
@@ -1030,37 +1105,29 @@
       1
     ],
     [
-      "C",
+      "HTML",
       1
     ],
     [
-      "C#",
-      1
-    ],
-    [
-      "C++",
-      1
-    ],
-    [
-      "Swift",
-      1
-    ],
-    [
-      "TypeScript",
+      "Lean",
       1
     ]
   ],
   "topics": [
     [
       "windows",
-      8
-    ],
-    [
-      "open-source",
-      6
+      11
     ],
     [
       "rust",
+      9
+    ],
+    [
+      "open-source",
+      7
+    ],
+    [
+      "desktop",
       6
     ],
     [
@@ -1072,27 +1139,39 @@
       4
     ],
     [
-      "desktop",
-      3
-    ],
-    [
-      "desktop-app",
-      3
-    ],
-    [
       "mcp",
+      4
+    ],
+    [
+      "steam",
+      4
+    ],
+    [
+      "ai-agents",
       3
+    ],
+    [
+      "compatibility-layer",
+      3
+    ],
+    [
+      "gaming",
+      3
+    ],
+    [
+      "linux",
+      3
+    ],
+    [
+      "achievement-management",
+      2
     ],
     [
       "agent-skills",
       2
     ],
     [
-      "ai-agents",
-      2
-    ],
-    [
-      "audio-converter",
+      "automation",
       2
     ],
     [
@@ -1100,11 +1179,7 @@
       2
     ],
     [
-      "conversion",
-      2
-    ],
-    [
-      "cursor",
+      "cpp",
       2
     ],
     [
@@ -1112,23 +1187,31 @@
       2
     ],
     [
+      "desktop-app",
+      2
+    ],
+    [
       "desktop-application",
       2
     ],
     [
-      "gaming",
+      "dotnet",
+      2
+    ],
+    [
+      "dxil",
+      2
+    ],
+    [
+      "game-development",
+      2
+    ],
+    [
+      "game-engine",
       2
     ],
     [
       "gui",
-      2
-    ],
-    [
-      "linux",
-      2
-    ],
-    [
-      "llm",
       2
     ],
     [
@@ -1140,11 +1223,11 @@
       2
     ],
     [
-      "productivity",
+      "nvidia",
       2
     ],
     [
-      "python",
+      "productivity",
       2
     ],
     [
@@ -1152,11 +1235,11 @@
       2
     ],
     [
-      "scarlett",
+      "shader-recompiler",
       2
     ],
     [
-      "steam",
+      "steam-games",
       2
     ],
     [
@@ -1164,7 +1247,15 @@
       2
     ],
     [
-      "video-converter",
+      "unity",
+      2
+    ],
+    [
+      "windows-10",
+      2
+    ],
+    [
+      "windows-11",
       2
     ],
     [
@@ -1172,11 +1263,11 @@
       2
     ],
     [
-      "3d",
-      1
+      "xbox-series",
+      2
     ],
     [
-      "achievement-management",
+      "3d",
       1
     ],
     [
@@ -1184,11 +1275,39 @@
       1
     ],
     [
+      "acrylic",
+      1
+    ],
+    [
+      "aero",
+      1
+    ],
+    [
+      "aeroglass",
+      1
+    ],
+    [
       "ai-companion",
       1
     ],
     [
+      "ai-game-generator",
+      1
+    ],
+    [
+      "amd",
+      1
+    ],
+    [
       "android",
+      1
+    ],
+    [
+      "archisteamfarm",
+      1
+    ],
+    [
+      "asf",
       1
     ],
     [
@@ -1200,7 +1319,7 @@
       1
     ],
     [
-      "automation",
+      "audio-converter",
       1
     ],
     [
@@ -1216,11 +1335,19 @@
       1
     ],
     [
+      "backup",
+      1
+    ],
+    [
+      "backup-tool",
+      1
+    ],
+    [
       "bare-metal",
       1
     ],
     [
-      "batch-conversion",
+      "blur",
       1
     ],
     [
@@ -1248,15 +1375,7 @@
       1
     ],
     [
-      "coding-agents",
-      1
-    ],
-    [
-      "convert",
-      1
-    ],
-    [
-      "converter",
+      "conversion",
       1
     ],
     [
@@ -1264,7 +1383,7 @@
       1
     ],
     [
-      "cpp",
+      "cplusplus",
       1
     ],
     [
@@ -1272,7 +1391,27 @@
       1
     ],
     [
+      "csharp",
+      1
+    ],
+    [
+      "cursor",
+      1
+    ],
+    [
       "dearrow",
+      1
+    ],
+    [
+      "deepseek",
+      1
+    ],
+    [
+      "deepseek-harness",
+      1
+    ],
+    [
+      "desktop-customization",
       1
     ],
     [
@@ -1288,27 +1427,35 @@
       1
     ],
     [
-      "directx-raytracing",
+      "directx-12",
       1
     ],
     [
-      "distillation",
+      "directx12",
       1
     ],
     [
-      "document-conversion",
+      "dlss",
       1
     ],
     [
-      "dotnet",
+      "dsh",
+      1
+    ],
+    [
+      "dsh-plugin",
+      1
+    ],
+    [
+      "dwm",
+      1
+    ],
+    [
+      "emulator",
       1
     ],
     [
       "epic-games",
-      1
-    ],
-    [
-      "fake-3d",
       1
     ],
     [
@@ -1324,35 +1471,31 @@
       1
     ],
     [
-      "file-conversion",
-      1
-    ],
-    [
-      "file-converter",
-      1
-    ],
-    [
-      "file-converter-pro",
-      1
-    ],
-    [
-      "fine-tuning",
-      1
-    ],
-    [
       "fluent",
       1
     ],
     [
-      "game-development",
+      "frame-generation",
       1
     ],
     [
-      "game-engine",
+      "game-backup",
+      1
+    ],
+    [
+      "game-library",
+      1
+    ],
+    [
+      "game-manager",
       1
     ],
     [
       "game-mods",
+      1
+    ],
+    [
+      "game-port",
       1
     ],
     [
@@ -1372,10 +1515,6 @@
       1
     ],
     [
-      "gamedev",
-      1
-    ],
-    [
       "games",
       1
     ],
@@ -1385,6 +1524,10 @@
     ],
     [
       "gdk",
+      1
+    ],
+    [
+      "glassmorphism",
       1
     ],
     [
@@ -1424,7 +1567,19 @@
       1
     ],
     [
-      "image-converter",
+      "hlsl",
+      1
+    ],
+    [
+      "idle-master",
+      1
+    ],
+    [
+      "idlemaster",
+      1
+    ],
+    [
+      "indie-game",
       1
     ],
     [
@@ -1440,11 +1595,11 @@
       1
     ],
     [
-      "local-llm",
+      "llm",
       1
     ],
     [
-      "lora",
+      "local-first",
       1
     ],
     [
@@ -1464,7 +1619,11 @@
       1
     ],
     [
-      "mlx",
+      "mica",
+      1
+    ],
+    [
+      "mini-games",
       1
     ],
     [
@@ -1488,6 +1647,10 @@
       1
     ],
     [
+      "native-port",
+      1
+    ],
+    [
       "nodejs",
       1
     ],
@@ -1496,11 +1659,15 @@
       1
     ],
     [
-      "offline",
+      "optimization",
       1
     ],
     [
-      "optimization",
+      "origin",
+      1
+    ],
+    [
+      "origin-games",
       1
     ],
     [
@@ -1520,11 +1687,7 @@
       1
     ],
     [
-      "pdf",
-      1
-    ],
-    [
-      "pdf-converter",
+      "pc-port",
       1
     ],
     [
@@ -1532,7 +1695,7 @@
       1
     ],
     [
-      "pixel-art",
+      "personalization",
       1
     ],
     [
@@ -1544,15 +1707,11 @@
       1
     ],
     [
-      "pyside6",
+      "python",
       1
     ],
     [
       "qml",
-      1
-    ],
-    [
-      "qt",
       1
     ],
     [
@@ -1592,6 +1751,10 @@
       1
     ],
     [
+      "scarlett",
+      1
+    ],
+    [
       "secret-scanning",
       1
     ],
@@ -1608,11 +1771,11 @@
       1
     ],
     [
-      "sponsorblock",
+      "shader-translation",
       1
     ],
     [
-      "sprite-stacking",
+      "sponsorblock",
       1
     ],
     [
@@ -1620,15 +1783,47 @@
       1
     ],
     [
-      "static-recompilation",
-      1
-    ],
-    [
       "steam-achievement-manager",
       1
     ],
     [
+      "steam-api",
+      1
+    ],
+    [
+      "steam-bot",
+      1
+    ],
+    [
+      "steam-farm",
+      1
+    ],
+    [
+      "steam-game-idler",
+      1
+    ],
+    [
+      "steam-idler",
+      1
+    ],
+    [
+      "steam-inventory",
+      1
+    ],
+    [
+      "steamkit2",
+      1
+    ],
+    [
+      "steamworks",
+      1
+    ],
+    [
       "swift",
+      1
+    ],
+    [
+      "threejs",
       1
     ],
     [
@@ -1644,6 +1839,10 @@
       1
     ],
     [
+      "transparency",
+      1
+    ],
+    [
       "ttpf",
       1
     ],
@@ -1656,11 +1855,19 @@
       1
     ],
     [
-      "unity",
+      "unreal",
       1
     ],
     [
-      "unreal",
+      "unreal-engine",
+      1
+    ],
+    [
+      "uplay",
+      1
+    ],
+    [
+      "uplay-games",
       1
     ],
     [
@@ -1668,15 +1875,23 @@
       1
     ],
     [
+      "vibe-coding",
+      1
+    ],
+    [
+      "victory",
+      1
+    ],
+    [
       "video",
       1
     ],
     [
-      "video-encoding",
+      "video-converter",
       1
     ],
     [
-      "voxel",
+      "video-encoding",
       1
     ],
     [
@@ -1688,11 +1903,15 @@
       1
     ],
     [
-      "windows-10",
+      "wechat-minigame",
       1
     ],
     [
-      "windows-11",
+      "win10",
+      1
+    ],
+    [
+      "win11",
       1
     ],
     [
@@ -1704,7 +1923,15 @@
       1
     ],
     [
+      "windows-customization",
+      1
+    ],
+    [
       "winui",
+      1
+    ],
+    [
+      "wpf",
       1
     ],
     [
@@ -1712,7 +1939,7 @@
       1
     ],
     [
-      "xbox-series",
+      "xbox-series-s",
       1
     ],
     [
